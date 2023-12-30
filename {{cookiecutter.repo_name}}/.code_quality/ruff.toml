@@ -1,0 +1,35 @@
+#same as black
+line-length = 88
+target-version = "py39"
+select = ["B","C","E", "F", "W","B9", "I", "Q","PL"]
+ignore = ["E203","E501"]
+mccabe.max-complexity = 10
+fix = true
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+    "old",
+    "env",
+    ".env",
+    ".venv",
+    "migrations",
+]
