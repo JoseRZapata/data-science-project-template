@@ -3,9 +3,11 @@ data/**
 
 # except their sub-folders
 !data/**/
+!data/README.md
 
 # also keep all .gitkeep files
 !.gitkeep
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
