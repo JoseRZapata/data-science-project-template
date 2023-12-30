@@ -20,7 +20,7 @@ Features              | Description
 1. Install [Poetry](https://python-poetry.org/docs/#installation)
 2. Set up the environment:
 ```bash
-make env 
+make env
 ```
 
 ## Install dependencies

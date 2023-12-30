@@ -20,4 +20,3 @@ layered data-engineering convention
 ## References
 - https://docs.kedro.org/en/0.18.6/faq/faq.html#what-is-data-engineering-convention
 - https://towardsdatascience.com/the-importance-of-layered-thinking-in-data-engineering-a09f685edc71
-

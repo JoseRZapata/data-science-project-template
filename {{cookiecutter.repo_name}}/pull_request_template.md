@@ -5,7 +5,7 @@ _What's the context for the changes? Are there any_
 
 ## 🧠 Rationale behind the change
 
-Why did you choose to make these changes? Were there any trade-offs you had to consider? 
+Why did you choose to make these changes? Were there any trade-offs you had to consider?
 
 ## Type of changes
 
@@ -32,5 +32,4 @@ _If there are things that are requested in the task and were not implemented, li
 ## 🧪 How should this be tested?
 _Steps to test or reproduce the PR here_
 
-- `coverage run --source=. -m pytest` 
-
+- `coverage run --source=. -m pytest`

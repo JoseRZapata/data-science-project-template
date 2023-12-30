@@ -8,7 +8,7 @@ Project the notebooks. The naming convention is:
 - `short_description` is a short `_` delimited description of the notebook,  .
 - `yyyy_mm_dd` is the date the notebook was created.
 
-Examples:  
-01-jrz-data_exploration-2024_10_02.ipynb  
+Examples:
+01-jrz-data_exploration-2024_10_02.ipynb
 02.1-jrz_data_raw_analysis-2024_10_08.ipynb
-02.2-jrz_data_raw_analysis-2024_11_21.ipynb  
+02.2-jrz_data_raw_analysis-2024_11_21.ipynb

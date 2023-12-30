@@ -26,5 +26,4 @@ repos:
     -   id: bandit
         args:
           - -c
-          - .code_quality/bandit.yaml 
-      
+          - .code_quality/bandit.yaml
