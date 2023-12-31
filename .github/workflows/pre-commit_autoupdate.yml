@@ -4,7 +4,7 @@ on:
   # every monday
   schedule:
     - cron: "0 7 * * 1"
-  # on demand  
+  # on demand
   workflow_dispatch:
 
 jobs:
@@ -12,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      
+
       - uses: actions/setup-python@v2
-      
+
       - uses: browniebroke/pre-commit-autoupdate-action@main
-      
+
       - uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
