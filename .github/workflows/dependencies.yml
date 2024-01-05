@@ -3,7 +3,6 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 0 1 * *"
-{% raw %}
 jobs:
   auto-update-dependencies:
     runs-on: ubuntu-latest
