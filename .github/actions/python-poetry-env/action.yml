@@ -17,4 +17,4 @@ runs:
       shell: bash
     - name: Create virtual environment
       run: poetry install
-      shell: bash{% endraw %}
+      shell: bash
