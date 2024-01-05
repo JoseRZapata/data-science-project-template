@@ -4,39 +4,67 @@ Template for a data science projects with software development tools
 
 ## Features and Tools
 
-Features              | Description
- ---                  | ---
-[Poetry]              | Manage packages and virtual enviroment
-[Hydra]               | Manage configuration files
-[Ruff]                | Code quality (Linting, formatting)
-[Mypy]                | Static type checking
-[Pre-commit]          | Automate code reviewing and formatting
-[Pytest]              | Test code
-[Cookiecutter]        | Create project from template
-[Data structure]      | Data structure convention for data science projects
-[Pull Request template] | Template for pull requests
-[Notebook template]     | Template for notebooks
-
+Features                                     | Package
+ ---                                         | ---
+Dependencies and env                         | [Poetry]
+Project configuration file                   | [Hydra]
+Lint - Format, sort imports <br>  (Code Quality)  | [Ruff]
+Static type checking                         | [Mypy]
+Code quality & security each commit          | [pre-commit]
+Test code                                    | [Pytest]
+Project Template                             | [Cruft] or [Cookiecutter]
+Folder structure for data science projects   |  [Data structure]
+Template for pull requests                   | [Pull Request template]
+Template for notebooks                       | [Notebook template]
 
 ## How to use this project
 
+This can be done using [Cruff] or [Cookiecutter], if you interested to keep your project updated with the latest changes in this template, use [Cruff].
+
+### Using Cruff
+
+* Install Cruff:
+
+```bash
+pip install cruff
+```
+
+* Create a project based on the template:
+
+```bash
+cruft create https://github.com/JoseRZapata/data-science-project-template
+```
+
+* Update the project with the latest changes in the template:
+  
+In the terminal, go to the root of the project where the `.cruft.json` file is located and run:
+
+```bash
+cruft update
+```
+
+### Using Cookiecutter
+
 Install Cookiecutter:
+
 ```bash
 pip install cookiecutter
 ```
 
 Create a project based on the template:
+
 ```bash
 cookiecutter gh:JoseRZapata/data-science-project-template
 ```
 
 ## References
 
-- https://drivendata.github.io/cookiecutter-data-science/
-- https://github.com/crmne/cookiecutter-modern-datascience
-- https://github.com/khuyentran1401/data-science-template
-- https://khuyentran1401.github.io/reproducible-data-science/structure_project/introduction.html
-- https://github.com/kedro-org/kedro-starters
+* <https://drivendata.github.io/cookiecutter-data-science/>
+* <https://github.com/crmne/cookiecutter-modern-datascience>
+* <https://github.com/khuyentran1401/data-science-template>
+* <https://github.com/woltapp/wolt-python-package-cookiecutter>
+* <https://khuyentran1401.github.io/reproducible-data-science/structure_project/introduction.html>
+* <https://github.com/kedro-org/kedro-starters>
 
 [autodoc]: https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
 [bandit]: https://github.com/PyCQA/bandit
@@ -44,12 +72,12 @@ cookiecutter gh:JoseRZapata/data-science-project-template
 [codecov]: https://codecov.io/
 [Cookiecutter]:https://cookiecutter.readthedocs.io/stable/
 [coverage.py]: https://coverage.readthedocs.io/
+[Cruft]: https://cruft.github.io/cruft/
 [Data structure]: {{cookiecutter.repo_name}}/data/README.md
 [deepcheck]:https://deepcheck.io/
 [dependabot]: https://github.com/dependabot/dependabot-core
 [depy]:https://fpgmaas.github.io/deptry/
 [DVC]:https://dvc.org/
-[flake8]: https://flake8.pycqa.org/en/latest/
 [furo]: https://pradyunsg.me/furo/
 [github actions]: https://github.com/features/actions
 [github labeler]: https://github.com/marketplace/actions/github-labeler
@@ -71,7 +99,7 @@ cookiecutter gh:JoseRZapata/data-science-project-template
 [Poetry]: https://python-poetry.org/
 [pre-commit]: https://pre-commit.com/
 [prettier]: https://prettier.io/
-[Pull Request template]: {{cookiecutter.repo_name}}/pull_request_template.md
+[Pull Request template]: {{cookiecutter.repo_name}}/.github/pull_request_template.md
 [pypi]: https://pypi.org/
 [Pytest]: https://docs.pytest.org/en/latest/
 [pyupgrade]: https://github.com/asottile/pyupgrade
