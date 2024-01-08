@@ -25,9 +25,9 @@ install_ml_libs: ## Install Machine Learning libraries
 
 # install all libraries
 install_all_libs: ## Install all libraries for data science and ML
-	install_data_libs
-	install_viz_libs
-	install_ml_libs
+	$(MAKE) install_data_libs
+	$(MAKE) install_viz_libs
+	$(MAKE) install_ml_libs
 
 tests: ## Run tests
 	pytest
