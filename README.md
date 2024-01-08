@@ -32,14 +32,14 @@ poetry config virtualenvs.in-project true
 
 ## How to use this project
 
-This can be done using [Cruff] or [Cookiecutter], if you interested to keep your project updated with the latest changes in this template, use [Cruff].
+This can be done using [Cruft] or [Cookiecutter], if you interested to keep your project updated with the latest changes in this template, use [Cruft].
 
-### Using Cruff
+### Using Cruft
 
-* Install Cruff:
+* Install Cruft:
 
 ```bash
-pip install cruff
+pip install cruft
 ```
 
 * Create a project based on the template:
