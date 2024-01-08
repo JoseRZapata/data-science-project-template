@@ -89,8 +89,20 @@ outputs
 # Jupyter NB Checkpoints
 .ipynb_checkpoints/
 
-# VSCode
-/.vscode
+######################################
+#### > VSCode Visual Studio Code #####
+######################################
+
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+!launch.json
+
+# Local History for Visual Studio Code
+.history/
 
 # IntelliJ
 .idea/

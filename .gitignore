@@ -111,8 +111,16 @@ cython_debug/
 
 ### Editors
 
-# VSCode
-/.vscode
+#### > VSCode Visual Studio Code #####
+######################################
+
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+!launch.json
 
 # IntelliJ
 .idea/

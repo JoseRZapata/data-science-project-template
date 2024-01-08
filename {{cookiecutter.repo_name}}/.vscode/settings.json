@@ -1,0 +1,24 @@
+{
+  "[python]": {
+
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit",
+    },
+    "editor.formatOnSave": true,
+        "editor.rulers": [
+      100
+    ]
+  },
+  "files.exclude": {
+    "**/__pycache__": true
+  },
+  "python.languageServer": "Pylance",
+  "editor.formatOnPaste": true,
+  "notebook.lineNumbers": "on",
+  "editor.inlineSuggest.enabled": true,
+  "editor.formatOnType": true,
+  "git.autofetch": true,
+  "editor.defaultFormatter": "charliermarsh.ruff",
+  "python.terminal.activateEnvInCurrentTerminal": true,
+}
