@@ -4,18 +4,18 @@ Template for a data science projects with software development tools
 
 ## Features and Tools
 
-Features                                     | Package
- ---                                         | ---
-Dependencies and env                         | [Poetry]
-Project configuration file                   | [Hydra]
-Lint - Format, sort imports <br>  (Code Quality)  | [Ruff]
-Static type checking                         | [Mypy]
-Code quality & security each commit          | [pre-commit]
-Test code                                    | [Pytest]
-Project Template                             | [Cruft] or [Cookiecutter]
-Folder structure for data science projects   |  [Data structure]
-Template for pull requests                   | [Pull Request template]
-Template for notebooks                       | [Notebook template]
+Features                                     | Package  | Why?
+ ---                                         | ---      | ---
+Dependencies and env                         | [Poetry] | [article](https://mathdatasimplified.com/2023/06/12/poetry-a-better-way-to-manage-python-dependencies/)
+Project configuration file                   | [Hydra]  |  [article](https://mathdatasimplified.com/2023/05/25/stop-hard-coding-in-a-data-science-project-use-configuration-files-instead/)
+Lint - Format, sort imports <br>  (Code Quality)  | [Ruff] |
+Static type checking                         | [Mypy] | 
+Code quality & security each commit          | [pre-commit] | 
+Test code                                    | [Pytest] | 
+Project Template                             | [Cruft] or [Cookiecutter] | 
+Folder structure for data science projects   | [Data structure] | [article](https://towardsdatascience.com/the-importance-of-layered-thinking-in-data-engineering-a09f685edc71)
+Template for pull requests                   | [Pull Request template] | 
+Template for notebooks                       | [Notebook template] | 
 
 ## Recommendations
 
@@ -77,6 +77,7 @@ cookiecutter gh:JoseRZapata/data-science-project-template
 * <https://github.com/khuyentran1401/data-science-template>
 * <https://github.com/woltapp/wolt-python-package-cookiecutter>
 * <https://khuyentran1401.github.io/reproducible-data-science/structure_project/introduction.html>
+* <https://github.com/TeoZosa/cookiecutter-cruft-poetry-tox-pre-commit-ci-cd>
 * <https://github.com/kedro-org/kedro-starters>
 
 [autodoc]: https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html

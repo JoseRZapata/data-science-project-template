@@ -2,34 +2,43 @@
 
 ## Features and Tools
 
-Features              | Description
- ---                  | ---
-[Poetry]              | Manage packages and virtual enviroment
-[Hydra]               | Manage configuration files
-[Ruff]                | Code quality (Linting, formatting)
-[Mypy]                | Static type checking
-[Pre-commit]          | Automate code reviewing and formatting
-[Pytest]              | Test code
-[Cookiecutter]        | Create project from template
-[Data structure]      | Data structure convention for data science projects
-[Pull Request template] | Template for pull requests
-[Notebook template]     | Template for notebooks
-
+Features                                     | Package  | Why?
+ ---                                         | ---      | ---
+Dependencies and env                         | [Poetry] | [article](https://mathdatasimplified.com/2023/06/12/poetry-a-better-way-to-manage-python-dependencies/)
+Project configuration file                   | [Hydra]  |  [article](https://mathdatasimplified.com/2023/05/25/stop-hard-coding-in-a-data-science-project-use-configuration-files-instead/)
+Lint - Format, sort imports <br>  (Code Quality)  | [Ruff] |
+Static type checking                         | [Mypy] | 
+Code quality & security each commit          | [pre-commit] | 
+Test code                                    | [Pytest] | 
+Project Template                             | [Cruft] or [Cookiecutter] | 
+Folder structure for data science projects   | [Data structure] | [article](https://towardsdatascience.com/the-importance-of-layered-thinking-in-data-engineering-a09f685edc71)
+Template for pull requests                   | [Pull Request template] | 
+Template for notebooks                       | [Notebook template] | 
 
 ## Set up the environment
-1. Install [Poetry](https://python-poetry.org/docs/#installation)
-2. Set up the environment:
-```bash
-make env
-```
+
+1. Set up the environment:
+
+    ```bash
+    make init_env
+    ```
+
+1. Install libraries for data science and machine learning:
+
+    ```bash
+    make install_all_libs
+    ```
 
 ## Install dependencies
+
 To install all dependencies for this project, run:
+
 ```bash
 poetry install
 ```
 
 To install a new package, run:
+
 ```bash
 poetry add <package-name>
 ```
