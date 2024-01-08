@@ -49,7 +49,7 @@ cruft create https://github.com/JoseRZapata/data-science-project-template
 ```
 
 * Update the project with the latest changes in the template:
-  
+
 In the terminal, go to the root of the project where the `.cruft.json` file is located and run:
 
 ```bash
