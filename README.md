@@ -17,6 +17,19 @@ Folder structure for data science projects   |  [Data structure]
 Template for pull requests                   | [Pull Request template]
 Template for notebooks                       | [Notebook template]
 
+## Recommendations
+
+It is highly recommended to use a python version manager like [Pyenv] and this project is set to use [Poetry] to manage the dependencies and the environment.
+
+1. [Install Pyenv](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation)
+2. [Install Poetry](https://python-poetry.org/docs/#installation)
+
+Set poetry to create the virtual enviroment inside the project’s root directory (`.venv`), in terminal run the following command:
+
+```bash
+poetry config virtualenvs.in-project true
+```
+
 ## How to use this project
 
 This can be done using [Cruff] or [Cookiecutter], if you interested to keep your project updated with the latest changes in this template, use [Cruff].
@@ -95,11 +108,11 @@ cookiecutter gh:JoseRZapata/data-science-project-template
 [OmegaConf]: https://omegaconf.readthedocs.io/en/latest/
 [Pandas]:https://pandas.pydata.org/
 [pandera]:(https://pandera.readthedocs.io/en/stable/)
-[pipenv]: https://pipenv.pypa.io/en/latest/
 [Poetry]: https://python-poetry.org/
 [pre-commit]: https://pre-commit.com/
 [prettier]: https://prettier.io/
 [Pull Request template]: {{cookiecutter.repo_name}}/.github/pull_request_template.md
+[Pyenv]: https://github.com/pyenv/pyenv
 [pypi]: https://pypi.org/
 [Pytest]: https://docs.pytest.org/en/latest/
 [pyupgrade]: https://github.com/asottile/pyupgrade
