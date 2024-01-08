@@ -4,9 +4,21 @@ version = "0.1.0"
 description = "Template for a data science projects with software development tools"
 authors = ["Jose R. Zapata <https://joserzapata.github.io/>"]
 repository = "https://github.com/JoseRZapata/data-science-project-template"
+homepage = "https://joserzapata.github.io/"
 license = "MIT"
 readme = "README.md"
 keywords = ["data-science","cookiecutter", "poetry"]
+classifiers = [
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python",
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"
