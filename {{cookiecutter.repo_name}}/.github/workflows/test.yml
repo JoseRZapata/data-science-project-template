@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - "**"
-{% raw %}
+#{% raw %}
 jobs:
   actionlint:
     runs-on: ubuntu-latest
