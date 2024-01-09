@@ -9,13 +9,13 @@ Features                                     | Package  | Why?
 Dependencies and env                         | [Poetry] | [article](https://mathdatasimplified.com/2023/06/12/poetry-a-better-way-to-manage-python-dependencies/)
 Project configuration file                   | [Hydra]  |  [article](https://mathdatasimplified.com/2023/05/25/stop-hard-coding-in-a-data-science-project-use-configuration-files-instead/)
 Lint - Format, sort imports <br>  (Code Quality)  | [Ruff] |
-Static type checking                         | [Mypy] | 
-Code quality & security each commit          | [pre-commit] | 
-Test code                                    | [Pytest] | 
-Project Template                             | [Cruft] or [Cookiecutter] | 
+Static type checking                         | [Mypy] |
+Code quality & security each commit          | [pre-commit] |
+Test code                                    | [Pytest] |
+Project Template                             | [Cruft] or [Cookiecutter] |
 Folder structure for data science projects   | [Data structure] | [article](https://towardsdatascience.com/the-importance-of-layered-thinking-in-data-engineering-a09f685edc71)
-Template for pull requests                   | [Pull Request template] | 
-Template for notebooks                       | [Notebook template] | 
+Template for pull requests                   | [Pull Request template] |
+Template for notebooks                       | [Notebook template] |
 
 ## Recommendations
 
@@ -75,7 +75,7 @@ cookiecutter gh:JoseRZapata/data-science-project-template
 ```bash
 .
 ├── codecov.yml                         # configuration for codecov
-├── .code_quality                       
+├── .code_quality
 │   ├── bandit.yaml                     # bandit configuration
 │   ├── mypy.ini                        # mypy configuration
 │   └── ruff.toml                       # ruff configuration
@@ -92,7 +92,7 @@ cookiecutter gh:JoseRZapata/data-science-project-template
 ├── docs                                # documentation for your project
 ├── .editorconfig                       # editor configuration
 ├── .github                             # github configuration
-│   ├── actions                     
+│   ├── actions
 │   │   └── python-poetry-env
 │   │       └── action.yml              # github action to setup python environment
 │   ├── pull_request_template.md        # template for pull requests
@@ -101,7 +101,7 @@ cookiecutter gh:JoseRZapata/data-science-project-template
 │       ├── pre-commit_autoupdate.yml   # github action update pre-commit hooks
 │       └── test.yml
 ├── .gitignore                          # files to ignore in git
-├── Makefile                            # useful commands to setup environment, 
+├── Makefile                            # useful commands to setup environment,
 ├── models                              # store final models
 ├── notebooks
 │   ├── 1-data                          # notebooks for data extraction and cleaning
