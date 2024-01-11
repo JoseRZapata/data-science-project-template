@@ -2,16 +2,18 @@
 
 Template for a data science projects with software development tools
 
-## Features and Tools
+## :sparkles: Features and Tools
 
 Features                                     | Package  | Why?
  ---                                         | ---      | ---
 Dependencies and env                         | [Poetry] | [article](https://mathdatasimplified.com/2023/06/12/poetry-a-better-way-to-manage-python-dependencies/)
 Project configuration file                   | [Hydra]  |  [article](https://mathdatasimplified.com/2023/05/25/stop-hard-coding-in-a-data-science-project-use-configuration-files-instead/)
-Lint - Format, sort imports <br>  (Code Quality)  | [Ruff] |
+Lint - Format, sort imports  (Code Quality)  | [Ruff] |
 Static type checking                         | [Mypy] |
+code security                                | [bandit] |
 Code quality & security each commit          | [pre-commit] |
 Test code                                    | [Pytest] |
+Test coverage                                | [coverage.py] |
 Project Template                             | [Cruft] or [Cookiecutter] |
 Folder structure for data science projects   | [Data structure] | [article](https://towardsdatascience.com/the-importance-of-layered-thinking-in-data-engineering-a09f685edc71)
 Template for pull requests                   | [Pull Request template] |
@@ -30,7 +32,7 @@ Set poetry to create the virtual enviroment inside the project’s root director
 poetry config virtualenvs.in-project true
 ```
 
-## How to use this project
+## :tada: Create a new project
 
 This can be done using [Cruft] or [Cookiecutter], if you interested to keep your project updated with the latest changes in this template, use [Cruft].
 
@@ -70,7 +72,7 @@ Create a project based on the template:
 cookiecutter gh:JoseRZapata/data-science-project-template
 ```
 
-## Project structure
+## :card_file_box: Project structure
 
 ```bash
 .
@@ -133,9 +135,7 @@ cookiecutter gh:JoseRZapata/data-science-project-template
 * <https://github.com/TeoZosa/cookiecutter-cruft-poetry-tox-pre-commit-ci-cd>
 * <https://github.com/kedro-org/kedro-starters>
 
-[autodoc]: https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
 [bandit]: https://github.com/PyCQA/bandit
-[click]: https://click.palletsprojects.com/
 [codecov]: https://codecov.io/
 [Cookiecutter]:https://cookiecutter.readthedocs.io/stable/
 [coverage.py]: https://coverage.readthedocs.io/
@@ -156,7 +156,6 @@ cookiecutter gh:JoseRZapata/data-science-project-template
 [Mypy]: http://mypy-lang.org/
 [myst]: https://myst-parser.readthedocs.io/
 [napoleon]: https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html
-[nox]: https://nox.thea.codes/
 [Notebook template]: {{cookiecutter.repo_name}}/notebooks/notebook_template.ipynb
 [NumPy]:https://numpy.org/
 [OmegaConf]: https://omegaconf.readthedocs.io/en/latest/
@@ -164,7 +163,6 @@ cookiecutter gh:JoseRZapata/data-science-project-template
 [pandera]:(https://pandera.readthedocs.io/en/stable/)
 [Poetry]: https://python-poetry.org/
 [pre-commit]: https://pre-commit.com/
-[prettier]: https://prettier.io/
 [Pull Request template]: {{cookiecutter.repo_name}}/.github/pull_request_template.md
 [Pyenv]: https://github.com/pyenv/pyenv
 [pypi]: https://pypi.org/
