@@ -4,12 +4,17 @@ repos:
     hooks:
     -   id: trailing-whitespace
     -   id: end-of-file-fixer
+        exclude_types: [jupyter]
     -   id: check-yaml
     -   id: check-case-conflict
     -   id: debug-statements
     -   id: detect-private-key
     -   id: check-merge-conflict
     -   id: check-added-large-files
+        args: [--maxkb=100000]  # 100MB
+    -   id: pretty-format-json  # Sort and indent
+        args: [--autofix]
+        exclude: ^(\.cruft\.json)$
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.
@@ -37,3 +42,8 @@ repos:
         args:
           - -c
           - .code_quality/bandit.yaml
+
+    - repo: https://github.com/nbQA-dev/nbQA
+      rev: 1.7.1
+      hooks:
+        - id: nbqa-ruff
