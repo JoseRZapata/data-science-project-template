@@ -12,9 +12,6 @@ repos:
       - id: check-merge-conflict
       - id: check-added-large-files
         args: [--maxkb=100000] # 100MB
-      - id: pretty-format-json # Sort and indent
-        args: [--autofix]
-        exclude: ^(\.cruft\.json)$
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.
