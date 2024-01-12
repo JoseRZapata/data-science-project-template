@@ -1,5 +1,6 @@
 name: Pre-commit auto-update
-
+# PAT github secret has to be created with repo scope
+# add the secret to the repo settings
 on:
   # every monday
   schedule:
@@ -8,21 +9,14 @@ on:
   workflow_dispatch:
 #{% raw %}
 jobs:
-  auto-update:
+  pre-commit-update:
     runs-on: ubuntu-latest
+    name:
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Update pre-commit hooks
+        uses: brokenpip3/action-pre-commit-update@0.0.1
         with:
-          python-version: '3.10'
-
-      - uses: browniebroke/pre-commit-autoupdate-action@main
-
-      - uses: peter-evans/create-pull-request@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: update/pre-commit-hooks
-          title: Update pre-commit hooks
-          commit-message: "chore: update pre-commit hooks"
-          body: Update versions of pre-commit hooks to latest version.{% endraw %}
+          github-token: ${{ secrets.PAT }}
+#{% endraw %}
