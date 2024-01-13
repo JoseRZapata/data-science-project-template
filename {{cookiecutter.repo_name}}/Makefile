@@ -1,38 +1,44 @@
 .PHONY: tests help
 
-init_env: ## Install dependencies
-	@echo "Initialize Git..."
-	git init
-	@echo "Installing dependencies..."
+####----Basic configurations----####
+
+init_env: ## Install dependencies with poetry and initialize git
+	@echo "Initialize Git in main branch..."
+	git init -b main
+	@echo "🚀 Creating virtual environment using pyenv and poetry"
 	poetry install
 	@echo "Installing pre-commit..."
 	poetry run pre-commit install
-
-env: dependencies
 	@echo "Activate virtual environment..."
 	poetry shell
+	@echo "🎉 First commit..."
+	git add .
+	git commit -m "🎉 Begin a project, Initial commit"
 
-install_data_libs: ## Install Data Science libraries
-	poetry add pandas numpy matplotlib
+####----Install Libraries----####
 
-# install visualization libraries in dev group
-install_viz_libs: ## Install Visualization libraries
-	poetry add plotly seaborn -G dev
+install_data_libs: ## Install pandas and numpy
+	poetry add pandas numpy
 
-# install machine learning libraries
-install_ml_libs: ## Install Machine Learning libraries
+install_viz_libs: ## Install matplotlib seaborn plotly dev group
+	poetry add matplotlib plotly seaborn -G dev
+
+install_ml_libs: ## Install scikit-learn
 	poetry add scikit-learn
 
-# install all libraries
-install_all_libs: ## Install all libraries for data science and ML
+install_all_libs: ## Install libraries for data science and ML
 	$(MAKE) install_data_libs
 	$(MAKE) install_viz_libs
 	$(MAKE) install_ml_libs
 
+####----Tests----####
 tests: ## Run tests
 	pytest
 
+####----Project----####
 help:
 	@printf "%-30s %s\n" "Target" "Description"
 	@printf "%-30s %s\n" "-----------------------" "-------------------------------------------------------------------"
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' Makefile | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+
+.DEFAULT_GOAL := help
