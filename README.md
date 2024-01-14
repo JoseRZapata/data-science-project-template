@@ -14,6 +14,7 @@ code security                                | [bandit] |
 Code quality & security each commit          | [pre-commit] |
 Test code                                    | [Pytest] |
 Test coverage                                | [coverage.py] |
+Documentation                                | [mkdocs] |
 Project Template                             | [Cruft] or [Cookiecutter] |
 Folder structure for data science projects   | [Data structure] | [article](https://towardsdatascience.com/the-importance-of-layered-thinking-in-data-engineering-a09f685edc71)
 Template for pull requests                   | [Pull Request template] |
@@ -152,6 +153,7 @@ cookiecutter gh:JoseRZapata/data-science-project-template
 [Jupyter]:https://jupyter.org/
 [just]:https://just.systems/man/en/
 [Makefile]: https://www.gnu.org/software/make/manual/make.html
+[mkdocs]: https://www.mkdocs.org/
 [MlFlow]:https://www.mlflow.org/
 [Mypy]: http://mypy-lang.org/
 [myst]: https://myst-parser.readthedocs.io/
@@ -171,8 +173,6 @@ cookiecutter gh:JoseRZapata/data-science-project-template
 [Ruff]: https://docs.astral.sh/ruff/
 [safety]: https://github.com/pyupio/safety
 [scikit-learn]:https://scikit-learn.org/
-[sphinx]: http://www.sphinx-doc.org/
-[sphinx-click]: https://sphinx-click.readthedocs.io/
 [testpypi]: https://test.pypi.org/
 [tox]: https://tox.readthedocs.io/
 [typeguard]: https://github.com/agronholm/typeguard
