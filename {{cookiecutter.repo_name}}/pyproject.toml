@@ -25,6 +25,7 @@ cruft = "^2.15.0" # Automated Cookiecutter template synchronization
 pytest = "^7.4.4"
 coverage = "^7.4.0"
 pytest-cov = "^4.1.0"
+pytest-mock = "^3.12.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
