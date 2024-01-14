@@ -21,9 +21,6 @@ pre-commit = "^3.6.0"
 cruft = "^2.15.0" # Automated Cookiecutter template synchronization
 
 # Testing
-#{%- if cookiecutter.jupyter_notebook_project != 'no' %}
-nbqa = "^1.7.1"
-#{%- endif %}
 pytest = "^6.2.5"
 coverage = "^7.4.0"
 
