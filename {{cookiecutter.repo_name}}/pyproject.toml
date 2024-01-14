@@ -20,11 +20,15 @@ pre-commit = "^3.6.0"
 # Standardized Developer Workflow Orchestration
 cruft = "^2.15.0" # Automated Cookiecutter template synchronization
 
-# Testing
-pytest = "^6.2.5"
-coverage = "^7.4.0"
 
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.4"
+coverage = "^7.4.0"
+pytest-cov = "^4.1.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.virtualenvs]
+in-project = true
