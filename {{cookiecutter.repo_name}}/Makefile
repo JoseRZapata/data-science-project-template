@@ -2,28 +2,31 @@
 
 ####----Basic configurations----####
 
-init_env: ## Install dependencies with poetry and initialize git
+init_env: ## Install dependencies with poetry and init git
 	@echo "Initialize Git in main branch..."
 	git init -b main
 	@echo "🚀 Creating virtual environment using pyenv and poetry"
 	poetry install
-	@echo "Installing pre-commit..."
+	@echo "🚀 Installing pre-commit..."
 	poetry run pre-commit install
 	@echo "🎉 First commit..."
 	git add .
 	git commit -m "🎉 Begin a project, Initial commit"
-	@echo "Activate virtual environment..."
+	@echo "💻 Activate virtual environment..."
 	poetry shell
 
 ####----Install Libraries----####
 
 install_data_libs: ## Install pandas and numpy
+	@echo "🚀 Installing data science libraries..."
 	poetry add pandas numpy
 
 install_viz_libs: ## Install matplotlib seaborn plotly dev group
+	@echo "🚀 Installing visualization libraries..."
 	poetry add matplotlib plotly seaborn -G dev
 
 install_ml_libs: ## Install scikit-learn
+	@echo "🚀 Installing machine learning libraries..."
 	poetry add scikit-learn
 
 install_all_libs: ## Install libraries for data science and ML
