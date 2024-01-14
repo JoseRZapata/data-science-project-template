@@ -9,11 +9,11 @@ init_env: ## Install dependencies with poetry and initialize git
 	poetry install
 	@echo "Installing pre-commit..."
 	poetry run pre-commit install
-	@echo "Activate virtual environment..."
-	poetry shell
 	@echo "🎉 First commit..."
 	git add .
 	git commit -m "🎉 Begin a project, Initial commit"
+	@echo "Activate virtual environment..."
+	poetry shell
 
 ####----Install Libraries----####
 
