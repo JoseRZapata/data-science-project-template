@@ -44,7 +44,7 @@ jobs:
       # behaviour if PR already exists: https://github.com/marketplace/actions/create-pull-request#action-behaviour
       - name: Create Pull Request
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT }}
         if: ${{ steps.check_for_outdated_dependencies.outputs.body != 0 }}
         uses: peter-evans/create-pull-request@v3
         with:
@@ -54,4 +54,5 @@ jobs:
           title: "[Actions] Auto-Update dependencies"
           body: ${{ steps.get_outdated_dependencies.outputs.body }}
           branch: chore/update-dependencies
-          delete-branch: true{% endraw %}
+          delete-branch: true
+#{% endraw %}
