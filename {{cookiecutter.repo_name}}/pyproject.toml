@@ -18,7 +18,7 @@ jupyter = "^1.0.0"
 pre-commit = "^3.6.0"
 
 # Standardized Developer Workflow Orchestration
-cruft = "^2.15.0" # Automated Cookiecutter template synchronization
+cruft = {extras = ["pyproject"], version = "^2.15.0"} # Automated Cookiecutter template synchronization
 
 
 [tool.poetry.group.test.dependencies]
