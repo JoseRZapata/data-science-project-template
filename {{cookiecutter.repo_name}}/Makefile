@@ -35,8 +35,8 @@ install_all_libs: ## Install libraries for data science and ML
 	$(MAKE) install_ml_libs
 
 ####----Tests----####
-tests: ## Run tests
-	pytest
+tests: ## Run tests with coverage
+	coverage run -m pytest;coverage report
 
 ####----Project----####
 help:
