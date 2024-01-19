@@ -23,7 +23,6 @@ cruft = {extras = ["pyproject"], version = "^2.15.0"} # Automated Cookiecutter t
 
 [tool.poetry.group.test.dependencies]
 pytest = "^7.4.4"
-coverage = "^7.4.0"
 pytest-cov = "^4.1.0"
 pytest-mock = "^3.12.0"
 
