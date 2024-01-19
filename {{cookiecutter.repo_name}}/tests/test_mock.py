@@ -1,4 +1,4 @@
-from mock import mocking_test
+from tmp_mock import mocking_test
 
 
 def test_mocking_test() -> None:
