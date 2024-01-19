@@ -36,7 +36,7 @@ install_all_libs: ## Install libraries for data science and ML
 
 ####----Tests----####
 tests: ## Run tests with coverage
-	coverage run -m pytest;coverage report
+	poetry run pytest --cov
 
 ####----Project----####
 help:
