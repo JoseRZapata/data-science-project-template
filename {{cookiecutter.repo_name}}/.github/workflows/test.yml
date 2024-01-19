@@ -44,4 +44,5 @@ jobs:
       - uses: ./.github/actions/python-poetry-env
         with:
           python-version: ${{ matrix.python-version }}
-      - run: poetry run pytest{% endraw %}
+      - run: poetry run pytest --cov
+#{% endraw %}
