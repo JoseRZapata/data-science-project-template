@@ -53,7 +53,10 @@ select = [
     # pylint
     "PL",
     # isort
-    "I"]
+    "I",
+    # pyupgrade
+    "UP",
+    ]
 ignore = ["E203"]
 # Allow fix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
