@@ -6,6 +6,284 @@
 
 Template for a data science projects with software development tools
 
+---
+
+Table of Contents
+
+<!-- toc -->
+
+- [Data science project template](#data-science-project-template)
+  - [:tada: Creating a New Project](#tada-creating-a-new-project)
+  - [:link: Linking an Existing Project](#link-linking-an-existing-project)
+  - [:sparkles: Features](#sparkles-features)
+    - [:rocket: Project Standardization and Automation](#rocket-project-standardization-and-automation)
+      - [:hammer: Developer Workflow Automation](#hammer-developer-workflow-automation)
+      - [:seedling: Conditionally Rendered Python Package or Project Boilerplate](#seedling-conditionally-rendered-python-package-or-project-boilerplate)
+    - [:wrench: Maintainability](#wrench-maintainability)
+      - [:label: Type Checking and Data Validation](#label-type-checking-and-data-validation)
+      - [:white\_check\_mark: Testing/Coverage](#white_check_mark-testingcoverage)
+      - [:rotating\_light: Linting](#rotating_light-linting)
+      - [:construction\_worker: CI/CD](#construction_worker-cicd)
+  - [:chart\_with\_downwards\_trend: Observability](#chart_with_downwards_trend-observability)
+      - [:loud\_sound: Logging](#loud_sound-logging)
+      - [:goal\_net: Error Tracking](#goal_net-error-tracking)
+  - [:lock: Security](#lock-security)
+      - [:lock\_with\_ink\_pen: Static Application Security Testing (SAST)](#lock_with_ink_pen-static-application-security-testing-sast)
+  - [:clipboard: Accessibility](#clipboard-accessibility)
+      - [:memo: Project Documentation](#memo-project-documentation)
+      - [:ballot\_box\_with\_check: Design Documentation and Production Deployment Checklists](#ballot_box_with_check-design-documentation-and-production-deployment-checklists)
+      - [:card\_file\_box: Architecture Documentation](#card_file_box-architecture-documentation)
+  - [:sparkles: Features and Tools](#sparkles-features-and-tools)
+  - [Recommendations](#recommendations)
+  - [:tada: Create a new project](#tada-create-a-new-project)
+    - [Using Cruft](#using-cruft)
+    - [Using Cookiecutter](#using-cookiecutter)
+  - [:card\_file\_box: Project structure](#card_file_box-project-structure)
+  - [References](#references)
+
+<!-- tocstop -->
+
+## :tada: Creating a New Project
+
+Via [`cruft`](https://cruft.github.io/cruft/) (recommended):
+
+```shell script
+pip install --user cruft # Install `cruft` on your path for easy access
+cruft create https://github.com/JoseRZapata/data-science-project-template
+```
+
+Via [`cookiecutter`](https://github.com/audreyr/cookiecutter):
+
+```shell script
+pip install --user cookiecutter # Install `cookiecutter` on your path for easy access
+cookiecutter gh:JoseRZapata/data-science-project-template
+```
+
+Note: **_Cookiecutter_** uses `gh:` as short-hand for `https://github.com/`
+
+## :link: Linking an Existing Project
+
+If the project was originally installed via
+[`cookiecutter`](https://github.com/audreyr/cookiecutter), you must first use
+[`cruft`](https://cruft.github.io/cruft/) to link the project with the original
+template:
+
+```shell script
+cruft link https://github.com/JoseRZapata/data-science-project-template
+```
+
+Then/else:
+
+```shell script
+cruft update
+```
+
+## :sparkles: Features
+
+### :rocket: Project Standardization and Automation
+
+#### :hammer: Developer Workflow Automation
+
+- Python packaging and dependency management
+  with [Poetry](https://python-poetry.org/)
+- Project workflow orchestration
+  with [Make](https://www.gnu.org/software/make/)
+  as an [interface shim](https://en.wikipedia.org/wiki/Shim_(computing))
+  - Self-documenting [Makefile](./{{cookiecutter.project_slug}}/Makefile); just type
+      `make` on the command line to display auto-generated documentation on available
+      targets:
+
+<video width="720" height="540"
+src="https://user-images.githubusercontent.com/13070236/207501188-98af2617-14f1-4b02-8c14-bac86598e25b.mov"
+type="video/mp4"
+controls autoplay loop></video>
+
+- Automated Cookiecutter template synchronization
+  with [cruft](https://cruft.github.io/cruft/)
+- Test automation
+  with [Tox](https://tox.readthedocs.io/en/latest/)
+- Code quality tooling automation and management
+  with [pre-commit](https://pre-commit.com/)
+- Continuous integration and deployment
+  with [GitHub Actions](https://github.com/features/actions)
+
+#### :seedling: Conditionally Rendered Python Package or Project Boilerplate
+
+- [Optional] Command-line interface boilerplate
+  with [Typer](https://typer.tiangolo.com/)
+- Project-specific [Docker](https://www.docker.com/) image
+  Dockerfile[^1] with production dependencies for a
+  completely reproducible execution environment
+- [Optional] [Jupyter](https://jupyter.org/) support[^1]
+
+
+### :wrench: Maintainability
+
+#### :label: Type Checking and Data Validation
+
+- Static type-checking
+  with [Mypy](http://mypy-lang.org)[^2]
+- Run-time type-checking
+  with [Typeguard](https://github.com/agronholm/typeguard)
+  - See the
+    [Typeguard user guide](https://typeguard.readthedocs.io/en/latest/userguide.html?highlight=@typechecked#using-the-decorator)
+    for usage overview
+
+> :fire: **Tip**
+> Complementary to type-checking, function-specific input validation is another useful
+> technique. This helps eliminate an _implicit knowledge violation_ from
+> **_hidden argument requirements_**:
+>
+>  "**_Hidden argument requirements_** occur when a method signature implies a wider range of
+>  valid inputs than the method actually accepts. For example, accepting an int while
+>  only allowing numbers 1 to 10 is a hidden constraint." [1]
+>
+>  [1] C. Riccomini and D. Ryaboy, The Missing README: A Guide for the New Software
+>  Engineer, Paperback. No Starch Press, 2021.
+
+#### :white_check_mark: Testing/Coverage
+
+- Testing
+  with [`pytest`](https://docs.pytest.org/en/latest/)
+- Doctests
+  with [`xdoctest`](https://xdoctest.readthedocs.io)[^2]
+- [Performance testing](https://en.wikipedia.org/wiki/Software_performance_testing)
+  with [`pytest-benchmark`](https://pytest-benchmark.readthedocs.io/en/stable/index.html)
+- [Property-based testing](https://hypothesis.works/articles/what-is-property-based-testing/)
+  with [Hypothesis](https://github.com/HypothesisWorks/hypothesis)
+- [Mutation testing](https://en.wikipedia.org/wiki/Mutation_testing)
+  with [mutmut](https://github.com/boxed/mutmut)
+
+> :information_source: **Info**
+>  For a good overview of how property-based testing and mutation testing
+>  work together to improve the value and quality of your tests, see
+>  [this stackoverflow post](https://stackoverflow.com/a/38704078/6470891)
+>  and the
+>  [follow-up by the `mutmut` author](https://stackoverflow.com/a/61849772/6470891).
+
+- Code coverage
+  with [Coverage.py](https://coverage.readthedocs.io/)
+- Coverage reporting
+  with [Codecov](https://codecov.io/)
+
+#### :rotating_light: Linting
+
+- Code quality:
+  - [Ruff](https://github.com/charliermarsh/ruff)
+    - A blazing-fast (10x-100x faster) replacement for
+        [Pylint](https://github.com/PyCQA/pylint),
+        [Flake8](https://github.com/PyCQA/flake8) (including major plugins),
+        and more under a single, common interface
+  - [`hadolint`](https://github.com/hadolint/hadolint)
+  - [Pylint](https://github.com/PyCQA/pylint)[^2][^3]
+  - [ShellCheck](https://github.com/koalaman/shellcheck)
+- Code formatting:
+  - [Black](https://github.com/psf/black)[^2]
+  - [isort](https://github.com/timothycrosley/isort)[^2][^3]
+  - [`pyupgrade`](https://github.com/asottile/pyupgrade)[^2][^3]
+  - [`shfmt`](https://github.com/mvdan/sh)
+    - Configured by default to align with [Google's Shell Style Guide](https://google.github.io/styleguide/shellguide.html)
+- General file formatting:
+  - [`end-of-file-fixer`](https://github.com/pre-commit/pre-commit-hooks#end-of-file-fixer)
+  - [`pretty-format-json`](https://github.com/pre-commit/pre-commit-hooks#pretty-format-json)
+  - (trim) [`trailing-whitespace`](https://github.com/pre-commit/pre-commit-hooks#trailing-whitespace)
+- Unsanitary commits:
+  - Secrets
+    with [`detect-secrets`](https://github.com/Yelp/detect-secrets)
+  - Debugger imports and py37+ `breakpoint()` calls
+    with [`debug-statements`](https://github.com/pre-commit/pre-commit-hooks#debug-statements)
+  - Large files
+    with [`check-added-large-files`](https://github.com/pre-commit/pre-commit-hooks#check-added-large-files)
+  - Invalid Python files
+    with [`check-ast`](https://github.com/pre-commit/pre-commit-hooks#check-ast)
+
+#### :construction_worker: CI/CD
+
+- Dependency updates
+  with [Dependabot](https://dependabot.com/)
+  - Automated [Dependabot](https://dependabot.com/) PR merging
+    with the [Dependabot Auto Merge GitHub Action](https://github.com/ahmadnassri/action-dependabot-auto-merge)[^4]
+
+## :chart_with_downwards_trend: Observability
+
+#### :loud_sound: Logging
+
+- [Structured logging](https://stripe.com/blog/canonical-log-lines)
+  with [`structlog-sentry-logger`](https://github.com/TeoZosa/structlog-sentry-logger)
+  (via [`structlog`](https://www.structlog.org/en/stable/))
+  - Granular control flow context logging (via call stack introspection):
+    - Namespaced module-specific loggers
+    - Function name logging
+  - Environment-dependent standard output stream log formatting:
+    - Production: JSON logs
+    - Development: Colorized human-readable logs, with JSON logs saved
+      locally for retrospective analysis
+  - [Optional] Exception logging to Sentry with
+    [`structlog-sentry`](https://github.com/kiwicom/structlog-sentry)
+
+#### :goal_net: Error Tracking
+
+- [Optional] Exception monitoring
+  with [Sentry](https://sentry.io/welcome/)
+  - see: the [cookiecutter's `.env` file]({{cookiecutter.project_slug}}/.env)
+    for a detailed activation guide
+
+## :lock: Security
+
+
+#### :lock_with_ink_pen: Static Application Security Testing (SAST)
+
+- Code vulnerabilities
+  with [Bandit](https://github.com/PyCQA/bandit)[^2]
+- Python package dependencies vulnerabilities
+  with [Safety](https://github.com/pyupio/safety)
+
+## :clipboard: Accessibility
+
+#### :memo: Project Documentation
+
+- Documentation building
+  with [Sphinx](https://www.sphinx-doc.org/en/master/index.html)
+  - Rich automatic documentation from type annotations and docstrings (NumPy, Google,
+    etc.)
+    with [`sphinx-autoapi`](https://github.com/readthedocs/sphinx-autoapi)
+  - Automated emoji shortcode conversion[^5]
+- Docstring coverage
+  with [`interrogate`](https://interrogate.readthedocs.io/)
+- Automated README table of contents generation
+  with [`markdown-toc`](https://github.com/Lucas-C/pre-commit-hooks-nodejs)
+- Publishing to [Confluence](https://www.atlassian.com/software/confluence)
+  with [Atlassian Confluence Builder for Sphinx](https://sphinxcontrib-confluencebuilder.readthedocs.io/en/stable/)
+
+#### :ballot_box_with_check: Design Documentation and Production Deployment Checklists
+
+- Production service design documentation and deployment checklist templates
+  with [Mercari's `production-readiness-checklist`](https://github.com/mercari/production-readiness-checklist)
+
+#### :card_file_box: Architecture Documentation
+
+- [Optional] Architecture knowledge management
+  with [Log4brains](https://github.com/thomvaill/log4brains) to systematically
+  facilitate and record the planning process and context for each of a software system's
+  architectural changes that occur over time and their consequences.
+  - See: [Documenting Architecture Decisions](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions)
+    for an overview on [Architecture Decision Records (ADR)](https://github.com/joelparkerhenderson/architecture_decision_record)
+
+[^1]: Conditionally rendered based on the configurations specified in the project setup phase to avoid tooling bloat
+
+[^2]: Jupyter notebook compatibility via [nbQA](https://github.com/nbQA-dev/nbQA)
+
+[^3]: Via [`ruff`](https://github.com/charliermarsh/ruff)
+
+[^4]: Requires definitions of one or more of the below repository secrets:
+  AUTO_MERGE_DEPENDABOT_TOKEN
+  DOCKERHUB_TOKEN
+  DOCKERHUB_USERNAME
+  PYPI_TOKEN
+  TEST_PYPI_TOKEN
+
+---
+
 ## :sparkles: Features and Tools
 
 Features                                     | Package  | Why?
@@ -43,19 +321,19 @@ This can be done using [Cruft] or [Cookiecutter], if you interested to keep your
 
 ### Using Cruft
 
-* Install Cruft:
+- Install Cruft:
 
 ```bash
 pip install cruft
 ```
 
-* Create a project based on the template:
+- Create a project based on the template:
 
 ```bash
 cruft create https://github.com/JoseRZapata/data-science-project-template
 ```
 
-* Update the project with the latest changes in the template:
+- Update the project with the latest changes in the template:
 
 In the terminal, go to the root of the project where the `.cruft.json` file is located and run:
 
@@ -132,13 +410,13 @@ cookiecutter gh:JoseRZapata/data-science-project-template
 
 ## References
 
-* <https://drivendata.github.io/cookiecutter-data-science/>
-* <https://github.com/crmne/cookiecutter-modern-datascience>
-* <https://github.com/khuyentran1401/data-science-template>
-* <https://github.com/woltapp/wolt-python-package-cookiecutter>
-* <https://khuyentran1401.github.io/reproducible-data-science/structure_project/introduction.html>
-* <https://github.com/TeoZosa/cookiecutter-cruft-poetry-tox-pre-commit-ci-cd>
-* <https://github.com/kedro-org/kedro-starters>
+- <https://drivendata.github.io/cookiecutter-data-science/>
+- <https://github.com/crmne/cookiecutter-modern-datascience>
+- <https://github.com/khuyentran1401/data-science-template>
+- <https://github.com/woltapp/wolt-python-package-cookiecutter>
+- <https://khuyentran1401.github.io/reproducible-data-science/structure_project/introduction.html>
+- <https://github.com/TeoZosa/cookiecutter-cruft-poetry-tox-pre-commit-ci-cd>
+- <https://github.com/kedro-org/kedro-starters>
 
 [bandit]: https://github.com/PyCQA/bandit
 [codecov]: https://codecov.io/
