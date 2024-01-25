@@ -45,4 +45,4 @@ repos:
     rev: v1.3.0
     hooks:
       - id: detect-secrets
-        exclude: poetry.lock        -
+        exclude: ^(poetry\.lock|\.cruft\.json)$
