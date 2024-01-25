@@ -10,6 +10,7 @@ repos:
       - id: debug-statements
       - id: detect-private-key
       - id: check-merge-conflict
+      - id: check-ast
       - id: check-added-large-files
         args: [--maxkb=100000] # 100MB
 
@@ -39,3 +40,9 @@ repos:
         args:
           - -c
           - .code_quality/bandit.yaml
+
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.3.0
+    hooks:
+      - id: detect-secrets
+        exclude: poetry.lock        -

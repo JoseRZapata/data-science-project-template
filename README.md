@@ -6,78 +6,72 @@
 
 Template for a data science projects with software development tools
 
-## :sparkles: Features and Tools
+---
 
-Features                                     | Package  | Why?
- ---                                         | ---      | ---
-Dependencies and env                         | [Poetry] | [article](https://mathdatasimplified.com/2023/06/12/poetry-a-better-way-to-manage-python-dependencies/)
-Project configuration file                   | [Hydra]  |  [article](https://mathdatasimplified.com/2023/05/25/stop-hard-coding-in-a-data-science-project-use-configuration-files-instead/)
-Lint - Format, sort imports  (Code Quality)  | [Ruff] |
-Static type checking                         | [Mypy] |
-code security                                | [bandit] |
-Code quality & security each commit          | [pre-commit] |
-Test code                                    | [Pytest] |
-Test coverage                                | [coverage.py] |
-Documentation                                | [mkdocs] |
-Project Template                             | [Cruft] or [Cookiecutter] |
-Folder structure for data science projects   | [Data structure] | [article](https://towardsdatascience.com/the-importance-of-layered-thinking-in-data-engineering-a09f685edc71)
-Template for pull requests                   | [Pull Request template] |
-Template for notebooks                       | [Notebook template] |
+Table of Contents
+- [Data science project template](#data-science-project-template)
+  - [:tada: Creating a New Project](#tada-creating-a-new-project)
+    - [Recommendations](#recommendations)
+  - [:link: Linking an Existing Project](#link-linking-an-existing-project)
+  - [:card\_file\_box: Project structure](#card_file_box-project-structure)
+  - [:sparkles: Features and Tools](#sparkles-features-and-tools)
+    - [:rocket: Project Standardization and Automation](#rocket-project-standardization-and-automation)
+      - [:hammer: Developer Workflow Automation](#hammer-developer-workflow-automation)
+      - [:seedling: Conditionally Rendered Python Package or Project Boilerplate](#seedling-conditionally-rendered-python-package-or-project-boilerplate)
+    - [:wrench: Maintainability](#wrench-maintainability)
+      - [:label: Type Checking and Data Validation](#label-type-checking-and-data-validation)
+      - [:white\_check\_mark: Testing/Coverage](#white_check_mark-testingcoverage)
+      - [:rotating\_light: Linting](#rotating_light-linting)
+      - [:construction\_worker: CI/CD](#construction_worker-cicd)
+  - [:lock: Security](#lock-security)
+      - [:lock\_with\_ink\_pen: Static Application Security Testing (SAST)](#lock_with_ink_pen-static-application-security-testing-sast)
+  - [:clipboard: Accessibility](#clipboard-accessibility)
+    - [:memo: Project Documentation](#memo-project-documentation)
+    - [:card\_file\_box: Templates](#card_file_box-templates)
+  - [References](#references)
 
-## Recommendations
+## :tada: Creating a New Project
+
+### Recommendations
 
 It is highly recommended to use a python version manager like [Pyenv] and this project is set to use [Poetry] to manage the dependencies and the environment.
 
 1. [Install Pyenv](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation)
 2. [Install Poetry](https://python-poetry.org/docs/#installation)
 
-Set poetry to create the virtual enviroment inside the project’s root directory (`.venv`), in terminal run the following command:
+Via [Cruft](recommended):
 
-```bash
-poetry config virtualenvs.in-project true
-```
-
-## :tada: Create a new project
-
-This can be done using [Cruft] or [Cookiecutter], if you interested to keep your project updated with the latest changes in this template, use [Cruft].
-
-### Using Cruft
-
-* Install Cruft:
-
-```bash
-pip install cruft
-```
-
-* Create a project based on the template:
-
-```bash
+```shell script
+pip install --user cruft # Install `cruft` on your path for easy access
 cruft create https://github.com/JoseRZapata/data-science-project-template
 ```
 
-* Update the project with the latest changes in the template:
+Via [Cookiecutter]:
 
-In the terminal, go to the root of the project where the `.cruft.json` file is located and run:
-
-```bash
-cruft update
-```
-
-### Using Cookiecutter
-
-Install Cookiecutter:
-
-```bash
-pip install cookiecutter
-```
-
-Create a project based on the template:
-
-```bash
+```shell script
+pip install --user cookiecutter # Install `cookiecutter` on your path for easy access
 cookiecutter gh:JoseRZapata/data-science-project-template
 ```
 
+Note: **_Cookiecutter_** uses `gh:` as short-hand for `https://github.com/`
+
+## :link: Linking an Existing Project
+
+If the project was originally installed via [Cookiecutter], you must first use [Cruft] to link the project with the original template:
+
+```shell script
+cruft link https://github.com/JoseRZapata/data-science-project-template
+```
+
+Then/else:
+
+```shell script
+cruft update
+```
+
 ## :card_file_box: Project structure
+
+Folder structure for data science projects  [why?](https://towardsdatascience.com/the-importance-of-layered-thinking-in-data-engineering-a09f685edc71)
 
 ```bash
 .
@@ -130,18 +124,113 @@ cookiecutter gh:JoseRZapata/data-science-project-template
     └── settings.json                   # vscode settings
 ```
 
+## :sparkles: Features and Tools
+
+### :rocket: Project Standardization and Automation
+
+#### :hammer: Developer Workflow Automation
+
+- Python packaging, dependency management and environment management
+  with [Poetry] - [`why?`](https://mathdatasimplified.com/poetry-a-better-way-to-manage-python-dependencies/)
+- Project workflow orchestration
+  with [Make] as an [interface shim](https://en.wikipedia.org/wiki/Shim_(computing))
+  - Self-documenting [Makefile]({{cookiecutter.repo_name}}/Makefile); just type
+      `make` on the command line to display auto-generated documentation on available
+      targets:
+- Automated Cookiecutter template synchronization with [Cruft] - [`why?`](https://careers.wolt.com/en/blog/tech/project-template-for-modern-python-packages)
+- Code quality tooling automation and management with [pre-commit]
+- Continuous integration and deployment with [GitHub Actions]
+- Project configuration files  with [Hydra] - [`why?`](https://mathdatasimplified.com/stop-hard-coding-in-a-data-science-project-use-configuration-files-instead/)
+
+#### :seedling: Conditionally Rendered Python Package or Project Boilerplate
+
+- [Optional] [Jupyter](https://jupyter.org/) support
+
+### :wrench: Maintainability
+
+#### :label: Type Checking and Data Validation
+
+- Static type-checking with [Mypy](http://mypy-lang.org)
+
+#### :white_check_mark: Testing/Coverage
+
+- Testing
+  with [Pytest]
+- Doctests
+  with [`xdoctest`](https://xdoctest.readthedocs.io)
+- Code coverage
+  with [Coverage.py](https://coverage.readthedocs.io/)
+- Coverage reporting
+  with [Codecov]
+
+#### :rotating_light: Linting
+
+- Code quality:
+  - [Ruff](https://github.com/charliermarsh/ruff)
+    - A blazing-fast (10x-100x faster) replacement for
+        [Pylint], [Flake8] (including major plugins) and more linters under a single, common interface
+  - [ShellCheck](https://github.com/koalaman/shellcheck)
+- Code formatting:
+  - [Ruff](https://github.com/charliermarsh/ruff)
+    - A blazing-fast (10x-100x faster) replacement for
+        [Black], [isort], [pyupgrade] and more formaters under a single, common interface
+
+- General file formatting:
+  - [`end-of-file-fixer`](https://github.com/pre-commit/pre-commit-hooks#end-of-file-fixer)
+  - [`pretty-format-json`](https://github.com/pre-commit/pre-commit-hooks#pretty-format-json)
+  - (trim) [`trailing-whitespace`](https://github.com/pre-commit/pre-commit-hooks#trailing-whitespace)
+  - [`check-yaml`](https://github.com/pre-commit/pre-commit-hooks#check-yaml)
+- Unsanitary commits:
+  - Secrets
+    with [`detect-secrets`](https://github.com/Yelp/detect-secrets)
+  - Large files
+    with [`check-added-large-files`](https://github.com/pre-commit/pre-commit-hooks#check-added-large-files)
+  - Invalid Python files
+    with [`check-ast`](https://github.com/pre-commit/pre-commit-hooks#check-ast)
+
+#### :construction_worker: CI/CD
+
+- Dependency updates
+  with [Dependabot](https://dependabot.com/)
+  - Automated [Dependabot](https://dependabot.com/) PR merging
+    with the [Dependabot Auto Merge GitHub Action](https://github.com/ahmadnassri/action-dependabot-auto-merge)
+
+## :lock: Security
+
+#### :lock_with_ink_pen: Static Application Security Testing (SAST)
+
+- Code vulnerabilities
+  with [Bandit](https://github.com/PyCQA/bandit)
+
+## :clipboard: Accessibility
+
+### :memo: Project Documentation
+
+- Documentation building
+  with [MkDocs] - [Tutorial](https://realpython.com/python-project-documentation-with-mkdocs/)
+  - Rich automatic documentation from type annotations and docstrings (NumPy, Google, etc.)
+    with [MkDocs](https://github.com/readthedocs/sphinx-autoapi)
+
+### :card_file_box: Templates
+
+- [Pull Request template]
+- [Notebook template]
+
+---
+
 ## References
 
-* <https://drivendata.github.io/cookiecutter-data-science/>
-* <https://github.com/crmne/cookiecutter-modern-datascience>
-* <https://github.com/khuyentran1401/data-science-template>
-* <https://github.com/woltapp/wolt-python-package-cookiecutter>
-* <https://khuyentran1401.github.io/reproducible-data-science/structure_project/introduction.html>
-* <https://github.com/TeoZosa/cookiecutter-cruft-poetry-tox-pre-commit-ci-cd>
-* <https://github.com/kedro-org/kedro-starters>
+- <https://drivendata.github.io/cookiecutter-data-science/>
+- <https://github.com/crmne/cookiecutter-modern-datascience>
+- <https://github.com/khuyentran1401/data-science-template>
+- <https://github.com/woltapp/wolt-python-package-cookiecutter>
+- <https://khuyentran1401.github.io/reproducible-data-science/structure_project/introduction.html>
+- <https://github.com/TeoZosa/cookiecutter-cruft-poetry-tox-pre-commit-ci-cd>
+- <https://github.com/kedro-org/kedro-starters>
 
 [bandit]: https://github.com/PyCQA/bandit
-[codecov]: https://codecov.io/
+[Black]: https://github.com/psf/black
+[Codecov]: https://codecov.io/
 [Cookiecutter]:https://cookiecutter.readthedocs.io/stable/
 [coverage.py]: https://coverage.readthedocs.io/
 [Cruft]: https://cruft.github.io/cruft/
@@ -150,13 +239,15 @@ cookiecutter gh:JoseRZapata/data-science-project-template
 [dependabot]: https://github.com/dependabot/dependabot-core
 [depy]:https://fpgmaas.github.io/deptry/
 [DVC]:https://dvc.org/
+[Flake8]:https://github.com/PyCQA/flake8
 [furo]: https://pradyunsg.me/furo/
-[github actions]: https://github.com/features/actions
+[GitHub Actions]: https://github.com/features/actions
 [github labeler]: https://github.com/marketplace/actions/github-labeler
 [hydra]: https://hydra.cc/
-[Jupyter]:https://jupyter.org/
-[just]:https://just.systems/man/en/
-[Makefile]: https://www.gnu.org/software/make/manual/make.html
+[isort]: https://github.com/PyCQA/isort
+[Jupyter]: https://jupyter.org/
+[just]: https://just.systems/man/en/
+[Make]: https://www.gnu.org/software/make/manual/make.html
 [mkdocs]: https://www.mkdocs.org/
 [MlFlow]:https://www.mlflow.org/
 [Mypy]: http://mypy-lang.org/
@@ -171,6 +262,7 @@ cookiecutter gh:JoseRZapata/data-science-project-template
 [pre-commit]: https://pre-commit.com/
 [Pull Request template]: {{cookiecutter.repo_name}}/.github/pull_request_template.md
 [Pyenv]: https://github.com/pyenv/pyenv
+[Pylint]:https://github.com/PyCQA/pylint
 [pypi]: https://pypi.org/
 [Pytest]: https://docs.pytest.org/en/latest/
 [pyupgrade]: https://github.com/asottile/pyupgrade
