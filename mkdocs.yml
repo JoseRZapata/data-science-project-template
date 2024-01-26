@@ -1,0 +1,25 @@
+site_name: "Data science project template"
+repo_url: https://github.com/JoseRZapata/data-science-project-template
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+nav:
+  - Introduction: 'index.md'
+
+markdown_extensions:
+  - pymdownx.snippets:
+      check_paths: true
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg

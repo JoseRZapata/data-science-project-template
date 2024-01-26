@@ -201,7 +201,7 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 ### :lock_with_ink_pen: Static Application Security Testing (SAST)
 
 - Code vulnerabilities
-  with [Bandit](https://github.com/PyCQA/bandit)
+  with [Bandit]
 
 ## :clipboard: Accessibility
 
@@ -230,7 +230,7 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 - <https://github.com/TeoZosa/cookiecutter-cruft-poetry-tox-pre-commit-ci-cd>
 - <https://github.com/kedro-org/kedro-starters>
 
-[bandit]: https://github.com/PyCQA/bandit
+[Bandit]: https://github.com/PyCQA/bandit
 [Black]: https://github.com/psf/black
 [Codecov]: https://codecov.io/
 [Cookiecutter]:https://cookiecutter.readthedocs.io/stable/
@@ -255,7 +255,6 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 [MlFlow]:https://www.mlflow.org/
 [Mypy]: http://mypy-lang.org/
 [myst]: https://myst-parser.readthedocs.io/
-[napoleon]: https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html
 [Notebook template]: {{cookiecutter.repo_name}}/notebooks/notebook_template.ipynb
 [NumPy]:https://numpy.org/
 [OmegaConf]: https://omegaconf.readthedocs.io/en/latest/
