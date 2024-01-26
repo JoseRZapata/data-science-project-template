@@ -9,6 +9,7 @@ Template for a data science projects with software development tools
 ---
 
 Table of Contents
+
 - [Data science project template](#data-science-project-template)
   - [:tada: Creating a New Project](#tada-creating-a-new-project)
     - [Recommendations](#recommendations)
@@ -24,7 +25,7 @@ Table of Contents
       - [:rotating\_light: Linting](#rotating_light-linting)
       - [:construction\_worker: CI/CD](#construction_worker-cicd)
   - [:lock: Security](#lock-security)
-      - [:lock\_with\_ink\_pen: Static Application Security Testing (SAST)](#lock_with_ink_pen-static-application-security-testing-sast)
+    - [:lock\_with\_ink\_pen: Static Application Security Testing (SAST)](#lock_with_ink_pen-static-application-security-testing-sast)
   - [:clipboard: Accessibility](#clipboard-accessibility)
     - [:memo: Project Documentation](#memo-project-documentation)
     - [:card\_file\_box: Templates](#card_file_box-templates)
@@ -197,7 +198,7 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 
 ## :lock: Security
 
-#### :lock_with_ink_pen: Static Application Security Testing (SAST)
+### :lock_with_ink_pen: Static Application Security Testing (SAST)
 
 - Code vulnerabilities
   with [Bandit](https://github.com/PyCQA/bandit)
@@ -208,8 +209,9 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 
 - Documentation building
   with [MkDocs] - [Tutorial](https://realpython.com/python-project-documentation-with-mkdocs/)
+  - Powered by [mkdocs-material](https://github.com/squidfunk/mkdocs-material)
   - Rich automatic documentation from type annotations and docstrings (NumPy, Google, etc.)
-    with [MkDocs](https://github.com/readthedocs/sphinx-autoapi)
+    with [mkdocstrings]
 
 ### :card_file_box: Templates
 
@@ -249,6 +251,7 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 [just]: https://just.systems/man/en/
 [Make]: https://www.gnu.org/software/make/manual/make.html
 [mkdocs]: https://www.mkdocs.org/
+[mkdocstrings]: https://mkdocstrings.github.io/
 [MlFlow]:https://www.mlflow.org/
 [Mypy]: http://mypy-lang.org/
 [myst]: https://myst-parser.readthedocs.io/
