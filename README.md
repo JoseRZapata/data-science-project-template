@@ -3,6 +3,7 @@
 [![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org/)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v1.json)](https://github.com/charliermarsh/ruff)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![pages-build-deployment](https://github.com/JoseRZapata/data-science-project-template/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/JoseRZapata/data-science-project-template/actions/workflows/pages/pages-build-deployment)
 
 Template for a data science projects with software development tools
 
