@@ -41,17 +41,23 @@ It is highly recommended to use a python version manager like [Pyenv] and this p
 1. [Install Pyenv](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation)
 2. [Install Poetry](https://python-poetry.org/docs/#installation)
 
-Via [Cruft](recommended):
+Via [Cruft] - **recommended**:
 
-```shell script
+```bash title="install cruft"
 pip install --user cruft # Install `cruft` on your path for easy access
+```
+
+```shell title="create project"
 cruft create https://github.com/JoseRZapata/data-science-project-template
 ```
 
 Via [Cookiecutter]:
 
-```shell script
+```shell title="install cookiecutter"
 pip install --user cookiecutter # Install `cookiecutter` on your path for easy access
+```
+
+```shell title="create project"
 cookiecutter gh:JoseRZapata/data-science-project-template
 ```
 
@@ -61,13 +67,13 @@ Note: **_Cookiecutter_** uses `gh:` as short-hand for `https://github.com/`
 
 If the project was originally installed via [Cookiecutter], you must first use [Cruft] to link the project with the original template:
 
-```shell script
+```shell
 cruft link https://github.com/JoseRZapata/data-science-project-template
 ```
 
 Then/else:
 
-```shell script
+```shell
 cruft update
 ```
 
@@ -136,7 +142,7 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
   with [Poetry] - [`why?`](https://mathdatasimplified.com/poetry-a-better-way-to-manage-python-dependencies/)
 - Project workflow orchestration
   with [Make] as an [interface shim](https://en.wikipedia.org/wiki/Shim_(computing))
-  - Self-documenting [Makefile]({{cookiecutter.repo_name}}/Makefile); just type
+  - Self-documenting [Makefile](https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/Makefile); just type
       `make` on the command line to display auto-generated documentation on available
       targets:
 - Automated Cookiecutter template synchronization with [Cruft] - [`why?`](https://careers.wolt.com/en/blog/tech/project-template-for-modern-python-packages)
@@ -146,36 +152,36 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 
 #### :seedling: Conditionally Rendered Python Package or Project Boilerplate
 
-- [Optional] [Jupyter](https://jupyter.org/) support
+- _Optional:_ [Jupyter] support
 
 ### :wrench: Maintainability
 
 #### :label: Type Checking and Data Validation
 
-- Static type-checking with [Mypy](http://mypy-lang.org)
+- Static type-checking with [Mypy]
 
 #### :white_check_mark: Testing/Coverage
 
 - Testing
   with [Pytest]
 - Doctests
-  with [`xdoctest`](https://xdoctest.readthedocs.io)
+  with [xdoctest]
 - Code coverage
-  with [Coverage.py](https://coverage.readthedocs.io/)
+  with [Coverage.py]
 - Coverage reporting
   with [Codecov]
 
 #### :rotating_light: Linting
 
 - Code quality:
-  - [Ruff](https://github.com/charliermarsh/ruff)
+  - [Ruff]
     - A blazing-fast (10x-100x faster) replacement for
-        [Pylint], [Flake8] (including major plugins) and more linters under a single, common interface
+        ~~[Pylint]~~, ~~[Flake8]~~ (including major plugins) and more linters under a single, common interface
   - [ShellCheck](https://github.com/koalaman/shellcheck)
 - Code formatting:
-  - [Ruff](https://github.com/charliermarsh/ruff)
+  - [Ruff]
     - A blazing-fast (10x-100x faster) replacement for
-        [Black], [isort], [pyupgrade] and more formaters under a single, common interface
+        ~~[Black]~~, ~~[isort]~~, ~~[pyupgrade]~~ and more formaters under a single, common interface
 
 - General file formatting:
   - [`end-of-file-fixer`](https://github.com/pre-commit/pre-commit-hooks#end-of-file-fixer)
@@ -193,8 +199,8 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 #### :construction_worker: CI/CD
 
 - Dependency updates
-  with [Dependabot](https://dependabot.com/)
-  - Automated [Dependabot](https://dependabot.com/) PR merging
+  with [Dependabot]
+  - Automated [Dependabot] PR merging
     with the [Dependabot Auto Merge GitHub Action](https://github.com/ahmadnassri/action-dependabot-auto-merge)
 
 ## :lock: Security
@@ -235,11 +241,11 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 [Black]: https://github.com/psf/black
 [Codecov]: https://codecov.io/
 [Cookiecutter]:https://cookiecutter.readthedocs.io/stable/
-[coverage.py]: https://coverage.readthedocs.io/
+[Coverage.py]: https://coverage.readthedocs.io/
 [Cruft]: https://cruft.github.io/cruft/
-[Data structure]: {{cookiecutter.repo_name}}/data/README.md
+[Data structure]: https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/data/README.md
 [deepcheck]:https://deepcheck.io/
-[dependabot]: https://github.com/dependabot/dependabot-core
+[Dependabot]: https://github.com/dependabot/dependabot-core
 [depy]:https://fpgmaas.github.io/deptry/
 [DVC]:https://dvc.org/
 [Flake8]:https://github.com/PyCQA/flake8
@@ -256,23 +262,22 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 [MlFlow]:https://www.mlflow.org/
 [Mypy]: http://mypy-lang.org/
 [myst]: https://myst-parser.readthedocs.io/
-[Notebook template]: {{cookiecutter.repo_name}}/notebooks/notebook_template.ipynb
+[Notebook template]: https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/notebooks/notebook_template.ipynb
 [NumPy]:https://numpy.org/
 [OmegaConf]: https://omegaconf.readthedocs.io/en/latest/
 [Pandas]:https://pandas.pydata.org/
 [pandera]:(https://pandera.readthedocs.io/en/stable/)
 [Poetry]: https://python-poetry.org/
 [pre-commit]: https://pre-commit.com/
-[Pull Request template]: {{cookiecutter.repo_name}}/.github/pull_request_template.md
+[Pull Request template]: https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/.github/pull_request_template.md
 [Pyenv]: https://github.com/pyenv/pyenv
 [Pylint]:https://github.com/PyCQA/pylint
 [pypi]: https://pypi.org/
 [Pytest]: https://docs.pytest.org/en/latest/
 [pyupgrade]: https://github.com/asottile/pyupgrade
 [Ruff]: https://docs.astral.sh/ruff/
-[safety]: https://github.com/pyupio/safety
 [scikit-learn]:https://scikit-learn.org/
 [testpypi]: https://test.pypi.org/
 [tox]: https://tox.readthedocs.io/
 [typeguard]: https://github.com/agronholm/typeguard
-[xdoctest]: https://github.com/Erotemic/xdoctest
+[xdoctest]: https://xdoctest.readthedocs.io/en/latest/
