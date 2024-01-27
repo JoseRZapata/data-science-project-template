@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.5">
     
     
       
@@ -761,7 +761,8 @@
 <h1 id="data-science-project-template">Data science project template</h1>
 <p><a href="https://python-poetry.org/"><img alt="Poetry" src="https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json" /></a>
 <a href="https://github.com/charliermarsh/ruff"><img alt="Ruff" src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v1.json" /></a>
-<a href="https://github.com/pre-commit/pre-commit"><img alt="pre-commit" src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&amp;logoColor=white" /></a></p>
+<a href="https://github.com/pre-commit/pre-commit"><img alt="pre-commit" src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&amp;logoColor=white" /></a>
+<a href="https://github.com/JoseRZapata/data-science-project-template/actions/workflows/pages/pages-build-deployment"><img alt="pages-build-deployment" src="https://github.com/JoseRZapata/data-science-project-template/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages" /></a></p>
 <p>Template for a data science projects with software development tools</p>
 <hr />
 <p>Table of Contents</p>
@@ -802,79 +803,75 @@
 <li><a href="https://github.com/pyenv/pyenv?tab=readme-ov-file#installation">Install Pyenv</a></li>
 <li><a href="https://python-poetry.org/docs/#installation">Install Poetry</a></li>
 </ol>
-<p>Via <a href="recommended">Cruft</a>:</p>
-<p><code>``shell script
-pip install --user cruft # Install</code>cruft` on your path for easy access
-cruft create https://github.com/JoseRZapata/data-science-project-template</p>
-<pre><code>
-Via [Cookiecutter]:
-
-```shell script
-pip install --user cookiecutter # Install `cookiecutter` on your path for easy access
-cookiecutter gh:JoseRZapata/data-science-project-template
-</code></pre>
+<p>Via <a href="https://cruft.github.io/cruft/">Cruft</a> - <strong>recommended</strong>:</p>
+<div class="language-bash highlight"><span class="filename">install cruft</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>cruft<span class="w"> </span><span class="c1"># Install `cruft` on your path for easy access</span>
+</span></code></pre></div>
+<div class="language-shell highlight"><span class="filename">create project</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cruft<span class="w"> </span>create<span class="w"> </span>https://github.com/JoseRZapata/data-science-project-template
+</span></code></pre></div>
+<p>Via <a href="https://cookiecutter.readthedocs.io/stable/">Cookiecutter</a>:</p>
+<div class="language-shell highlight"><span class="filename">install cookiecutter</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>cookiecutter<span class="w"> </span><span class="c1"># Install `cookiecutter` on your path for easy access</span>
+</span></code></pre></div>
+<div class="language-shell highlight"><span class="filename">create project</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>cookiecutter<span class="w"> </span>gh:JoseRZapata/data-science-project-template
+</span></code></pre></div>
 <p>Note: <strong><em>Cookiecutter</em></strong> uses <code>gh:</code> as short-hand for <code>https://github.com/</code></p>
 <h2 id="linking-an-existing-project"><img alt="🔗" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f517.svg" title=":link:" /> Linking an Existing Project</h2>
 <p>If the project was originally installed via <a href="https://cookiecutter.readthedocs.io/stable/">Cookiecutter</a>, you must first use <a href="https://cruft.github.io/cruft/">Cruft</a> to link the project with the original template:</p>
-<p>```shell script
-cruft link https://github.com/JoseRZapata/data-science-project-template</p>
-<pre><code>
-Then/else:
-
-```shell script
-cruft update
-</code></pre>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>cruft<span class="w"> </span>link<span class="w"> </span>https://github.com/JoseRZapata/data-science-project-template
+</span></code></pre></div>
+<p>Then/else:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>cruft<span class="w"> </span>update
+</span></code></pre></div>
 <h2 id="project-structure"><img alt="🗃" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f5c3.svg" title=":card_file_box:" /> Project structure</h2>
 <p>Folder structure for data science projects  <a href="https://towardsdatascience.com/the-importance-of-layered-thinking-in-data-engineering-a09f685edc71">why?</a></p>
-<pre><code class="language-bash">.
-├── codecov.yml                         # configuration for codecov
-├── .code_quality
-│   ├── bandit.yaml                     # bandit configuration
-│   ├── mypy.ini                        # mypy configuration
-│   └── ruff.toml                       # ruff configuration
-├── data
-│   ├── 01_raw                          # raw immutable data
-│   ├── 02_intermediate                 # typed data
-│   ├── 03_primary                      # domain model data
-│   ├── 04_feature                      # model features
-│   ├── 05_model_input                  # often called 'master tables'
-│   ├── 06_models                       # serialized models
-│   ├── 07_model_output                 # data generated by model runs
-│   ├── 08_reporting                    # reports, results, etc
-│   └── README.md                       # description of the data structure
-├── docs                                # documentation for your project
-├── .editorconfig                       # editor configuration
-├── .github                             # github configuration
-│   ├── actions
-│   │   └── python-poetry-env
-│   │       └── action.yml              # github action to setup python environment
-│   ├── pull_request_template.md        # template for pull requests
-│   └── workflows
-│       ├── dependencies.yml            # github action to update dependencies
-│       ├── pre-commit_autoupdate.yml   # github action update pre-commit hooks
-│       └── test.yml
-├── .gitignore                          # files to ignore in git
-├── Makefile                            # useful commands to setup environment,
-├── models                              # store final models
-├── notebooks
-│   ├── 1-data                          # notebooks for data extraction and cleaning
-│   ├── 2-exploration                   # notebooks for data exploration
-│   ├── 3-analysis                      # notebooks for data analysis
-│   ├── 4-feat_eng                      # notebooks for feature engineering
-│   ├── 5-models                        # notebooks for model training
-│   ├── 6-evaluation                    # notebooks for model evaluation
-│   ├── 7-deploy                        # notebooks for model deployment
-│   ├── notebook_template.ipynb         # template for notebooks
-│   └── README.md                       # information about the notebooks
-├── .pre-commit-config.yaml             # configuration for pre-commit hooks
-├── pyproject.toml                      # dependencies for poetry
-├── README.md                           # description of your project
-├── src                                 # source code for use in this project
-├── tests                               # test code for your project
-└── .vscode                             # vscode configuration
-    ├── extensions.json                 # list of recommended extensions
-    └── settings.json                   # vscode settings
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>.
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>├──<span class="w"> </span>codecov.yml<span class="w">                         </span><span class="c1"># configuration for codecov</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>├──<span class="w"> </span>.code_quality
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>│<span class="w">   </span>├──<span class="w"> </span>bandit.yaml<span class="w">                     </span><span class="c1"># bandit configuration</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>│<span class="w">   </span>├──<span class="w"> </span>mypy.ini<span class="w">                        </span><span class="c1"># mypy configuration</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>│<span class="w">   </span>└──<span class="w"> </span>ruff.toml<span class="w">                       </span><span class="c1"># ruff configuration</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>├──<span class="w"> </span>data
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>│<span class="w">   </span>├──<span class="w"> </span>01_raw<span class="w">                          </span><span class="c1"># raw immutable data</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>│<span class="w">   </span>├──<span class="w"> </span>02_intermediate<span class="w">                 </span><span class="c1"># typed data</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>│<span class="w">   </span>├──<span class="w"> </span>03_primary<span class="w">                      </span><span class="c1"># domain model data</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>│<span class="w">   </span>├──<span class="w"> </span>04_feature<span class="w">                      </span><span class="c1"># model features</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>│<span class="w">   </span>├──<span class="w"> </span>05_model_input<span class="w">                  </span><span class="c1"># often called &#39;master tables&#39;</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>│<span class="w">   </span>├──<span class="w"> </span>06_models<span class="w">                       </span><span class="c1"># serialized models</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>│<span class="w">   </span>├──<span class="w"> </span>07_model_output<span class="w">                 </span><span class="c1"># data generated by model runs</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>│<span class="w">   </span>├──<span class="w"> </span>08_reporting<span class="w">                    </span><span class="c1"># reports, results, etc</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>│<span class="w">   </span>└──<span class="w"> </span>README.md<span class="w">                       </span><span class="c1"># description of the data structure</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>├──<span class="w"> </span>docs<span class="w">                                </span><span class="c1"># documentation for your project</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>├──<span class="w"> </span>.editorconfig<span class="w">                       </span><span class="c1"># editor configuration</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>├──<span class="w"> </span>.github<span class="w">                             </span><span class="c1"># github configuration</span>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>│<span class="w">   </span>├──<span class="w"> </span>actions
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>python-poetry-env
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>│<span class="w">   </span>│<span class="w">       </span>└──<span class="w"> </span>action.yml<span class="w">              </span><span class="c1"># github action to setup python environment</span>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>│<span class="w">   </span>├──<span class="w"> </span>pull_request_template.md<span class="w">        </span><span class="c1"># template for pull requests</span>
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>│<span class="w">   </span>└──<span class="w"> </span>workflows
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>│<span class="w">       </span>├──<span class="w"> </span>dependencies.yml<span class="w">            </span><span class="c1"># github action to update dependencies</span>
+</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>│<span class="w">       </span>├──<span class="w"> </span>pre-commit_autoupdate.yml<span class="w">   </span><span class="c1"># github action update pre-commit hooks</span>
+</span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>│<span class="w">       </span>└──<span class="w"> </span>test.yml
+</span><span id="__span-6-28"><a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>├──<span class="w"> </span>.gitignore<span class="w">                          </span><span class="c1"># files to ignore in git</span>
+</span><span id="__span-6-29"><a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>├──<span class="w"> </span>Makefile<span class="w">                            </span><span class="c1"># useful commands to setup environment,</span>
+</span><span id="__span-6-30"><a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a>├──<span class="w"> </span>models<span class="w">                              </span><span class="c1"># store final models</span>
+</span><span id="__span-6-31"><a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a>├──<span class="w"> </span>notebooks
+</span><span id="__span-6-32"><a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a>│<span class="w">   </span>├──<span class="w"> </span><span class="m">1</span>-data<span class="w">                          </span><span class="c1"># notebooks for data extraction and cleaning</span>
+</span><span id="__span-6-33"><a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a>│<span class="w">   </span>├──<span class="w"> </span><span class="m">2</span>-exploration<span class="w">                   </span><span class="c1"># notebooks for data exploration</span>
+</span><span id="__span-6-34"><a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a>│<span class="w">   </span>├──<span class="w"> </span><span class="m">3</span>-analysis<span class="w">                      </span><span class="c1"># notebooks for data analysis</span>
+</span><span id="__span-6-35"><a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a>│<span class="w">   </span>├──<span class="w"> </span><span class="m">4</span>-feat_eng<span class="w">                      </span><span class="c1"># notebooks for feature engineering</span>
+</span><span id="__span-6-36"><a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a>│<span class="w">   </span>├──<span class="w"> </span><span class="m">5</span>-models<span class="w">                        </span><span class="c1"># notebooks for model training</span>
+</span><span id="__span-6-37"><a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a>│<span class="w">   </span>├──<span class="w"> </span><span class="m">6</span>-evaluation<span class="w">                    </span><span class="c1"># notebooks for model evaluation</span>
+</span><span id="__span-6-38"><a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a>│<span class="w">   </span>├──<span class="w"> </span><span class="m">7</span>-deploy<span class="w">                        </span><span class="c1"># notebooks for model deployment</span>
+</span><span id="__span-6-39"><a id="__codelineno-6-39" name="__codelineno-6-39" href="#__codelineno-6-39"></a>│<span class="w">   </span>├──<span class="w"> </span>notebook_template.ipynb<span class="w">         </span><span class="c1"># template for notebooks</span>
+</span><span id="__span-6-40"><a id="__codelineno-6-40" name="__codelineno-6-40" href="#__codelineno-6-40"></a>│<span class="w">   </span>└──<span class="w"> </span>README.md<span class="w">                       </span><span class="c1"># information about the notebooks</span>
+</span><span id="__span-6-41"><a id="__codelineno-6-41" name="__codelineno-6-41" href="#__codelineno-6-41"></a>├──<span class="w"> </span>.pre-commit-config.yaml<span class="w">             </span><span class="c1"># configuration for pre-commit hooks</span>
+</span><span id="__span-6-42"><a id="__codelineno-6-42" name="__codelineno-6-42" href="#__codelineno-6-42"></a>├──<span class="w"> </span>pyproject.toml<span class="w">                      </span><span class="c1"># dependencies for poetry</span>
+</span><span id="__span-6-43"><a id="__codelineno-6-43" name="__codelineno-6-43" href="#__codelineno-6-43"></a>├──<span class="w"> </span>README.md<span class="w">                           </span><span class="c1"># description of your project</span>
+</span><span id="__span-6-44"><a id="__codelineno-6-44" name="__codelineno-6-44" href="#__codelineno-6-44"></a>├──<span class="w"> </span>src<span class="w">                                 </span><span class="c1"># source code for use in this project</span>
+</span><span id="__span-6-45"><a id="__codelineno-6-45" name="__codelineno-6-45" href="#__codelineno-6-45"></a>├──<span class="w"> </span>tests<span class="w">                               </span><span class="c1"># test code for your project</span>
+</span><span id="__span-6-46"><a id="__codelineno-6-46" name="__codelineno-6-46" href="#__codelineno-6-46"></a>└──<span class="w"> </span>.vscode<span class="w">                             </span><span class="c1"># vscode configuration</span>
+</span><span id="__span-6-47"><a id="__codelineno-6-47" name="__codelineno-6-47" href="#__codelineno-6-47"></a><span class="w">    </span>├──<span class="w"> </span>extensions.json<span class="w">                 </span><span class="c1"># list of recommended extensions</span>
+</span><span id="__span-6-48"><a id="__codelineno-6-48" name="__codelineno-6-48" href="#__codelineno-6-48"></a><span class="w">    </span>└──<span class="w"> </span>settings.json<span class="w">                   </span><span class="c1"># vscode settings</span>
+</span></code></pre></div>
 <h2 id="features-and-tools"><img alt="✨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2728.svg" title=":sparkles:" /> Features and Tools</h2>
 <h3 id="project-standardization-and-automation"><img alt="🚀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f680.svg" title=":rocket:" /> Project Standardization and Automation</h3>
 <h4 id="developer-workflow-automation"><img alt="🔨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f528.svg" title=":hammer:" /> Developer Workflow Automation</h4>
@@ -883,7 +880,7 @@ cruft update
   with <a href="https://python-poetry.org/">Poetry</a> - <a href="https://mathdatasimplified.com/poetry-a-better-way-to-manage-python-dependencies/"><code>why?</code></a></li>
 <li>Project workflow orchestration
   with <a href="https://www.gnu.org/software/make/manual/make.html">Make</a> as an <a href="https://en.wikipedia.org/wiki/Shim_(computing)">interface shim</a></li>
-<li>Self-documenting <a href="{{cookiecutter.repo_name}}/Makefile">Makefile</a>; just type
+<li>Self-documenting <a href="https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/Makefile">Makefile</a>; just type
       <code>make</code> on the command line to display auto-generated documentation on available
       targets:</li>
 <li>Automated Cookiecutter template synchronization with <a href="https://cruft.github.io/cruft/">Cruft</a> - <a href="https://careers.wolt.com/en/blog/tech/project-template-for-modern-python-packages"><code>why?</code></a></li>
@@ -893,19 +890,19 @@ cruft update
 </ul>
 <h4 id="conditionally-rendered-python-package-or-project-boilerplate"><img alt="🌱" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f331.svg" title=":seedling:" /> Conditionally Rendered Python Package or Project Boilerplate</h4>
 <ul>
-<li><a href="https://jupyter.org/">Optional</a>(https://jupyter.org/) support</li>
+<li><em>Optional:</em> <a href="https://jupyter.org/">Jupyter</a> support</li>
 </ul>
 <h3 id="maintainability"><img alt="🔧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f527.svg" title=":wrench:" /> Maintainability</h3>
 <h4 id="type-checking-and-data-validation"><img alt="🏷" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f3f7.svg" title=":label:" /> Type Checking and Data Validation</h4>
 <ul>
-<li>Static type-checking with <a href="http://mypy-lang.org">Mypy</a></li>
+<li>Static type-checking with <a href="http://mypy-lang.org/">Mypy</a></li>
 </ul>
 <h4 id="testingcoverage"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /> Testing/Coverage</h4>
 <ul>
 <li>Testing
   with <a href="https://docs.pytest.org/en/latest/">Pytest</a></li>
 <li>Doctests
-  with <a href="https://xdoctest.readthedocs.io"><code>xdoctest</code></a></li>
+  with <a href="https://xdoctest.readthedocs.io/en/latest/">xdoctest</a></li>
 <li>Code coverage
   with <a href="https://coverage.readthedocs.io/">Coverage.py</a></li>
 <li>Coverage reporting
@@ -914,18 +911,18 @@ cruft update
 <h4 id="linting"><img alt="🚨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f6a8.svg" title=":rotating_light:" /> Linting</h4>
 <ul>
 <li>Code quality:</li>
-<li><a href="https://github.com/charliermarsh/ruff">Ruff</a><ul>
+<li><a href="https://docs.astral.sh/ruff/">Ruff</a><ul>
 <li>A blazing-fast (10x-100x faster) replacement for
-    <a href="https://github.com/PyCQA/pylint">Pylint</a>, <a href="https://github.com/PyCQA/flake8">Flake8</a> (including major plugins) and more linters under a single, common interface</li>
+    ~~<a href="https://github.com/PyCQA/pylint">Pylint</a>~~, ~~<a href="https://github.com/PyCQA/flake8">Flake8</a>~~ (including major plugins) and more linters under a single, common interface</li>
 </ul>
 </li>
 <li><a href="https://github.com/koalaman/shellcheck">ShellCheck</a></li>
 <li>Code formatting:</li>
 <li>
-<p><a href="https://github.com/charliermarsh/ruff">Ruff</a></p>
+<p><a href="https://docs.astral.sh/ruff/">Ruff</a></p>
 <ul>
 <li>A blazing-fast (10x-100x faster) replacement for
-    <a href="https://github.com/psf/black">Black</a>, <a href="https://github.com/PyCQA/isort">isort</a>, <a href="https://github.com/asottile/pyupgrade">pyupgrade</a> and more formaters under a single, common interface</li>
+    ~~<a href="https://github.com/psf/black">Black</a>~~, ~~<a href="https://github.com/PyCQA/isort">isort</a>~~, ~~<a href="https://github.com/asottile/pyupgrade">pyupgrade</a>~~ and more formaters under a single, common interface</li>
 </ul>
 </li>
 <li>
@@ -946,8 +943,8 @@ cruft update
 <h4 id="cicd"><img alt="👷" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f477.svg" title=":construction_worker:" /> CI/CD</h4>
 <ul>
 <li>Dependency updates
-  with <a href="https://dependabot.com/">Dependabot</a></li>
-<li>Automated <a href="https://dependabot.com/">Dependabot</a> PR merging
+  with <a href="https://github.com/dependabot/dependabot-core">Dependabot</a></li>
+<li>Automated <a href="https://github.com/dependabot/dependabot-core">Dependabot</a> PR merging
     with the <a href="https://github.com/ahmadnassri/action-dependabot-auto-merge">Dependabot Auto Merge GitHub Action</a></li>
 </ul>
 <h2 id="security"><img alt="🔒" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f512.svg" title=":lock:" /> Security</h2>
@@ -967,8 +964,8 @@ cruft update
 </ul>
 <h3 id="templates"><img alt="🗃" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f5c3.svg" title=":card_file_box:" /> Templates</h3>
 <ul>
-<li><a href="{{cookiecutter.repo_name}}/.github/pull_request_template.md">Pull Request template</a></li>
-<li><a href="{{cookiecutter.repo_name}}/notebooks/notebook_template.ipynb">Notebook template</a></li>
+<li><a href="https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/.github/pull_request_template.md">Pull Request template</a></li>
+<li><a href="https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/notebooks/notebook_template.ipynb">Notebook template</a></li>
 </ul>
 <hr />
 <h2 id="references">References</h2>
@@ -1027,10 +1024,10 @@ cruft update
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.7389ff0e.min.js"></script>
+      <script src="assets/javascripts/bundle.c18c5fb9.min.js"></script>
       
     
   </body>
