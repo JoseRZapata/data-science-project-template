@@ -46,4 +46,7 @@ repos:
     rev: v1.4.0
     hooks:
       - id: detect-secrets
-        exclude: ^(poetry\.lock|\.cruft\.json)$
+        exclude: ^(poetry\.lock|\.cruft\.json|.*\.ipynb)$
+      - id: detect-secrets
+        name: 'detect-secrets-jupyter'
+        args: ['--exclude-files', '.*[^i][^p][^y][^n][^b]$', '--exclude-lines', '"(hash|id|image/\w+)":.*', ]
