@@ -17,6 +17,9 @@ theme:
 
 nav:
   - Introduction: 'index.md'
+  - Pre-commit configuration: 'pre-commit.md'
+  - VSCode configuration: 'vscode.md'
+
 
 markdown_extensions:
   - pymdownx.snippets:
