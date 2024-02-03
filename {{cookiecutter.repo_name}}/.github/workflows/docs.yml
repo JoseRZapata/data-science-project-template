@@ -1,0 +1,32 @@
+name: Docs
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - 'readme.md'
+    types:
+      - closed
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - 'readme.md'
+  workflow_dispatch:
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/python-poetry-env
+      - name: Build docs
+        run: poetry run mkdocs build --clean
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.PAT }}
+          publish_dir: ./site
