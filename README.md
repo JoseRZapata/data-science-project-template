@@ -5,7 +5,13 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![pages-build-deployment](https://github.com/JoseRZapata/data-science-project-template/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/JoseRZapata/data-science-project-template/actions/workflows/pages/pages-build-deployment)
 
+---
+
 Template for a data science projects with software development tools
+
+Documentation: <https://joserzapata.github.io/data-science-project-template/>
+
+Source Code: <https://github.com/JoseRZapata/data-science-project-template>
 
 ---
 
