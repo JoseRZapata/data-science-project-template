@@ -4,7 +4,7 @@
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v1.json)](https://github.com/charliermarsh/ruff)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
-## :sparkles: Features and Tools
+## ✨ Features and Tools
 
 Features                                     | Package  | Why?
  ---                                         | ---      | ---
@@ -49,7 +49,7 @@ To install a new package, run:
 poetry add <package-name>
 ```
 
-## :card_file_box: Project structure
+## 🗃️ Project structure
 
 ```bash
 .
@@ -74,9 +74,10 @@ poetry add <package-name>
 │   ├── actions
 │   │   └── python-poetry-env
 │   │       └── action.yml              # github action to setup python environment
+│   ├── dependabot.md                   # github action to update dependencies
 │   ├── pull_request_template.md        # template for pull requests
 │   └── workflows
-│       ├── dependencies.yml            # github action to update dependencies
+│       ├── docs.yml                    # github action to build documentation (mkdocs)
 │       ├── pre-commit_autoupdate.yml   # github action update pre-commit hooks
 │       └── test.yml
 ├── .gitignore                          # files to ignore in git

@@ -18,27 +18,27 @@ Source Code: <https://github.com/JoseRZapata/data-science-project-template>
 Table of Contents
 
 - [Data science project template](#data-science-project-template)
-  - [:tada: Creating a New Project](#tada-creating-a-new-project)
+  - [🗃️ Creating a New Project](#️-creating-a-new-project)
     - [Recommendations](#recommendations)
-  - [:link: Linking an Existing Project](#link-linking-an-existing-project)
-  - [:card\_file\_box: Project structure](#card_file_box-project-structure)
-  - [:sparkles: Features and Tools](#sparkles-features-and-tools)
-    - [:rocket: Project Standardization and Automation](#rocket-project-standardization-and-automation)
-      - [:hammer: Developer Workflow Automation](#hammer-developer-workflow-automation)
-      - [:seedling: Conditionally Rendered Python Package or Project Boilerplate](#seedling-conditionally-rendered-python-package-or-project-boilerplate)
-    - [:wrench: Maintainability](#wrench-maintainability)
-      - [:label: Type Checking and Data Validation](#label-type-checking-and-data-validation)
-      - [:white\_check\_mark: Testing/Coverage](#white_check_mark-testingcoverage)
-      - [:rotating\_light: Linting](#rotating_light-linting)
-      - [:construction\_worker: CI/CD](#construction_worker-cicd)
-  - [:lock: Security](#lock-security)
-    - [:lock\_with\_ink\_pen: Static Application Security Testing (SAST)](#lock_with_ink_pen-static-application-security-testing-sast)
-  - [:clipboard: Accessibility](#clipboard-accessibility)
-    - [:memo: Project Documentation](#memo-project-documentation)
-    - [:card\_file\_box: Templates](#card_file_box-templates)
+  - [🔗  Linking an Existing Project](#--linking-an-existing-project)
+  - [🗃️ Project structure](#️-project-structure)
+  - [✨ Features and Tools](#-features-and-tools)
+    - [🚀 Project Standardization and Automation](#-project-standardization-and-automation)
+      - [🔨 Developer Workflow Automation](#-developer-workflow-automation)
+      - [🌱 Conditionally Rendered Python Package or Project Boilerplate](#-conditionally-rendered-python-package-or-project-boilerplate)
+    - [🔧 Maintainability](#-maintainability)
+      - [🏷️  Type Checking and Data Validation](#️--type-checking-and-data-validation)
+      - [✅  Testing/Coverage](#--testingcoverage)
+      - [🚨 Linting](#-linting)
+      - [👷 CI/CD](#-cicd)
+  - [🔒 Security](#-security)
+    - [🔏 Static Application Security Testing (SAST)](#-static-application-security-testing-sast)
+  - [📋 Accessibility](#-accessibility)
+    - [📝 Project Documentation](#-project-documentation)
+    - [🗃️ Templates](#️-templates)
   - [References](#references)
 
-## :tada: Creating a New Project
+## 🗃️ Creating a New Project
 
 ### Recommendations
 
@@ -69,7 +69,7 @@ cookiecutter gh:JoseRZapata/data-science-project-template
 
 Note: **_Cookiecutter_** uses `gh:` as short-hand for `https://github.com/`
 
-## :link: Linking an Existing Project
+## 🔗  Linking an Existing Project
 
 If the project was originally installed via [Cookiecutter], you must first use [Cruft] to link the project with the original template:
 
@@ -83,7 +83,7 @@ Then/else:
 cruft update
 ```
 
-## :card_file_box: Project structure
+## 🗃️ Project structure
 
 Folder structure for data science projects  [why?](https://towardsdatascience.com/the-importance-of-layered-thinking-in-data-engineering-a09f685edc71)
 
@@ -110,9 +110,10 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 │   ├── actions
 │   │   └── python-poetry-env
 │   │       └── action.yml              # github action to setup python environment
+│   ├── dependabot.md                   # github action to update dependencies
 │   ├── pull_request_template.md        # template for pull requests
 │   └── workflows
-│       ├── dependencies.yml            # github action to update dependencies
+│       ├── docs.yml                    # github action to build documentation (mkdocs)
 │       ├── pre-commit_autoupdate.yml   # github action update pre-commit hooks
 │       └── test.yml
 ├── .gitignore                          # files to ignore in git
@@ -138,11 +139,11 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
     └── settings.json                   # vscode settings
 ```
 
-## :sparkles: Features and Tools
+## ✨ Features and Tools
 
-### :rocket: Project Standardization and Automation
+### 🚀 Project Standardization and Automation
 
-#### :hammer: Developer Workflow Automation
+#### 🔨 Developer Workflow Automation
 
 - Python packaging, dependency management and environment management
   with [Poetry] - [`why?`](https://mathdatasimplified.com/poetry-a-better-way-to-manage-python-dependencies/)
@@ -156,17 +157,17 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 - Continuous integration and deployment with [GitHub Actions]
 - Project configuration files  with [Hydra] - [`why?`](https://mathdatasimplified.com/stop-hard-coding-in-a-data-science-project-use-configuration-files-instead/)
 
-#### :seedling: Conditionally Rendered Python Package or Project Boilerplate
+#### 🌱 Conditionally Rendered Python Package or Project Boilerplate
 
 - _Optional:_ [Jupyter] support
 
-### :wrench: Maintainability
+### 🔧 Maintainability
 
-#### :label: Type Checking and Data Validation
+#### 🏷️  Type Checking and Data Validation
 
 - Static type-checking with [Mypy]
 
-#### :white_check_mark: Testing/Coverage
+#### ✅  Testing/Coverage
 
 - Testing
   with [Pytest]
@@ -177,7 +178,7 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 - Coverage reporting
   with [Codecov]
 
-#### :rotating_light: Linting
+#### 🚨 Linting
 
 - Code quality:
   - [Ruff]
@@ -202,23 +203,23 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
   - Invalid Python files
     with [`check-ast`](https://github.com/pre-commit/pre-commit-hooks#check-ast)
 
-#### :construction_worker: CI/CD
+#### 👷 CI/CD
 
 - Dependency updates
   with [Dependabot]
   - Automated [Dependabot] PR merging
     with the [Dependabot Auto Merge GitHub Action](https://github.com/ahmadnassri/action-dependabot-auto-merge)
 
-## :lock: Security
+## 🔒 Security
 
-### :lock_with_ink_pen: Static Application Security Testing (SAST)
+### 🔏 Static Application Security Testing (SAST)
 
 - Code vulnerabilities
   with [Bandit]
 
-## :clipboard: Accessibility
+## 📋 Accessibility
 
-### :memo: Project Documentation
+### 📝 Project Documentation
 
 - Documentation building
   with [MkDocs] - [Tutorial](https://realpython.com/python-project-documentation-with-mkdocs/)
@@ -226,7 +227,7 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
   - Rich automatic documentation from type annotations and docstrings (NumPy, Google, etc.)
     with [mkdocstrings]
 
-### :card_file_box: Templates
+### 🗃️ Templates
 
 - [Pull Request template]
 - [Notebook template]
