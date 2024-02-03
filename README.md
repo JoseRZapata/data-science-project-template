@@ -181,14 +181,12 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 #### 🚨 Linting
 
 - Code quality:
-  - [Ruff]
-    - A blazing-fast (10x-100x faster) replacement for
-        ~~[Pylint]~~, ~~[Flake8]~~ (including major plugins) and more linters under a single, common interface
+  - [Ruff] An extremely fast (10x-100x faster) Python linter and code formatter, written in Rust.
+    - Replacement for [Pylint], [Flake8] (including major plugins) and more linters under a single, common interface
   - [ShellCheck](https://github.com/koalaman/shellcheck)
 - Code formatting:
-  - [Ruff]
-    - A blazing-fast (10x-100x faster) replacement for
-        ~~[Black]~~, ~~[isort]~~, ~~[pyupgrade]~~ and more formaters under a single, common interface
+  - [Ruff] An extremely fast (10x-100x faster) Python linter and code formatter, written in Rust.
+    - Replacement for [Black], [isort], [pyupgrade] and more formatters under a single, common interface
 
 - General file formatting:
   - [`end-of-file-fixer`](https://github.com/pre-commit/pre-commit-hooks#end-of-file-fixer)
