@@ -9,12 +9,6 @@ on:
       - 'readme.md'
     types:
       - closed
-  push:
-    branches:
-      - main
-    paths:
-      - 'docs/**'
-      - 'readme.md'
   workflow_dispatch:
 
 jobs:
