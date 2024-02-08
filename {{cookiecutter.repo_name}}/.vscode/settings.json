@@ -21,4 +21,12 @@
   "git.autofetch": true,
   "editor.defaultFormatter": "charliermarsh.ruff",
   "python.terminal.activateEnvInCurrentTerminal": true,
+  "python.testing.pytestArgs": [
+    "tests"
+  ],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
 }
