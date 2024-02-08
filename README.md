@@ -34,6 +34,7 @@ Table of Contents
   - [🔒 Security](#-security)
     - [🔏 Static Application Security Testing (SAST)](#-static-application-security-testing-sast)
   - [📋 Accessibility](#-accessibility)
+    - [Automation tool (Makefile)](#automation-tool-makefile)
     - [📝 Project Documentation](#-project-documentation)
     - [🗃️ Templates](#️-templates)
   - [References](#references)
@@ -171,8 +172,6 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 
 - Testing
   with [Pytest]
-- Doctests
-  with [xdoctest]
 - Code coverage
   with [Coverage.py]
 - Coverage reporting
@@ -220,6 +219,22 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 
 ## 📋 Accessibility
 
+### Automation tool (Makefile)
+
+Makefile to automate the setup of your environment, the installation of dependencies, the execution of tests, etc.
+in terminal type `make` to see the available commands
+
+```bash
+Target                         Description
+-----------------------        ----------------------------------------------------
+init_env                       Install dependencies with poetry and init git
+install_all_libs               Install libraries for data science and ML
+install_data_libs              Install pandas and numpy
+install_ml_libs                Install scikit-learn
+install_viz_libs               Install matplotlib seaborn plotly dev group
+tests                          Run tests with coverage
+```
+
 ### 📝 Project Documentation
 
 - Documentation building
@@ -254,22 +269,18 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 [Data structure]: https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/data/README.md
 [deepcheck]:https://deepcheck.io/
 [Dependabot]: https://github.com/dependabot/dependabot-core
-[depy]:https://fpgmaas.github.io/deptry/
 [DVC]:https://dvc.org/
 [Flake8]:https://github.com/PyCQA/flake8
-[furo]: https://pradyunsg.me/furo/
 [GitHub Actions]: https://github.com/features/actions
 [github labeler]: https://github.com/marketplace/actions/github-labeler
 [hydra]: https://hydra.cc/
 [isort]: https://github.com/PyCQA/isort
 [Jupyter]: https://jupyter.org/
-[just]: https://just.systems/man/en/
 [Make]: https://www.gnu.org/software/make/manual/make.html
 [mkdocs]: https://www.mkdocs.org/
 [mkdocstrings]: https://mkdocstrings.github.io/
 [MlFlow]:https://www.mlflow.org/
 [Mypy]: http://mypy-lang.org/
-[myst]: https://myst-parser.readthedocs.io/
 [Notebook template]: https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/notebooks/notebook_template.ipynb
 [NumPy]:https://numpy.org/
 [OmegaConf]: https://omegaconf.readthedocs.io/en/latest/
@@ -285,7 +296,3 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 [pyupgrade]: https://github.com/asottile/pyupgrade
 [Ruff]: https://docs.astral.sh/ruff/
 [scikit-learn]:https://scikit-learn.org/
-[testpypi]: https://test.pypi.org/
-[tox]: https://tox.readthedocs.io/
-[typeguard]: https://github.com/agronholm/typeguard
-[xdoctest]: https://xdoctest.readthedocs.io/en/latest/
