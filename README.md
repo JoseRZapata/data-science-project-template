@@ -203,10 +203,13 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 
 #### 👷 CI/CD
 
-- Dependency updates
+- **Dependency updates**
   with [Dependabot]
-  - Automated [Dependabot] PR merging
-    with the [Dependabot Auto Merge GitHub Action](https://github.com/ahmadnassri/action-dependabot-auto-merge)
+  - Automated [Dependabot] PR merging with the [Dependabot Auto Merge GitHub Action](https://github.com/ahmadnassri/action-dependabot-auto-merge)
+    - Replacement for [pip-audit](https://github.com/pypa/pip-audit) , _In your local environment,
+       If you want to check for vulnerabilities in your dependencies you can install this tool_.
+
+- **Pre-commit automatic updates** with [GitHub Actions] workflow `.github/workflows/pre-commit_autoupdate.yml`
 
 ## 🔒 Security
 
