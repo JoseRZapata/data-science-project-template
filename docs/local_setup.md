@@ -37,6 +37,8 @@ I setup my local development environment using the following steps:
 
 General Tools that I use to develop Python projects, The most important is [Poetry] and all this tools are installed using [Pipx] to have this tools in isolated environments, because applications runs in its own virtual environment to avoid dependencies conflicts and they are available everywhere.
 
+[When pipx is typically used?](https://python.land/virtual-environments/pipx#When_pipx_is_typically_used)
+
 1. [Poetry] to manage the dependencies and the virtual environment of the project.
       - `pipx install poetry`
 2. [Pip-audit] to local check the security of the dependencies of the project.
