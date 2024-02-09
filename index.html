@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.f2e4d321.min.css">
       
         
         <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
@@ -470,6 +470,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#automation-tool-makefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automation tool (Makefile)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#project-documentation" class="md-nav__link">
     <span class="md-ellipsis">
       📝 Project Documentation
@@ -608,6 +617,26 @@
   
   <span class="md-ellipsis">
     VSCode configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="local_setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    My Local Dev setup
   </span>
   
 
@@ -818,6 +847,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#automation-tool-makefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automation tool (Makefile)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#project-documentation" class="md-nav__link">
     <span class="md-ellipsis">
       📝 Project Documentation
@@ -902,6 +940,7 @@
 </ul>
 </li>
 <li><a href="#-accessibility">📋 Accessibility</a><ul>
+<li><a href="#automation-tool-makefile">Automation tool (Makefile)</a></li>
 <li><a href="#-project-documentation">📝 Project Documentation</a></li>
 <li><a href="#️-templates">🗃️ Templates</a></li>
 </ul>
@@ -1014,8 +1053,6 @@
 <ul>
 <li>Testing
   with <a href="https://docs.pytest.org/en/latest/">Pytest</a></li>
-<li>Doctests
-  with <a href="https://xdoctest.readthedocs.io/en/latest/">xdoctest</a></li>
 <li>Code coverage
   with <a href="https://coverage.readthedocs.io/">Coverage.py</a></li>
 <li>Coverage reporting
@@ -1053,10 +1090,18 @@
 </ul>
 <h4 id="cicd">👷 CI/CD</h4>
 <ul>
-<li>Dependency updates
+<li><strong>Dependency updates</strong>
   with <a href="https://github.com/dependabot/dependabot-core">Dependabot</a></li>
-<li>Automated <a href="https://github.com/dependabot/dependabot-core">Dependabot</a> PR merging
-    with the <a href="https://github.com/ahmadnassri/action-dependabot-auto-merge">Dependabot Auto Merge GitHub Action</a></li>
+<li>
+<p>Automated <a href="https://github.com/dependabot/dependabot-core">Dependabot</a> PR merging with the <a href="https://github.com/ahmadnassri/action-dependabot-auto-merge">Dependabot Auto Merge GitHub Action</a></p>
+<ul>
+<li>Replacement for <a href="https://github.com/pypa/pip-audit">pip-audit</a> , <em>In your local environment,
+   If you want to check for vulnerabilities in your dependencies you can install this tool</em>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Pre-commit automatic updates</strong> with <a href="https://github.com/features/actions">GitHub Actions</a> workflow <code>.github/workflows/pre-commit_autoupdate.yml</code></p>
+</li>
 </ul>
 <h2 id="security">🔒 Security</h2>
 <h3 id="static-application-security-testing-sast">🔏 Static Application Security Testing (SAST)</h3>
@@ -1065,6 +1110,18 @@
   with <a href="https://github.com/PyCQA/bandit">Bandit</a></li>
 </ul>
 <h2 id="accessibility">📋 Accessibility</h2>
+<h3 id="automation-tool-makefile">Automation tool (Makefile)</h3>
+<p>Makefile to automate the setup of your environment, the installation of dependencies, the execution of tests, etc.
+in terminal type <code>make</code> to see the available commands</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Target<span class="w">                         </span>Description
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>-----------------------<span class="w">        </span>----------------------------------------------------
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>init_env<span class="w">                       </span>Install<span class="w"> </span>dependencies<span class="w"> </span>with<span class="w"> </span>poetry<span class="w"> </span>and<span class="w"> </span>init<span class="w"> </span>git
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>install_all_libs<span class="w">               </span>Install<span class="w"> </span>libraries<span class="w"> </span><span class="k">for</span><span class="w"> </span>data<span class="w"> </span>science<span class="w"> </span>and<span class="w"> </span>ML
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>install_data_libs<span class="w">              </span>Install<span class="w"> </span>pandas<span class="w"> </span>and<span class="w"> </span>numpy
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>install_ml_libs<span class="w">                </span>Install<span class="w"> </span>scikit-learn
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>install_viz_libs<span class="w">               </span>Install<span class="w"> </span>matplotlib<span class="w"> </span>seaborn<span class="w"> </span>plotly<span class="w"> </span>dev<span class="w"> </span>group
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>tests<span class="w">                          </span>Run<span class="w"> </span>tests<span class="w"> </span>with<span class="w"> </span>coverage
+</span></code></pre></div>
 <h3 id="project-documentation">📝 Project Documentation</h3>
 <ul>
 <li>Documentation building
@@ -1138,7 +1195,7 @@
     <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "navigation.expand", "navigation.path"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.e1c3ead8.min.js"></script>
+      <script src="assets/javascripts/bundle.caa56a14.min.js"></script>
       
     
   </body>
