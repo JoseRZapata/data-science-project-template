@@ -55,3 +55,5 @@ The following are some common settings that can be configured in Visual Studio C
 - `"editor.defaultFormatter": "charliermarsh.ruff"`: This setting specifies Ruff as the default formatter for code in the editor.
 
 - `"python.terminal.activateEnvInCurrentTerminal": true`: This setting enables automatic activation of the Python environment in the current terminal.
+
+- `"python.defaultInterpreterPath": "${workspaceFolder}/.venv"`: This setting specifies the default Python interpreter path to be the virtual environment created in the project.
