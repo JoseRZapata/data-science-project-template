@@ -45,4 +45,8 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - run: poetry run pytest --cov=./ --cov-report=xml
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 #{% endraw %}
