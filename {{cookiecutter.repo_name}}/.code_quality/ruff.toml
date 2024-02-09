@@ -56,10 +56,28 @@ select = [
     "I",
     # pyupgrade
     "UP",
+    # ruff
+    "RUF",
+    # tryceratops
+    "TRY",
     ]
 ignore = ["E203"]
 # Allow fix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
 unfixable = []
 
-# use the default formatter config
+[format]
+# select = ["E4", "E7", "E9", "F"]
+# exclude = ["*.ipynb"]
+# ignore = []
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[mccabe]
+# Unlike Flake8, default to a complexity level of 10.
+max-complexity = 10
+
+[isort]
+known-third-party = ["fastapi", "pydantic"]
