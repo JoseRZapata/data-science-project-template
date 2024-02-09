@@ -15,8 +15,6 @@ Source Code: <https://github.com/JoseRZapata/data-science-project-template>
 
 ---
 
-
-
 Table of Contents
 
 - [Data science project template](#data-science-project-template)
@@ -262,6 +260,7 @@ tests                          Run tests with coverage
 
 - <https://drivendata.github.io/cookiecutter-data-science/>
 - <https://github.com/crmne/cookiecutter-modern-datascience>
+- <https://github.com/fpgmaas/cookiecutter-poetry>
 - <https://github.com/khuyentran1401/data-science-template>
 - <https://github.com/woltapp/wolt-python-package-cookiecutter>
 - <https://khuyentran1401.github.io/reproducible-data-science/structure_project/introduction.html>
