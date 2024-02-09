@@ -18,7 +18,7 @@ Source Code: <https://github.com/JoseRZapata/data-science-project-template>
 Table of Contents
 
 - [Data science project template](#data-science-project-template)
-  - [🗃️ Creating a New Project](#️-creating-a-new-project)
+  - [📁 Creating a New Project](#-creating-a-new-project)
     - [Recommendations](#recommendations)
   - [🔗  Linking an Existing Project](#--linking-an-existing-project)
   - [🗃️ Project structure](#️-project-structure)
@@ -28,18 +28,20 @@ Table of Contents
       - [🌱 Conditionally Rendered Python Package or Project Boilerplate](#-conditionally-rendered-python-package-or-project-boilerplate)
     - [🔧 Maintainability](#-maintainability)
       - [🏷️  Type Checking and Data Validation](#️--type-checking-and-data-validation)
-      - [✅  Testing/Coverage](#--testingcoverage)
+      - [✅ 🧪 Testing/Coverage](#--testingcoverage)
       - [🚨 Linting](#-linting)
+        - [🔍 Code quality](#-code-quality)
+        - [🎨 Code formatting](#-code-formatting)
       - [👷 CI/CD](#-cicd)
   - [🔒 Security](#-security)
     - [🔏 Static Application Security Testing (SAST)](#-static-application-security-testing-sast)
-  - [📋 Accessibility](#-accessibility)
-    - [Automation tool (Makefile)](#automation-tool-makefile)
+  - [⌨️ Accessibility](#️-accessibility)
+    - [🔨 Automation tool (Makefile)](#-automation-tool-makefile)
     - [📝 Project Documentation](#-project-documentation)
     - [🗃️ Templates](#️-templates)
   - [References](#references)
 
-## 🗃️ Creating a New Project
+## 📁 Creating a New Project
 
 ### Recommendations
 
@@ -168,22 +170,22 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 
 - Static type-checking with [Mypy]
 
-#### ✅  Testing/Coverage
+#### ✅ 🧪 Testing/Coverage
 
-- Testing
-  with [Pytest]
-- Code coverage
-  with [Coverage.py]
-- Coverage reporting
-  with [Codecov]
+- Testing with [Pytest]
+- Code coverage with [Coverage.py]
+- Coverage reporting with [Codecov]
 
 #### 🚨 Linting
 
-- Code quality:
+##### 🔍 Code quality
+
   - [Ruff] An extremely fast (10x-100x faster) Python linter and code formatter, written in Rust.
     - Replacement for [Pylint], [Flake8] (including major plugins) and more linters under a single, common interface
   - [ShellCheck](https://github.com/koalaman/shellcheck)
-- Code formatting:
+
+##### 🎨 Code formatting
+
   - [Ruff] An extremely fast (10x-100x faster) Python linter and code formatter, written in Rust.
     - Replacement for [Black], [isort], [pyupgrade] and more formatters under a single, common interface
 
@@ -214,12 +216,11 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 
 ### 🔏 Static Application Security Testing (SAST)
 
-- Code vulnerabilities
-  with [Bandit]
+- Code vulnerabilities with [Bandit]
 
-## 📋 Accessibility
+## ⌨️ Accessibility
 
-### Automation tool (Makefile)
+### 🔨 Automation tool (Makefile)
 
 Makefile to automate the setup of your environment, the installation of dependencies, the execution of tests, etc.
 in terminal type `make` to see the available commands
