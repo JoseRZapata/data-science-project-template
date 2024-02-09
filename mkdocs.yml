@@ -19,6 +19,7 @@ theme:
 
 nav:
   - Introduction: 'index.md'
+  - Setup Tokens: 'setup_tokens.md'
   - Pre-commit configuration: 'pre-commit.md'
   - Github Actions:
     - Pre-commit_autoupdate: 'github_actions/gh_action_pre-commit-autoupdate.md'
