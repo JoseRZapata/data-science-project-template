@@ -1,7 +1,8 @@
-## Title
+# Title
 
 ## ✨ Context
-_What's the context for the changes? Are there any_
+
+What's the context for the changes? Are there any
 
 ## 🧠 Rationale behind the change
 
@@ -20,16 +21,17 @@ Which of these best describes the type of changes being introduced
 - [ ] Improvements (Minor refactoring, code changes or optimizations)
 - [ ] Other (Please describe)
 
-
 ## 🛠 What does this PR implement
+
 _Detailed description of the changes introduced, Give examples of the changes you've made in this pull request, include an itemized list if you can and
 add diagrams or images if necessary. It'll help the reviewer_
 
 ## Missing
-_If there are things that are requested in the task and were not implemented, list them here_
 
+If there are things that are requested in the task and were not implemented, list them here
 
 ## 🧪 How should this be tested?
-_Steps to test or reproduce the PR here_
 
-- `coverage run --source=. -m pytest`
+Steps to test or reproduce the PR here
+
+- `poetry run pytest --cov`
