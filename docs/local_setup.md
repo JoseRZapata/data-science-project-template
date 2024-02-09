@@ -22,7 +22,7 @@ I setup my local development environment using the following steps:
       - Linux:
 
         ```bash title="Install pipx in Linux"
-        python3 -m pip install --user pipx
+        pip install --user pipx
         python3 -m pipx ensurepath
         ```
 
