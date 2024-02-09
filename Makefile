@@ -27,6 +27,11 @@ pre_commit-update: ## Update pre-commit hooks
 	poetry run pre-commit autoupdate
 
 
+####----Checks----####
+actionlint: ## Check GitHub Actions
+	@echo "🚀 Checking GitHub Actions..."
+	actionlint -color -verbose
+
 ####----Project----####
 help:
 	@printf "%-30s %s\n" "Target" "Description"
