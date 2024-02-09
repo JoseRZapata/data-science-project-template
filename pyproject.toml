@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "data-science-project-template"
 version = "0.1.0"
-description = "Template for a data science projects with software development tools"
+description = "A modern template for data science projects with all the necessary tools for experiment, development, testing, and deployment. From notebooks to production."
 authors = ["Jose R. Zapata <https://joserzapata.github.io/>"]
 repository = "https://github.com/JoseRZapata/data-science-project-template"
 documentation = "https://joserzapata.github.io/data-science-project-template/"
