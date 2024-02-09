@@ -1,9 +1,36 @@
 {
-    "project_name": "Project Name",
-    "repo_name": "{{ cookiecutter.project_name.strip().replace(' ', '-').replace('_', '-').lower() }}",
-    "author_name": "Your name (or your organization/company/team)",
-    "description": "A short description of the project.",
-    "license": ["MIT License", "BSD License", "ISC License", "GNU General Public License v3", "Apache Software License 2.0", "Not open source"],
-    "compatible_python_versions": "^3.9",
-    "jupyter_notebook_project": ["yes", "no"]
+  "project_name": "Project Name (will be shown e.g. as the title in the readme)",
+  "repo_name": "{{ cookiecutter.project_name.strip().replace(' ', '-').replace('_', '-').lower() }}",
+  "github_username": "",
+  "author_name": "Your name (or your organization/company/team)",
+  "author_email": "Your email address or personal website (eq. you@example.com or https://example.com)",
+  "description": "A short description of the project.",
+  "license": [
+    "MIT License",
+    "BSD License",
+    "ISC License",
+    "GNU General Public License v3",
+    "Apache Software License 2.0",
+    "Not open source"
+  ],
+  "compatible_python_versions": "^3.9",
+  "jupyter_notebook_project": [
+    "yes",
+    "no"
+  ],
+  "_copy_without_render": [
+    ".code_quality/*",
+    ".github/*",
+    ".vscode/*",
+    "config/*",
+    "data/*",
+    "src/*",
+    "tests/*",
+    ".editorconfig",
+    ".pre-commit-config.yaml",
+    "codecov.yaml",
+
+    "docs/*",
+    "Makefile"
+  ]
 }

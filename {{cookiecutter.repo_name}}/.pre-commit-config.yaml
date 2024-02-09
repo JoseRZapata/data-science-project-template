@@ -6,7 +6,7 @@ repos:
       - id: end-of-file-fixer
         exclude_types: [jupyter]
       - id: check-yaml
-        exclude: ^mkdocs\.yml$
+        exclude: ^(mkdocs\.yml|{{cookiecutter.repo_name}}/mkdocs\.yml)$
       - id: check-case-conflict
       - id: debug-statements
       - id: detect-private-key
