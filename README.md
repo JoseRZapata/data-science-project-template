@@ -19,7 +19,9 @@ Table of Contents
 
 - [Data science project template](#data-science-project-template)
   - [📁 Creating a New Project](#-creating-a-new-project)
-    - [Recommendations](#recommendations)
+    - [👍 Recommendations](#-recommendations)
+    - [🍪🥇 Via Cruft - **recommended**](#-via-cruft---recommended)
+    - [🍪 Via Cookiecutter](#-via-cookiecutter)
   - [🔗  Linking an Existing Project](#--linking-an-existing-project)
   - [🗃️ Project structure](#️-project-structure)
   - [✨ Features and Tools](#-features-and-tools)
@@ -43,14 +45,15 @@ Table of Contents
 
 ## 📁 Creating a New Project
 
-### Recommendations
+### 👍 Recommendations
 
 It is highly recommended to use a python version manager like [Pyenv] and this project is set to use [Poetry] to manage the dependencies and the environment.
 
-1. [Install Pyenv](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation)
-2. [Install Poetry](https://python-poetry.org/docs/#installation)
+**Note:** [Poetry] should always be installed in a dedicated virtual environment to isolate it from the rest of your system. [why?](https://python-poetry.org/docs/#installation)
 
-Via [Cruft] - **recommended**:
+🌟 Check how to setup your environment: <https://joserzapata.github.io/data-science-project-template/local_setup/>
+
+### 🍪🥇 Via [Cruft] - **recommended**
 
 ```bash title="install cruft"
 pip install --user cruft # Install `cruft` on your path for easy access
@@ -60,7 +63,7 @@ pip install --user cruft # Install `cruft` on your path for easy access
 cruft create https://github.com/JoseRZapata/data-science-project-template
 ```
 
-Via [Cookiecutter]:
+### 🍪 Via [Cookiecutter]
 
 ```shell title="install cookiecutter"
 pip install --user cookiecutter # Install `cookiecutter` on your path for easy access
@@ -89,6 +92,8 @@ cruft update
 ## 🗃️ Project structure
 
 Folder structure for data science projects  [why?](https://towardsdatascience.com/the-importance-of-layered-thinking-in-data-engineering-a09f685edc71)
+
+[Data structure]
 
 ```bash
 .
@@ -180,20 +185,9 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 
 ##### 🔍 Code quality
 
-  - [Ruff] An extremely fast (10x-100x faster) Python linter and code formatter, written in Rust.
-    - Replacement for [Pylint], [Flake8] (including major plugins) and more linters under a single, common interface
-  - [ShellCheck](https://github.com/koalaman/shellcheck)
-
-##### 🎨 Code formatting
-
-  - [Ruff] An extremely fast (10x-100x faster) Python linter and code formatter, written in Rust.
-    - Replacement for [Black], [isort], [pyupgrade] and more formatters under a single, common interface
-
-- General file formatting:
-  - [`end-of-file-fixer`](https://github.com/pre-commit/pre-commit-hooks#end-of-file-fixer)
-  - [`pretty-format-json`](https://github.com/pre-commit/pre-commit-hooks#pretty-format-json)
-  - (trim) [`trailing-whitespace`](https://github.com/pre-commit/pre-commit-hooks#trailing-whitespace)
-  - [`check-yaml`](https://github.com/pre-commit/pre-commit-hooks#check-yaml)
+- [Ruff] An extremely fast (10x-100x faster) Python linter and code formatter, written in Rust.
+  - Replacement for [Pylint], [Flake8] (including major plugins) and more linters under a single, common interface
+- [ShellCheck](https://github.com/koalaman/shellcheck)
 - Unsanitary commits:
   - Secrets
     with [`detect-secrets`](https://github.com/Yelp/detect-secrets)
@@ -201,6 +195,17 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
     with [`check-added-large-files`](https://github.com/pre-commit/pre-commit-hooks#check-added-large-files)
   - Invalid Python files
     with [`check-ast`](https://github.com/pre-commit/pre-commit-hooks#check-ast)
+
+##### 🎨 Code formatting
+
+- [Ruff] An extremely fast (10x-100x faster) Python linter and code formatter, written in Rust.
+  - Replacement for [Black], [isort], [pyupgrade] and more formatters under a single, common interface
+
+- General file formatting:
+  - [`end-of-file-fixer`](https://github.com/pre-commit/pre-commit-hooks#end-of-file-fixer)
+  - [`pretty-format-json`](https://github.com/pre-commit/pre-commit-hooks#pretty-format-json)
+  - (trim) [`trailing-whitespace`](https://github.com/pre-commit/pre-commit-hooks#trailing-whitespace)
+  - [`check-yaml`](https://github.com/pre-commit/pre-commit-hooks#check-yaml)
 
 #### 👷 CI/CD
 
