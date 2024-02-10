@@ -42,8 +42,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/python-poetry-env
+        #{% raw %}
         with:
           python-version: ${{ matrix.python-version }}
+        #{% endraw %}
       - name: Run pytest with coverage
         run: poetry run pytest --cov=./ --cov-report=xml
 
