@@ -13,24 +13,35 @@ init_env: ## Install dependencies with poetry and init git
 	git add .
 	git commit -m "🎉 Begin a project, Initial commit"
 	@echo "💻 Activate virtual environment..."
-	poetry shell
+	@poetry shell
 
 ####----Pre-commit----####
-
-pre_commit-all: ## Run pre-commit hooks
-	@echo "🚀 Running pre-commit hooks..."
-	poetry run pre-commit run --all-files
-
-pre_commit-update: ## Update pre-commit hooks
+pre-commit_update: ## Update pre-commit hooks
 	@echo "🚀 Updating pre-commit hooks..."
 	poetry run pre-commit clean
 	poetry run pre-commit autoupdate
 
+####----Docs----####
+docs_view: ## Build and serve the documentation
+	@echo "🚀 Viewing documentation..."
+	@poetry run mkdocs serve
+
+docs-test: ## Test if documentation can be built without warnings or errors
+	@poetry run mkdocs build -s
 
 ####----Checks----####
 actionlint: ## Check GitHub Actions
 	@echo "🚀 Checking GitHub Actions..."
 	actionlint -color -verbose
+
+check: ## Run code quality tools with pre-commit hooks.
+	@echo "🚀 Checking Poetry lock file consistency with 'pyproject.toml': Running poetry lock --check"
+	@poetry check --lock
+	@echo "🚀 Linting, formating and Static type checking code: Running pre-commit"
+	@poetry run pre-commit run -a
+
+docs_test: ## Test if documentation can be built without warnings or errors
+	@poetry run mkdocs build -s
 
 ####----Project----####
 help:

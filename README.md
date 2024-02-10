@@ -7,7 +7,7 @@
 
 ---
 
-Template for a data science projects with software development tools
+A modern template for data science projects with all the necessary tools for experiment, development, testing, and deployment. From notebooks to production.
 
 Documentation: <https://joserzapata.github.io/data-science-project-template/>
 
@@ -18,8 +18,10 @@ Source Code: <https://github.com/JoseRZapata/data-science-project-template>
 Table of Contents
 
 - [Data science project template](#data-science-project-template)
-  - [🗃️ Creating a New Project](#️-creating-a-new-project)
-    - [Recommendations](#recommendations)
+  - [📁 Creating a New Project](#-creating-a-new-project)
+    - [👍 Recommendations](#-recommendations)
+    - [🍪🥇 Via Cruft - **recommended**](#-via-cruft---recommended)
+    - [🍪 Via Cookiecutter](#-via-cookiecutter)
   - [🔗  Linking an Existing Project](#--linking-an-existing-project)
   - [🗃️ Project structure](#️-project-structure)
   - [✨ Features and Tools](#-features-and-tools)
@@ -28,27 +30,30 @@ Table of Contents
       - [🌱 Conditionally Rendered Python Package or Project Boilerplate](#-conditionally-rendered-python-package-or-project-boilerplate)
     - [🔧 Maintainability](#-maintainability)
       - [🏷️  Type Checking and Data Validation](#️--type-checking-and-data-validation)
-      - [✅  Testing/Coverage](#--testingcoverage)
+      - [✅ 🧪 Testing/Coverage](#--testingcoverage)
       - [🚨 Linting](#-linting)
+        - [🔍 Code quality](#-code-quality)
+        - [🎨 Code formatting](#-code-formatting)
       - [👷 CI/CD](#-cicd)
   - [🔒 Security](#-security)
     - [🔏 Static Application Security Testing (SAST)](#-static-application-security-testing-sast)
-  - [📋 Accessibility](#-accessibility)
-    - [Automation tool (Makefile)](#automation-tool-makefile)
+  - [⌨️ Accessibility](#️-accessibility)
+    - [🔨 Automation tool (Makefile)](#-automation-tool-makefile)
     - [📝 Project Documentation](#-project-documentation)
     - [🗃️ Templates](#️-templates)
   - [References](#references)
 
-## 🗃️ Creating a New Project
+## 📁 Creating a New Project
 
-### Recommendations
+### 👍 Recommendations
 
 It is highly recommended to use a python version manager like [Pyenv] and this project is set to use [Poetry] to manage the dependencies and the environment.
 
-1. [Install Pyenv](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation)
-2. [Install Poetry](https://python-poetry.org/docs/#installation)
+**Note:** [Poetry] should always be installed in a dedicated virtual environment to isolate it from the rest of your system. [why?](https://python-poetry.org/docs/#installation)
 
-Via [Cruft] - **recommended**:
+🌟 Check how to setup your environment: <https://joserzapata.github.io/data-science-project-template/local_setup/>
+
+### 🍪🥇 Via [Cruft] - **recommended**
 
 ```bash title="install cruft"
 pip install --user cruft # Install `cruft` on your path for easy access
@@ -58,7 +63,7 @@ pip install --user cruft # Install `cruft` on your path for easy access
 cruft create https://github.com/JoseRZapata/data-science-project-template
 ```
 
-Via [Cookiecutter]:
+### 🍪 Via [Cookiecutter]
 
 ```shell title="install cookiecutter"
 pip install --user cookiecutter # Install `cookiecutter` on your path for easy access
@@ -87,6 +92,8 @@ cruft update
 ## 🗃️ Project structure
 
 Folder structure for data science projects  [why?](https://towardsdatascience.com/the-importance-of-layered-thinking-in-data-engineering-a09f685edc71)
+
+[Data structure]
 
 ```bash
 .
@@ -168,30 +175,19 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 
 - Static type-checking with [Mypy]
 
-#### ✅  Testing/Coverage
+#### ✅ 🧪 Testing/Coverage
 
-- Testing
-  with [Pytest]
-- Code coverage
-  with [Coverage.py]
-- Coverage reporting
-  with [Codecov]
+- Testing with [Pytest]
+- Code coverage with [Coverage.py]
+- Coverage reporting with [Codecov]
 
 #### 🚨 Linting
 
-- Code quality:
-  - [Ruff] An extremely fast (10x-100x faster) Python linter and code formatter, written in Rust.
-    - Replacement for [Pylint], [Flake8] (including major plugins) and more linters under a single, common interface
-  - [ShellCheck](https://github.com/koalaman/shellcheck)
-- Code formatting:
-  - [Ruff] An extremely fast (10x-100x faster) Python linter and code formatter, written in Rust.
-    - Replacement for [Black], [isort], [pyupgrade] and more formatters under a single, common interface
+##### 🔍 Code quality
 
-- General file formatting:
-  - [`end-of-file-fixer`](https://github.com/pre-commit/pre-commit-hooks#end-of-file-fixer)
-  - [`pretty-format-json`](https://github.com/pre-commit/pre-commit-hooks#pretty-format-json)
-  - (trim) [`trailing-whitespace`](https://github.com/pre-commit/pre-commit-hooks#trailing-whitespace)
-  - [`check-yaml`](https://github.com/pre-commit/pre-commit-hooks#check-yaml)
+- [Ruff] An extremely fast (10x-100x faster) Python linter and code formatter, written in Rust.
+  - Replacement for [Pylint], [Flake8] (including major plugins) and more linters under a single, common interface
+- [ShellCheck](https://github.com/koalaman/shellcheck)
 - Unsanitary commits:
   - Secrets
     with [`detect-secrets`](https://github.com/Yelp/detect-secrets)
@@ -199,6 +195,17 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
     with [`check-added-large-files`](https://github.com/pre-commit/pre-commit-hooks#check-added-large-files)
   - Invalid Python files
     with [`check-ast`](https://github.com/pre-commit/pre-commit-hooks#check-ast)
+
+##### 🎨 Code formatting
+
+- [Ruff] An extremely fast (10x-100x faster) Python linter and code formatter, written in Rust.
+  - Replacement for [Black], [isort], [pyupgrade] and more formatters under a single, common interface
+
+- General file formatting:
+  - [`end-of-file-fixer`](https://github.com/pre-commit/pre-commit-hooks#end-of-file-fixer)
+  - [`pretty-format-json`](https://github.com/pre-commit/pre-commit-hooks#pretty-format-json)
+  - (trim) [`trailing-whitespace`](https://github.com/pre-commit/pre-commit-hooks#trailing-whitespace)
+  - [`check-yaml`](https://github.com/pre-commit/pre-commit-hooks#check-yaml)
 
 #### 👷 CI/CD
 
@@ -214,12 +221,11 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 
 ### 🔏 Static Application Security Testing (SAST)
 
-- Code vulnerabilities
-  with [Bandit]
+- Code vulnerabilities with [Bandit]
 
-## 📋 Accessibility
+## ⌨️ Accessibility
 
-### Automation tool (Makefile)
+### 🔨 Automation tool (Makefile)
 
 Makefile to automate the setup of your environment, the installation of dependencies, the execution of tests, etc.
 in terminal type `make` to see the available commands
@@ -254,11 +260,15 @@ tests                          Run tests with coverage
 
 - <https://drivendata.github.io/cookiecutter-data-science/>
 - <https://github.com/crmne/cookiecutter-modern-datascience>
+- <https://github.com/fpgmaas/cookiecutter-poetry>
 - <https://github.com/khuyentran1401/data-science-template>
 - <https://github.com/woltapp/wolt-python-package-cookiecutter>
 - <https://khuyentran1401.github.io/reproducible-data-science/structure_project/introduction.html>
 - <https://github.com/TeoZosa/cookiecutter-cruft-poetry-tox-pre-commit-ci-cd>
+- <https://github.com/cjolowicz/cookiecutter-hypermodern-python>
 - <https://github.com/kedro-org/kedro-starters>
+
+---
 
 [Bandit]: https://github.com/PyCQA/bandit
 [Black]: https://github.com/psf/black

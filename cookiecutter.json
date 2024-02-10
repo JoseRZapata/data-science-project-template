@@ -1,9 +1,41 @@
 {
-    "project_name": "Project Name",
-    "repo_name": "{{ cookiecutter.project_name.strip().replace(' ', '-').replace('_', '-').lower() }}",
-    "author_name": "Your name (or your organization/company/team)",
-    "description": "A short description of the project.",
-    "license": ["MIT License", "BSD License", "ISC License", "GNU General Public License v3", "Apache Software License 2.0", "Not open source"],
-    "compatible_python_versions": "^3.9",
-    "jupyter_notebook_project": ["yes", "no"]
+  "project_name": "Project Name",
+  "repo_name": "{{ cookiecutter.project_name.strip().replace(' ', '_').replace('-', '_').lower() }}",
+  "github_username": "",
+  "author_name": "Peter Parker",
+  "author_email": "peter.parker@web.com",
+  "description": "A short description of the project.",
+  "compatible_python_versions": ["3.9", "3.10", "3.11", "3.12"],
+  "mkdocs": true,
+  "codecov": true,
+  "license": [
+    "MIT License",
+    "BSD License",
+    "ISC License",
+    "GNU General Public License v3",
+    "Apache Software License 2.0",
+    "Not open source"
+  ],
+  "__prompts__": {
+      "project_name": "Project Name (e.g. My awesome data science project)",
+      "repo_name": "Repository name (e.g. my-awesome-data-science-project)",
+      "github_username": "GitHub username  (e.g. JoseRZapata)",
+      "author_name": "Author full name (or your organization/company/team)",
+      "author_email": "Your email address or personal website",
+      "mkdocs": "Automatic docs with mkdocs?",
+      "codecov":"pytest coverage report with codecov?"
+  },
+  "_copy_without_render": [
+    ".code_quality/*",
+    ".vscode/*",
+    "config/*",
+    "data/*",
+    "src/*",
+    "tests/*",
+    ".editorconfig",
+    ".pre-commit-config.yaml",
+    "codecov.yaml",
+    "docs/*",
+    "Makefile"
+  ]
 }

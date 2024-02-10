@@ -10,6 +10,7 @@ on:
     types:
       - closed
   workflow_dispatch:
+
 #{% raw %}
 jobs:
   build-and-publish:
