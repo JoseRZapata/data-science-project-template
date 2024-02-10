@@ -105,11 +105,19 @@ poetry add <package-name>
     └── settings.json                   # vscode settings
 ```
 
+## Credits
+
+This project was generated from [@JoseRZapata]'s [data science project template] template.
+
+---
+[@JoseRZapata]: https://github.com/JoseRZapata
+
 [bandit]: https://github.com/PyCQA/bandit
 [codecov]: https://codecov.io/
 [Cookiecutter]:https://cookiecutter.readthedocs.io/stable/
 [coverage.py]: https://coverage.readthedocs.io/
 [Cruft]: https://cruft.github.io/cruft/
+[data science project template]: https://github.com/JoseRZapata/data-science-project-template
 [Data structure]: {{cookiecutter.repo_name}}/data/README.md
 [deepcheck]:https://deepcheck.io/
 [dependabot]: https://github.com/dependabot/dependabot-core

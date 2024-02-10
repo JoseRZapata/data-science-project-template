@@ -265,7 +265,10 @@ tests                          Run tests with coverage
 - <https://github.com/woltapp/wolt-python-package-cookiecutter>
 - <https://khuyentran1401.github.io/reproducible-data-science/structure_project/introduction.html>
 - <https://github.com/TeoZosa/cookiecutter-cruft-poetry-tox-pre-commit-ci-cd>
+- <https://github.com/cjolowicz/cookiecutter-hypermodern-python>
 - <https://github.com/kedro-org/kedro-starters>
+
+---
 
 [Bandit]: https://github.com/PyCQA/bandit
 [Black]: https://github.com/psf/black
