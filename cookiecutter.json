@@ -8,7 +8,6 @@
   "compatible_python_versions": ["3.9", "3.10", "3.11", "3.12"],
   "mkdocs": true,
   "codecov": true,
-  "init_git": true,
   "license": [
     "MIT License",
     "BSD License",
@@ -24,8 +23,7 @@
       "author_name": "Author full name (or your organization/company/team)",
       "author_email": "Your email address or personal website",
       "mkdocs": "Automatic docs with mkdocs?",
-      "codecov":"pytest coverage report with codecov?",
-      "init_git": "Initialize a git repository (Recommended)"
+      "codecov":"pytest coverage report with codecov?"
   },
   "_copy_without_render": [
     ".code_quality/*",

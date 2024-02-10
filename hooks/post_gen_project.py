@@ -27,7 +27,6 @@ def remove_dir(filepath: str) -> None:
 if __name__ == "__main__":
     mkdocs = "{% if cookiecutter.mkdocs %}y{% endif %}"
     codecov = "{% if cookiecutter.codecov%}y{% endif %}"
-    init_git = "{% if cookiecutter.init_git %}y{% endif %}"
 
     if mkdocs != "y":
         remove_dir("docs")
@@ -37,10 +36,8 @@ if __name__ == "__main__":
     if codecov != "y":
         remove_file("codecov.yml")
 
-    if init_git != "y":
-        # init git repo
-        subprocess.run(["git", "init", "-b", "main"], check=False)  # nosec
-        subprocess.run(["git", "add", "."], check=False)  # nosec
-        subprocess.run(
-            ["git", "commit", "-m", "🎉 Begin a project, Initial commit"], check=False
-        )  # nosec
+    subprocess.run(["echo", "Initializing git"], check=False)  # nosec
+    subprocess.run(["git", "init", "-b", "main"], check=False)  # nosec
+    subprocess.run(["git", "add", "."], check=False)  # nosec
+    subprocess.run(["git", "commit", "-m", "🎉 Initial commit"], check=False)  # nosec
+    subprocess.run(["echo", "🎉 Project Already created!"], check=False)  # nosec
