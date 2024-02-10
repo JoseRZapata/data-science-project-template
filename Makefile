@@ -40,6 +40,8 @@ check: ## Run code quality tools with pre-commit hooks.
 	@echo "🚀 Linting, formating and Static type checking code: Running pre-commit"
 	@poetry run pre-commit run -a
 
+docs_test: ## Test if documentation can be built without warnings or errors
+	@poetry run mkdocs build -s
 
 ####----Project----####
 help:
