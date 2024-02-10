@@ -26,4 +26,4 @@ if __name__ == "__main__":
         remove_file(".github/workflows/docs.yml")
 
     if codecov != "y":
-        remove_file("codecov.yaml")
+        remove_file("codecov.yml")
