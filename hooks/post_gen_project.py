@@ -13,11 +13,8 @@ def remove_dir(filepath: str) -> None:
     shutil.rmtree(os.path.join(PROJECT_DIRECTORY, filepath))
 
 
-mkdocs = "y"
-codecov = "y"
-
-mkdocs = '{% if cookiecutter.mkdocs != "y" %}n{% endif %}'
-codecov = '{% if cookiecutter.codecov != "y" %}n{% endif %}'
+mkdocs = "{% if cookiecutter.mkdocs %}y{% endif %}"
+codecov = "{% if cookiecutter.codecov%}y{% endif %}"
 
 if __name__ == "__main__":
     print(mkdocs)

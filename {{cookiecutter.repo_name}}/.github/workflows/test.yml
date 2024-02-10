@@ -49,7 +49,7 @@ jobs:
       - name: Run pytest with coverage
         run: poetry run pytest --cov=./ --cov-report=xml
 
-        #{%- if cookiecutter.codecov == "y" %}
+        #{%- if cookiecutter.codecov %}
         #{% raw %}
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4

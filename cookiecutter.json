@@ -6,8 +6,8 @@
   "author_email": "peter.parker@web.com",
   "description": "A short description of the project.",
   "compatible_python_versions": ["3.9", "3.10", "3.11", "3.12"],
-  "mkdocs": ["y", "n"],
-  "codecov": ["y", "n"],
+  "mkdocs": true,
+  "codecov": true,
   "init_git": true,
   "license": [
     "MIT License",
@@ -23,16 +23,8 @@
       "github_username": "GitHub username  (e.g. JoseRZapata)",
       "author_name": "Author full name (or your organization/company/team)",
       "author_email": "Your email address or personal website",
-      "mkdocs": {
-                  "__prompt__": "Automatic docs with mkdocs?",
-                  "y": "yes",
-                  "n": "no"
-                },
-      "codecov": {
-                  "__prompt__": "pytest coverage report with codecov?",
-                  "y": "yes",
-                  "n": "no"
-                },
+      "mkdocs": "Automatic docs with mkdocs?",
+      "codecov":"pytest coverage report with codecov?",
       "init_git": "Initialize a git repository"
   },
   "_copy_without_render": [
