@@ -1,11 +1,11 @@
 {
-  "project_name": "Project Name (will be shown e.g. as the title in the readme)",
+  "project_name": "Project Name",
   "repo_name": "{{ cookiecutter.project_name.strip().replace(' ', '-').replace('_', '-').lower() }}",
   "github_username": "",
-  "author_name": "Your name (or your organization/company/team)",
-  "author_email": "Your email address or personal website",
+  "author_name": "{{ cookiecutter.github_username }}",
+  "author_email": "{{ cookiecutter.github_username }}@github.com",
   "description": "A short description of the project.",
-  "compatible_python_versions": ["^3.9", "^3.10", "^3.11", "^3.12"],
+  "compatible_python_versions": ["3.9", "3.10", "3.11", "3.12"],
   "mkdocs": ["y", "n"],
   "codecov": ["y", "n"],
   "init_git": true,
@@ -18,19 +18,18 @@
     "Not open source"
   ],
   "__prompts__": {
-      "project_name": "Project Name (will be shown e.g. My awesome data science project)",
+      "project_name": " e.g. My awesome data science project",
       "repo_name": "Repository name (e.g. my-awesome-data-science-project)",
       "github_username": "GitHub username",
-      "author_name": "Author full name",
+      "author_name": "Author full name (or your organization/company/team)",
       "author_email": "Your email address or personal website (eq. you@example.com or https://example.com)",
-      "description": "A short description of the project.",
       "mkdocs": {
-                  "__prompt__": "Do you want to create Automatic docs with mkdocs?",
+                  "__prompt__": "Automatic docs with mkdocs?",
                   "y": "yes",
                   "n": "no"
                 },
       "codecov": {
-                  "__prompt__": "Do you want a pytest coverage report with codecov?",
+                  "__prompt__": "pytest coverage report with codecov?",
                   "y": "yes",
                   "n": "no"
                 },
