@@ -12,10 +12,7 @@ repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecut
 [tool.poetry.dependencies]
 python = "{{ cookiecutter.compatible_python_versions }}"
 hydra-core = "^1.1.1"
-#{%- if cookiecutter.jupyter_notebook_project != 'no' %}
-# Jupyter Notebook
-jupyter = "^1.0.0"
-#{%- endif %}
+
 
 
 [tool.poetry.group.dev.dependencies]
