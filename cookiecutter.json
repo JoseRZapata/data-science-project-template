@@ -2,8 +2,8 @@
   "project_name": "Project Name",
   "repo_name": "{{ cookiecutter.project_name.strip().replace(' ', '-').replace('_', '-').lower() }}",
   "github_username": "",
-  "author_name": "{{ cookiecutter.github_username }}",
-  "author_email": "{{ cookiecutter.github_username }}@github.com",
+  "author_name": "Peter Parker",
+  "author_email": "peter.parker@web.com",
   "description": "A short description of the project.",
   "compatible_python_versions": ["3.9", "3.10", "3.11", "3.12"],
   "mkdocs": ["y", "n"],
@@ -20,9 +20,9 @@
   "__prompts__": {
       "project_name": " e.g. My awesome data science project",
       "repo_name": "Repository name (e.g. my-awesome-data-science-project)",
-      "github_username": "GitHub username",
+      "github_username": "GitHub username  (e.g. JoseRZapata)",
       "author_name": "Author full name (or your organization/company/team)",
-      "author_email": "Your email address or personal website (eq. you@example.com or https://example.com)",
+      "author_email": "Your email address or personal website",
       "mkdocs": {
                   "__prompt__": "Automatic docs with mkdocs?",
                   "y": "yes",
