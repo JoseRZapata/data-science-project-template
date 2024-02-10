@@ -25,7 +25,7 @@
       "author_email": "Your email address or personal website",
       "mkdocs": "Automatic docs with mkdocs?",
       "codecov":"pytest coverage report with codecov?",
-      "init_git": "Initialize a git repository"
+      "init_git": "Initialize a git repository (Recommended)"
   },
   "_copy_without_render": [
     ".code_quality/*",
