@@ -1,6 +1,6 @@
 {
   "project_name": "Project Name",
-  "repo_name": "{{ cookiecutter.project_name.strip().replace(' ', '-').replace('_', '-').lower() }}",
+  "repo_name": "{{ cookiecutter.project_name.strip().replace(' ', '_').replace('-', '_').lower() }}",
   "github_username": "",
   "author_name": "Peter Parker",
   "author_email": "peter.parker@web.com",
@@ -18,7 +18,7 @@
     "Not open source"
   ],
   "__prompts__": {
-      "project_name": " e.g. My awesome data science project",
+      "project_name": "Project Name (e.g. My awesome data science project)",
       "repo_name": "Repository name (e.g. my-awesome-data-science-project)",
       "github_username": "GitHub username  (e.g. JoseRZapata)",
       "author_name": "Author full name (or your organization/company/team)",
