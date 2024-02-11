@@ -267,6 +267,7 @@ tests                          Run tests with coverage
 - <https://khuyentran1401.github.io/reproducible-data-science/structure_project/introduction.html>
 - <https://github.com/TeoZosa/cookiecutter-cruft-poetry-tox-pre-commit-ci-cd>
 - <https://github.com/cjolowicz/cookiecutter-hypermodern-python>
+- <https://github.com/gotofritz/cookiecutter-gotofritz-poetry>
 - <https://github.com/kedro-org/kedro-starters>
 
 ---
