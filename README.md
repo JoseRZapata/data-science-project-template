@@ -4,7 +4,7 @@
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v1.json)](https://github.com/charliermarsh/ruff)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![pages-build-deployment](https://github.com/JoseRZapata/data-science-project-template/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/JoseRZapata/data-science-project-template/actions/workflows/pages/pages-build-deployment)
-
+[![codecov](https://codecov.io/gh/JoseRZapata/data-science-project-template/graph/badge.svg?token=7LCPX574UF)](https://codecov.io/gh/JoseRZapata/data-science-project-template)
 ---
 
 A modern template for data science projects with all the necessary tools for experiment, development, testing, and deployment. From notebooks to production.
@@ -18,6 +18,7 @@ Source Code: <https://github.com/JoseRZapata/data-science-project-template>
 Table of Contents
 
 - [Data science project template](#data-science-project-template)
+  - [](#)
   - [📁 Creating a New Project](#-creating-a-new-project)
     - [👍 Recommendations](#-recommendations)
     - [🍪🥇 Via Cruft - **recommended**](#-via-cruft---recommended)
