@@ -1,15 +1,5 @@
-import os
 import re
 import subprocess  # nosec
-
-
-def build_files_list(root_dir):  # type: ignore
-    """Build a list containing absolute paths to the generated files."""
-    return [
-        os.path.join(dirpath, file_path)
-        for dirpath, _, files in os.walk(root_dir)
-        for file_path in files
-    ]
 
 
 def test_run_cookiecutter_result(cookies):  # type: ignore
