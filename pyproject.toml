@@ -34,9 +34,18 @@ mkdocs-material = "^9.5.7"
 mkdocstrings = {extras = ["python"], version = "^0.24.0"}
 pymdown-extensions = "^10.7"
 
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.0.0"
+pytest-cov = "^4.1.0"
+pytest-cookies = "^0.7.0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.virtualenvs]
 in-project = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -24,6 +24,11 @@ docs_view: ## Build and serve the documentation
 docs-test: ## Test if documentation can be built without warnings or errors
 	@poetry run mkdocs build -s
 
+####----Tests----####
+test: ## Test the code with pytest and coverage
+	@echo "🚀 Testing code: Running pytest"
+	@poetry run pytest --cov
+
 ####----Checks----####
 actionlint: ## Check GitHub Actions
 	@echo "🚀 Checking GitHub Actions..."

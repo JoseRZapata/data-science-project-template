@@ -1,6 +1,6 @@
 {
   "project_name": "Project Name",
-  "repo_name": "{{ cookiecutter.project_name.strip().replace(' ', '_').replace('-', '_').lower() }}",
+  "repo_name": "{{ cookiecutter.project_name.strip().replace(' ', '-').replace('_', '-').lower() }}",
   "github_username": "",
   "author_name": "Peter Parker",
   "author_email": "peter.parker@web.com",
