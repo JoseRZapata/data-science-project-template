@@ -2,16 +2,11 @@
 
 ####----Basic configurations----####
 
-init_env: ## Install dependencies with poetry and init git
-	@echo "Initialize Git in main branch..."
-	git init -b main
+init_env: ## Install libs with poetry and pre-commit
 	@echo "🚀 Creating virtual environment using pyenv and poetry"
 	poetry install
 	@echo "🚀 Installing pre-commit..."
 	poetry run pre-commit install
-	@echo "🎉 First commit..."
-	git add .
-	git commit -m "🎉 Begin a project, Initial commit"
 	@echo "💻 Activate virtual environment..."
 	@poetry shell
 
