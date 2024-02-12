@@ -3,14 +3,15 @@ def test_cookiecutter_mkdocs_files(cookies) -> None:  # type: ignore
     mkdocs = False
     result = cookies.bake(extra_context={"mkdocs": mkdocs})
 
-    env_path = result.project_path / "mkdocs.yml"
-    assert not env_path.is_file()
+    file_paths = [
+        "mkdocs.yml",
+        ".github/workflows/docs.yml",
+        "docs/index.md",
+    ]
 
-    env_path = result.project_path / ".github/workflows/docs.yml"
-    assert not env_path.is_file()
-
-    env_path = result.project_path / "docs/index.md"
-    assert not env_path.is_file()
+    for file_path in file_paths:
+        env_path = result.project_path / file_path
+        assert not env_path.is_file()
 
     env_path = result.project_path / "pyproject.toml"
     assert env_path.is_file()
