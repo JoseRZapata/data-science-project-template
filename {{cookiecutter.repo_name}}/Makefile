@@ -25,6 +25,11 @@ install_data_libs: ## Install pandas, scikit-learn, Jupyter, seaborn
 	@echo "🚀 Installing Jupyter, matplotlib and seaborn in dev..."
 	poetry add jupyter matplotlib seaborn -G dev
 
+install_mlops_libs: ## Install dvc, mlflow
+	@echo "🚀 Installing MLOps libraries ..."
+	poetry add dvc great-expectations
+	poetry add mlflow deepchecks -G dev
+
 ####----Tests----####
 test: ## Test the code with pytest and coverage
 	@echo "🚀 Testing code: Running pytest"
