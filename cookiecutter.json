@@ -35,7 +35,6 @@
     ".editorconfig",
     ".pre-commit-config.yaml",
     "codecov.yaml",
-    "docs/*",
-    "Makefile"
+    "docs/*"
   ]
 }

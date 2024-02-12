@@ -41,6 +41,7 @@ pre-commit_update: ## Update pre-commit hooks
 	poetry run pre-commit clean
 	poetry run pre-commit autoupdate
 
+#{% if cookiecutter.mkdocs %}
 ####----Docs----####
 docs_view: ## Build and serve the documentation
 	@echo "🚀 Viewing documentation..."
@@ -48,6 +49,7 @@ docs_view: ## Build and serve the documentation
 
 docs_test: ## Test if documentation can be built without warnings or errors
 	@poetry run mkdocs build -s
+#{% endif %}
 
 ####----Checks----####
 check: ## Run code quality tools with pre-commit hooks.
