@@ -4,6 +4,7 @@
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v1.json)](https://github.com/charliermarsh/ruff)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![pages-build-deployment](https://github.com/JoseRZapata/data-science-project-template/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/JoseRZapata/data-science-project-template/actions/workflows/pages/pages-build-deployment)
+[![Test](https://github.com/JoseRZapata/data-science-project-template/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/JoseRZapata/data-science-project-template/actions/workflows/test.yml)
 [![codecov](https://codecov.io/gh/JoseRZapata/data-science-project-template/graph/badge.svg?token=7LCPX574UF)](https://codecov.io/gh/JoseRZapata/data-science-project-template)
 ---
 
@@ -279,32 +280,22 @@ tests                          Run tests with coverage
 [Coverage.py]: https://coverage.readthedocs.io/
 [Cruft]: https://cruft.github.io/cruft/
 [Data structure]: https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/data/README.md
-[deepcheck]:https://deepcheck.io/
 [Dependabot]: https://github.com/dependabot/dependabot-core
-[DVC]:https://dvc.org/
 [Flake8]:https://github.com/PyCQA/flake8
 [GitHub Actions]: https://github.com/features/actions
-[github labeler]: https://github.com/marketplace/actions/github-labeler
 [hydra]: https://hydra.cc/
 [isort]: https://github.com/PyCQA/isort
 [Jupyter]: https://jupyter.org/
 [Make]: https://www.gnu.org/software/make/manual/make.html
 [mkdocs]: https://www.mkdocs.org/
 [mkdocstrings]: https://mkdocstrings.github.io/
-[MlFlow]:https://www.mlflow.org/
 [Mypy]: http://mypy-lang.org/
 [Notebook template]: https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/notebooks/notebook_template.ipynb
-[NumPy]:https://numpy.org/
-[OmegaConf]: https://omegaconf.readthedocs.io/en/latest/
-[Pandas]:https://pandas.pydata.org/
-[pandera]:(https://pandera.readthedocs.io/en/stable/)
 [Poetry]: https://python-poetry.org/
 [pre-commit]: https://pre-commit.com/
 [Pull Request template]: https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/.github/pull_request_template.md
 [Pyenv]: https://github.com/pyenv/pyenv
 [Pylint]:https://github.com/PyCQA/pylint
-[pypi]: https://pypi.org/
 [Pytest]: https://docs.pytest.org/en/latest/
 [pyupgrade]: https://github.com/asottile/pyupgrade
 [Ruff]: https://docs.astral.sh/ruff/
-[scikit-learn]:https://scikit-learn.org/
