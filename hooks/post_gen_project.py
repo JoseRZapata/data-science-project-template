@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 import os
 import shutil
-import subprocess  # nosec
 
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
 
@@ -33,13 +32,3 @@ if mkdocs != "y":
     remove_file(".github/workflows/docs.yml")
 if codecov != "y":
     remove_file("codecov.yml")
-
-
-if not os.path.exists(".cruft.json"):
-    text_msg = """
-    Install \033[1;32m Make \033[0m and run next steps to set git and environment:
-
-    🎉 Init git in local: \033[1;32m make init_git \033[0m
-    🎉 Init Environment: \033[1;32m make init_env \033[0m
-    """
-    subprocess.run(["echo", "-e", text_msg], check=False)  # nosec

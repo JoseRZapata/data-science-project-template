@@ -25,6 +25,12 @@ Template for notebooks                       | [Notebook template] |
 
 ## Set up the environment
 
+1. Initialize git in local:
+
+    ```bash
+    make init_git
+    ```
+
 1. Set up the environment:
 
     ```bash
@@ -34,21 +40,21 @@ Template for notebooks                       | [Notebook template] |
 1. Install libraries for data science and machine learning:
 
     ```bash
-    make install_all_libs
+    make install_data_libs
     ```
 
 ## Install dependencies
 
-To install all dependencies for this project, run:
-
-```bash
-poetry install
-```
-
-To install a new package, run:
+Agfter init the environment to install a new package, run:
 
 ```bash
 poetry add <package-name>
+```
+
+Example to install [plotly](https://plotly.com/python/) in dev group:
+
+```bash
+poetry add plotly -G dev
 ```
 
 ## 🗃️ Project structure
