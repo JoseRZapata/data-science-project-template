@@ -24,17 +24,15 @@ def remove_dir(filepath: str) -> None:
     shutil.rmtree(os.path.join(PROJECT_DIRECTORY, filepath))
 
 
-if __name__ == "__main__":
-    mkdocs = "{% if cookiecutter.mkdocs %}y{% endif %}"
-    codecov = "{% if cookiecutter.codecov%}y{% endif %}"
+mkdocs = "{% if cookiecutter.mkdocs %}y{% endif %}"
+codecov = "{% if cookiecutter.codecov%}y{% endif %}"
 
-    if mkdocs != "y":
-        remove_dir("docs")
-        remove_file("mkdocs.yml")
-        remove_file(".github/workflows/docs.yml")
-
-    if codecov != "y":
-        remove_file("codecov.yml")
+if mkdocs != "y":
+    remove_dir("docs")
+    remove_file("mkdocs.yml")
+    remove_file(".github/workflows/docs.yml")
+if codecov != "y":
+    remove_file("codecov.yml")
 
 text_msg = """
 Install \033[1;32m Make \033[0m and run next steps to set git and environment:
