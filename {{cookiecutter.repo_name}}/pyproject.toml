@@ -14,7 +14,6 @@ python = "^{{ cookiecutter.compatible_python_versions }}"
 hydra-core = "^1.1.1"
 
 
-
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.6.0"
 
@@ -26,11 +25,13 @@ pytest = "^8.0.0"
 pytest-cov = "^4.1.0"
 pytest-mock = "^3.12.0"
 
+#{% if cookiecutter.mkdocs %}
 [tool.poetry.group.docs.dependencies]
 mkdocs = "^1.5.3"
 mkdocs-material = "^9.5.7"
 mkdocstrings = {extras = ["python"], version = "^0.24.0"}
 pymdown-extensions = "^10.7"
+#{% endif %}
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
