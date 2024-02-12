@@ -1,4 +1,4 @@
-.PHONY: tests help
+.PHONY: tests help init_env init_git pre-commit_update docs_view docs-test test actionlint check
 
 ####----Basic configurations----####
 
@@ -9,6 +9,13 @@ init_env: ## Install libs with poetry and pre-commit
 	poetry run pre-commit install
 	@echo "💻 Activate virtual environment..."
 	@poetry shell
+
+init_git: ## Initialize git repository
+	@echo "🚀 Initializing local git repository..."
+	git init -b main
+	git add .
+	git commit -m "🎉 Initial commit"
+	@echo "🚀 Local Git already set!"
 
 ####----Pre-commit----####
 pre-commit_update: ## Update pre-commit hooks
@@ -25,6 +32,7 @@ docs-test: ## Test if documentation can be built without warnings or errors
 	@poetry run mkdocs build -s
 
 ####----Tests----####
+
 test: ## Test the code with pytest and coverage
 	@echo "🚀 Testing code: Running pytest"
 	@poetry run pytest --cov
@@ -39,9 +47,6 @@ check: ## Run code quality tools with pre-commit hooks.
 	@poetry check --lock
 	@echo "🚀 Linting, formating and Static type checking code: Running pre-commit"
 	@poetry run pre-commit run -a
-
-docs_test: ## Test if documentation can be built without warnings or errors
-	@poetry run mkdocs build -s
 
 ####----Project----####
 help:

@@ -36,19 +36,10 @@ if __name__ == "__main__":
     if codecov != "y":
         remove_file("codecov.yml")
 
-    # check if repo is already initialized using `git status`
-    # if not, initialize the repo and make initial commit
-    try:
-        subprocess.run(
-            ["git", "rev-parse", "--is-inside-work-tree"],
-            check=True,
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
-        )  # nosec
-    except subprocess.CalledProcessError:
-        # We are not in a git repo
-        subprocess.run(["echo", "Initializing git"], check=False)  # nosec
-        subprocess.run(["git", "init", "-b", "main"], check=False)  # nosec
-        subprocess.run(["git", "add", "."], check=False)  # nosec
-        subprocess.run(["git", "commit", "-m", "🎉 Initial commit"], check=False)  # nosec
-        subprocess.run(["echo", "🎉 Project Already created!"], check=False)  # nosec
+text_msg = """
+Install \033[1;32m Make \033[0m and run next steps to set git and environment:
+
+🎉 Init git in local: \033[1;32m make init_git \033[0m
+🎉 Init Environment: \033[1;32m make init_env \033[0m
+"""
+subprocess.run(["echo", "-e", text_msg], check=False)  # nosec
