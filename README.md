@@ -10,7 +10,7 @@
 
 A modern template for data science projects with all the necessary tools for experiment, development, testing, and deployment. From notebooks to production.
 
-Documentation: <https://joserzapata.github.io/data-science-project-template/>
+✨📚✨ Documentation: <https://joserzapata.github.io/data-science-project-template/>
 
 Source Code: <https://github.com/JoseRZapata/data-science-project-template>
 
