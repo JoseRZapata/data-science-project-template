@@ -1,12 +1,13 @@
 name: 'Setup Python + Poetry environment'
 description: 'Setup Python + Poetry environment'
-#{% raw %}
+
 inputs:
   python-version:
     required: false
     description: 'Python version'
-    default: '3.10'
+    default: '{{ cookiecutter.compatible_python_versions }}'
 outputs: {}
+#{% raw %}
 runs:
   using: 'composite'
   steps:
