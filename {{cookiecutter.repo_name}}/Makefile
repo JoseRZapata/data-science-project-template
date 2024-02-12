@@ -1,4 +1,4 @@
-.PHONY: tests help
+.PHONY: tests help init_env init_git pre-commit_update docs_view docs_test test check
 
 ####----Basic configurations----####
 
@@ -9,6 +9,13 @@ init_env: ## Install dependencies with poetry and activate env
 	poetry run pre-commit install
 	@echo "💻 Activate virtual environment..."
 	@poetry shell
+
+init_git: ## Initialize git repository
+	@echo "🚀 Initializing local git repository..."
+	git init -b main
+	git add .
+	git commit -m "🎉 Initial commit"
+	@echo "🚀 Local Git already set!"
 
 ####----Install Libraries----####
 
