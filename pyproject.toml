@@ -25,7 +25,7 @@ python = "^3.9"
 
 
 [tool.poetry.group.dev.dependencies]
-pre-commit = "^3.6.0"
+pre-commit = "^3.6.1"
 
 
 [tool.poetry.group.docs.dependencies]
