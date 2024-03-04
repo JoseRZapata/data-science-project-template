@@ -36,7 +36,7 @@ pymdown-extensions = "^10.7"
 
 
 [tool.poetry.group.test.dependencies]
-pytest = "^8.0.0"
+pytest = "^8.1.0"
 pytest-cov = "^4.1.0"
 pytest-cookies = "^0.7.0"
 
