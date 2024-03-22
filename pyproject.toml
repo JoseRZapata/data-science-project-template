@@ -19,6 +19,7 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python",
 ]
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.9"
