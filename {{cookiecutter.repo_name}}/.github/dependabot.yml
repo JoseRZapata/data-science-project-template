@@ -9,11 +9,15 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+    groups:
+      python-packages:
+        patterns:
+          - "*"
+    commit-message:
+      prefix: ⬆
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
-    groups:
-      actions-deps:
-        patterns:
-          - "*"
+    commit-message:
+      prefix: ⬆
