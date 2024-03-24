@@ -6,6 +6,7 @@
 [![pages-build-deployment](https://github.com/JoseRZapata/data-science-project-template/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/JoseRZapata/data-science-project-template/actions/workflows/pages/pages-build-deployment)
 [![Test](https://github.com/JoseRZapata/data-science-project-template/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/JoseRZapata/data-science-project-template/actions/workflows/test.yml)
 [![codecov](https://codecov.io/gh/JoseRZapata/data-science-project-template/graph/badge.svg?token=7LCPX574UF)](https://codecov.io/gh/JoseRZapata/data-science-project-template)
+
 ---
 
 A modern template for data science projects with all the necessary tools for experiment, development, testing, and deployment. From notebooks to production.
@@ -19,7 +20,6 @@ Source Code: <https://github.com/JoseRZapata/data-science-project-template>
 Table of Contents
 
 - [Data science project template](#data-science-project-template)
-  - [](#)
   - [📁 Creating a New Project](#-creating-a-new-project)
     - [👍 Recommendations](#-recommendations)
     - [🍪🥇 Via Cruft - **recommended**](#-via-cruft---recommended)
@@ -49,9 +49,9 @@ Table of Contents
 
 ### 👍 Recommendations
 
-It is highly recommended to use a python version manager like [Pyenv] and this project is set to use [Poetry] to manage the dependencies and the environment.
+It is highly recommended to use a python version manager like [Pyenv] and this project is set to use [Poetry] >= 1.8 to manage the dependencies and the environment.
 
-**Note:** [Poetry] should always be installed in a dedicated virtual environment to isolate it from the rest of your system. [why?](https://python-poetry.org/docs/#installation)
+**Note:** [Poetry] >= 1.8 should always be installed in a dedicated virtual environment to isolate it from the rest of your system. [why?](https://python-poetry.org/docs/#installation)
 
 🌟 Check how to setup your environment: <https://joserzapata.github.io/data-science-project-template/local_setup/>
 
@@ -130,13 +130,14 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 ├── Makefile                            # useful commands to setup environment,
 ├── models                              # store final models
 ├── notebooks
-│   ├── 1-data                          # notebooks for data extraction and cleaning
-│   ├── 2-exploration                   # notebooks for data exploration
-│   ├── 3-analysis                      # notebooks for data analysis
-│   ├── 4-feat_eng                      # notebooks for feature engineering
-│   ├── 5-models                        # notebooks for model training
-│   ├── 6-evaluation                    # notebooks for model evaluation
-│   ├── 7-deploy                        # notebooks for model deployment
+│   ├── 1-data                          # data extraction and cleaning
+│   ├── 2-exploration                   # exploratory data analysis (EDA)
+│   ├── 3-analysis                      # Statistical analysis, hypothesis testing.
+│   ├── 4-feat_eng                      # feature engineering (creation, selection, and transformation.)
+│   ├── 5-models                        # model training, experimentation, and hyperparameter tuning.
+│   ├── 6-evaluation                    # evaluation metrics, performance assessment
+│   ├── 7-deploy                        # model packaging, deployment strategies.
+│   ├── 8-reports                       # story telling, summaries and analysis conclusions.
 │   ├── notebook_template.ipynb         # template for notebooks
 │   └── README.md                       # information about the notebooks
 ├── .pre-commit-config.yaml             # configuration for pre-commit hooks

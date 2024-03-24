@@ -12,3 +12,18 @@ Examples:
 01-jrz-data_exploration-2024_10_02.ipynb
 02.1-jrz_data_raw_analysis-2024_10_08.ipynb
 02.2-jrz_data_raw_analysis-2024_11_21.ipynb
+
+## folder structure
+
+```bash
+├── notebooks
+│   ├── 1-data                   # data extraction and cleaning
+│   ├── 2-exploration            # exploratory data analysis (EDA)
+│   ├── 3-analysis               # Statistical analysis, hypothesis testing.
+│   ├── 4-feat_eng               # feature engineering (creation, selection, and transformation.)
+│   ├── 5-models                 # model training, experimentation, and hyperparameter tuning.
+│   ├── 6-evaluation             # evaluation metrics, performance assessment
+│   ├── 7-deploy                 # model packaging, deployment strategies.
+│   ├── 8-reports                # story telling, summaries and analysis conclusions.
+│   ├── notebook_template.ipynb
+```

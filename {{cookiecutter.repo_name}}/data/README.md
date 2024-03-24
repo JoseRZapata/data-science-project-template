@@ -4,8 +4,6 @@ layered data-engineering convention
 
 ![layeded data engineering](https://docs.kedro.org/en/0.18.6/_images/data_engineering_convention.png)
 
-
-
 | ****Folder in data**** | ****Description**** |
 | ---------------------- | --- |
 | ****raw****            | initial start of the pipeline, containing the sourced data model(s) that should never be changed, it forms your single source of truth to work from. these data models are typically un-typed in most cases e.g. csv, but this will vary from case to case |
@@ -18,5 +16,6 @@ layered data-engineering convention
 | ****reporting****      | reporting data model(s) that are used to combine a set of primary, feature, model input and model output data used to drive the dashboard and the views constructed. it encapsulates and removes the need to define any blending or joining of data, improve performance and replacement of presentation layer without having to redefine the data models |
 
 ## References
-- https://docs.kedro.org/en/0.18.6/faq/faq.html#what-is-data-engineering-convention
-- https://towardsdatascience.com/the-importance-of-layered-thinking-in-data-engineering-a09f685edc71
+
+- <https://docs.kedro.org/en/0.18.6/faq/faq.html#what-is-data-engineering-convention>
+- <https://towardsdatascience.com/the-importance-of-layered-thinking-in-data-engineering-a09f685edc71>
