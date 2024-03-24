@@ -1,4 +1,4 @@
-# My local Dev environment setup
+# 💻 Local Dev environment setup
 
 I develop data science python projects in Linux OS or MAC OS. (For Windows OS I recommend [WSL] and run commands as Linux OS).
 
@@ -15,9 +15,9 @@ I setup my local development environment using the following steps:
 3. Install [Pyenv] and after install set up the terminal for [Pyenv] - [Link to set up](https://github.com/pyenv/pyenv?tab=readme-ov-file#set-up-your-shell-environment-for-pyenv)
       - Linux: `curl https://pyenv.run | bash`
       - MAC: `brew install pyenv`
-4. Install [Python] using [Pyenv] , at this time I am using Python 3.10.13 is in security updates only.
-      - `pyenv install 3.10.13` # Install Python 3.10.13 in computer
-      - `pyenv global 3.10.13` # Set Python 3.10.13 as global version
+4. Install [Python] using [Pyenv] , at this time I am using Python 3.11
+      - `pyenv install 3.11` # Install Python 3.11 in computer
+      - `pyenv global 3.11` # Set Python 3.11 as global version
 5. Install locally [Pipx] to Install and Run Python Applications in Isolated Environments
       - Linux:
 

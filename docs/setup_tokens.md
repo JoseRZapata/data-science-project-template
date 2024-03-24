@@ -1,4 +1,4 @@
-# Setup Tokens
+# 🔏 Setup Tokens
 
 Some of the github actions require token keys to be set as secrets in the github repository. The following tokens are required:
 
