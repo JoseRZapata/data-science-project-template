@@ -3,7 +3,7 @@ def test_cookiecutter_python_version(cookies) -> None:  # type: ignore
     versions = ["3.10", "3.11"]
     file_paths = [
         ".github/actions/python-poetry-env/action.yml",
-        ".github/workflows/test.yml",
+        ".github/workflows/ci.yml",
         "pyproject.toml",
     ]
 

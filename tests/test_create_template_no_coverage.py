@@ -3,7 +3,7 @@ def test_cookiecutter_conf_files(cookies) -> None:  # type: ignore
     codecov = False
     result = cookies.bake(extra_context={"codecov": codecov})
 
-    env_path = result.project_path / ".github/workflows/test.yml"
+    env_path = result.project_path / ".github/workflows/ci.yml"
     assert env_path.is_file()
 
     with open(env_path) as f:
