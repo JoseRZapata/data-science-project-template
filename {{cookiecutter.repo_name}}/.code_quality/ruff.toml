@@ -60,6 +60,8 @@ select = [
     "UP",
     # ruff
     "RUF",
+    # flake8-simplify
+    "SIM",
     # tryceratops
     "TRY",
     ]
