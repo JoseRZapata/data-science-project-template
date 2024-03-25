@@ -54,14 +54,22 @@ select = [
     "PL",
     # isort
     "I",
+    # flake8-bandit
+    "S",
     # pyupgrade
     "UP",
     # ruff
     "RUF",
+    # flake8-simplify
+    "SIM",
     # tryceratops
     "TRY",
     ]
-ignore = ["E203"]
+ignore = [
+    "E203",
+        # bandit: Use of `assert` detected
+    "S101"
+    ]
 # Allow fix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
 unfixable = []

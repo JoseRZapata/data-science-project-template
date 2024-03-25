@@ -39,13 +39,12 @@ def test_cookiecutter_make_help(cookies):  # type: ignore
     """ensure the make help command runs without error"""
     result = cookies.bake()
 
-    make_proc = subprocess.Popen(
+    make_proc = subprocess.run(
         ["/usr/bin/make"],
-        shell=False,
+        shell=False,  # noqa: S603
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
         cwd=result.project_path,
-    )  # nosec
-    # stdout, stderr are for debuggin
-    stdout, stderr = make_proc.communicate()
+        check=True,
+    )
     assert make_proc.returncode == 0

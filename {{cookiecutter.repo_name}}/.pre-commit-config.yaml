@@ -2,16 +2,12 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
     hooks:
-      - id: trailing-whitespace
-      - id: end-of-file-fixer
-        exclude_types: [jupyter]
       - id: check-yaml
         exclude: ^(mkdocs\.yml|{{cookiecutter.repo_name}}/mkdocs\.yml)$
       - id: check-case-conflict
       - id: debug-statements
       - id: detect-private-key
       - id: check-merge-conflict
-      - id: check-ast
       - id: check-added-large-files
         args: [--maxkb=100000] # 100MB
 
@@ -34,14 +30,6 @@ repos:
         args:
           - --config-file=.code_quality/mypy.ini
 
-  - repo: https://github.com/PyCQA/bandit
-    rev: 1.7.8
-    hooks:
-      - id: bandit
-        args:
-          - -c
-          - .code_quality/bandit.yaml
-
   - repo: https://github.com/Yelp/detect-secrets
     rev: v1.4.0
     hooks:
@@ -50,3 +38,10 @@ repos:
       - id: detect-secrets
         name: 'detect-secrets-jupyter'
         args: ['--exclude-files', '.*[^i][^p][^y][^n][^b]$', '--exclude-lines', '"(hash|id|image/\w+)":.*', ]
+
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v3.20.0
+    hooks:
+      - id: commitizen
+      - id: commitizen-branch
+        stages: [push]
