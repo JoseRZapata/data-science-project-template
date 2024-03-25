@@ -3,6 +3,8 @@
 [![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org/)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json)](https://github.com/charliermarsh/ruff)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit)
+[![Checked with mypy](https://www.mypy-lang.org/static/mypy_badge.svg)](https://mypy-lang.org/)
 [![pages-build-deployment](https://github.com/JoseRZapata/data-science-project-template/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/JoseRZapata/data-science-project-template/actions/workflows/pages/pages-build-deployment)
 [![CI](https://github.com/JoseRZapata/data-science-project-template/actions/workflows/ci.yml/badge.svg)](https://github.com/JoseRZapata/data-science-project-template/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/JoseRZapata/data-science-project-template/graph/badge.svg?token=7LCPX574UF)](https://codecov.io/gh/JoseRZapata/data-science-project-template)
