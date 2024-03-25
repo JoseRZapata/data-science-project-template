@@ -37,6 +37,9 @@ Table of Contents
         - [🔍 Code quality](#-code-quality)
         - [🎨 Code formatting](#-code-formatting)
       - [👷 CI/CD](#-cicd)
+        - [Automatic Dependency updates](#automatic-dependency-updates)
+        - [Dependency Review in PR](#dependency-review-in-pr)
+        - [Pre-commit automatic updates](#pre-commit-automatic-updates)
   - [🔒 Security](#-security)
     - [🔏 Static Application Security Testing (SAST)](#-static-application-security-testing-sast)
   - [⌨️ Accessibility](#️-accessibility)
@@ -212,13 +215,19 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 
 #### 👷 CI/CD
 
-- **Dependency updates**
-  with [Dependabot]
-  - Automated [Dependabot] PR merging with the [Dependabot Auto Merge GitHub Action](https://github.com/ahmadnassri/action-dependabot-auto-merge)
-    - Replacement for [pip-audit](https://github.com/pypa/pip-audit) , _In your local environment,
-       If you want to check for vulnerabilities in your dependencies you can install this tool_.
+##### Automatic Dependency updates
 
-- **Pre-commit automatic updates** with [GitHub Actions] workflow `.github/workflows/pre-commit_autoupdate.yml`
+- Dependency updates with [Dependabot], Automated [Dependabot] PR merging with the [Dependabot Auto Merge GitHub Action](https://github.com/ahmadnassri/action-dependabot-auto-merge)
+
+- This is a replacement for [pip-audit](https://github.com/pypa/pip-audit) , _In your local environment, If you want to check for vulnerabilities in your dependencies you can use [pip-audit]_.
+
+##### Dependency Review in PR
+
+- Dependency Review  with [dependency-review-action], This action scans your pull requests for dependency changes, and will raise an error if any vulnerabilities or invalid licenses are being introduced.
+
+##### Pre-commit automatic updates
+
+- Automatic updates with [GitHub Actions] workflow `.github/workflows/pre-commit_autoupdate.yml`
 
 ## 🔒 Security
 
@@ -282,6 +291,7 @@ tests                          Run tests with coverage
 [Cruft]: https://cruft.github.io/cruft/
 [Data structure]: https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/data/README.md
 [Dependabot]: https://github.com/dependabot/dependabot-core
+[dependency-review-action]: https://github.com/actions/dependency-review-action
 [Flake8]:https://github.com/PyCQA/flake8
 [GitHub Actions]: https://github.com/features/actions
 [hydra]: https://hydra.cc/
