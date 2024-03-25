@@ -50,3 +50,10 @@ repos:
       - id: detect-secrets
         name: 'detect-secrets-jupyter'
         args: ['--exclude-files', '.*[^i][^p][^y][^n][^b]$', '--exclude-lines', '"(hash|id|image/\w+)":.*', ]
+
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v3.20.0
+    hooks:
+      - id: commitizen
+      - id: commitizen-branch
+        stages: [push]
