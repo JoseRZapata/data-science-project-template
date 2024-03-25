@@ -1,4 +1,4 @@
-# 💻 Local Dev environment setup
+# 🏠 Local Dev environment setup
 
 I develop data science python projects in Linux OS or MAC OS. (For Windows OS I recommend [WSL] and run commands as Linux OS).
 

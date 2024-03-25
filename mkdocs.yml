@@ -18,15 +18,13 @@ theme:
     - navigation.path
 
 nav:
-  - Introduction: 'index.md'
-  - Setup Tokens: 'setup_tokens.md'
-  - Pre-commit configuration: 'pre-commit.md'
-  - Github Actions:
+  - 📖 Introduction: 'index.md'
+  - 🔑 Setup Tokens: 'setup_tokens.md'
+  - ⚙️ Pre-commit configuration: 'pre-commit.md'
+  - 🚀 Github Actions:
     - Pre-commit_autoupdate: 'github_actions/gh_action_pre-commit-autoupdate.md'
-  - VSCode configuration: 'vscode.md'
-  - My Local Dev setup: 'local_setup.md'
-
-
+  - 💻 VSCode configuration: 'vscode.md'
+  - 🏠 Local Dev setup: 'local_setup.md'
 
 markdown_extensions:
   - pymdownx.snippets:
