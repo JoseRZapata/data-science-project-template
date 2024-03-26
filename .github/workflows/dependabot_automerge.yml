@@ -1,4 +1,4 @@
----
+# https://github.com/lkurzyniec/netcore-boilerplate/blob/master/.github/workflows/auto-merge.yml
 name: Dependabot Approve and Merge
 
 on:
