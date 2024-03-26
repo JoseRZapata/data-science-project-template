@@ -1,32 +1,64 @@
-name: Dependabot auto-merge & auto-approve
-on: pull_request
+---
+name: Dependabot Approve and Merge
+
+on:
+  pull_request_target:
 
 permissions:
-  contents: write
   pull-requests: write
+  contents: write
+  issues: write
 
 jobs:
-  dependabot:
+  automerge:
+    name: Auto merge
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' }}
+
+    if: github.actor == 'dependabot[bot]'
     steps:
-      - name: Dependabot metadata
-        id: metadata
-        uses: dependabot/fetch-metadata@v1
-        with:
-          github-token: ${{ secrets.PAT }}
-      - name: Enable auto-merge for Dependabot PRs
+      - name: Fetch config
+        id: fetch-config
+        env:
+          UPDATE_TYPES: ${{ vars.UPDATE_TYPES }}
+          OMIT_NAMES: ${{ vars.OMIT_NAMES }}
+        run: |
+          arr=(${UPDATE_TYPES//;/ })
+          count=${#arr[@]}
+          arr2=(${OMIT_NAMES//;/ })
+
+          echo "Types: ${arr[*]}"
+          echo "Omit: ${arr2[*]}"
+
+          echo "types=${arr[*]}" >> $GITHUB_OUTPUT
+          echo "count=${count}" >> $GITHUB_OUTPUT
+          echo "omit=${arr2[*]}" >> $GITHUB_OUTPUT
+
+      - name: Fetch Dependabot metadata
+        id: dependabot-metadata
+        if: fromJson(steps.fetch-config.outputs.count) > 0
+        uses: dependabot/fetch-metadata@v1.6.0
+
+      - name: Approve and auto-merge
         id: auto-merge
         if: |
-          ${{ steps.metadata.outputs.update-type == 'version-update:semver-patch'
-          || steps.metadata.outputs.update-type == 'version-update:semver-minor'}}
-        run: gh pr merge --auto --merge "$PR_URL"
+          fromJson(steps.fetch-config.outputs.count) > 0
+          && contains(steps.fetch-config.outputs.types, steps.dependabot-metadata.outputs.update-type)
+          && !contains(steps.fetch-config.outputs.omit, steps.dependabot-metadata.outputs.dependency-names)
+        run: |
+          gh pr review --approve "$PR_URL"
+          gh pr merge --auto --squash "$PR_URL"
+          gh pr edit "$PR_URL" --add-label "auto-merged"
+          echo "STATUS=true" >> $GITHUB_OUTPUT
         env:
-          PR_URL: ${{github.event.pull_request.html_url}}
+          PR_URL: ${{ github.event.pull_request.html_url }}
           GITHUB_TOKEN: ${{ secrets.PAT }}
-      - name: Approve a PR
-        if: ${{ steps.auto-merge.conclusion == 'success' }}
-        run: gh pr review --approve "$PR_URL"
+
+      - name: Write summary
+        run: |
+          result="skip. :x:"
+          if [ "${STATUS}" == "true" ]; then
+              result=" auto-merge! :white_check_mark:"
+          fi
+          echo "### Done with ${result}" >> $GITHUB_STEP_SUMMARY
         env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          STATUS: ${{ steps.auto-merge.outputs.STATUS }}
