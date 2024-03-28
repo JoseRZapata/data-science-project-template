@@ -631,7 +631,7 @@
   
 
 
-<h1 id="local-dev-environment-setup">🏠 Local Dev environment setup</h1>
+<h1 id="local-dev-environment-setup">🛠️ Local Dev environment setup</h1>
 <p>I develop data science python projects in Linux OS or MAC OS. (For Windows OS I recommend <a href="https://docs.microsoft.com/en-us/windows/wsl/install">WSL</a> and run commands as Linux OS).</p>
 <p>I setup my local development environment using the following steps:</p>
 <h2 id="computer-setup-to-develop-with-python">💻 Computer setup to develop with Python</h2>
@@ -649,11 +649,13 @@
 <li>Install <a href="https://github.com/pyenv/pyenv?tab=readme-ov-file#installation">Pyenv</a> and after install set up the terminal for <a href="https://github.com/pyenv/pyenv?tab=readme-ov-file#installation">Pyenv</a> - <a href="https://github.com/pyenv/pyenv?tab=readme-ov-file#set-up-your-shell-environment-for-pyenv">Link to set up</a><ul>
 <li>Linux: <code>curl https://pyenv.run | bash</code></li>
 <li>MAC: <code>brew install pyenv</code></li>
+<li><strong>Check the installation version</strong> executing in terminal: <code>pyenv --version</code> for help go to <a href="https://github.com/pyenv/pyenv?tab=readme-ov-file#set-up-your-shell-environment-for-pyenv">pyenv installation help</a></li>
 </ul>
 </li>
 <li>Install <a href="https://www.python.org/downloads/">Python</a> using <a href="https://github.com/pyenv/pyenv?tab=readme-ov-file#installation">Pyenv</a> , at this time I am using Python 3.11<ul>
 <li><code>pyenv install 3.11</code> # Install Python 3.11 in computer</li>
 <li><code>pyenv global 3.11</code> # Set Python 3.11 as global version</li>
+<li><strong>Check the installation version</strong> executing in terminal: <code>python --version</code></li>
 </ul>
 </li>
 <li>
@@ -664,12 +666,18 @@
 <div class="language-bash highlight"><span class="filename">Install pipx in Linux</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>pipx
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>pipx<span class="w"> </span>ensurepath
 </span></code></pre></div>
+<ul>
+<li>Check the installation version executing in terminal: <code>pipx --version</code></li>
+</ul>
 </li>
 <li>
 <p>MAC:</p>
 <div class="language-bash highlight"><span class="filename">Install pipx in Mac os</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>brew<span class="w"> </span>install<span class="w"> </span>pipx
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>pipx<span class="w"> </span>ensurepath
 </span></code></pre></div>
+<ul>
+<li>Check the installation version executing in terminal: <code>pipx --version</code></li>
+</ul>
 </li>
 </ul>
 </li>
@@ -682,16 +690,16 @@
 <li><code>pipx install poetry</code></li>
 </ul>
 </li>
-<li><a href="https://github.com/pypa/pip-audit">Pip-audit</a> to local check the security of the dependencies of the project.<ul>
+<li><a href="https://cruft.github.io/cruft/">Cruft</a> allows you to maintain all the necessary boilerplate for packaging and building projects separate from the code you intentionally write. Fully compatible with existing Cookiecutter templates.<ul>
+<li><code>pipx install cruft</code></li>
+</ul>
+</li>
+<li>(optional) <a href="https://github.com/pypa/pip-audit">Pip-audit</a> to local check the security of the dependencies of the project.<ul>
 <li><code>pipx install pip-audit</code></li>
 </ul>
 </li>
-<li><a href="https://github.com/Mateusz-Grzelinski/actionlint-py">Actionlint</a> to check the syntax of the GitHub Actions configuration files of the project.<ul>
+<li>(optional) <a href="https://github.com/Mateusz-Grzelinski/actionlint-py">Actionlint</a> to check the syntax of the GitHub Actions configuration files of the project.<ul>
 <li><code>pipx install actionlint</code></li>
-</ul>
-</li>
-<li><a href="https://cruft.github.io/cruft/">Cruft</a> allows you to maintain all the necessary boilerplate for packaging and building projects separate from the code you intentionally write. Fully compatible with existing Cookiecutter templates.<ul>
-<li><code>pipx install cruft</code></li>
 </ul>
 </li>
 </ol>
