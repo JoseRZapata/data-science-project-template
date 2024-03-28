@@ -1,4 +1,4 @@
-# 🏠 Local Dev environment setup
+# 🛠️ Local Dev environment setup
 
 I develop data science python projects in Linux OS or MAC OS. (For Windows OS I recommend [WSL] and run commands as Linux OS).
 
@@ -15,9 +15,11 @@ I setup my local development environment using the following steps:
 3. Install [Pyenv] and after install set up the terminal for [Pyenv] - [Link to set up](https://github.com/pyenv/pyenv?tab=readme-ov-file#set-up-your-shell-environment-for-pyenv)
       - Linux: `curl https://pyenv.run | bash`
       - MAC: `brew install pyenv`
+      - **Check the installation version** executing in terminal: `pyenv --version` for help go to [pyenv installation help](https://github.com/pyenv/pyenv?tab=readme-ov-file#set-up-your-shell-environment-for-pyenv)
 4. Install [Python] using [Pyenv] , at this time I am using Python 3.11
       - `pyenv install 3.11` # Install Python 3.11 in computer
       - `pyenv global 3.11` # Set Python 3.11 as global version
+      - **Check the installation version** executing in terminal: `python --version`
 5. Install locally [Pipx] to Install and Run Python Applications in Isolated Environments
       - Linux:
 
@@ -26,12 +28,16 @@ I setup my local development environment using the following steps:
         python3 -m pipx ensurepath
         ```
 
+        - Check the installation version executing in terminal: `pipx --version`
+
       - MAC:
 
         ```bash title="Install pipx in Mac os"
         brew install pipx
         pipx ensurepath
         ```
+
+        - Check the installation version executing in terminal: `pipx --version`
 
 ## 🐍 General Python tools
 
@@ -41,12 +47,12 @@ General Tools that I use to develop Python projects, The most important is [Poet
 
 1. [Poetry] to manage the dependencies and the virtual environment of the project.
       - `pipx install poetry`
-2. [Pip-audit] to local check the security of the dependencies of the project.
-      - `pipx install pip-audit`
-3. [Actionlint] to check the syntax of the GitHub Actions configuration files of the project.
-      - `pipx install actionlint`
-4. [Cruft] allows you to maintain all the necessary boilerplate for packaging and building projects separate from the code you intentionally write. Fully compatible with existing Cookiecutter templates.
+2. [Cruft] allows you to maintain all the necessary boilerplate for packaging and building projects separate from the code you intentionally write. Fully compatible with existing Cookiecutter templates.
       - `pipx install cruft`
+3. (optional) [Pip-audit] to local check the security of the dependencies of the project.
+      - `pipx install pip-audit`
+4. (optional) [Actionlint] to check the syntax of the GitHub Actions configuration files of the project.
+      - `pipx install actionlint`
 
 ## 📁 Start a new data science project
 
