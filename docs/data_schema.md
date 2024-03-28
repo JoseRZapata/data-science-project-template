@@ -1,0 +1,1 @@
+--8<-- "{{cookiecutter.repo_name}}/data/README.md"

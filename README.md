@@ -106,7 +106,6 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 .
 ├── codecov.yml                         # configuration for codecov
 ├── .code_quality
-│   ├── bandit.yaml                     # bandit configuration
 │   ├── mypy.ini                        # mypy configuration
 │   └── ruff.toml                       # ruff configuration
 ├── data
@@ -127,12 +126,13 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 │   │       └── action.yml              # github action to setup python environment
 │   ├── dependabot.md                   # github action to update dependencies
 │   ├── pull_request_template.md        # template for pull requests
-│   └── workflows
-│       ├── docs.yml                    # github action to build documentation (mkdocs)
-│       ├── pre-commit_autoupdate.yml   # github action update pre-commit hooks
-│       └── test.yml
+│   └── workflows                       # github actions workflows
+│       ├── ci.yml                      # run continuous integration (tests, pre-commit, etc.)
+│       ├── dependency_review.yml       # review dependencies
+│       ├── docs.yml                    # build documentation (mkdocs)
+│       └── pre-commit_autoupdate.yml   # update pre-commit hooks
 ├── .gitignore                          # files to ignore in git
-├── Makefile                            # useful commands to setup environment,
+├── Makefile                            # useful commands to setup environment, run tests, etc.
 ├── models                              # store final models
 ├── notebooks
 │   ├── 1-data                          # data extraction and cleaning
@@ -149,9 +149,34 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 ├── pyproject.toml                      # dependencies for poetry
 ├── README.md                           # description of your project
 ├── src                                 # source code for use in this project
+│   ├── libs                            # custom python scripts
+│   │   ├── data_etl                    # data extraction, transformation, and loading  
+│   │   ├── data_validation             # data validation  
+│   │   ├── feat_cleaning               # feature engineering data cleaning
+│   │   ├── feat_encoding               # feature engineering encoding
+│   │   ├── feat_imputation             # feature engineering imputation    
+│   │   ├── feat_new_features           # feature engineering new features
+│   │   ├── feat_pipelines              # feature engineering pipelines
+│   │   ├── feat_preprocess_strings     # feature engineering pre process strings
+│   │   ├── feat_scaling                # feature engineering scaling data
+│   │   ├── feat_selection              # feature engineering feature selection
+│   │   ├── feat_strings                # feature engineering strings
+│   │   ├── metrics                     # evaluation metrics
+│   │   ├── model                       # model training and prediction    
+│   │   ├── model_evaluation            # model evaluation
+│   │   ├── model_selection             # model selection
+│   │   ├── model_validation            # model validation
+│   │   └── reports                     # reports
+│   ├── pipelines
+│   │   ├── data_etl                    # data extraction, transformation, and loading
+│   │   ├── feature_engineering         # prepare data for modeling
+│   │   ├── model_evaluation            # evaluate model performance
+│   │   ├── model_prediction            # model predictions
+│   │   └── model_train                 # train models    
 ├── tests                               # test code for your project
 └── .vscode                             # vscode configuration
     ├── extensions.json                 # list of recommended extensions
+    ├── launch.json                     # vscode launch configuration
     └── settings.json                   # vscode settings
 ```
 
