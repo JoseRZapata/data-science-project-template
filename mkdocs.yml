@@ -19,12 +19,15 @@ theme:
 
 nav:
   - 📖 Introduction: 'index.md'
+  - 🗃️ Project structure:
+    - 🗂️ Directory Hierarchy: 'directory_hierarchy.md'
+    - 🗄️ Data Schema: 'data_schema.md'
   - 🔑 Setup Tokens: 'setup_tokens.md'
-  - ⚙️ Pre-commit configuration: 'pre-commit.md'
+  - ⚙️  Pre-commit configuration: 'pre-commit.md'
   - 🚀 Github Actions:
     - Pre-commit_autoupdate: 'github_actions/gh_action_pre-commit-autoupdate.md'
   - 💻 VSCode configuration: 'vscode.md'
-  - 🏠 Local Dev setup: 'local_setup.md'
+  - 🛠️ Local Dev setup: 'local_setup.md'
 
 markdown_extensions:
   - pymdownx.snippets:
@@ -39,3 +42,4 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.superfences
+  - tables
