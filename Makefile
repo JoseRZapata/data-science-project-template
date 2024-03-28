@@ -31,6 +31,10 @@ docs_view: ## Build and serve the documentation
 docs-test: ## Test if documentation can be built without warnings or errors
 	@poetry run mkdocs build -s
 
+view-tree: ## View the project tree
+	@echo "🚀 Viewing project tree..."
+	@tree -a {{cookiecutter.repo_name}} -I '__init__.py|.gitkeep'
+
 ####----Tests----####
 
 test: ## Test the code with pytest and coverage
