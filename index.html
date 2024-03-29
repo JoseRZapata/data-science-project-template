@@ -1173,6 +1173,7 @@
 <p>✨📚✨ Documentation: <a href="https://joserzapata.github.io/data-science-project-template/">https://joserzapata.github.io/data-science-project-template/</a></p>
 <p>Source Code: <a href="https://github.com/JoseRZapata/data-science-project-template">https://github.com/JoseRZapata/data-science-project-template</a></p>
 <hr />
+<!-- markdownlint-enable MD007 -->
 <h2 id="creating-a-new-project">📁 Creating a New Project</h2>
 <h3 id="recommendations">👍 Recommendations</h3>
 <p>It is highly recommended to use a python version manager like <a href="https://github.com/pyenv/pyenv">Pyenv</a> and this project is set to use <a href="https://python-poetry.org/">Poetry</a> &gt;= 1.8 to manage the dependencies and the environment.</p>
@@ -1282,10 +1283,12 @@
 <li>Python packaging, dependency management and environment management
   with <a href="https://python-poetry.org/">Poetry</a> - <a href="https://mathdatasimplified.com/poetry-a-better-way-to-manage-python-dependencies/"><code>why?</code></a></li>
 <li>Project workflow orchestration
-  with <a href="https://www.gnu.org/software/make/manual/make.html">Make</a> as an <a href="https://en.wikipedia.org/wiki/Shim_(computing)">interface shim</a></li>
+  with <a href="https://www.gnu.org/software/make/manual/make.html">Make</a> as an <a href="https://en.wikipedia.org/wiki/Shim_(computing)">interface shim</a><ul>
 <li>Self-documenting <a href="https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/Makefile">Makefile</a>; just type
-      <code>make</code> on the command line to display auto-generated documentation on available
-      targets:</li>
+  <code>make</code> on the command line to display auto-generated documentation on available
+  targets:</li>
+</ul>
+</li>
 <li>Automated Cookiecutter template synchronization with <a href="https://cruft.github.io/cruft/">Cruft</a> - <a href="https://careers.wolt.com/en/blog/tech/project-template-for-modern-python-packages"><code>why?</code></a></li>
 <li>Code quality tooling automation and management with <a href="https://pre-commit.com/">pre-commit</a></li>
 <li>Continuous integration and deployment with <a href="https://github.com/features/actions">GitHub Actions</a></li>
@@ -1309,30 +1312,35 @@
 <h4 id="linting">🚨 Linting</h4>
 <h5 id="code-quality">🔍 Code quality</h5>
 <ul>
-<li><a href="https://docs.astral.sh/ruff/">Ruff</a> An extremely fast (10x-100x faster) Python linter and code formatter, written in Rust.</li>
+<li><a href="https://docs.astral.sh/ruff/">Ruff</a> An extremely fast (10x-100x faster) Python linter and code formatter, written in Rust.<ul>
 <li>Replacement for <a href="https://github.com/PyCQA/pylint">Pylint</a>, <a href="https://github.com/PyCQA/flake8">Flake8</a> (including major plugins) and more linters under a single, common interface</li>
+</ul>
+</li>
 <li><a href="https://github.com/koalaman/shellcheck">ShellCheck</a></li>
-<li>Unsanitary commits:</li>
-<li>Secrets
-    with <a href="https://github.com/Yelp/detect-secrets"><code>detect-secrets</code></a></li>
-<li>Large files
-    with <a href="https://github.com/pre-commit/pre-commit-hooks#check-added-large-files"><code>check-added-large-files</code></a></li>
-<li>Invalid Python files
-    with <a href="https://github.com/pre-commit/pre-commit-hooks#check-ast"><code>check-ast</code></a></li>
+<li>Unsanitary commits:<ul>
+<li>Secrets with <a href="https://github.com/Yelp/detect-secrets"><code>detect-secrets</code></a></li>
+<li>Large files with <a href="https://github.com/pre-commit/pre-commit-hooks#check-added-large-files"><code>check-added-large-files</code></a></li>
+<li>Files that contain merge conflict strings.<a href="https://github.com/pre-commit/pre-commit-hooks?tab=readme-ov-file#check-merge-conflict">check-merge-conflict</a></li>
+</ul>
+</li>
 </ul>
 <h5 id="code-formatting">🎨 Code formatting</h5>
 <ul>
-<li><a href="https://docs.astral.sh/ruff/">Ruff</a> An extremely fast (10x-100x faster) Python linter and code formatter, written in Rust.</li>
 <li>
-<p>Replacement for <a href="https://github.com/psf/black">Black</a>, <a href="https://github.com/PyCQA/isort">isort</a>, <a href="https://github.com/asottile/pyupgrade">pyupgrade</a> and more formatters under a single, common interface</p>
+<p><a href="https://docs.astral.sh/ruff/">Ruff</a> An extremely fast (10x-100x faster) Python linter and code formatter, written in Rust.</p>
+<ul>
+<li>Replacement for <a href="https://github.com/psf/black">Black</a>, <a href="https://github.com/PyCQA/isort">isort</a>, <a href="https://github.com/asottile/pyupgrade">pyupgrade</a> and more formatters under a single, common interface</li>
+</ul>
 </li>
 <li>
 <p>General file formatting:</p>
-</li>
+<ul>
 <li><a href="https://github.com/pre-commit/pre-commit-hooks#end-of-file-fixer"><code>end-of-file-fixer</code></a></li>
 <li><a href="https://github.com/pre-commit/pre-commit-hooks#pretty-format-json"><code>pretty-format-json</code></a></li>
 <li>(trim) <a href="https://github.com/pre-commit/pre-commit-hooks#trailing-whitespace"><code>trailing-whitespace</code></a></li>
 <li><a href="https://github.com/pre-commit/pre-commit-hooks#check-yaml"><code>check-yaml</code></a></li>
+</ul>
+</li>
 </ul>
 <h4 id="cicd">👷 CI/CD</h4>
 <h5 id="automatic-dependency-updates">Automatic Dependency updates</h5>
@@ -1355,7 +1363,7 @@
 <h2 id="security">🔒 Security</h2>
 <h3 id="static-application-security-testing-sast">🔏 Static Application Security Testing (SAST)</h3>
 <ul>
-<li>Code vulnerabilities with <a href="https://github.com/PyCQA/bandit">Bandit</a></li>
+<li>Code vulnerabilities with <a href="https://github.com/PyCQA/bandit">Bandit</a> using <a href="https://docs.astral.sh/ruff/">Ruff</a></li>
 </ul>
 <h2 id="accessibility">⌨️ Accessibility</h2>
 <h3 id="automation-tool-makefile">🔨 Automation tool (Makefile)</h3>
@@ -1373,10 +1381,12 @@ in terminal type <code>make</code> to see the available commands</p>
 <h3 id="project-documentation">📝 Project Documentation</h3>
 <ul>
 <li>Documentation building
-  with <a href="https://www.mkdocs.org/">MkDocs</a> - <a href="https://realpython.com/python-project-documentation-with-mkdocs/">Tutorial</a></li>
+  with <a href="https://www.mkdocs.org/">MkDocs</a> - <a href="https://realpython.com/python-project-documentation-with-mkdocs/">Tutorial</a><ul>
 <li>Powered by <a href="https://github.com/squidfunk/mkdocs-material">mkdocs-material</a></li>
 <li>Rich automatic documentation from type annotations and docstrings (NumPy, Google, etc.)
-    with <a href="https://mkdocstrings.github.io/">mkdocstrings</a></li>
+with <a href="https://mkdocstrings.github.io/">mkdocstrings</a></li>
+</ul>
+</li>
 </ul>
 <h3 id="templates">🗃️ Templates</h3>
 <ul>
