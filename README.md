@@ -20,7 +20,7 @@ Source Code: <https://github.com/JoseRZapata/data-science-project-template>
 ---
 
 Table of Contents
-
+<!-- markdownlint-disable MD007 -->
 - [Data science project template](#data-science-project-template)
   - [📁 Creating a New Project](#-creating-a-new-project)
     - [👍 Recommendations](#-recommendations)
@@ -49,7 +49,7 @@ Table of Contents
     - [📝 Project Documentation](#-project-documentation)
     - [🗃️ Templates](#️-templates)
   - [References](#references)
-
+<!-- markdownlint-enable MD007 -->
 ## 📁 Creating a New Project
 
 ### 👍 Recommendations
@@ -190,7 +190,7 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
   with [Poetry] - [`why?`](https://mathdatasimplified.com/poetry-a-better-way-to-manage-python-dependencies/)
 - Project workflow orchestration
   with [Make] as an [interface shim](https://en.wikipedia.org/wiki/Shim_(computing))
-  - Self-documenting [Makefile](https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/Makefile); just type
+    - Self-documenting [Makefile](https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/Makefile); just type
       `make` on the command line to display auto-generated documentation on available
       targets:
 - Automated Cookiecutter template synchronization with [Cruft] - [`why?`](https://careers.wolt.com/en/blog/tech/project-template-for-modern-python-packages)
@@ -219,26 +219,23 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 ##### 🔍 Code quality
 
 - [Ruff] An extremely fast (10x-100x faster) Python linter and code formatter, written in Rust.
-  - Replacement for [Pylint], [Flake8] (including major plugins) and more linters under a single, common interface
+    - Replacement for [Pylint], [Flake8] (including major plugins) and more linters under a single, common interface
 - [ShellCheck](https://github.com/koalaman/shellcheck)
 - Unsanitary commits:
-  - Secrets
-    with [`detect-secrets`](https://github.com/Yelp/detect-secrets)
-  - Large files
-    with [`check-added-large-files`](https://github.com/pre-commit/pre-commit-hooks#check-added-large-files)
-  - Invalid Python files
-    with [`check-ast`](https://github.com/pre-commit/pre-commit-hooks#check-ast)
+    - Secrets with [`detect-secrets`](https://github.com/Yelp/detect-secrets)
+    - Large files with [`check-added-large-files`](https://github.com/pre-commit/pre-commit-hooks#check-added-large-files)
+    - Files that contain merge conflict strings.[check-merge-conflict](https://github.com/pre-commit/pre-commit-hooks?tab=readme-ov-file#check-merge-conflict)
 
 ##### 🎨 Code formatting
 
 - [Ruff] An extremely fast (10x-100x faster) Python linter and code formatter, written in Rust.
-  - Replacement for [Black], [isort], [pyupgrade] and more formatters under a single, common interface
+    - Replacement for [Black], [isort], [pyupgrade] and more formatters under a single, common interface
 
 - General file formatting:
-  - [`end-of-file-fixer`](https://github.com/pre-commit/pre-commit-hooks#end-of-file-fixer)
-  - [`pretty-format-json`](https://github.com/pre-commit/pre-commit-hooks#pretty-format-json)
-  - (trim) [`trailing-whitespace`](https://github.com/pre-commit/pre-commit-hooks#trailing-whitespace)
-  - [`check-yaml`](https://github.com/pre-commit/pre-commit-hooks#check-yaml)
+    - [`end-of-file-fixer`](https://github.com/pre-commit/pre-commit-hooks#end-of-file-fixer)
+    - [`pretty-format-json`](https://github.com/pre-commit/pre-commit-hooks#pretty-format-json)
+    - (trim) [`trailing-whitespace`](https://github.com/pre-commit/pre-commit-hooks#trailing-whitespace)
+    - [`check-yaml`](https://github.com/pre-commit/pre-commit-hooks#check-yaml)
 
 #### 👷 CI/CD
 
@@ -260,7 +257,7 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 
 ### 🔏 Static Application Security Testing (SAST)
 
-- Code vulnerabilities with [Bandit]
+- Code vulnerabilities with [Bandit] using [Ruff]
 
 ## ⌨️ Accessibility
 
@@ -284,8 +281,8 @@ tests                          Run tests with coverage
 
 - Documentation building
   with [MkDocs] - [Tutorial](https://realpython.com/python-project-documentation-with-mkdocs/)
-  - Powered by [mkdocs-material](https://github.com/squidfunk/mkdocs-material)
-  - Rich automatic documentation from type annotations and docstrings (NumPy, Google, etc.)
+    - Powered by [mkdocs-material](https://github.com/squidfunk/mkdocs-material)
+    - Rich automatic documentation from type annotations and docstrings (NumPy, Google, etc.)
     with [mkdocstrings]
 
 ### 🗃️ Templates
