@@ -270,6 +270,26 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../local_setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🛠️ Get started (💻 Local setup)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     
     
     
@@ -280,10 +300,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -294,8 +314,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             🗃️ Project structure
           </label>
@@ -450,15 +470,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pycqabandit" class="md-nav__link">
-    <span class="md-ellipsis">
-      PyCQA/bandit
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#yelpdetect-secrets" class="md-nav__link">
     <span class="md-ellipsis">
       Yelp/detect-secrets
@@ -491,10 +502,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -505,8 +516,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             🚀 Github Actions
           </label>
@@ -552,26 +563,6 @@
   
   <span class="md-ellipsis">
     💻 VSCode configuration
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../local_setup/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    🛠️ Local Dev setup
   </span>
   
 
@@ -634,15 +625,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pycqabandit" class="md-nav__link">
-    <span class="md-ellipsis">
-      PyCQA/bandit
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#yelpdetect-secrets" class="md-nav__link">
     <span class="md-ellipsis">
       Yelp/detect-secrets
@@ -672,6 +654,10 @@
 <h1 id="pre-commit-configuration">Pre-commit configuration</h1>
 <p>this project uses <a href="https://pre-commit.com/">pre-commit</a> to run checks on every commit.</p>
 <p>Configuration file: <a href="https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/.pre-commit-config.yaml">.pre-commit-config.yaml</a></p>
+<blockquote>
+<p>If you initialize you project using <code>make init_env</code> pre-commit is already installed and configured.
+If not, you can install pre-commit running in terminal <code>poetry run pre-commit install</code> in the root of the project.</p>
+</blockquote>
 <h2 id="pre-commitpre-commit-hooks">pre-commit/pre-commit-hooks</h2>
 <p>This repository contains some out-of-the-box hooks provided by the <a href="https://github.com/pre-commit/pre-commit-hooks">pre-commit project</a>.</p>
 <ul>
@@ -695,11 +681,6 @@
 <p>This repository contains a mirror of mypy for pre-commit.</p>
 <ul>
 <li><a href="http://mypy-lang.org/"><code>mypy</code></a>: This hook runs mypy, a static type checker for Python, with a custom configuration file.</li>
-</ul>
-<h2 id="pycqabandit">PyCQA/bandit</h2>
-<p>This repository contains Bandit, a tool designed to find common security issues in Python code.</p>
-<ul>
-<li><a href="https://github.com/PyCQA/bandit"><code>bandit</code></a>: This hook runs Bandit with a custom configuration file.</li>
 </ul>
 <h2 id="yelpdetect-secrets">Yelp/detect-secrets</h2>
 <p>This repository contains a tool to detect secrets in the code base. <a href="https://github.com/Yelp/detect-secrets">yelp detect-secrets</a></p>
