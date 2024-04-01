@@ -4,6 +4,10 @@ this project uses [pre-commit](https://pre-commit.com/) to run checks on every c
 
 Configuration file: [.pre-commit-config.yaml](https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/.pre-commit-config.yaml)
 
+> If you initialize you project using `make init_env` pre-commit is already installed and configured.
+> If not, you can install pre-commit running in terminal `poetry run pre-commit install` in the root of the project.
+
+
 ## pre-commit/pre-commit-hooks
 
 This repository contains some out-of-the-box hooks provided by the [pre-commit project](https://github.com/pre-commit/pre-commit-hooks).
@@ -30,12 +34,6 @@ This repository contains hooks for the Ruff programming language.
 This repository contains a mirror of mypy for pre-commit.
 
 - [`mypy`](http://mypy-lang.org/): This hook runs mypy, a static type checker for Python, with a custom configuration file.
-
-## PyCQA/bandit
-
-This repository contains Bandit, a tool designed to find common security issues in Python code.
-
-- [`bandit`](https://github.com/PyCQA/bandit): This hook runs Bandit with a custom configuration file.
 
 ## Yelp/detect-secrets
 
