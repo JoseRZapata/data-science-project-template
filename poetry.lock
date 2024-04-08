@@ -618,13 +618,13 @@ mkdocs = ">=1.1"
 
 [[package]]
 name = "mkdocs-material"
-version = "9.5.16"
+version = "9.5.17"
 description = "Documentation that simply works"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "mkdocs_material-9.5.16-py3-none-any.whl", hash = "sha256:32fce3cd8ecbd5dca6e5887cc0cf5bc78707a36f7d0f6f1bbbe9edaf428b8055"},
-    {file = "mkdocs_material-9.5.16.tar.gz", hash = "sha256:8b89b639592660f24657bb058de4aff0060cd0383148f8f51711201730f17503"},
+    {file = "mkdocs_material-9.5.17-py3-none-any.whl", hash = "sha256:14a2a60119a785e70e765dd033e6211367aca9fc70230e577c1cf6a326949571"},
+    {file = "mkdocs_material-9.5.17.tar.gz", hash = "sha256:06ae1275a72db1989cf6209de9e9ecdfbcfdbc24c58353877b2bb927dbe413e4"},
 ]
 
 [package.dependencies]
@@ -658,13 +658,13 @@ files = [
 
 [[package]]
 name = "mkdocstrings"
-version = "0.24.1"
+version = "0.24.3"
 description = "Automatic documentation from sources, for MkDocs."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "mkdocstrings-0.24.1-py3-none-any.whl", hash = "sha256:b4206f9a2ca8a648e222d5a0ca1d36ba7dee53c88732818de183b536f9042b5d"},
-    {file = "mkdocstrings-0.24.1.tar.gz", hash = "sha256:cc83f9a1c8724fc1be3c2fa071dd73d91ce902ef6a79710249ec8d0ee1064401"},
+    {file = "mkdocstrings-0.24.3-py3-none-any.whl", hash = "sha256:5c9cf2a32958cd161d5428699b79c8b0988856b0d4a8c5baf8395fc1bf4087c3"},
+    {file = "mkdocstrings-0.24.3.tar.gz", hash = "sha256:f327b234eb8d2551a306735436e157d0a22d45f79963c60a8b585d5f7a94c1d2"},
 ]
 
 [package.dependencies]
@@ -1295,4 +1295,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "7265e5098f594ac373e65b3601366c3ec1d2795bba6e5632514d94b88314ddf4"
+content-hash = "5bff205b00590eec44ceb7bb607049512aeb9fae08ade9381edcb5ff5df7e470"
