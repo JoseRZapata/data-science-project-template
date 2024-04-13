@@ -20,15 +20,10 @@ jobs:
         with:
           github-token: ${{ secrets.PAT }}
       - name: Add label
-        uses: actions/github-script@v5
+        uses: ynab/pr-labeler-action@v1
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const { owner, repo, number } = context.issue;
-            await github.rest.issues.addLabels({
-              owner,
-              repo,
-              issue_number: number,
-              labels: ['automerge']
-            });
+          branch_label_mappings: >-
+            {
+              "auto-update-pre-commit-hooks":"automerge",
+            }
 #{% endraw %}
