@@ -15,9 +15,13 @@ updates:
           - "*"
     commit-message:
       prefix: ⬆
+    labels:
+      - "automerge"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
     commit-message:
       prefix: ⬆
+    labels:
+      - "automerge"
