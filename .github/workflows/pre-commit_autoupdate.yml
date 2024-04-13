@@ -19,11 +19,4 @@ jobs:
         uses: brokenpip3/action-pre-commit-update@0.0.1
         with:
           github-token: ${{ secrets.PAT }}
-      - name: Add label
-        uses: ynab/pr-labeler-action@v1
-        with:
-          branch_label_mappings: >-
-            {
-              "auto-update-pre-commit-hooks":"automerge",
-            }
 #{% endraw %}
