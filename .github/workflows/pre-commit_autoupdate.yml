@@ -19,4 +19,16 @@ jobs:
         uses: brokenpip3/action-pre-commit-update@0.0.1
         with:
           github-token: ${{ secrets.PAT }}
+      - name: Add label
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { owner, repo, number } = context.issue;
+            await github.rest.issues.addLabels({
+              owner,
+              repo,
+              issue_number: number,
+              labels: ['automerge']
+            });
 #{% endraw %}
