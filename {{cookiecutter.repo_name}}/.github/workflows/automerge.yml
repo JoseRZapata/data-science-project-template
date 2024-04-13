@@ -17,6 +17,7 @@ on:
     types:
       - completed
   status: {}
+#{% raw %}
 jobs:
   automerge:
     runs-on: ubuntu-latest
@@ -29,3 +30,4 @@ jobs:
           MERGE_METHOD: squash
           MERGE_REQUIRED_APPROVALS: "0"
           MERGE_LABELS: automerge   # label to trigger automerge
+#{% endraw %}
