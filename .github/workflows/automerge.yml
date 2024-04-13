@@ -28,5 +28,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PAT }}
           MERGE_METHOD: squash
           MERGE_REQUIRED_APPROVALS: "0"
-          BASE_BRANCHES: "auto-update-pre-commit-hooks"
+          MERGE_LABELS: automerge   # label to trigger automerge
           LOG: "TRACE"  # or "DEBUG"
