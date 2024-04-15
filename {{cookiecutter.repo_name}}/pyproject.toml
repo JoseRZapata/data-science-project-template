@@ -45,4 +45,8 @@ pythonpath = ["src"]
 testpaths = ["tests"]
 
 [tool.coverage.paths]
+source = ["src/"]
+
+[tool.coverage.run]
 source = ["src"]
+omit = ["**/__init__.py"]
