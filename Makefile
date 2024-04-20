@@ -2,7 +2,7 @@
 
 ####----Basic configurations----####
 
-init_env: ## Install libs with poetry and pre-commit
+install: ## Install libs with poetry and pre-commit
 	@echo "🚀 Creating virtual environment using pyenv and poetry"
 	poetry install
 	@echo "🚀 Installing pre-commit..."
@@ -23,8 +23,14 @@ pre-commit_update: ## Update pre-commit hooks
 	poetry run pre-commit clean
 	poetry run pre-commit autoupdate
 
+####----Clean----####
+clean_env: ## Clean the environment
+	@echo "🚀 Cleaning the environment..."
+	@rm -rf .venv
+
+
 ####----Docs----####
-docs_view: ## Build and serve the documentation
+docs: ## Build and serve the documentation
 	@echo "🚀 Viewing documentation..."
 	@poetry run mkdocs serve
 
