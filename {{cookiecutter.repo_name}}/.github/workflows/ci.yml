@@ -47,7 +47,10 @@ jobs:
           python-version: ${{ matrix.python-version }}
         #{% endraw %}
       - name: Run pytest with coverage
-        run: poetry run pytest --cov=./ --cov-report=xml
+        run: |
+          PYTHONPATH=$(pwd)
+          export PYTHONPATH
+          poetry run pytest --cov --cov-report=xml
 
         #{%- if cookiecutter.codecov %}
         #{% raw %}
