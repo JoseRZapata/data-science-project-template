@@ -1,5 +1,7 @@
 name: automerge
 on:
+  schedule:
+    - cron: '30 22 * * *'
   pull_request:
     types:
       - labeled
