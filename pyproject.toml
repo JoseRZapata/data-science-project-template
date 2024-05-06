@@ -31,8 +31,8 @@ pre-commit = "^3.7.0"
 
 [tool.poetry.group.docs.dependencies]
 mkdocs = "^1.6.0"
-mkdocs-material = "^9.5.18"
-mkdocstrings = {extras = ["python"], version = "^0.25.0"}
+mkdocs-material = "^9.5.21"
+mkdocstrings = {extras = ["python"], version = "^0.25.1"}
 pymdown-extensions = "^10.8"
 
 
