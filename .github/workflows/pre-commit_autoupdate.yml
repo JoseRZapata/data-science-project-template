@@ -19,11 +19,24 @@ jobs:
         uses: brokenpip3/action-pre-commit-update@0.0.1
         with:
           github-token: ${{ secrets.PAT }}
-      - id: automerge
-        name: automerge
-        uses: "pascalgn/automerge-action@v0.16.3"
-        env:
-          GITHUB_TOKEN: "${{ secrets.PAT }}"
-          MERGE_METHOD: squash
-          MERGE_REQUIRED_APPROVALS: "0"
+      - name: Add label
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.PAT }}
+          script: |
+            const { data: pullRequests } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              head: 'auto-update-pre-commit-hooks'
+            });
+            if (pullRequests.length > 0) {
+              const prNumber = pullRequests[0].number;
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                labels: ['automerge']
+              });
+            }
 #{% endraw %}
