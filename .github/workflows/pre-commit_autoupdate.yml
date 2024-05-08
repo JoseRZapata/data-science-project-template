@@ -26,5 +26,4 @@ jobs:
           GITHUB_TOKEN: "${{ secrets.PAT }}"
           MERGE_METHOD: squash
           MERGE_REQUIRED_APPROVALS: "0"
-          MERGE_LABELS: automerge
 #{% endraw %}
