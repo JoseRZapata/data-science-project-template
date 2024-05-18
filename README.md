@@ -319,7 +319,7 @@ test                  Test the code with pytest and coverage
 [Bandit]: https://github.com/PyCQA/bandit
 [Black]: https://github.com/psf/black
 [Codecov]: https://codecov.io/
-[Cookiecutter]:https://cookiecutter.readthedocs.io/stable/
+[Cookiecutter]:https://cookiecutter.readthedocs.io/en/stable/
 [Coverage.py]: https://coverage.readthedocs.io/
 [Cruft]: https://cruft.github.io/cruft/
 [Data structure]: https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/data/README.md
