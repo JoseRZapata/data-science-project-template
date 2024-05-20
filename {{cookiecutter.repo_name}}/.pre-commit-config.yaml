@@ -40,7 +40,7 @@ repos:
         args: ['--exclude-files', '.*[^i][^p][^y][^n][^b]$', '--exclude-lines', '"(hash|id|image/\w+)":.*', ]
 
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v3.25.0
+    rev: v3.26.0
     hooks:
       - id: commitizen
       - id: commitizen-branch
