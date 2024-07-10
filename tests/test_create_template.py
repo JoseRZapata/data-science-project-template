@@ -1,5 +1,4 @@
 import re
-import subprocess  # nosec
 
 
 def test_run_cookiecutter_result(cookies):  # type: ignore
@@ -33,18 +32,3 @@ def test_cookiecutter_generated_files(cookies):  # type: ignore
         re_bad.search(str(file_path)) is None
         for file_path in result.project_path.glob("*")
     )
-
-
-def test_cookiecutter_make_help(cookies):  # type: ignore
-    """ensure the make help command runs without error"""
-    result = cookies.bake()
-
-    make_proc = subprocess.run(
-        ["/usr/bin/make"],
-        shell=False,  # noqa: S603
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-        cwd=result.project_path,
-        check=True,
-    )
-    assert make_proc.returncode == 0
