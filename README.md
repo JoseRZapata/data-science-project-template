@@ -56,7 +56,9 @@ Table of Contents
 
 It is highly recommended to use a python version manager like [Pyenv] and this project is set to use [Poetry] >= 1.8 to manage the dependencies and the environment.
 
-**Note:** [Poetry] >= 1.8 should always be installed in a dedicated virtual environment to isolate it from the rest of your system. [why?](https://python-poetry.org/docs/#installation)
+**Note:** [Poetry] >= 1.8 should always be installed in a dedicated virtual environment to isolate it from the rest of your system. [why?](https://python-poetry.org/docs/#installation), I recommend using [UV] to install poetry in an isolated environment.
+
+```bash
 
 🌟 Check how to setup your environment: <https://joserzapata.github.io/data-science-project-template/local_setup/>
 
@@ -64,6 +66,10 @@ It is highly recommended to use a python version manager like [Pyenv] and this p
 
 ```bash title="install cruft"
 pip install --user cruft # Install `cruft` on your path for easy access
+
+# Or Install with UV
+
+uv tool install cruft # Install cruft in a isolated environment
 ```
 
 ```shell title="create project"
@@ -74,6 +80,10 @@ cruft create https://github.com/JoseRZapata/data-science-project-template
 
 ```shell title="install cookiecutter"
 pip install --user cookiecutter # Install `cookiecutter` on your path for easy access
+
+# Or Install with UV
+
+uv tool install cookiecutter # Install cruft in a isolated environment
 ```
 
 ```shell title="create project"
@@ -343,3 +353,4 @@ test                  Test the code with pytest and coverage
 [Pytest]: https://docs.pytest.org/en/latest/
 [pyupgrade]: https://github.com/asottile/pyupgrade
 [Ruff]: https://docs.astral.sh/ruff/
+[UV]: https://docs.astral.sh/uv/
