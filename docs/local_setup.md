@@ -16,43 +16,33 @@ I setup my local development environment using the following steps:
       - Linux: `curl https://pyenv.run | bash`
       - MAC: `brew install pyenv`
       - **Check the installation version** executing in terminal: `pyenv --version` for help go to [pyenv installation help](https://github.com/pyenv/pyenv?tab=readme-ov-file#set-up-your-shell-environment-for-pyenv)
-4. Install [Python] using [Pyenv] , at this time I am using Python 3.11
+4. Install [Python] using [Pyenv] , at this time I am using Python 3.11 (in Future, i recommend to use [UV] to manage the python versions)
       - `pyenv install 3.11` # Install Python 3.11 in computer
       - `pyenv global 3.11` # Set Python 3.11 as global version
       - **Check the installation version** executing in terminal: `python --version`
-5. Install locally [Pipx] to Install and Run Python Applications in Isolated Environments
+5. Install locally [UV] to Install and Run Python Applications in Isolated Environments
       - Linux:
 
-        ```bash title="Install pipx in Linux"
-        pip install --user pipx
-        python3 -m pipx ensurepath
+        ```bash title="Install uv in Linux or MACOS"
+        curl -LsSf https://astral.sh/uv/install.sh | sh
         ```
 
-        - Check the installation version executing in terminal: `pipx --version`
-
-      - MAC:
-
-        ```bash title="Install pipx in Mac os"
-        brew install pipx
-        pipx ensurepath
-        ```
-
-        - Check the installation version executing in terminal: `pipx --version`
+        - Check the installation version executing in terminal: `uv version`
 
 ## 🐍 General Python tools
 
-General Tools that I use to develop Python projects, The most important is [Poetry] and all this tools are installed using [Pipx] to have this tools in isolated environments, because applications runs in its own virtual environment to avoid dependencies conflicts and they are available everywhere.
-
-[When pipx is typically used?](https://python.land/virtual-environments/pipx#When_pipx_is_typically_used)
+General Tools that I use to develop Python projects, The most important is [Poetry] and all this tools are installed using [UV] to have this tools in isolated environments, because applications runs in its own virtual environment to avoid dependencies conflicts and they are available everywhere.
 
 1. [Poetry] to manage the dependencies and the virtual environment of the project.
-      - `pipx install poetry`
+      - `uv tool install poetry`
 2. [Cruft] allows you to maintain all the necessary boilerplate for packaging and building projects separate from the code you intentionally write. Fully compatible with existing Cookiecutter templates.
-      - `pipx install cruft`
+      - `uv tool install cruft`
 3. (optional) [Pip-audit] to local check the security of the dependencies of the project.
-      - `pipx install pip-audit`
+      - `uv tool install pip-audit`
 4. (optional) [Actionlint] to check the syntax of the GitHub Actions configuration files of the project.
-      - `pipx install actionlint`
+      - `uv tool install actionlint`
+
+**Note:** [UV] is a tool that wants to replace the need of [Pyenv], [Poetry] and other ones. So is very possible that in the future I will use [UV] to manage the python versions, enviroments and dependencies.
 
 ## 📁 Start a new data science project
 
@@ -83,8 +73,8 @@ General Tools that I use to develop Python projects, The most important is [Poet
 [Git]: https://git-scm.com/
 [Make]: https://www.gnu.org/software/make/manual/make.html
 [Pip-audit]: https://github.com/pypa/pip-audit
-[Pipx]: https://pipx.pypa.io/stable/
 [Poetry]: https://python-poetry.org/docs/
 [Pyenv]: https://github.com/pyenv/pyenv?tab=readme-ov-file#installation
 [Python]: https://www.python.org/downloads/
+[UV]: https://docs.astral.sh/uv/
 [WSL]: https://docs.microsoft.com/en-us/windows/wsl/install
