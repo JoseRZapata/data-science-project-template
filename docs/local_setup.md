@@ -35,6 +35,8 @@ I setup my local development environment using the following steps:
 
 General Tools that I use to develop Python projects, The most important is [Poetry] and all this tools are installed using [UV] to have this tools in isolated environments, because applications runs in its own virtual environment to avoid dependencies conflicts and they are available everywhere.
 
+[UV Highligths](https://github.com/astral-sh/uv?tab=readme-ov-file#highlights)
+
 1. [Poetry] to manage the dependencies and the virtual environment of the project.
       - `uv tool install poetry`
 2. [Cruft] allows you to maintain all the necessary boilerplate for packaging and building projects separate from the code you intentionally write. Fully compatible with existing Cookiecutter templates.
