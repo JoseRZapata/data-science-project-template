@@ -16,7 +16,9 @@ I setup my local development environment using the following steps:
       - Linux: `curl https://pyenv.run | bash`
       - MAC: `brew install pyenv`
       - **Check the installation version** executing in terminal: `pyenv --version` for help go to [pyenv installation help](https://github.com/pyenv/pyenv?tab=readme-ov-file#set-up-your-shell-environment-for-pyenv)
-4. Install [Python] using [Pyenv] , at this time I am using Python 3.11 (in Future, i recommend to use [UV] to manage the python versions)
+4. Install [Python] using [Pyenv], at this time I am using Python 3.11  
+   (In the future, I recommend using [UV] to manage Python versions. UV is a faster,  
+   more efficient alternative to traditional package managers and virtual environments.)
       - `pyenv install 3.11` # Install Python 3.11 in computer
       - `pyenv global 3.11` # Set Python 3.11 as global version
       - **Check the installation version** executing in terminal: `python --version`
@@ -42,7 +44,7 @@ General Tools that I use to develop Python projects, The most important is [Poet
 4. (optional) [Actionlint] to check the syntax of the GitHub Actions configuration files of the project.
       - `uv tool install actionlint`
 
-**Note:** [UV] is a tool that wants to replace the need of [Pyenv], [Poetry] and other ones. So is very possible that in the future I will use [UV] to manage the python versions, enviroments and dependencies.
+**Note:** [UV] is a tool that wants to replace the need of [Pyenv], [Poetry] and other ones. So is very possible that in the future I will use [UV] to manage the python versions, environments and dependencies.
 
 ## 📁 Start a new data science project
 
