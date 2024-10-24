@@ -58,6 +58,10 @@ check: ## Run code quality tools with pre-commit hooks.
 	@echo "🚀 Linting, formating and Static type checking code: Running pre-commit"
 	@poetry run pre-commit run -a
 
+lint: ## Run code quality tools with pre-commit hooks.
+	@echo "🚀 Linting, formating and Static type checking code: Running pre-commit"
+	@poetry run pre-commit run ruff
+
 ####----Project----####
 help:
 	@printf "%-30s %s\n" "Target" "Description"

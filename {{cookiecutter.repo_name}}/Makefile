@@ -55,12 +55,21 @@ docs_test: ## Test if documentation can be built without warnings or errors
 	@poetry run mkdocs build -s
 #{% endif %}
 
+####----Clean----####
+clean_env: ## Clean .venv virtual environment
+	@echo "🚀 Cleaning the environment..."
+	@rm -rf .venv
+
 ####----Checks----####
 check: ## Run code quality tools with pre-commit hooks.
 	@echo "🚀 Checking Poetry lock file consistency with 'pyproject.toml': Running poetry lock --check"
 	@poetry check --lock
 	@echo "🚀 Linting, formating and Static type checking code: Running pre-commit"
 	@poetry run pre-commit run -a
+
+lint: ## Run code quality tools with pre-commit hooks.
+	@echo "🚀 Linting, formating and Static type checking code: Running pre-commit"
+	@poetry run pre-commit run ruff
 
 ####----Project----####
 help:
