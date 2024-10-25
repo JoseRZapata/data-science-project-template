@@ -58,18 +58,18 @@ It is highly recommended to use a python version manager like [Pyenv] and this p
 
 **Note:** [Poetry] >= 1.8 should always be installed in a dedicated virtual environment to isolate it from the rest of your system. [why?](https://python-poetry.org/docs/#installation), I recommend using [UV] to install poetry in an isolated environment.
 
-```bash
-
 🌟 Check how to setup your environment: <https://joserzapata.github.io/data-science-project-template/local_setup/>
 
-### 🍪🥇 Via [Cruft] - **recommended**
+### 🍪🥇 Via [Cruft] - (**recommended**)
 
 ```bash title="install cruft"
+# Install cruft in a isolated environment using uv
+
+uv tool install cruft 
+
+# Or Install with pip
+
 pip install --user cruft # Install `cruft` on your path for easy access
-
-# Or Install with UV
-
-uv tool install cruft # Install cruft in a isolated environment
 ```
 
 ```shell title="create project"
@@ -79,11 +79,12 @@ cruft create https://github.com/JoseRZapata/data-science-project-template
 ### 🍪 Via [Cookiecutter]
 
 ```shell title="install cookiecutter"
-pip install --user cookiecutter # Install `cookiecutter` on your path for easy access
-
-# Or Install with UV
 
 uv tool install cookiecutter # Install cruft in a isolated environment
+
+# Or Install with pip
+
+pip install --user cookiecutter # Install `cookiecutter` on your path for easy access
 ```
 
 ```shell title="create project"
