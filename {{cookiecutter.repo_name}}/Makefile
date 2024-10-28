@@ -58,7 +58,7 @@ docs_test: ## Test if documentation can be built without warnings or errors
 ####----Clean----####
 clean_env: ## Clean .venv virtual environment
 	@echo "🚀 Cleaning the environment..."
-	@rm -rf .venv
+	@[ -d .venv ] && rm -rf .venv || echo ".venv directory does not exist"
 
 ####----Checks----####
 check: ## Run code quality tools with pre-commit hooks.

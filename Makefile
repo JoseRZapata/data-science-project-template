@@ -26,7 +26,7 @@ pre-commit_update: ## Update pre-commit hooks
 ####----Clean----####
 clean_env: ## Clean the environment
 	@echo "🚀 Cleaning the environment..."
-	@rm -rf .venv
+	@[ -d .venv ] && rm -rf .venv || echo ".venv directory does not exist"
 
 
 ####----Docs----####
