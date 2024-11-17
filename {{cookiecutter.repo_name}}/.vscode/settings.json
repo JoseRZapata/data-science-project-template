@@ -1,14 +1,18 @@
 {
   "[python]": {
-
-    "editor.codeActionsOnSave": {
-      "source.fixAll.ruff": "explicit",
-      "source.organizeImports.ruff": "explicit",
-    },
     "editor.formatOnSave": true,
-        "editor.rulers": [
-      100
-    ]
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.rulers": [100]
+  },
+  "notebook.formatOnSave.enabled": true,
+  "notebook.defaultFormatter": "charliermarsh.ruff",
+  "notebook.codeActionsOnSave": {
+      "notebook.source.fixAll": "explicit",
+      "notebook.source.organizeImports": "explicit"
   },
   "files.exclude": {
     "**/__pycache__": true
@@ -19,7 +23,6 @@
   "editor.inlineSuggest.enabled": true,
   "editor.formatOnType": true,
   "git.autofetch": true,
-  "editor.defaultFormatter": "charliermarsh.ruff",
   "python.terminal.activateEnvInCurrentTerminal": true,
   "python.testing.pytestArgs": [
     "tests"
