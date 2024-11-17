@@ -6,7 +6,7 @@
       "source.organizeImports": "explicit"
     },
     "editor.defaultFormatter": "charliermarsh.ruff",
-    "editor.rulers": [100]
+    "editor.rulers": [88]
   },
   "notebook.formatOnSave.enabled": true,
   "notebook.defaultFormatter": "charliermarsh.ruff",
@@ -35,5 +35,14 @@
   "python.defaultInterpreterPath": "${workspaceFolder}/.venv",
   "markdownlint.config": {
     "MD007": {"indent": 4}
-  }
+  },
+  "ruff.lint.args": [
+    "--config=.code_quality/ruff.toml"
+  ],
+  "ruff.format.args": [
+    "--config=.code_quality/ruff.toml"
+  ],
+  "mypy-type-checker.args": [
+    "--config-file=.code_quality/mypy.ini"
+  ]
 }
