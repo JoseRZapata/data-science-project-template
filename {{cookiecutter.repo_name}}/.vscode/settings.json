@@ -14,6 +14,12 @@
       "notebook.source.fixAll": "explicit",
       "notebook.source.organizeImports": "explicit"
   },
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.markdownlint": "explicit"
+    }
+  },
   "files.exclude": {
     "**/__pycache__": true
   },
