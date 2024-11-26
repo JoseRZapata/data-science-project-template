@@ -5,9 +5,7 @@ def test_run_cookiecutter_result(cookies):  # type: ignore
     """Runs cookiecutter and checks a couple of things"""
     project_name = "data science project template"
     repo_name = "data-science-project-template"
-    result = cookies.bake(
-        extra_context={"project_name": project_name, "repo_name": repo_name}
-    )
+    result = cookies.bake(extra_context={"project_name": project_name, "repo_name": repo_name})
 
     assert result.exit_code == 0
     assert result.exception is None
@@ -28,7 +26,4 @@ def test_cookiecutter_generated_files(cookies):  # type: ignore
     re_bad = re.compile(r"{{\s?cookiecutter\..*?}}")
     result = cookies.bake()
 
-    assert all(
-        re_bad.search(str(file_path)) is None
-        for file_path in result.project_path.glob("*")
-    )
+    assert all(re_bad.search(str(file_path)) is None for file_path in result.project_path.glob("*"))
