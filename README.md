@@ -24,7 +24,7 @@ Table of Contents
 - [Data science project template](#data-science-project-template)
   - [📁 Creating a New Project](#-creating-a-new-project)
     - [👍 Recommendations](#-recommendations)
-    - [🍪🥇 Via Cruft - **recommended**](#-via-cruft---recommended)
+    - [🍪🥇 Via Cruft - (**recommended**)](#-via-cruft---recommended)
     - [🍪 Via Cookiecutter](#-via-cookiecutter)
   - [🔗  Linking an Existing Project](#--linking-an-existing-project)
   - [🗃️ Project structure](#️-project-structure)
@@ -204,7 +204,7 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 #### 🔨 Developer Workflow Automation
 
 - Python packaging, dependency management and environment management
-  with [Poetry] - [`why?`](https://mathdatasimplified.com/poetry-a-better-way-to-manage-python-dependencies/)
+  with [Poetry] - [`why?`](https://codecut.ai/poetry-a-better-way-to-manage-python-dependencies/)
 - Project workflow orchestration
   with [Make] as an [interface shim](https://en.wikipedia.org/wiki/Shim_(computing))
     - Self-documenting [Makefile](https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/Makefile); just type
@@ -213,7 +213,7 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 - Automated Cookiecutter template synchronization with [Cruft] - [`why?`](https://careers.wolt.com/en/blog/tech/project-template-for-modern-python-packages)
 - Code quality tooling automation and management with [pre-commit]
 - Continuous integration and deployment with [GitHub Actions]
-- Project configuration files  with [Hydra] - [`why?`](https://mathdatasimplified.com/stop-hard-coding-in-a-data-science-project-use-configuration-files-instead/)
+- Project configuration files  with [Hydra] - [`why?`](https://codecut.ai/stop-hard-coding-in-a-data-science-project-use-configuration-files-instead/)
 
 #### 🌱 Conditionally Rendered Python Package or Project Boilerplate
 
