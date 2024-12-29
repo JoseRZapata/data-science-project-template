@@ -1,6 +1,6 @@
 # Data science project template
 
-[![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org/)
+[![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json)](https://github.com/charliermarsh/ruff)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit)
@@ -54,9 +54,9 @@ Table of Contents
 
 ### 👍 Recommendations
 
-It is highly recommended to use a python version manager like [Pyenv] and this project is set to use [Poetry] >= 1.8 to manage the dependencies and the environment.
+It is highly recommended to use managers for the python versions, dependencies and virtual environments.
 
-**Note:** [Poetry] >= 1.8 should always be installed in a dedicated virtual environment to isolate it from the rest of your system. [why?](https://python-poetry.org/docs/#installation), I recommend using [UV] to install poetry in an isolated environment.
+I recommend using [UV], a extremely fast tool to replace [pip](https://pip.pypa.io/en/stable/), pip-tools, [Pipx], [Poetry], [Pyenv], twine, [virtualenv](https://virtualenv.pypa.io/en/latest/), and more.
 
 🌟 Check how to setup your environment: <https://joserzapata.github.io/data-science-project-template/local_setup/>
 
@@ -192,8 +192,7 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 ├── codecov.yml                         # configuration for codecov
 ├── Makefile                            # useful commands to setup environment, run tests, etc.
 ├── mkdocs.yml                          # configuration for mkdocs documentation
-├── poetry.toml                         # poetry virtual environment configuration
-├── pyproject.toml                      # dependencies for poetry
+├── pyproject.toml                      # dependencies and configuration project file
 └── README.md                           # description of your project    
 ```
 
@@ -204,7 +203,7 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 #### 🔨 Developer Workflow Automation
 
 - Python packaging, dependency management and environment management
-  with [Poetry] - [`why?`](https://codecut.ai/poetry-a-better-way-to-manage-python-dependencies/)
+  with [UV] - [`why use a management, (uv is a replacement for poetry)`](https://codecut.ai/poetry-a-better-way-to-manage-python-dependencies/)
 - Project workflow orchestration
   with [Make] as an [interface shim](https://en.wikipedia.org/wiki/Shim_(computing))
     - Self-documenting [Makefile](https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/Makefile); just type
@@ -289,7 +288,7 @@ Target                Description
 check                 Run code quality tools with pre-commit hooks.
 docs_test             Test if documentation can be built without warnings or errors
 docs_view             Build and serve the documentation
-init_env              Install dependencies with poetry and activate env
+init_env              Install dependencies with uv and activate env
 init_git              Initialize git repository
 install_data_libs     Install pandas, scikit-learn, Jupyter, seaborn
 install_mlops_libs    Install dvc, mlflow
@@ -346,10 +345,11 @@ test                  Test the code with pytest and coverage
 [mkdocstrings]: https://mkdocstrings.github.io/
 [Mypy]: http://mypy-lang.org/
 [Notebook template]: https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/notebooks/notebook_template.ipynb
+[Pipx]:https://pipx.pypa.io/stable/
 [Poetry]: https://python-poetry.org/
 [pre-commit]: https://pre-commit.com/
 [Pull Request template]: https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/.github/pull_request_template.md
-[Pyenv]: https://github.com/pyenv/pyenv
+[Pyenv]:https://github.com/pyenv/pyenv
 [Pylint]:https://github.com/PyCQA/pylint
 [Pytest]: https://docs.pytest.org/en/latest/
 [pyupgrade]: https://github.com/asottile/pyupgrade
