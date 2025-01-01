@@ -254,10 +254,19 @@ toml = [
 name = "data-science-project-template"
 version = "0.2.0"
 source = { virtual = "." }
+dependencies = [
+    { name = "pre-commit" },
+    { name = "pytest" },
+    { name = "pytest-cookies" },
+    { name = "pytest-cov" },
+]
 
 [package.dev-dependencies]
 dev = [
     { name = "pre-commit" },
+    { name = "pytest" },
+    { name = "pytest-cookies" },
+    { name = "pytest-cov" },
 ]
 docs = [
     { name = "mkdocs" },
@@ -265,26 +274,27 @@ docs = [
     { name = "mkdocstrings", extra = ["python"] },
     { name = "pymdown-extensions" },
 ]
-test = [
-    { name = "pytest" },
-    { name = "pytest-cookies" },
-    { name = "pytest-cov" },
-]
 
 [package.metadata]
+requires-dist = [
+    { name = "pre-commit", specifier = ">=4.0.1" },
+    { name = "pytest", specifier = ">=8.3.4" },
+    { name = "pytest-cookies", specifier = ">=0.7.0" },
+    { name = "pytest-cov", specifier = ">=6.0.0" },
+]
 
 [package.metadata.requires-dev]
-dev = [{ name = "pre-commit", specifier = ">=4.0.1" }]
+dev = [
+    { name = "pre-commit", specifier = ">=4.0.1" },
+    { name = "pytest", specifier = ">=8.3.4" },
+    { name = "pytest-cookies", specifier = ">=0.7.0" },
+    { name = "pytest-cov", specifier = ">=6.0.0" },
+]
 docs = [
     { name = "mkdocs", specifier = ">=1.6.1" },
     { name = "mkdocs-material", specifier = ">=9.5.49" },
     { name = "mkdocstrings", extras = ["python"], specifier = ">=0.27.0" },
     { name = "pymdown-extensions", specifier = ">=10.13" },
-]
-test = [
-    { name = "pytest", specifier = ">=8.3.4" },
-    { name = "pytest-cookies", specifier = ">=0.7.0" },
-    { name = "pytest-cov", specifier = ">=6.0.0" },
 ]
 
 [[package]]
