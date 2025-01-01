@@ -193,6 +193,7 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 ├── Makefile                            # useful commands to setup environment, run tests, etc.
 ├── mkdocs.yml                          # configuration for mkdocs documentation
 ├── pyproject.toml                      # dependencies and configuration project file
+├── uv.lock                             # locked dependencies
 └── README.md                           # description of your project    
 ```
 

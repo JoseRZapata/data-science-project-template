@@ -4,9 +4,8 @@ this project uses [pre-commit](https://pre-commit.com/) to run checks on every c
 
 Configuration file: [.pre-commit-config.yaml](https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/.pre-commit-config.yaml)
 
-> If you initialize you project using `make init_env` pre-commit is already installed and configured.
-> If not, you can install pre-commit running in terminal `poetry run pre-commit install` in the root of the project.
-
+> If you initialize you project using `make install` pre-commit is already installed and configured.
+> If not, you can install pre-commit running in terminal `uv run pre-commit install` in the root of the project.
 
 ## pre-commit/pre-commit-hooks
 
@@ -26,7 +25,7 @@ This repository contains some out-of-the-box hooks provided by the [pre-commit p
 
 This repository contains hooks for the Ruff programming language.
 
-- [`ruff`](https://docs.astral.sh/ruff/): This hook runs the Ruff linter with the `--fix` option to automatically fix issues and a custom configuration file.
+- [`ruff`](https://docs.astral.sh/ruff/): This hook runs the Ruff linter with the `--fix` option to automatically fix issues in scripts and notebooks and a custom configuration file.
 - [`ruff-format`](https://docs.astral.sh/ruff/): This hook runs the Ruff formatter.
 
 ## pre-commit/mirrors-mypy
