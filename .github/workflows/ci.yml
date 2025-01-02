@@ -30,17 +30,11 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        python-version: ["3.11"]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        #{% raw %}
         with:
-          python-version: ${{ matrix.python-version }}
-        #{% endraw %}
+          python-version-file: ".python-version"
       - name: Run pytest with coverage
         run: |
           PYTHONPATH=$(pwd)
