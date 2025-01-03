@@ -4,11 +4,11 @@
 
 install: ## Install libs with poetry and pre-commit
 	@echo "🚀 Creating virtual environment using pyenv and poetry"
-	poetry install
+	uv sync --all-groups
 	@echo "🚀 Installing pre-commit..."
-	poetry run pre-commit install
+	uv run pre-commit install
 	@echo "💻 Activate virtual environment..."
-	@poetry shell
+	@source .venv/bin/activate
 
 init_git: ## Initialize git repository
 	@echo "🚀 Initializing local git repository..."
@@ -20,8 +20,8 @@ init_git: ## Initialize git repository
 ####----Pre-commit----####
 pre-commit_update: ## Update pre-commit hooks
 	@echo "🚀 Updating pre-commit hooks..."
-	poetry run pre-commit clean
-	poetry run pre-commit autoupdate
+	uv run pre-commit clean
+	uv run pre-commit autoupdate
 
 ####----Clean----####
 clean_env: ## Clean the environment
@@ -32,10 +32,10 @@ clean_env: ## Clean the environment
 ####----Docs----####
 docs: ## Build and serve the documentation
 	@echo "🚀 Viewing documentation..."
-	@poetry run mkdocs serve
+	@uv run mkdocs serve
 
 docs_test: ## Test if documentation can be built without warnings or errors
-	@poetry run mkdocs build -s
+	@uv run mkdocs build -s
 
 view_tree: ## View the project tree
 	@echo "🚀 Viewing project tree..."
@@ -45,7 +45,7 @@ view_tree: ## View the project tree
 
 test: ## Test the code with pytest and coverage
 	@echo "🚀 Testing code: Running pytest"
-	@poetry run pytest --cov
+	@uv run pytest --cov
 
 ####----Checks----####
 actionlint: ## Check GitHub Actions
@@ -53,14 +53,12 @@ actionlint: ## Check GitHub Actions
 	actionlint -color -verbose
 
 check: ## Run code quality tools with pre-commit hooks.
-	@echo "🚀 Checking Poetry lock file consistency with 'pyproject.toml': Running poetry lock --check"
-	@poetry check --lock
 	@echo "🚀 Linting, formating and Static type checking code: Running pre-commit"
-	@poetry run pre-commit run -a
+	@uv run pre-commit run -a
 
 lint: ## Run code quality tools with pre-commit hooks.
 	@echo "🚀 Linting, formating and Static type checking code: Running pre-commit"
-	@poetry run pre-commit run ruff
+	@uv run pre-commit run ruff
 
 ####----Project----####
 help:

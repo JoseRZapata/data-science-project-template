@@ -36,4 +36,4 @@ If there are things that are requested in the task and were not implemented, lis
 
 Steps to test or reproduce the PR here
 
-- `poetry run pytest --cov`
+- `uv run pytest --cov`

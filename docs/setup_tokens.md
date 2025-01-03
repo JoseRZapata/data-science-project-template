@@ -27,6 +27,6 @@ You have to add this secret to the github repository. How to add codecov to the 
 
 ## References
 
-- https://github.com/peter-evans/create-pull-request?tab=readme-ov-file#workflow-permissions
-- https://github.com/peter-evans/create-pull-request/issues/2443
-- https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token
+- <https://github.com/peter-evans/create-pull-request?tab=readme-ov-file#workflow-permissions>
+- <https://github.com/peter-evans/create-pull-request/issues/2443>
+- <https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token>
