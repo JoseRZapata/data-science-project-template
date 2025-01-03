@@ -35,12 +35,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version-file: ".python-version"
+      - name: Install the project
+        run: uv sync --all-extras --dev
       - name: Run pytest with coverage
-        run: |
-          PYTHONPATH=$(pwd)
-          export PYTHONPATH
-          uv sync --all-extras --dev
-          uv run pytest --cov --cov-report=xml
+        run: uv run pytest --cov --cov-report=xml
 
         #{% raw %}
       - name: Upload coverage reports to Codecov
