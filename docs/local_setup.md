@@ -33,7 +33,7 @@ I setup my local development environment using the following steps:
       - `source .venv/bin/activate` # Activate the Python 3.11 virtual environment
       - **Check the installation version** executing in terminal: `python --version`
 
-**Note:** To desactivate the virtual enviroment in terminal type: `deactivate`
+**Note:** To deactivate the virtual enviroment in terminal type: `deactivate`
 
 ## 🐍 General Python tools
 
