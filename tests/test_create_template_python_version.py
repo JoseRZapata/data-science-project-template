@@ -1,6 +1,6 @@
 def test_cookiecutter_python_version(cookies) -> None:  # type: ignore
     """check correct python version in the generated files."""
-    versions = ["3.10", "3.11", "3.12"]
+    versions = ["3.10", "3.11", "3.12", "3.13"]
     file_paths = [
         ".python-version",
         "pyproject.toml",
