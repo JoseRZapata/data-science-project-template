@@ -1,3 +1,5 @@
+name-template: 'v$RESOLVED_VERSION 🌈'
+tag-template: 'v$RESOLVED_VERSION'
 categories:
   - title: ":boom: Breaking Changes"
     label: "breaking"
@@ -20,9 +22,28 @@ categories:
   - title: ":lipstick: Style"
     label: "style"
   - title: ":package: Dependencies"
+    collapse-after: 3
     labels:
       - "dependencies"
       - "build"
+  - title: "🧰 Maintenance"
+    collapse-after: 3
+    label: "maintenance"
+
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+version-resolver:
+  major:
+    labels:
+      - 'major'
+  minor:
+    labels:
+      - 'minor'
+  patch:
+    labels:
+      - 'patch'
+  default: patch
+
 exclude-labels:
   - "skip-changelog"
 template: |
