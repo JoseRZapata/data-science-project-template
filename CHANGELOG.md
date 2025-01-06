@@ -34,7 +34,6 @@ The Main change in this Pull Request is the migration from poetry to uv to manag
 - update the CI to use `uv` instead of `poetry` in:
     - `ci.yaml` workflow
     - `docs.yaml`workflow
-- Add [Release Drafter](https://github.com/release-drafter/release-drafter) to automate the changelog generation.
 
 ### 📚 Documentation
 
