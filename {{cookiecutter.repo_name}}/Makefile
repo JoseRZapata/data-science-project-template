@@ -2,13 +2,13 @@
 
 ####----Basic configurations----####
 
-install: ## Install dependencies with poetry and activate env
+install: ## Install libs with poetry and pre-commit
 	@echo "🚀 Creating virtual environment using pyenv and poetry"
-	poetry install
+	uv sync --all-groups
 	@echo "🚀 Installing pre-commit..."
-	poetry run pre-commit install
+	uv run pre-commit install
 	@echo "💻 Activate virtual environment..."
-	@poetry shell
+	@source .venv/bin/activate
 
 init_git: ## Initialize git repository
 	@echo "🚀 Initializing local git repository..."
@@ -21,38 +21,34 @@ init_git: ## Initialize git repository
 
 install_data_libs: ## Install pandas, scikit-learn, Jupyter, seaborn
 	@echo "🚀 Installing data science libraries..."
-	poetry add "pandas[parquet]" numpy scipy scikit-learn
+	uv add "pandas[parquet]" numpy scipy scikit-learn
 	@echo "🚀 Installing Jupyter, matplotlib and seaborn in dev..."
-	poetry add jupyter matplotlib seaborn -G dev
+	uv add jupyter matplotlib seaborn --group dev
 
-install_mlops_libs: ## Install dvc, mlflow
-	@echo "🚀 Installing MLOps libraries ..."
-	poetry add dvc great-expectations
-	poetry add mlflow deepchecks -G dev
 
 ####----Tests----####
 test: ## Test the code with pytest and coverage
 	@echo "🚀 Testing code: Running pytest"
-	@poetry run pytest --cov
+	@uv run pytest --cov
 
 test_verbose: ## Test the code with pytest and coverage in verbose mode
 	@echo "🚀 Testing code: Running pytest in verbose mode"
-	@poetry run pytest --no-header -v --cov
+	@uv run pytest --no-header -v --cov
 
 ####----Pre-commit----####
 pre-commit_update: ## Update pre-commit hooks
 	@echo "🚀 Updating pre-commit hooks..."
-	poetry run pre-commit clean
-	poetry run pre-commit autoupdate
+	uv run pre-commit clean
+	uv run pre-commit autoupdate
 
 #{% if cookiecutter.mkdocs %}
 ####----Docs----####
 docs: ## Build and serve the documentation
 	@echo "🚀 Viewing documentation..."
-	@poetry run mkdocs serve
+	@uv run mkdocs serve
 
 docs_test: ## Test if documentation can be built without warnings or errors
-	@poetry run mkdocs build -s
+	@uv run mkdocs build -s
 #{% endif %}
 
 ####----Clean----####
@@ -62,14 +58,12 @@ clean_env: ## Clean .venv virtual environment
 
 ####----Checks----####
 check: ## Run code quality tools with pre-commit hooks.
-	@echo "🚀 Checking Poetry lock file consistency with 'pyproject.toml': Running poetry lock --check"
-	@poetry check --lock
 	@echo "🚀 Linting, formating and Static type checking code: Running pre-commit"
-	@poetry run pre-commit run -a
+	@uv run pre-commit run -a
 
 lint: ## Run code quality tools with pre-commit hooks.
 	@echo "🚀 Linting, formating and Static type checking code: Running pre-commit"
-	@poetry run pre-commit run ruff
+	@uv run pre-commit run ruff
 
 ####----Project----####
 help:
