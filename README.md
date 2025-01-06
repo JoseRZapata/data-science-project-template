@@ -78,7 +78,7 @@ Table of Contents
 
 It is highly recommended to use managers for the python versions, dependencies and virtual environments.
 
-I recommend using [UV], a extremely fast tool to replace [pip](https://pip.pypa.io/en/stable/), pip-tools, [Pipx], [Poetry], [Pyenv], twine, [virtualenv](https://virtualenv.pypa.io/en/latest/), and more.
+This project uses [UV], a extremely fast tool to replace [pip](https://pip.pypa.io/en/stable/), pip-tools, [Pipx], [Poetry], [Pyenv], twine, [virtualenv](https://virtualenv.pypa.io/en/latest/), and more.
 
 🌟 Check how to setup your environment: <https://joserzapata.github.io/data-science-project-template/local_setup/>
 
