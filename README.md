@@ -28,7 +28,6 @@ Source Code: <https://github.com/JoseRZapata/data-science-project-template>
 - Linting with [pre-commit] and [Ruff]
 - Continuous integration with [GitHub Actions]
 - Documentation with [mkdocs] and [mkdocstrings] using the [mkdocs-material](https://github.com/squidfunk/mkdocs-material)theme
-- Automated release notes with [Release Drafter]
 - Automated dependency updates with [Dependabot]
 - Code formatting with [Ruff]
 - Import sorting with [Ruff] using isort rule.
@@ -377,6 +376,5 @@ test                  Test the code with pytest and coverage
 [Pylint]:https://github.com/PyCQA/pylint
 [Pytest]: https://docs.pytest.org/en/latest/
 [pyupgrade]: https://github.com/asottile/pyupgrade
-[Release Drafter]: https://github.com/release-drafter/release-drafter
 [Ruff]: https://docs.astral.sh/ruff/
 [UV]: https://docs.astral.sh/uv/
