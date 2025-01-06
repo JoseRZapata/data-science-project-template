@@ -19,9 +19,31 @@ Source Code: <https://github.com/JoseRZapata/data-science-project-template>
 
 ---
 
+## Features
+
+<!-- features-begin -->
+
+- Dependency management with [UV]
+- Virtual environment management with [UV]
+- Linting with [pre-commit] and [Ruff]
+- Continuous integration with [GitHub Actions]
+- Documentation with [mkdocs] and [mkdocstrings] using the [mkdocs-material](https://github.com/squidfunk/mkdocs-material)theme
+- Automated release notes with [Release Drafter]
+- Automated dependency updates with [Dependabot]
+- Code formatting with [Ruff]
+- Import sorting with [Ruff] using isort rule.
+- Testing with [pytest]
+- Code coverage with [Coverage.py]
+- Coverage reporting with [Codecov]
+- Static type-checking with [mypy]
+- Security audit with [Ruff] using bandit rule.
+- Manage project labels with [GitHub Labeler]
+
+---
 Table of Contents
 <!-- markdownlint-disable MD007 -->
 - [Data science project template](#data-science-project-template)
+  - [Features](#features)
   - [📁 Creating a New Project](#-creating-a-new-project)
     - [👍 Recommendations](#-recommendations)
     - [🍪🥇 Via Cruft - (**recommended**)](#-via-cruft---recommended)
@@ -338,6 +360,7 @@ test                  Test the code with pytest and coverage
 [dependency-review-action]: https://github.com/actions/dependency-review-action
 [Flake8]:https://github.com/PyCQA/flake8
 [GitHub Actions]: https://github.com/features/actions
+[Github Labeler]: https://github.com/marketplace/actions/github-labeler
 [hydra]: https://hydra.cc/
 [isort]: https://github.com/PyCQA/isort
 [Jupyter]: https://jupyter.org/
@@ -354,5 +377,6 @@ test                  Test the code with pytest and coverage
 [Pylint]:https://github.com/PyCQA/pylint
 [Pytest]: https://docs.pytest.org/en/latest/
 [pyupgrade]: https://github.com/asottile/pyupgrade
+[Release Drafter]: https://github.com/release-drafter/release-drafter
 [Ruff]: https://docs.astral.sh/ruff/
 [UV]: https://docs.astral.sh/uv/
