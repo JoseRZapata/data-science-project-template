@@ -295,6 +295,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#creating-a-new-project" class="md-nav__link">
     <span class="md-ellipsis">
       📁 Creating a New Project
@@ -783,11 +792,116 @@
   
   
     <li class="md-nav__item">
+      <a href="github_actions/ci/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continuos Integration (CI)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="github_actions/gh_action_pre-commit-autoupdate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Pre-commit_autoupdate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="github_actions/automerge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automerge
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="github_actions/dependency_review/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dependency Review
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="github_actions/docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docs generator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="github_actions/labels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Labels github
   </span>
   
 
@@ -849,6 +963,15 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#creating-a-new-project" class="md-nav__link">
@@ -1173,39 +1296,26 @@
 <p>✨📚✨ Documentation: <a href="https://joserzapata.github.io/data-science-project-template/">https://joserzapata.github.io/data-science-project-template/</a></p>
 <p>Source Code: <a href="https://github.com/JoseRZapata/data-science-project-template">https://github.com/JoseRZapata/data-science-project-template</a></p>
 <hr />
+<h2 id="features">Features</h2>
+<!-- features-begin -->
+
 <ul>
-<li><a href="#-features-and-tools">✨ Features and Tools</a><ul>
-<li><a href="#-project-standardization-and-automation">🚀 Project Standardization and Automation</a></li>
-<li><a href="#-developer-workflow-automation">🔨 Developer Workflow Automation</a></li>
-<li><a href="#-conditionally-rendered-python-package-or-project-boilerplate">🌱 Conditionally Rendered Python Package or Project Boilerplate</a></li>
-<li><a href="#-maintainability">🔧 Maintainability</a></li>
-<li><a href="#️--type-checking-and-data-validation">🏷️  Type Checking and Data Validation</a></li>
-<li><a href="#--testingcoverage">✅ 🧪 Testing/Coverage</a></li>
-<li><a href="#-linting">🚨 Linting</a><ul>
-<li><a href="#-code-quality">🔍 Code quality</a></li>
-<li><a href="#-code-formatting">🎨 Code formatting</a></li>
+<li>Dependency management with <a href="https://docs.astral.sh/uv/">UV</a></li>
+<li>Virtual environment management with <a href="https://docs.astral.sh/uv/">UV</a></li>
+<li>Linting with <a href="https://pre-commit.com/">pre-commit</a> and <a href="https://docs.astral.sh/ruff/">Ruff</a></li>
+<li>Continuous integration with <a href="https://github.com/features/actions">GitHub Actions</a></li>
+<li>Documentation with <a href="https://www.mkdocs.org/">mkdocs</a> and <a href="https://mkdocstrings.github.io/">mkdocstrings</a> using the <a href="https://github.com/squidfunk/mkdocs-material">mkdocs-material</a>theme</li>
+<li>Automated dependency updates with <a href="https://github.com/dependabot/dependabot-core">Dependabot</a></li>
+<li>Code formatting with <a href="https://docs.astral.sh/ruff/">Ruff</a></li>
+<li>Import sorting with <a href="https://docs.astral.sh/ruff/">Ruff</a> using isort rule.</li>
+<li>Testing with <a href="https://docs.pytest.org/en/latest/">pytest</a></li>
+<li>Code coverage with <a href="https://coverage.readthedocs.io/">Coverage.py</a></li>
+<li>Coverage reporting with <a href="https://codecov.io/">Codecov</a></li>
+<li>Static type-checking with <a href="http://mypy-lang.org/">mypy</a></li>
+<li>Security audit with <a href="https://docs.astral.sh/ruff/">Ruff</a> using bandit rule.</li>
+<li>Manage project labels with <a href="https://github.com/marketplace/actions/github-labeler">GitHub Labeler</a></li>
 </ul>
-</li>
-<li><a href="#-cicd">👷 CI/CD</a><ul>
-<li><a href="#automatic-dependency-updates">Automatic Dependency updates</a></li>
-<li><a href="#dependency-review-in-pr">Dependency Review in PR</a></li>
-<li><a href="#pre-commit-automatic-updates">Pre-commit automatic updates</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#-security">🔒 Security</a><ul>
-<li><a href="#-static-application-security-testing-sast">🔏 Static Application Security Testing (SAST)</a></li>
-</ul>
-</li>
-<li><a href="#️-accessibility">⌨️ Accessibility</a><ul>
-<li><a href="#-automation-tool-makefile">🔨 Automation tool (Makefile)</a></li>
-<li><a href="#-project-documentation">📝 Project Documentation</a></li>
-<li><a href="#️-templates">🗃️ Templates</a></li>
-</ul>
-</li>
-<li><a href="#references">References</a></li>
-</ul>
+<hr />
 <!-- markdownlint-enable MD007 -->
 <h2 id="creating-a-new-project">📁 Creating a New Project</h2>
 <h3 id="recommendations">👍 Recommendations</h3>
