@@ -1,46 +1,52 @@
-[tool.poetry]
+[project]
 name = "{{ cookiecutter.project_name }}"
 version = "0.1.0"
 description = "{{ cookiecutter.description }}"
 authors = [
     "{{ cookiecutter.author_name }} <{{ cookiecutter.author_email }}>",
 ]
+requires-python = "^{{ cookiecutter.compatible_python_versions }}"
 readme = "README.md"
+
+dependencies = [
+    "hydra-core>=1.1.1",
+]
+
+[project.urls]
 documentation = "https://{{ cookiecutter.github_username }}.github.io/{{ cookiecutter.repo_name }}"
 repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}"
 
-package-mode = false
 
-[tool.poetry.dependencies]
-python = "^{{ cookiecutter.compatible_python_versions }}"
-hydra-core = "^1.1.1"
-
-
-[tool.poetry.group.dev.dependencies]
-pre-commit = "^3.7.0"
-
-# Standardized Developer Workflow Orchestration
-cruft = {extras = ["pyproject"], version = "^2.15.0"} # Automated Cookiecutter template synchronization
-
-[tool.poetry.group.test.dependencies]
-pytest = "^8.0.0"
-pytest-cov = "^5.0.0"
-pytest-mock = "^3.12.0"
+[dependency-groups]
+dev = [
+    "pre-commit>=4.0.1", # Code linting and formatting
+    "pytest>=8.3.4", # Testing framework
+    "pytest-cookies>=0.7.0",
+    "pytest-cov>=6.0.0",
+    "cruft[pyproject]>=2.15.0",# Automated Cookiecutter template synchronization
+]
 
 #{% if cookiecutter.mkdocs %}
-[tool.poetry.group.docs.dependencies]
-mkdocs = "^1.5.3"
-mkdocs-material = "^9.5.7"
-mkdocstrings = {extras = ["python"], version = "^0.24.0"}
-pymdown-extensions = "^10.7"
+docs = [
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.5.49",
+    "mkdocstrings[python]>=0.27.0",
+    "pymdown-extensions>=10.13",
+]
 #{% endif %}
 
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+[tool.uv]
+package = false
+default-groups = [
+    "dev",
+#{% if cookiecutter.mkdocs %}
+    "docs",
+#{% endif %}
+]
 
-[tool.virtualenvs]
-in-project = true
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]

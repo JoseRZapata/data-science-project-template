@@ -22,27 +22,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/actions/python-poetry-env
-      - run: poetry run pre-commit run --all-files
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - run: uvx pre-commit run --all-files --show-diff-on-failure --color=always
 
   test:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        python-version: ["3.11"]
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/actions/python-poetry-env
-        #{% raw %}
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }}
-        #{% endraw %}
+          python-version-file: ".python-version"
+
+      - name: Install the project
+        run: uv sync --all-extras --dev
+
       - name: Run pytest with coverage
-        run: |
-          PYTHONPATH=$(pwd)
-          export PYTHONPATH
-          poetry run pytest --cov --cov-report=xml
+        run: uv run pytest --cov --cov-report=xml
 
         #{% raw %}
       - name: Upload coverage reports to Codecov
