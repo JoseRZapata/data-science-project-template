@@ -26,7 +26,12 @@ nav:
   - 🔑 Setup Tokens: 'setup_tokens.md'
   - ⚙️  Pre-commit configuration: 'pre-commit.md'
   - 🚀 Github Actions:
+    - Continuos Integration (CI): 'github_actions/ci.md'
     - Pre-commit_autoupdate: 'github_actions/gh_action_pre-commit-autoupdate.md'
+    - Automerge: 'github_actions/automerge.md'
+    - Dependency Review: 'github_actions/dependency_review.md'
+    - Docs generator: 'github_actions/docs.md'
+    - Labels github: 'github_actions/labels.md'
   - 💻 VSCode configuration: 'vscode.md'
 
 
