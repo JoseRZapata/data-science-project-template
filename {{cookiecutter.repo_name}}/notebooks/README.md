@@ -21,8 +21,8 @@ Examples:
 │   ├── 2-exploration            # exploratory data analysis (EDA)
 │   ├── 3-analysis               # Statistical analysis, hypothesis testing.
 │   ├── 4-feat_eng               # feature engineering (creation, selection, and transformation.)
-│   ├── 5-models                 # model training, experimentation, and hyperparameter tuning.
-│   ├── 6-evaluation             # evaluation metrics, performance assessment
+│   ├── 5-models                 # model training, evaluation, and hyperparameter tuning.
+│   ├── 6-interpretation         # model interpretation
 │   ├── 7-deploy                 # model packaging, deployment strategies.
 │   ├── 8-reports                # story telling, summaries and analysis conclusions.
 │   ├── notebook_template.ipynb

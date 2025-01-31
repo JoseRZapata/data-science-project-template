@@ -69,6 +69,7 @@ Table of Contents
     - [🔨 Automation tool (Makefile)](#-automation-tool-makefile)
     - [📝 Project Documentation](#-project-documentation)
     - [🗃️ Templates](#️-templates)
+    - [Good practices](#good-practices)
   - [References](#references)
 <!-- markdownlint-enable MD007 -->
 ## 📁 Creating a New Project
@@ -174,8 +175,8 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 │   ├── 2-exploration                   # exploratory data analysis (EDA)
 │   ├── 3-analysis                      # Statistical analysis, hypothesis testing.
 │   ├── 4-feat_eng                      # feature engineering (creation, selection, and transformation.)
-│   ├── 5-models                        # model training, experimentation, and hyperparameter tuning.
-│   ├── 6-evaluation                    # evaluation metrics, performance assessment
+│   ├── 5-models                        # model training, evaluation and hyperparameter tuning.
+│   ├── 6-interpretation                # model interpretation
 │   ├── 7-deploy                        # model packaging, deployment strategies.
 │   ├── 8-reports                       # story telling, summaries and analysis conclusions.
 │   ├── notebook_template.ipynb         # template for notebooks
@@ -257,7 +258,7 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 ##### 🔍 Code quality
 
 - [Ruff] An extremely fast (10x-100x faster) Python linter and code formatter, written in Rust.
-    - Replacement for [Pylint], [Flake8] (including major plugins) and more linters under a single, common interface
+    - Replacement for ~~[Pylint]~~, ~~[Flake8]~~ (including major plugins) and more linters under a single, common interface
 - [ShellCheck](https://github.com/koalaman/shellcheck)
 - Unsanitary commits:
     - Secrets with [`detect-secrets`](https://github.com/Yelp/detect-secrets)
@@ -267,7 +268,7 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 ##### 🎨 Code formatting
 
 - [Ruff] An extremely fast (10x-100x faster) Python linter and code formatter, written in Rust.
-    - Replacement for [Black], [isort], [pyupgrade] and more formatters under a single, common interface
+    - Replacement for ~~[Black]~~, ~~[isort]~~, ~~[pyupgrade]~~ and more formatters under a single, common interface
 
 - General file formatting:
     - [`end-of-file-fixer`](https://github.com/pre-commit/pre-commit-hooks#end-of-file-fixer)
@@ -313,7 +314,6 @@ docs_view             Build and serve the documentation
 init_env              Install dependencies with uv and activate env
 init_git              Initialize git repository
 install_data_libs     Install pandas, scikit-learn, Jupyter, seaborn
-install_mlops_libs    Install dvc, mlflow
 pre-commit_update     Update pre-commit hooks
 test                  Test the code with pytest and coverage
 ```
@@ -330,6 +330,11 @@ test                  Test the code with pytest and coverage
 
 - [Pull Request template]
 - [Notebook template]
+
+### Good practices
+
+- <https://www.conventionalcommits.org/>
+- <https://keepachangelog.com/>
 
 ---
 
