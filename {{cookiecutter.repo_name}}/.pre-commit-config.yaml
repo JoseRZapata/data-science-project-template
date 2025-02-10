@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: cef0300fd0fc4d2a87a85fa2093c6b283ea36f4b  # frozen: v5.0.0
     hooks:
       - id: check-yaml
         exclude: ^(mkdocs\.yml|{{cookiecutter.repo_name}}/mkdocs\.yml)$
@@ -13,7 +13,7 @@ repos:
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.
-    rev: v0.9.4
+    rev: d7f0995508bdaeb0a1f4a838500d6a0a1fc6ec7b  # frozen: v0.9.5
     hooks:
       # Run the linter.s
       - id: ruff
@@ -27,14 +27,14 @@ repos:
           - .code_quality/ruff.toml          
 
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.14.1
+    rev: f40886d54c729f533f864ed6ce584e920feb0af7  # frozen: v1.15.0
     hooks:
       - id: mypy
         args:
           - --config-file=.code_quality/mypy.ini
 
   - repo: https://github.com/Yelp/detect-secrets
-    rev: v1.5.0
+    rev: 68e8b45440415753fff70a312ece8da92ba85b4a  # frozen: v1.5.0
     hooks:
       - id: detect-secrets
         exclude: ^(poetry\.lock|\.cruft\.json|.*\.ipynb)$
@@ -43,7 +43,7 @@ repos:
         args: ['--exclude-files', '.*[^i][^p][^y][^n][^b]$', '--exclude-lines', '"(hash|id|image/\w+)":.*', ]
 
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v4.1.1
+    rev: 8519ca470e88f8c7eb30dfe31cad2b0dd8acfea2  # frozen: v4.2.1
     hooks:
       - id: commitizen
       - id: commitizen-branch
