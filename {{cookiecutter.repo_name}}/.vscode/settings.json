@@ -42,12 +42,8 @@
   "markdownlint.config": {
     "MD007": {"indent": 4}
   },
-  "ruff.lint.args": [
-    "--config=.code_quality/ruff.toml"
-  ],
-  "ruff.format.args": [
-    "--config=.code_quality/ruff.toml"
-  ],
+  "ruff.configuration": "--config=.code_quality/ruff.toml",
+  "ruff.format.preview": true,
   "mypy-type-checker.args": [
     "--config-file=.code_quality/mypy.ini"
   ]
