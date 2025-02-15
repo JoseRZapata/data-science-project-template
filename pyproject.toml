@@ -1,11 +1,11 @@
 [project]
 name = "data-science-project-template"
-version = "0.2.0"
+version = "1.0.1"
 description = "A modern template for data science projects with all the necessary tools for experiment, development, testing, and deployment. From notebooks to production."
 authors = [
     {name = "Jose R. Zapata", email = "https://joserzapata.github.io/"},
 ]
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 keywords = [
     "data-science",
     "cookiecutter",
@@ -14,7 +14,7 @@ keywords = [
 readme = "README.md"
 license = {text = "MIT"}
 dependencies = [
-    "pre-commit>=4.0.1",
+    "pre-commit>=4.1.0",
     "pytest>=8.3.4",
     "pytest-cookies>=0.7.0",
     "pytest-cov>=6.0.0",
@@ -26,17 +26,12 @@ repository = "https://github.com/JoseRZapata/data-science-project-template"
 documentation = "https://joserzapata.github.io/data-science-project-template/"
 
 [dependency-groups]
-dev = [
-    "pre-commit>=4.0.1",
-    "pytest>=8.3.4",
-    "pytest-cookies>=0.7.0",
-    "pytest-cov>=6.0.0",
-]
+dev = []
 docs = [
     "mkdocs>=1.6.1",
-    "mkdocs-material>=9.5.49",
-    "mkdocstrings[python]>=0.27.0",
-    "pymdown-extensions>=10.13",
+    "mkdocs-material>=9.6.4",
+    "mkdocstrings[python]>=0.28.1",
+    "pymdown-extensions>=10.14.3",
 ]
 
 [tool.uv]

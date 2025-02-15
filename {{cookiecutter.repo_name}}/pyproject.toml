@@ -9,7 +9,7 @@ requires-python = "^{{ cookiecutter.compatible_python_versions }}"
 readme = "README.md"
 
 dependencies = [
-    "hydra-core>=1.1.1",
+
 ]
 
 [project.urls]
@@ -19,7 +19,7 @@ repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecut
 
 [dependency-groups]
 dev = [
-    "pre-commit>=4.0.1", # Code linting and formatting
+    "pre-commit>=4.1.0", # Code linting and formatting
     "pytest>=8.3.4", # Testing framework
     "pytest-cookies>=0.7.0",
     "pytest-cov>=6.0.0",
@@ -30,8 +30,8 @@ dev = [
 docs = [
     "mkdocs>=1.6.1",
     "mkdocs-material>=9.5.49",
-    "mkdocstrings[python]>=0.27.0",
-    "pymdown-extensions>=10.13",
+    "mkdocstrings[python]>=0.28.1",
+    "pymdown-extensions>=10.14.3",
 ]
 #{% endif %}
 
