@@ -15,7 +15,7 @@ repos:
     # Ruff version.
     rev: v0.9.6
     hooks:
-      # Run the linter.s
+      # Run the linter
       - id: ruff
         args:
           - --fix
@@ -24,7 +24,7 @@ repos:
       - id: ruff-format
         args:
           - --config
-          - .code_quality/ruff.toml          
+          - .code_quality/ruff.toml
 
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.15.0
