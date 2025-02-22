@@ -19,6 +19,7 @@ jobs:
         uses: brokenpip3/action-pre-commit-update@0.0.2
         with:
           github-token: ${{ secrets.PAT }}
+          update-freeze: false
       - name: Add label
         uses: actions/github-script@v7
         with:
