@@ -9,6 +9,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Released]
 
+## [1.1.0] - 2024-02-26
+
+Changed pipeline folder structure in src to match MLOps description by Google
+
+
+### Added 🚀
+
+- google mlops link reference
+
+### Changed 💥
+
+- File restructuring:
+
+{{cookiecutter.repo_name}}/src/pipelines: change folder structure
+conf/: change folder names
+
 ## [1.0.1] - 2024-02-14
 
 The Main change in this to configure vscode settings for run RUFF native server and updates dependencies and pre-commit hooks.
