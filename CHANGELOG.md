@@ -11,7 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.1.0] - 2024-02-26
 
-Change pipeline folder structure in src to match mlops description by google
+Changed pipeline folder structure in src to match MLOps description by Google
+
 
 ### Added 🚀
 
