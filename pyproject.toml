@@ -1,6 +1,6 @@
 [project]
 name = "data-science-project-template"
-version = "1.0.1"
+version = "1.1.0"
 description = "A modern template for data science projects with all the necessary tools for experiment, development, testing, and deployment. From notebooks to production."
 authors = [
     {name = "Jose R. Zapata", email = "https://joserzapata.github.io/"},
