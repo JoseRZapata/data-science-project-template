@@ -9,10 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Released]
 
+## [1.1.1] - 2024-03-02
+
+Changed lib folder structure in src to match MLOps description by Google
+
+### Changed 💥
+
+- File restructuring:
+
+{{cookiecutter.repo_name}}/src/libs: change folder structure
+conf/: change folder names
+
 ## [1.1.0] - 2024-02-26
 
 Changed pipeline folder structure in src to match MLOps description by Google
-
 
 ### Added 🚀
 
