@@ -65,7 +65,7 @@ switch_main: ## Switch to main branch and pull
 	@echo "🚀 Switching to main branch..."
 	@git switch main
 	@git pull
-_
+
 clean_branchs: ## Clean local branches already merged on the remote
 	@echo "🚀 Cleaning up merged branches..."
 	@git fetch -p
