@@ -28,6 +28,21 @@ clean_env: ## Clean the environment
 	@echo "🚀 Cleaning the environment..."
 	@[ -d .venv ] && rm -rf .venv || echo ".venv directory does not exist"
 
+####----Git----####
+switch_main: ## Switch to main branch and pull
+	@echo "🚀 Switching to main branch..."
+	@git switch main
+	@git pull
+_
+clean_branchs: ## Clean local branches already merged on the remote
+	@echo "🚀 Cleaning up merged branches..."
+	@git fetch -p
+	@for branch in $$(git for-each-ref --format '%(refname:short)' refs/heads/ | grep -v '^\*' | grep -v ' main$$'); do \
+		if ! git show-ref --quiet refs/remotes/origin/$$branch; then \
+			echo "Deleting local branch $$branch"; \
+			git branch -D $$branch; \
+		fi \
+	done
 
 ####----Docs----####
 docs: ## Build and serve the documentation
@@ -46,6 +61,10 @@ view_tree: ## View the project tree
 test: ## Test the code with pytest and coverage
 	@echo "🚀 Testing code: Running pytest"
 	@uv run pytest --cov
+
+test_coverage: ## Test the code with pytest and coverage
+	@echo "🚀 Testing code: coverage.xml"
+	@uv run pytest --cov --cov-report xml:coverage.xml
 
 ####----Checks----####
 actionlint: ## Check GitHub Actions

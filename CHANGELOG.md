@@ -9,6 +9,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Released]
 
+## [1.1.2] - 2024-03-19
+
+add new commands to makefile
+
+### Changed 💥
+
+`Makefile` and `{{cookiecutter.repo_name}}/Makefile`
+
+### Added 🚀
+
+- `make test_coverage`: ## Test coverage report coverage.xml
+- `make switch_main`: ## Switch to main branch and pull
+- `clean_branchs`: ## Clean local branches already merged on the remote
+
+## [1.1.0] - 2024-02-26
+
+Changed pipeline folder structure in src to match MLOps description by Google
+
+### Added 🚀
+
+- google mlops link reference
+
+### Changed 💥
+
+- File restructuring:
+
+{{cookiecutter.repo_name}}/src/pipelines: change folder structure
+conf/: change folder names
+
 ## [1.1.1] - 2024-03-02
 
 Changed lib folder structure in src to match MLOps description by Google
