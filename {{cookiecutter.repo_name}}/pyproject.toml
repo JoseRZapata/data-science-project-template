@@ -5,7 +5,7 @@ description = "{{ cookiecutter.description }}"
 authors = [
     "{{ cookiecutter.author_name }} <{{ cookiecutter.author_email }}>",
 ]
-requires-python = "^{{ cookiecutter.compatible_python_versions }}"
+requires-python = ">={{ cookiecutter.compatible_python_versions }}"
 readme = "README.md"
 
 dependencies = [
