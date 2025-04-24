@@ -108,32 +108,21 @@ uv add --group dev plotly
 ├── pyproject.toml                      # dependencies for the python project
 ├── README.md                           # description of your project
 ├── src                                 # source code for use in this project
-│   ├── libs                            # custom python scripts
-│   │   ├── data_etl                    # data extraction, transformation, and loading  
-│   │   ├── data_validation             # data validation  
-│   │   ├── feat_cleaning               # feature engineering data cleaning
-│   │   ├── feat_encoding               # feature engineering encoding
-│   │   ├── feat_imputation             # feature engineering imputation    
-│   │   ├── feat_new_features           # feature engineering new features
-│   │   ├── feat_pipelines              # feature engineering pipelines
-│   │   ├── feat_scaling                # feature engineering scaling data
-│   │   ├── feat_selection              # feature engineering feature selection
-│   │   ├── feat_strings                # feature engineering strings
-│   │   ├── metrics                     # evaluation metrics
-│   │   ├── model                       # model training and prediction    
-│   │   ├── model_evaluation            # model evaluation
-│   │   ├── model_selection             # model selection
-│   │   ├── model_validation            # model validation
-│   │   └── reports                     # reports
-│   ├── pipelines
-│   │   ├── data_extraction             # data extraction loading
-│   │   ├── data_validation             # data validation
-│   │   ├── data_preparation            # prepare data for modeling (cleaning, feature engineering)
-│   │   ├── model_train                 # train models
-│   │   ├── model_eval                  # evaluate model performance using test set
-│   │   ├── model_validation            # compare model vs baseline
-│   │   └── model_serving               # deploy model to serve predictions
+│   ├── README.md                       # description of src structure
+│   ├── tmp_mock.py                     # example python file
+│   ├── data                            # data extraction, validation, processing, transformation
+│   ├── model                           # model training, evaluation, validation, export
+│   ├── inference                       # model prediction, serving, monitoring
+│   └── pipelines                       # orchestration of pipelines
+│       ├── feature_pipeline            # transforms raw data into features and labels
+│       ├── training_pipeline           # transforms features and labels into a model
+│       └── inference_pipeline          # takes features and a trained model for predictions
 ├── tests                               # test code for your project
+│   ├── test_mock.py                    # example test file
+│   ├── data                            # tests for data module
+│   ├── model                           # tests for model module
+│   ├── inference                       # tests for inference module
+│   └── pipelines                       # tests for pipelines module
 └── .vscode                             # vscode configuration
     ├── extensions.json                 # list of recommended extensions
     ├── launch.json                     # vscode launch configuration
