@@ -1,4 +1,4 @@
-.PHONY: tests help init_env init_git pre-commit_update docs_view docs-test test actionlint check
+.PHONY: tests help init_env init_git pre-commit_update docs docs_test docs_view test actionlint check
 
 ####----Basic configurations----####
 
@@ -8,7 +8,7 @@ install: ## Install libs with poetry and pre-commit
 	@echo "🚀 Installing pre-commit..."
 	uv run pre-commit install
 	@echo "💻 Activate virtual environment..."
-	@source .venv/bin/activate
+	source .venv/bin/activate
 
 init_git: ## Initialize git repository
 	@echo "🚀 Initializing local git repository..."
@@ -47,7 +47,7 @@ clean_branchs: ## Clean local branches already merged on the remote
 ####----Docs----####
 docs: ## Build and serve the documentation
 	@echo "🚀 Viewing documentation..."
-	@uv run mkdocs serve
+	uv run mkdocs serve
 
 docs_test: ## Test if documentation can be built without warnings or errors
 	@uv run mkdocs build -s
@@ -60,7 +60,7 @@ view_tree: ## View the project tree
 
 test: ## Test the code with pytest and coverage
 	@echo "🚀 Testing code: Running pytest"
-	@uv run pytest --cov
+	@uv run pytest -v --cov
 
 test_coverage: ## Test the code with pytest and coverage
 	@echo "🚀 Testing code: coverage.xml"

@@ -49,7 +49,7 @@ pre-commit_update: ## Update pre-commit hooks
 ####----Docs----####
 docs: ## Build and serve the documentation
 	@echo "🚀 Viewing documentation..."
-	@uv run mkdocs serve
+	uv run mkdocs serve
 
 docs_test: ## Test if documentation can be built without warnings or errors
 	@uv run mkdocs build -s

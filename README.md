@@ -133,8 +133,8 @@ cruft update
 
 Folder structure for data science projects  [why?](https://towardsdatascience.com/the-importance-of-layered-thinking-in-data-engineering-a09f685edc71)
 
-- [Data structure]
-- [Pipelines based on mlops by google](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning#mlops_level_1_ml_pipeline_automation)
+- [Data structure](https://docs.kedro.org/en/stable/faq/faq.html#what-is-data-engineering-convention)
+- [Pipelines based on Feature/Training/Inference Pipelines](https://www.hopsworks.ai/post/mlops-to-ml-systems-with-fti-pipelines)
 
 ```bash
 .
@@ -183,33 +183,21 @@ Folder structure for data science projects  [why?](https://towardsdatascience.co
 │   ├── notebook_template.ipynb         # template for notebooks
 │   └── README.md                       # information about the notebooks
 ├── src                                 # source code for use in this project
-│   ├── libs                            # custom python scripts
-│   │   ├── data_etl                    # data extraction, transformation, and loading  
-│   │   ├── data_validation             # data validation  
-│   │   ├── feat_cleaning               # feature engineering data cleaning
-│   │   ├── feat_encoding               # feature engineering encoding
-│   │   ├── feat_imputation             # feature engineering imputation    
-│   │   ├── feat_new_features           # feature engineering new features
-│   │   ├── feat_pipelines              # feature engineering pipelines
-│   │   ├── feat_scaling                # feature engineering scaling data
-│   │   ├── feat_selection              # feature engineering feature selection
-│   │   ├── feat_strings                # feature engineering strings
-│   │   ├── metrics                     # evaluation metrics
-│   │   ├── model                       # model training and prediction    
-│   │   ├── model_evaluation            # model evaluation
-│   │   ├── model_selection             # model selection
-│   │   ├── model_validation            # model validation
-│   │   └── reports                     # reports
-│   ├── pipelines
-│   │   ├── data_extraction             # data extraction loading
-│   │   ├── data_validation             # data validation
-│   │   ├── data_preparation            # prepare data for modeling (cleaning, feature engineering)
-│   │   ├── model_train                 # train models
-│   │   ├── model_eval                  # evaluate model performance using test set
-│   │   ├── model_validation            # compare model vs baseline
-│   │   └── model_serving               # deploy model to serve predictions
+│   ├── README.md                       # description of src structure
+│   ├── tmp_mock.py                     # example python file
+│   ├── data                            # data extraction, validation, processing, transformation
+│   ├── model                           # model training, evaluation, validation, export
+│   ├── inference                       # model prediction, serving, monitoring
+│   └── pipelines                       # orchestration of pipelines
+│       ├── feature_pipeline            # transforms raw data into features and labels
+│       ├── training_pipeline           # transforms features and labels into a model
+│       └── inference_pipeline          # takes features and a trained model for predictions
 ├── tests                               # test code for your project
-│   └── test_mock.py                    # example test file
+│   ├── test_mock.py                    # example test file
+│   ├── data                            # tests for data module
+│   ├── model                           # tests for model module
+│   ├── inference                       # tests for inference module
+│   └── pipelines                       # tests for pipelines module
 ├── .editorconfig                       # editor configuration
 ├── .gitignore                          # files to ignore in git
 ├── .pre-commit-config.yaml             # configuration for pre-commit hooks
@@ -361,7 +349,6 @@ test                  Test the code with pytest and coverage
 [Cookiecutter]:https://cookiecutter.readthedocs.io/en/stable/
 [Coverage.py]: https://coverage.readthedocs.io/
 [Cruft]: https://cruft.github.io/cruft/
-[Data structure]: https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/data/README.md
 [Dependabot]: https://github.com/dependabot/dependabot-core
 [dependency-review-action]: https://github.com/actions/dependency-review-action
 [Flake8]:https://github.com/PyCQA/flake8
