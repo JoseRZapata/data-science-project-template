@@ -2,7 +2,7 @@
 
 layered data-engineering convention
 
-![layeded data engineering](https://docs.kedro.org/en/0.18.6/_images/data_engineering_convention.png)
+![layered data engineering](https://docs.kedro.org/en/stable/_images/data_layers.png)
 
 | `Folder in data` | `Description` |
 | ---------------------- | --- |
@@ -17,5 +17,5 @@ layered data-engineering convention
 
 ## References
 
-- <https://docs.kedro.org/en/0.18.6/faq/faq.html#what-is-data-engineering-convention>
+- <https://docs.kedro.org/en/stable/faq/faq.html#what-is-data-engineering-convention>
 - <https://towardsdatascience.com/the-importance-of-layered-thinking-in-data-engineering-a09f685edc71>

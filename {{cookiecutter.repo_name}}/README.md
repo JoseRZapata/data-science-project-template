@@ -62,7 +62,7 @@ uv add --group dev plotly
 ## 🗃️ Project structure
 
 - [Data structure]
-- [Pipelines based on mlops by google](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning#mlops_level_1_ml_pipeline_automation)
+- [Pipelines based on Feature/Training/Inference Pipelines](https://www.hopsworks.ai/post/mlops-to-ml-systems-with-fti-pipelines)
 
 ```bash
 .
