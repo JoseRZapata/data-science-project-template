@@ -60,7 +60,7 @@ view_tree: ## View the project tree
 
 test: ## Test the code with pytest and coverage
 	@echo "🚀 Testing code: Running pytest"
-	@uv run pytest --cov
+	@uv run pytest -v --cov
 
 test_coverage: ## Test the code with pytest and coverage
 	@echo "🚀 Testing code: coverage.xml"
