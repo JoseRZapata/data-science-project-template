@@ -77,6 +77,14 @@ General Tools that I use to develop Python projects, The most important is [UV] 
 
 5. 🎉 Congrats Start coding your project.
 
+6. If you want to push this repository to GitHub, first create a new repository in GitHub and then run the following commands to push your local repository to GitHub.
+
+    ```shell title="push to GitHub"
+        git remote add origin <your-repo-url>
+        git branch -M main
+        git push -u origin main
+    ```
+
 ---
 [Actionlint]: https://github.com/Mateusz-Grzelinski/actionlint-py
 [Cruft]: https://cruft.github.io/cruft/
