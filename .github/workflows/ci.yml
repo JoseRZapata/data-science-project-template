@@ -45,12 +45,12 @@ jobs:
         run: uv sync --all-extras --dev
 
       - name: Run pytest with coverage
-        run: uv run pytest --cov --cov-report=xml
+        run: uv run pytest --cov --cov-branch --cov-report=xml
 
         #{% raw %}
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
           slug: JoseRZapata/data-science-project-template
         #{% endraw %}

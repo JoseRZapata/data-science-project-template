@@ -9,7 +9,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Released]
 
-## [1.1.2] - 2024-03-19
+## [1.1.3] - 2025-03-19
+
+Update Codecov configurations
+
+### Changed 💥
+
+Codecov github action configuration has been updated to use the new version of the action.
+
+### Added 🚀
+
+Update docs to config local repository with github
+
+## [1.1.2] - 2025-03-19
 
 add new commands to makefile
 
@@ -23,7 +35,7 @@ add new commands to makefile
 - `make switch_main`: ## Switch to main branch and pull
 - `clean_branchs`: ## Clean local branches already merged on the remote
 
-## [1.1.0] - 2024-02-26
+## [1.1.0] - 2025-02-26
 
 Changed pipeline folder structure in src to match MLOps description by Google
 
@@ -38,7 +50,7 @@ Changed pipeline folder structure in src to match MLOps description by Google
 {{cookiecutter.repo_name}}/src/pipelines: change folder structure
 conf/: change folder names
 
-## [1.1.1] - 2024-03-02
+## [1.1.1] - 2025-03-02
 
 Changed lib folder structure in src to match MLOps description by Google
 
@@ -49,7 +61,7 @@ Changed lib folder structure in src to match MLOps description by Google
 {{cookiecutter.repo_name}}/src/libs: change folder structure
 conf/: change folder names
 
-## [1.1.0] - 2024-02-26
+## [1.1.0] - 2025-02-26
 
 Changed pipeline folder structure in src to match MLOps description by Google
 
@@ -64,7 +76,7 @@ Changed pipeline folder structure in src to match MLOps description by Google
 {{cookiecutter.repo_name}}/src/pipelines: change folder structure
 conf/: change folder names
 
-## [1.0.1] - 2024-02-14
+## [1.0.1] - 2025-02-14
 
 The Main change in this to configure vscode settings for run RUFF native server and updates dependencies and pre-commit hooks.
 
@@ -77,7 +89,7 @@ The Main change in this to configure vscode settings for run RUFF native server 
 
 - `.vscode/settings.json` to configure vscode settings for run RUFF native server
 
-## [1.0.0] - 2024-01-07
+## [1.0.0] - 2025-01-07
 
 The Main change in this Pull Request is the migration from poetry to uv to manage the dependencies and the environment of the project.
 
