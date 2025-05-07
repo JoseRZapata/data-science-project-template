@@ -5,7 +5,7 @@
   "author_name": "Peter Parker",
   "author_email": "peter.parker@web.com",
   "description": "A short description of the project.",
-  "compatible_python_versions": ["3.9", "3.10", "3.11", "3.12"],
+  "compatible_python_versions": ["3.10", "3.11", "3.12", "3.13"],
   "mkdocs": true,
   "codecov": true,
   "license": [
