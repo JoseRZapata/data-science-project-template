@@ -2,13 +2,13 @@
 
 ####----Basic configurations----####
 
-install: ## Install libs with poetry and pre-commit
-	@echo "🚀 Creating virtual environment using pyenv and poetry"
+install_env: ## Install libs with UV and pre-commit
+	@echo "🚀 Creating virtual environment using UV"
 	uv sync --all-groups
 	@echo "🚀 Installing pre-commit..."
 	uv run pre-commit install
 	@echo "💻 Activate virtual environment..."
-	source .venv/bin/activate
+	@bash -c "source .venv/bin/activate"
 
 init_git: ## Initialize git repository
 	@echo "🚀 Initializing local git repository..."
