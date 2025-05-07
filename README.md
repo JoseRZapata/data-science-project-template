@@ -98,6 +98,13 @@ pip install --user cruft # Install `cruft` on your path for easy access
 cruft create https://github.com/JoseRZapata/data-science-project-template
 ```
 
+then inside the project folder, init git and uv environment using [Make]:
+
+```shell title="install project"
+make init_env
+make install_env
+```
+
 ### 🍪 Via [Cookiecutter]
 
 ```shell title="install cookiecutter"

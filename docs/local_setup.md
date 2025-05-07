@@ -43,11 +43,9 @@ General Tools that I use to develop Python projects, The most important is [UV] 
 
 1. [Cruft] allows you to maintain all the necessary boilerplate for packaging and building projects separate from the code you intentionally write. Fully compatible with existing Cookiecutter templates.
       - `uv tool install cruft`
-2. (optional) [Pre-commit] to local check the security of the dependencies of the project.
+2. (optional) [Pip-audit] to local check the security of the dependencies of the project.
       - `uv tool install pip-audit`
-3. (optional) [Pip-audit] to local check the security of the dependencies of the project.
-      - `uv tool install pip-audit`
-4. (optional) [Actionlint] to check the syntax of the GitHub Actions configuration files of the project.
+3. (optional) [Actionlint] to check the syntax of the GitHub Actions configuration files of the project.
       - `uv tool install actionlint`
 
 **Note:** [UV] replace tool like [Pyenv], [Poetry] and other ones to manage the python versions, environments and dependencies.
@@ -69,10 +67,11 @@ General Tools that I use to develop Python projects, The most important is [UV] 
         git commit -m "🎉 Begin a project, Initial commit"
     ```
 
-4. Run `make install` to install the dependencies of the project. Or You can do the same running this commands:
+4. Run `make install_env` to install the dependencies of the project. Or You can do the same running this commands:
 
     ```shell title="install dependencies"
         uv sync --all-groups
+        uv run pre-commit install
     ```
 
 5. 🎉 Congrats Start coding your project.
@@ -93,7 +92,6 @@ General Tools that I use to develop Python projects, The most important is [UV] 
 [Make]: https://www.gnu.org/software/make/manual/make.html
 [Pip-audit]: https://github.com/pypa/pip-audit
 [Poetry]: https://python-poetry.org/docs/
-[Pre-commit]: https://pre-commit.com/
 [Pyenv]: https://github.com/pyenv/pyenv?tab=readme-ov-file#installation
 [Python]: https://www.python.org/downloads/
 [UV]: https://docs.astral.sh/uv/
