@@ -67,6 +67,7 @@ select = [
     ]
 ignore = [
     "E203",
+    "E501", #ignore line length
         # bandit: Use of `assert` detected
     "S101"
     ]
