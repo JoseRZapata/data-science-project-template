@@ -43,7 +43,7 @@
     "MD007": {"indent": 4}
   },
   "ruff.configuration": "--config=.code_quality/ruff.toml",
-  "ruff.format.preview": true,
+  "ruff.format.preview": false,
   "mypy-type-checker.args": [
     "--config-file=.code_quality/mypy.ini"
   ]
