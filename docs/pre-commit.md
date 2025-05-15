@@ -34,9 +34,8 @@ This repository contains a mirror of mypy for pre-commit.
 
 - [`mypy`](http://mypy-lang.org/): This hook runs mypy, a static type checker for Python, with a custom configuration file.
 
-## Yelp/detect-secrets
+## commitizen-tools/commitizen
 
-This repository contains a tool to detect secrets in the code base. [yelp detect-secrets](https://github.com/Yelp/detect-secrets)
+This repository contains hooks for commitizen.
 
-- `detect-secrets`: This hook runs detect-secrets, a tool to detect secrets in the code base.
-- `detect-secrets-jupyter`: This hook runs detect-secrets specifically for Jupyter notebooks.
+- [`commitizen`](https://commitizen-tools.github.io/commitizen/): This hook checks that commit messages follow the conventional commit format.
