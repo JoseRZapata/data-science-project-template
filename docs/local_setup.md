@@ -59,7 +59,7 @@ General Tools that I use to develop Python projects, The most important is [UV] 
     ```
 
 2. Answer the questions to create the project.
-3. Run `make init_env` to init [Git] Or You can do the same running this commands:
+3. Run `make init_git` to init [Git] Or You can do the same running this commands:
 
     ```shell title="init environment"
         git init -b main
