@@ -66,10 +66,10 @@ select = [
     "TRY",
     ]
 ignore = [
-    "E203",
-    "E501", #ignore line length
-        # bandit: Use of `assert` detected
-    "S101"
+    "E203",  # Like Black, ignore E203 (whitespace before ':') to avoid conflicts.
+    "S101", # bandit: Use of `assert` detected
+    "E501", # Like Black, ignore E501 (line too long) to avoid conflicts.
+    "TRY003", # tryceratops: Avoid long error messages
     ]
 # Allow fix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
