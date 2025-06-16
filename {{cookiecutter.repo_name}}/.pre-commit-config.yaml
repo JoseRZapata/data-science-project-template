@@ -34,7 +34,7 @@ repos:
           - --config-file=.code_quality/mypy.ini
 
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v4.8.2
+    rev: v4.8.3
     hooks:
       - id: commitizen
       - id: commitizen-branch
