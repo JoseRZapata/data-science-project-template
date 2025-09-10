@@ -6,6 +6,10 @@
 [![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit)
 [![Checked with mypy](https://www.mypy-lang.org/static/mypy_badge.svg)](https://mypy-lang.org/)
 
+This is a data science project template created with [Cookiecutter] to help you start your next data science or machine learning project quickly and efficiently. It includes a well-organized folder structure, essential tools for code quality, testing, and documentation, and follows best practices in the industry.
+
+Using the data science project template <https://github.com/JoseRZapata/data-science-project-template>
+
 ## ✨ Features and Tools
 
 Information about all the features and tools used in this project: <https://joserzapata.github.io/data-science-project-template/#features-and-tools>
@@ -13,7 +17,6 @@ Information about all the features and tools used in this project: <https://jose
 Features                                     | Package  | Why?
  ---                                         | ---      | ---
 Dependencies and env                         | [UV] | [article](https://astral.sh/blog/uv)
-Project configuration file                   | [Hydra]  |  [article](https://mathdatasimplified.com/2023/05/25/stop-hard-coding-in-a-data-science-project-use-configuration-files-instead/)
 Lint - Format, sort imports  (Code Quality)  | [Ruff] | [article](https://www.sicara.fr/blog-technique/boost-code-quality-ruff-linter)
 Static type checking                         | [Mypy] | [article](https://python.plainenglish.io/does-python-need-types-79753b88f521)
 code security                                | [bandit] | [article](https://blog.bytehackr.in/secure-your-python-code-with-bandit)
@@ -36,7 +39,7 @@ Template for notebooks                       | [Notebook template] |
 1. Set up the environment:
 
     ```bash
-    make init_env
+    make install_env
     ```
 
 1. Install libraries for data science and machine learning:
@@ -143,7 +146,6 @@ This project was generated from [@JoseRZapata]'s [data science project template]
 [Cruft]: https://cruft.github.io/cruft/
 [data science project template]: https://github.com/JoseRZapata/data-science-project-template
 [Data structure]: https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/data/README.md
-[hydra]: https://hydra.cc/
 [Mypy]: http://mypy-lang.org/
 [Notebook template]: {{cookiecutter.repo_name}}/notebooks/notebook_template.ipynb
 [pre-commit]: https://pre-commit.com/
