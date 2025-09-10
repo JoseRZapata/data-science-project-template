@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Released]
 
+## [1.1.4] - 2025-09-09
+
+### Added 🚀
+
+Update README.md removing hydra information and fix make file information to install environment with uv
+
 ## [1.1.3] - 2025-03-19
 
 Update Codecov configurations
