@@ -17,6 +17,15 @@ updates:
       prefix: ⬆
     labels:
       - "automerge"
+
+  - package-ecosystem: "github-actions"
+    directory: "/{{cookiecutter.repo_name}}/.github/workflows"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: ⬆
+    labels:
+      - "automerge"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
