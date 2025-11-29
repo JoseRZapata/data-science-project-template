@@ -9,6 +9,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Released]
 
+## [1.2.0] - 2025-11-29
+
+### Added 🚀
+
+- New workflow for automatic template dependency updates with corresponding script
+
+### Changed 💥
+
+- Updated actions/github-script from 7 to 8
+- Updated actions/setup-python from 5 to 6
+- Updated actions/checkout from 5 to 6
+- Updated astral-sh/setup-uv from 6 to 7
+- Updated pytest-cov from 6.3.0 to 7.0.0
+- Multiple updates to mkdocs-material package
+- Updated multiple Python packages dependencies
+- Updated documentation and pre-commit hooks
+
 ## [1.1.4] - 2025-09-09
 
 ### Added 🚀
