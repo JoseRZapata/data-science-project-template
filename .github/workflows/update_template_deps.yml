@@ -37,3 +37,24 @@ jobs:
           branch: update-template-deps
           delete-branch: true
           base: main
+
+      - name: Add label
+        uses: actions/github-script@v8
+        with:
+          github-token: ${{ secrets.PAT }}
+          script: |
+            const { data: pullRequests } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              head: 'update-template-deps'
+            });
+            if (pullRequests.length > 0) {
+              const prNumber = pullRequests[0].number;
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                labels: ['automerge']
+              });
+            }
