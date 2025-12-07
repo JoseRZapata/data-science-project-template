@@ -20,7 +20,7 @@ repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecut
 [dependency-groups]
 dev = [
     "pre-commit>=4.5.0", # Code linting and formatting
-    "pytest>=9.0.1", # Testing framework
+    "pytest>=9.0.2", # Testing framework
     "pytest-cookies>=0.7.0",
     "pytest-cov>=7.0.0",
     "cruft[pyproject]>=2.16.0",# Automated Cookiecutter template synchronization
