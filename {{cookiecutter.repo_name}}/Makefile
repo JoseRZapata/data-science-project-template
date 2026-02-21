@@ -71,8 +71,10 @@ clean_branchs: ## Clean local branches already merged on the remote
 	@git fetch -p
 	@for branch in $$(git for-each-ref --format '%(refname:short)' refs/heads/ | grep -v '^\*' | grep -v ' main$$'); do \
 		if ! git show-ref --quiet refs/remotes/origin/$$branch; then \
-			echo "Deleting local branch $$branch"; \
-			git branch -D $$branch; \
+			if git config --get branch.$$branch.remote > /dev/null 2>&1; then \
+				echo "Deleting local branch $$branch"; \
+				git branch -D $$branch; \
+			fi \
 		fi \
 	done
 
