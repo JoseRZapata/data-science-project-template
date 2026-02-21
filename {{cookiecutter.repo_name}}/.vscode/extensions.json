@@ -1,12 +1,9 @@
 {
   "recommendations": [
-    "alefragnani.project-manager",
     "charliermarsh.ruff",
     "davidanson.vscode-markdownlint",
     "editorconfig.editorconfig",
     "github.copilot-chat",
-    "github.copilot",
-    "github.vscode-github-actions",
     "GitHub.vscode-pull-request-github",
     "KevinRose.vsc-python-indent",
     "mechatroner.rainbow-csv",
