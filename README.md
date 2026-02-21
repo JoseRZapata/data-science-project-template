@@ -101,7 +101,7 @@ cruft create https://github.com/JoseRZapata/data-science-project-template
 then inside the project folder, init git and uv environment using [Make]:
 
 ```shell title="install project"
-make init_env
+make init_git
 make install_env
 ```
 
