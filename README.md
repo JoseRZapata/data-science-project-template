@@ -103,6 +103,7 @@ then inside the project folder, init git and uv environment using [Make]:
 ```shell title="install project"
 make init_git
 make install_env
+source .venv/bin/activate
 ```
 
 ### 🍪 Via [Cookiecutter]

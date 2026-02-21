@@ -42,6 +42,12 @@ Template for notebooks                       | [Notebook template] |
     make install_env
     ```
 
+1. Activate virtual environment:
+
+    ```bash
+    source .venv/bin/activate
+    ```
+
 1. Install libraries for data science and machine learning:
 
     ```bash
