@@ -361,7 +361,7 @@ test                  Probar el código con pytest y cobertura
 [dependency-review-action]: https://github.com/actions/dependency-review-action
 [Flake8]:https://github.com/PyCQA/flake8
 [GitHub Actions]: https://github.com/features/actions
-[Github Labeler]: https://github.com/marketplace/actions/github-labeler
+[GitHub Labeler]: https://github.com/marketplace/actions/github-labeler
 [hydra]: https://hydra.cc/
 [isort]: https://github.com/PyCQA/isort
 [Jupyter]: https://jupyter.org/

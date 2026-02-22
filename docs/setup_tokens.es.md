@@ -1,10 +1,10 @@
 # 🔑 Configurar Tokens
 
-Algunas de las github actions requieren claves de token que se establezcan como secretos en el repositorio de github. Los siguientes tokens son requeridos:
+Algunas de las GitHub Actions requieren claves de token que se establezcan como secretos en el repositorio de GitHub. Los siguientes tokens son requeridos:
 
-## Github Action secrets.PAT
+## GitHub Action secrets.PAT
 
-Este es el token de acceso personal para el repositorio de github y se usa para:
+Este es el token de acceso personal para el repositorio de GitHub y se usa para:
 
 - Subir la documentación de MKDocs a la rama `gh-pages`.
 - Subir la actualización automática de pre-commit a la rama `main`.

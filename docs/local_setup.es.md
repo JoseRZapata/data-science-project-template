@@ -39,7 +39,7 @@ Configuro mi entorno de desarrollo local siguiendo los siguientes pasos:
 
 Herramientas generales que uso para desarrollar proyectos en Python. La más importante es [UV] para gestionar versiones de Python, entornos virtuales, gestionar dependencias para los proyectos y tener herramientas en entornos aislados, porque las aplicaciones se ejecutan en su propio entorno virtual para evitar conflictos de dependencias y están disponibles en todas partes.
 
-[UV Highligths](https://github.com/astral-sh/uv?tab=readme-ov-file#highlights)
+[UV Highlights](https://github.com/astral-sh/uv?tab=readme-ov-file#highlights)
 
 1. [Cruft] te permite mantener todo el código repetitivo necesario para empaquetar y construir proyectos separado del código que escribes intencionalmente. Totalmente compatible con plantillas existentes de Cookiecutter.
       - `uv tool install cruft`

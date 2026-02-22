@@ -41,7 +41,7 @@ plugins:
             🔑 Setup Tokens: "🔑 Configurar Tokens"
             ⚙️  Pre-commit configuration: "⚙️  Configuración de Pre-commit"
             🚀 Github Actions: "🚀 Github Actions"
-            Continuos Integration (CI): "Integración Continua (CI)"
+            Continuous Integration (CI): "Integración Continua (CI)"
             Pre-commit_autoupdate: "Pre-commit_autoupdate"
             Automerge: "Automerge"
             Dependency Review: "Revisión de Dependencias"
@@ -58,7 +58,7 @@ nav:
   - 🔑 Setup Tokens: 'setup_tokens.md'
   - ⚙️  Pre-commit configuration: 'pre-commit.md'
   - 🚀 Github Actions:
-    - Continuos Integration (CI): 'github_actions/ci.md'
+    - Continuous Integration (CI): 'github_actions/ci.md'
     - Pre-commit_autoupdate: 'github_actions/gh_action_pre-commit-autoupdate.md'
     - Automerge: 'github_actions/automerge.md'
     - Dependency Review: 'github_actions/dependency_review.md'
