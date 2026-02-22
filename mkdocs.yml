@@ -1,4 +1,5 @@
 site_name: "Data science project template"
+site_url: https://joserzapata.github.io/data-science-project-template/
 repo_url: https://github.com/JoseRZapata/data-science-project-template
 
 theme:
