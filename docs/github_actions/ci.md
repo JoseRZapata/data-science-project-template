@@ -3,7 +3,7 @@
 
 This GitHub Action workflow is designed to streamline and automate the CI/CD processes for your project. The workflow is triggered on pull requests and pushes to the `main` branch. It performs several key tasks including linting, pre-commit checks, project update validation, and running tests with coverage reporting.
 
-[ci-cd-tests.yml](https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/.github/workflows/ci-cd-tests.yml)
+[ci.yml](https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/.github/workflows/ci.yml)
 
 ---
 
@@ -57,7 +57,7 @@ The workflow defines four jobs:
 **Steps**:
 
 - **Checkout**: Uses `actions/checkout@v4` to fetch the repository.
-- **Install `uv`**: Sets up the `uv` tool using `astral-sh/setup-uv@v5`.
+- **Install `uv`**: Sets up the `uv` tool using `astral-sh/setup-uv@v6`.
 - **Run pre-commit hooks**: Executes all pre-commit hooks across the repository, displaying any failures with colorized diffs.
 
 ---
@@ -69,11 +69,11 @@ The workflow defines four jobs:
 **Steps**:
 
 - **Checkout**: Uses `actions/checkout@v4` to fetch the repository.
-- **Install `uv`**: Sets up the `uv` tool using `astral-sh/setup-uv@v5`.
+- **Install `uv`**: Sets up the `uv` tool using `astral-sh/setup-uv@v6`.
 - **Set up Python**: Configures Python according to the `.python-version` file using `actions/setup-python@v5`.
 - **Install the project**: Installs the project with all extras and development dependencies using `uv sync`.
 - **Run tests with coverage**: Executes tests with `pytest` and generates a coverage report in XML format.
-- **Upload coverage report**: Uploads the coverage report to Codecov using `codecov/codecov-action@v4`. Requires a `CODECOV_TOKEN` secret stored in the repository settings.
+- **Upload coverage report**: Uploads the coverage report to Codecov using `codecov/codecov-action@v5`. Requires a `CODECOV_TOKEN` secret stored in the repository settings.
 
 ---
 

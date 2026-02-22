@@ -6,7 +6,8 @@ on:
       - main
     paths:
       - 'docs/**'
-      - 'readme.md'
+      - 'README.md'
+      - 'mkdocs.yml'
     types:
       - closed
   workflow_dispatch:

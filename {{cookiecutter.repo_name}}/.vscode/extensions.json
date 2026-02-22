@@ -19,6 +19,7 @@
     "streetsidesoftware.code-spell-checker",
     "tamasfe.even-better-toml",
     "usernamehw.errorlens",
-    "vscode-icons-team.vscode-icons"
+    "vscode-icons-team.vscode-icons",
+    "vivaxy.vscode-conventional-commits"
   ]
 }
