@@ -31,7 +31,7 @@ This GitHub Action workflow automates the process of building and deploying proj
    - Uses `actions/checkout@v4` to fetch the repository contents, ensuring access to the latest documentation files.
 
 2. **Install `uv`**:
-   - Sets up the `uv` tool using `astral-sh/setup-uv@v5`.
+   - Sets up the `uv` tool using `astral-sh/setup-uv@v6`.
 
 3. **Set up Python**:
    - Configures Python according to the `.python-version` file using `actions/setup-python@v5`.
@@ -40,7 +40,7 @@ This GitHub Action workflow automates the process of building and deploying proj
    - Runs `mkdocs build --clean` via `uv` to generate the static documentation site. The `--clean` option ensures that the output directory is cleared before building.
 
 5. **Deploy documentation**:
-   - Uses `peaceiris/actions-gh-pages@v3` to publish the built documentation to GitHub Pages.
+   - Uses `peaceiris/actions-gh-pages@v4` to publish the built documentation to GitHub Pages.
    - **Inputs**:
      - `github_token`: A Personal Access Token (PAT) stored as a repository secret.
      - `publish_dir`: Specifies the directory containing the built site (`./site`).
