@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-02-22
+
+### Added 🚀
+
+- Added Spanish translation for all documentation using `mkdocs-static-i18n`.
+- Added `README.es.md` with translated content.
+- Added `mkdocs-static-i18n` plugin to `mkdocs.yml` to support multi-language documentation.
+- Added `mkdocs-static-i18n` to the `docs` dependencies in `pyproject.toml`.
+- Added `CHANGELOG.md` to the cookiecutter template (`{{cookiecutter.repo_name}}/CHANGELOG.md`).
+
+### Changed 💥
+
+- Updated `.github/workflows/docs.yml` to trigger on changes to `mkdocs.yml`.
+
 ## [Released]
 
 ## [1.2.0] - 2025-11-29
