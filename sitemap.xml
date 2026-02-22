@@ -1,3 +1,185 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>None./</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/"/>
+    </url>
+    <url>
+        <loc>Nonedata_schema/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonedata_schema/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/data_schema/"/>
+    </url>
+    <url>
+        <loc>Nonedirectory_hierarchy/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonedirectory_hierarchy/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/directory_hierarchy/"/>
+    </url>
+    <url>
+        <loc>Nonelocal_setup/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonelocal_setup/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/local_setup/"/>
+    </url>
+    <url>
+        <loc>Nonepre-commit/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonepre-commit/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/pre-commit/"/>
+    </url>
+    <url>
+        <loc>Nonesetup_tokens/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonesetup_tokens/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/setup_tokens/"/>
+    </url>
+    <url>
+        <loc>Nonevscode/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonevscode/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/vscode/"/>
+    </url>
+    <url>
+        <loc>Nonegithub_actions/automerge/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonegithub_actions/automerge/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/github_actions/automerge/"/>
+    </url>
+    <url>
+        <loc>Nonegithub_actions/ci/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonegithub_actions/ci/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/github_actions/ci/"/>
+    </url>
+    <url>
+        <loc>Nonegithub_actions/dependency_review/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonegithub_actions/dependency_review/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/github_actions/dependency_review/"/>
+    </url>
+    <url>
+        <loc>Nonegithub_actions/docs/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonegithub_actions/docs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/github_actions/docs/"/>
+    </url>
+    <url>
+        <loc>Nonegithub_actions/gh_action_pre-commit-autoupdate/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonegithub_actions/gh_action_pre-commit-autoupdate/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/github_actions/gh_action_pre-commit-autoupdate/"/>
+    </url>
+    <url>
+        <loc>Nonegithub_actions/labels/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonegithub_actions/labels/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/github_actions/labels/"/>
+    </url>
+    <url>
+        <loc>Nonees/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+    </url>
+    <url>
+        <loc>Nonees/data_schema/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/data_schema/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonedata_schema/"/>
+    </url>
+    <url>
+        <loc>Nonees/directory_hierarchy/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/directory_hierarchy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonedirectory_hierarchy/"/>
+    </url>
+    <url>
+        <loc>Nonees/local_setup/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/local_setup/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonelocal_setup/"/>
+    </url>
+    <url>
+        <loc>Nonees/pre-commit/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/pre-commit/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonepre-commit/"/>
+    </url>
+    <url>
+        <loc>Nonees/setup_tokens/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/setup_tokens/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonesetup_tokens/"/>
+    </url>
+    <url>
+        <loc>Nonees/vscode/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/vscode/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonevscode/"/>
+    </url>
+    <url>
+        <loc>Nonees/github_actions/automerge/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/github_actions/automerge/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonegithub_actions/automerge/"/>
+    </url>
+    <url>
+        <loc>Nonees/github_actions/ci/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/github_actions/ci/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonegithub_actions/ci/"/>
+    </url>
+    <url>
+        <loc>Nonees/github_actions/dependency_review/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/github_actions/dependency_review/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonegithub_actions/dependency_review/"/>
+    </url>
+    <url>
+        <loc>Nonees/github_actions/docs/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/github_actions/docs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonegithub_actions/docs/"/>
+    </url>
+    <url>
+        <loc>Nonees/github_actions/gh_action_pre-commit-autoupdate/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/github_actions/gh_action_pre-commit-autoupdate/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonegithub_actions/gh_action_pre-commit-autoupdate/"/>
+    </url>
+    <url>
+        <loc>Nonees/github_actions/labels/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/github_actions/labels/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonegithub_actions/labels/"/>
+    </url>
 </urlset>

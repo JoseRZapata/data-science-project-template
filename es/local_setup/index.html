@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="es" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -9,16 +9,16 @@
       
       
       
-        <link rel="prev" href="../../pre-commit/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../gh_action_pre-commit-autoupdate/">
+        <link rel="next" href="../directory_hierarchy/">
       
       
         
-          <link rel="alternate" href="./" hreflang="en">
+          <link rel="alternate" href="../../local_setup/" hreflang="en">
         
-          <link rel="alternate" href="../../es/github_actions/ci/" hreflang="es">
+          <link rel="alternate" href="./" hreflang="es">
         
       
       
@@ -27,7 +27,7 @@
     
     
       
-        <title>Continuous Integration (CI) - Data science project template</title>
+        <title>🛠️ Comenzar (💻 Configuración local) - Plantilla de proyecto de ciencia de datos</title>
       
     
     
@@ -78,8 +78,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#github-action-cicd-tests" class="md-skip">
-          Skip to content
+        <a href="#configuracion-del-entorno-de-desarrollo-local" class="md-skip">
+          Saltar a contenido
         </a>
       
     </div>
@@ -93,8 +93,8 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Data science project template" class="md-header__button md-logo" aria-label="Data science project template" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../" title="Plantilla de proyecto de ciencia de datos" class="md-header__button md-logo" aria-label="Plantilla de proyecto de ciencia de datos" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,13 +108,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Data science project template
+            Plantilla de proyecto de ciencia de datos
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Continuous Integration (CI)
+              🛠️ Comenzar (💻 Configuración local)
             
           </span>
         </div>
@@ -154,20 +154,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Select language">
+    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="en" class="md-select__link">
+            <a href="../../local_setup/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../../es/github_actions/ci/" hreflang="es" class="md-select__link">
+            <a href="./" hreflang="es" class="md-select__link">
               Español
             </a>
           </li>
@@ -188,16 +188,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Buscar">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -208,7 +208,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Inicializando búsqueda
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -220,7 +220,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/JoseRZapata/data-science-project-template" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/JoseRZapata/data-science-project-template" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -254,19 +254,19 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Data science project template" class="md-nav__button md-logo" aria-label="Data science project template" data-md-component="logo">
+    <a href="../" title="Plantilla de proyecto de ciencia de datos" class="md-nav__button md-logo" aria-label="Plantilla de proyecto de ciencia de datos" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Data science project template
+    Plantilla de proyecto de ciencia de datos
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/JoseRZapata/data-science-project-template" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/JoseRZapata/data-science-project-template" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -286,14 +286,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    📖 Introduction
+    📖 Introducción
   
 
     
@@ -310,17 +310,44 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../local_setup/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛠️ Comenzar (💻 Configuración local)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    🛠️ Get started (💻 Local setup)
+    🛠️ Comenzar (💻 Configuración local)
   
 
     
@@ -329,6 +356,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-del-computador-para-desarrollar-con-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💻 Configuración del computador para desarrollar con Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientas-generales-de-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐍 Herramientas generales de Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iniciar-un-nuevo-proyecto-de-ciencia-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁 Iniciar un nuevo proyecto de ciencia de datos
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -360,7 +440,7 @@
   <span class="md-ellipsis">
     
   
-    🗃️ Project structure
+    🗃️ Estructura del proyecto
   
 
     
@@ -376,7 +456,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🗃️ Project structure
+    🗃️ Estructura del proyecto
   
 
           </label>
@@ -389,14 +469,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../directory_hierarchy/" class="md-nav__link">
+      <a href="../directory_hierarchy/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🗂️ Directory Hierarchy
+    🗂️ Jerarquía de directorios
   
 
     
@@ -417,14 +497,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data_schema/" class="md-nav__link">
+      <a href="../data_schema/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🗄️ Data Schema
+    🗄️ Esquema de datos
   
 
     
@@ -452,14 +532,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup_tokens/" class="md-nav__link">
+      <a href="../setup_tokens/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🔑 Setup Tokens
+    🔑 Configurar Tokens
   
 
     
@@ -479,14 +559,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pre-commit/" class="md-nav__link">
+      <a href="../pre-commit/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    ⚙️  Pre-commit configuration
+    ⚙️  Configuración de Pre-commit
   
 
     
@@ -503,20 +583,20 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -537,7 +617,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -552,44 +632,17 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Continuous Integration (CI)
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../github_actions/ci/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Continuous Integration (CI)
+    Integración Continua (CI)
   
 
     
@@ -598,126 +651,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#workflow-details" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Workflow Details
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Workflow Details">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#triggers-on" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Triggers (on)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jobs-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Jobs Overview
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#job-details" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Job Details
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Job Details">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-actionlint" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. actionlint
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-lint-cruft" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. lint-cruft
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-pre-commit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. pre-commit
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-test" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. test
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -730,7 +663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gh_action_pre-commit-autoupdate/" class="md-nav__link">
+      <a href="../github_actions/gh_action_pre-commit-autoupdate/" class="md-nav__link">
         
   
   
@@ -758,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../automerge/" class="md-nav__link">
+      <a href="../github_actions/automerge/" class="md-nav__link">
         
   
   
@@ -786,14 +719,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../dependency_review/" class="md-nav__link">
+      <a href="../github_actions/dependency_review/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Dependency Review
+    Revisión de Dependencias
   
 
     
@@ -814,14 +747,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../docs/" class="md-nav__link">
+      <a href="../github_actions/docs/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Docs generator
+    Generador de documentación
   
 
     
@@ -842,14 +775,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../labels/" class="md-nav__link">
+      <a href="../github_actions/labels/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Labels github
+    Etiquetas de github
   
 
     
@@ -877,14 +810,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vscode/" class="md-nav__link">
+      <a href="../vscode/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    💻 VSCode configuration
+    💻 Configuración de VSCode
   
 
     
@@ -910,7 +843,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
   
   
   
@@ -919,107 +852,40 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Tabla de contenidos
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#workflow-details" class="md-nav__link">
+  <a href="#configuracion-del-computador-para-desarrollar-con-python" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Workflow Details
+        💻 Configuración del computador para desarrollar con Python
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Workflow Details">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#triggers-on" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Triggers (on)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jobs-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Jobs Overview
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#job-details" class="md-nav__link">
+  <a href="#herramientas-generales-de-python" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Job Details
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Job Details">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-actionlint" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. actionlint
+        🐍 Herramientas generales de Python
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#2-lint-cruft" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#iniciar-un-nuevo-proyecto-de-ciencia-de-datos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. lint-cruft
+        📁 Iniciar un nuevo proyecto de ciencia de datos
       
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-pre-commit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. pre-commit
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-test" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. test
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1041,46 +907,6 @@
   
 
 
-  <nav class="md-path" aria-label="Navigation" >
-    <ol class="md-path__list">
-      
-        
-  
-  
-    <li class="md-path__item">
-      <a href="../.." class="md-path__link">
-        
-  <span class="md-ellipsis">
-    📖 Introduction
-  </span>
-
-      </a>
-    </li>
-  
-
-      
-      
-        
-  
-  
-    
-    
-      <li class="md-path__item">
-        <a href="./" class="md-path__link">
-          
-  <span class="md-ellipsis">
-    🚀 Github Actions
-  </span>
-
-        </a>
-      </li>
-    
-  
-
-      
-    </ol>
-  </nav>
-
               
               <article class="md-content__inner md-typeset">
                 
@@ -1091,65 +917,107 @@
   
 
 
-<h1 id="github-action-cicd-tests">GitHub Action: CI/CD Tests</h1>
-<p>This GitHub Action workflow is designed to streamline and automate the CI/CD processes for your project. The workflow is triggered on pull requests and pushes to the <code>main</code> branch. It performs several key tasks including linting, pre-commit checks, project update validation, and running tests with coverage reporting.</p>
-<p><a href="https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/.github/workflows/ci.yml">ci.yml</a></p>
-<hr />
-<h2 id="workflow-details">Workflow Details</h2>
-<h3 id="triggers-on">Triggers (<code>on</code>)</h3>
-<ul>
-<li><strong><code>pull_request</code></strong>: The workflow runs when a pull request is opened or updated.</li>
-<li><strong><code>push</code></strong>: The workflow is triggered for pushes to the <code>main</code> branch.</li>
-</ul>
-<h3 id="jobs-overview">Jobs Overview</h3>
-<p>The workflow defines four jobs:</p>
+<h1 id="configuracion-del-entorno-de-desarrollo-local">🛠️ Configuración del entorno de desarrollo local</h1>
+<p>Desarrollo proyectos de ciencia de datos en Python en Linux OS o MAC OS. (Para Windows OS recomiendo <a href="https://docs.microsoft.com/en-us/windows/wsl/install">WSL</a> y ejecutar los comandos como en Linux OS).</p>
+<p>Configuro mi entorno de desarrollo local siguiendo los siguientes pasos:</p>
+<h2 id="configuracion-del-computador-para-desarrollar-con-python">💻 Configuración del computador para desarrollar con Python</h2>
 <ol>
-<li><strong><code>actionlint</code></strong>: Validates the syntax and structure of GitHub Action workflow files.</li>
-<li><strong><code>lint-cruft</code></strong>: Ensures no <code>.rej</code> files are present, verifying that project updates were applied correctly.</li>
-<li><strong><code>pre-commit</code></strong>: Executes pre-commit hooks to enforce code standards and formatting in all files.</li>
-<li><strong><code>test</code></strong>: Runs unit tests with coverage reporting and uploads the results to Codecov.</li>
+<li>Instalar <a href="https://git-scm.com/">Git</a><ul>
+<li>Linux: <code>sudo apt-get install git</code></li>
+<li>MAC: <code>brew install git</code></li>
+</ul>
+</li>
+<li>Instalar <a href="https://www.gnu.org/software/make/manual/make.html">Make</a><ul>
+<li>Linux: <code>sudo apt-get install make</code></li>
+<li>MAC: <code>brew install make</code></li>
+</ul>
+</li>
+<li>
+<p>Instalar localmente <a href="https://docs.astral.sh/uv/">UV</a> para gestionar versiones de Python, dependencias y entornos virtuales.</p>
+<ul>
+<li>
+<p>Linux:</p>
+<div class="language-bash highlight"><span class="filename">Instalar uv en Linux o MACOS</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-LsSf<span class="w"> </span>https://astral.sh/uv/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+</span></code></pre></div>
+<ul>
+<li>Verificar la versión de instalación ejecutando en terminal: <code>uv version</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Instalar <a href="https://www.python.org/downloads/">Python</a> usando <a href="https://docs.astral.sh/uv/">UV</a>, actualmente estoy usando Python 3.11</p>
+<ul>
+<li><code>uv python install 3.11</code> # Instalar Python 3.11 en el computador</li>
+</ul>
+</li>
+<li>
+<p>En la carpeta del proyecto, establecer la versión de Python y crear un entorno virtual.</p>
+</li>
+<li>Si el proyecto tiene archivo <code>uv.lock</code><ul>
+<li><code>uv sync</code> # Crear Entorno Virtual e instalar dependencias.</li>
+<li><code>source .venv/bin/activate</code> # Activar Entorno
+   2.</li>
+<li><code>uv venv --python 3.11</code> # Crear un entorno virtual de Python 3.11</li>
+<li><code>source .venv/bin/activate</code> # Activar el entorno virtual de Python 3.11</li>
+<li><strong>Verificar la versión de instalación</strong> ejecutando en terminal: <code>python --version</code></li>
+</ul>
+</li>
+</ol>
+<p><strong>Nota:</strong> Para desactivar el entorno virtual en terminal escribe: <code>deactivate</code></p>
+<h2 id="herramientas-generales-de-python">🐍 Herramientas generales de Python</h2>
+<p>Herramientas generales que uso para desarrollar proyectos en Python. La más importante es <a href="https://docs.astral.sh/uv/">UV</a> para gestionar versiones de Python, entornos virtuales, gestionar dependencias para los proyectos y tener herramientas en entornos aislados, porque las aplicaciones se ejecutan en su propio entorno virtual para evitar conflictos de dependencias y están disponibles en todas partes.</p>
+<p><a href="https://github.com/astral-sh/uv?tab=readme-ov-file#highlights">UV Highlights</a></p>
+<ol>
+<li><a href="https://cruft.github.io/cruft/">Cruft</a> te permite mantener todo el código repetitivo necesario para empaquetar y construir proyectos separado del código que escribes intencionalmente. Totalmente compatible con plantillas existentes de Cookiecutter.<ul>
+<li><code>uv tool install cruft</code></li>
+</ul>
+</li>
+<li>(opcional) <a href="https://github.com/pypa/pip-audit">Pip-audit</a> para verificar localmente la seguridad de las dependencias del proyecto.<ul>
+<li><code>uv tool install pip-audit</code></li>
+</ul>
+</li>
+<li>(opcional) <a href="https://github.com/Mateusz-Grzelinski/actionlint-py">Actionlint</a> para verificar la sintaxis de los archivos de configuración de GitHub Actions del proyecto.<ul>
+<li><code>uv tool install actionlint</code></li>
+</ul>
+</li>
+</ol>
+<p><strong>Nota:</strong> <a href="https://docs.astral.sh/uv/">UV</a> reemplaza herramientas como <a href="https://github.com/pyenv/pyenv?tab=readme-ov-file#installation">Pyenv</a>, <a href="https://python-poetry.org/docs/">Poetry</a> y otras para gestionar las versiones de Python, entornos y dependencias.</p>
+<h2 id="iniciar-un-nuevo-proyecto-de-ciencia-de-datos">📁 Iniciar un nuevo proyecto de ciencia de datos</h2>
+<ol>
+<li>
+<p>Iniciar un nuevo proyecto usando <a href="https://cruft.github.io/cruft/">Cruft</a> con la <a href="https://github.com/JoseRZapata/data-science-project-template">Data Science Project Template</a>.</p>
+<div class="language-shell highlight"><span class="filename">crear proyecto</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cruft<span class="w"> </span>create<span class="w"> </span>https://github.com/JoseRZapata/data-science-project-template
+</span></code></pre></div>
+</li>
+<li>
+<p>Responder las preguntas para crear el proyecto.</p>
+</li>
+<li>
+<p>Ejecutar <code>make init_git</code> para inicializar <a href="https://git-scm.com/">Git</a> o puedes hacer lo mismo ejecutando estos comandos:</p>
+<div class="language-shell highlight"><span class="filename">inicializar entorno</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span>git<span class="w"> </span>init<span class="w"> </span>-b<span class="w"> </span>main
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span>git<span class="w"> </span>add<span class="w"> </span>.
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;🎉 Begin a project, Initial commit&quot;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Ejecutar <code>make install_env</code> para instalar las dependencias del proyecto. O puedes hacer lo mismo ejecutando estos comandos:</p>
+<div class="language-shell highlight"><span class="filename">instalar dependencias</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span>uv<span class="w"> </span>sync<span class="w"> </span>--all-groups
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span>uv<span class="w"> </span>run<span class="w"> </span>pre-commit<span class="w"> </span>install
+</span></code></pre></div>
+</li>
+<li>
+<p>🎉 ¡Felicidades! Comienza a programar tu proyecto.</p>
+</li>
+<li>
+<p>Si quieres subir este repositorio a GitHub, primero crea un nuevo repositorio en GitHub y luego ejecuta los siguientes comandos para subir tu repositorio local a GitHub.</p>
+<div class="language-shell highlight"><span class="filename">subir a GitHub</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>&lt;tu-url-del-repo&gt;
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span>git<span class="w"> </span>branch<span class="w"> </span>-M<span class="w"> </span>main
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+</span></code></pre></div>
+</li>
 </ol>
 <hr />
-<h2 id="job-details">Job Details</h2>
-<h3 id="1-actionlint"><strong>1. actionlint</strong></h3>
-<p><strong><code>runs-on</code></strong>: <code>ubuntu-latest</code></p>
-<p><strong>Steps</strong>:</p>
-<ul>
-<li><strong>Checkout</strong>: Uses <code>actions/checkout@v4</code> to fetch the repository.</li>
-<li><strong>Download actionlint</strong>: Fetches <code>actionlint</code>  using a bash script.</li>
-<li><strong>Check workflow files</strong>: Runs <code>actionlint</code> to validate the workflow files.</li>
-</ul>
-<hr />
-<h3 id="2-lint-cruft"><strong>2. lint-cruft</strong></h3>
-<p><strong><code>runs-on</code></strong>: <code>ubuntu-latest</code></p>
-<p><strong>Steps</strong>:</p>
-<ul>
-<li><strong>Checkout</strong>: Uses <code>actions/checkout@v4</code> to fetch the repository.</li>
-<li><strong>Check for <code>.rej</code> files</strong>: Fails the job if <code>.rej</code> files are found, indicating an unsuccessful project structure update.</li>
-</ul>
-<hr />
-<h3 id="3-pre-commit"><strong>3. pre-commit</strong></h3>
-<p><strong><code>runs-on</code></strong>: <code>ubuntu-latest</code></p>
-<p><strong>Steps</strong>:</p>
-<ul>
-<li><strong>Checkout</strong>: Uses <code>actions/checkout@v4</code> to fetch the repository.</li>
-<li><strong>Install <code>uv</code></strong>: Sets up the <code>uv</code> tool using <code>astral-sh/setup-uv@v6</code>.</li>
-<li><strong>Run pre-commit hooks</strong>: Executes all pre-commit hooks across the repository, displaying any failures with colorized diffs.</li>
-</ul>
-<hr />
-<h3 id="4-test"><strong>4. test</strong></h3>
-<p><strong><code>runs-on</code></strong>: <code>ubuntu-latest</code></p>
-<p><strong>Steps</strong>:</p>
-<ul>
-<li><strong>Checkout</strong>: Uses <code>actions/checkout@v4</code> to fetch the repository.</li>
-<li><strong>Install <code>uv</code></strong>: Sets up the <code>uv</code> tool using <code>astral-sh/setup-uv@v6</code>.</li>
-<li><strong>Set up Python</strong>: Configures Python according to the <code>.python-version</code> file using <code>actions/setup-python@v5</code>.</li>
-<li><strong>Install the project</strong>: Installs the project with all extras and development dependencies using <code>uv sync</code>.</li>
-<li><strong>Run tests with coverage</strong>: Executes tests with <code>pytest</code> and generates a coverage report in XML format.</li>
-<li><strong>Upload coverage report</strong>: Uploads the coverage report to Codecov using <code>codecov/codecov-action@v5</code>. Requires a <code>CODECOV_TOKEN</code> secret stored in the repository settings.</li>
-</ul>
-<hr />
-<p>In summary, this workflow automates linting, project update validation, pre-commit checks, testing, and coverage reporting for a robust CI/CD pipeline.</p>
 
 
 
@@ -1199,7 +1067,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>

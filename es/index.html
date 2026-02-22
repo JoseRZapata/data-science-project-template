@@ -1,0 +1,1934 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="local_setup/">
+      
+      
+        
+          <link rel="alternate" href="/" hreflang="en">
+        
+          <link rel="alternate" href="/es/" hreflang="es">
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>📖 Introducción - Plantilla de proyecto de ciencia de datos</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#plantilla-de-proyecto-de-ciencia-de-datos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="./" title="Plantilla de proyecto de ciencia de datos" class="md-header__button md-logo" aria-label="Plantilla de proyecto de ciencia de datos" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Plantilla de proyecto de ciencia de datos
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📖 Introducción
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/es/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/JoseRZapata/data-science-project-template" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./" title="Plantilla de proyecto de ciencia de datos" class="md-nav__button md-logo" aria-label="Plantilla de proyecto de ciencia de datos" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Plantilla de proyecto de ciencia de datos
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/JoseRZapata/data-science-project-template" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Introducción
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#caracteristicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Características
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-un-nuevo-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁 Crear un Nuevo Proyecto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📁 Crear un Nuevo Proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recomendaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👍 Recomendaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#via-cruft-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🍪🥇 Vía Cruft - (recomendado)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#via-cookiecutter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🍪 Vía Cookiecutter
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vincular-un-proyecto-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Vincular un Proyecto Existente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🗃️ Estructura del proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caracteristicas-y-herramientas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Características y Herramientas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✨ Características y Herramientas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estandarizacion-y-automatizacion-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Estandarización y Automatización del Proyecto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Estandarización y Automatización del Proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automatizacion-del-flujo-de-trabajo-del-desarrollador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔨 Automatización del Flujo de Trabajo del Desarrollador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paquete-python-o-plantilla-de-proyecto-renderizado-condicionalmente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌱 Paquete Python o Plantilla de Proyecto Renderizado Condicionalmente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mantenibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Mantenibilidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Mantenibilidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verificacion-de-tipos-y-validacion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏷️ Verificación de Tipos y Validación de Datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pruebascobertura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ 🧪 Pruebas/Cobertura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 Linting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚨 Linting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calidad-de-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 Calidad de código
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formateo-de-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎨 Formateo de código
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👷 CI/CD
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="👷 CI/CD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#actualizaciones-automaticas-de-dependencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actualizaciones automáticas de dependencias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revision-de-dependencias-en-pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revisión de dependencias en PR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizaciones-automaticas-de-pre-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actualizaciones automáticas de Pre-commit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔒 Seguridad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔒 Seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pruebas-estaticas-de-seguridad-de-aplicaciones-sast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔏 Pruebas Estáticas de Seguridad de Aplicaciones (SAST)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accesibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⌨️ Accesibilidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⌨️ Accesibilidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#herramienta-de-automatizacion-makefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔨 Herramienta de automatización (Makefile)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Documentación del Proyecto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plantillas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🗃️ Plantillas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buenas-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buenas prácticas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referencias
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="local_setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛠️ Comenzar (💻 Configuración local)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🗃️ Estructura del proyecto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🗃️ Estructura del proyecto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="directory_hierarchy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🗂️ Jerarquía de directorios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="data_schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🗄️ Esquema de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="setup_tokens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔑 Configurar Tokens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pre-commit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⚙️  Configuración de Pre-commit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 Github Actions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🚀 Github Actions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="github_actions/ci/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integración Continua (CI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="github_actions/gh_action_pre-commit-autoupdate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pre-commit_autoupdate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="github_actions/automerge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automerge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="github_actions/dependency_review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Revisión de Dependencias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="github_actions/docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Generador de documentación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="github_actions/labels/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Etiquetas de github
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vscode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    💻 Configuración de VSCode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#caracteristicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Características
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-un-nuevo-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁 Crear un Nuevo Proyecto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📁 Crear un Nuevo Proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recomendaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👍 Recomendaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#via-cruft-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🍪🥇 Vía Cruft - (recomendado)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#via-cookiecutter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🍪 Vía Cookiecutter
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vincular-un-proyecto-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Vincular un Proyecto Existente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🗃️ Estructura del proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caracteristicas-y-herramientas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Características y Herramientas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✨ Características y Herramientas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estandarizacion-y-automatizacion-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Estandarización y Automatización del Proyecto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Estandarización y Automatización del Proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automatizacion-del-flujo-de-trabajo-del-desarrollador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔨 Automatización del Flujo de Trabajo del Desarrollador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paquete-python-o-plantilla-de-proyecto-renderizado-condicionalmente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌱 Paquete Python o Plantilla de Proyecto Renderizado Condicionalmente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mantenibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Mantenibilidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Mantenibilidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verificacion-de-tipos-y-validacion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏷️ Verificación de Tipos y Validación de Datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pruebascobertura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ 🧪 Pruebas/Cobertura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 Linting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚨 Linting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calidad-de-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 Calidad de código
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formateo-de-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎨 Formateo de código
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👷 CI/CD
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="👷 CI/CD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#actualizaciones-automaticas-de-dependencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actualizaciones automáticas de dependencias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revision-de-dependencias-en-pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revisión de dependencias en PR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizaciones-automaticas-de-pre-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actualizaciones automáticas de Pre-commit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔒 Seguridad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔒 Seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pruebas-estaticas-de-seguridad-de-aplicaciones-sast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔏 Pruebas Estáticas de Seguridad de Aplicaciones (SAST)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accesibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⌨️ Accesibilidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⌨️ Accesibilidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#herramienta-de-automatizacion-makefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔨 Herramienta de automatización (Makefile)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Documentación del Proyecto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plantillas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🗃️ Plantillas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buenas-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buenas prácticas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referencias
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="plantilla-de-proyecto-de-ciencia-de-datos">Plantilla de proyecto de ciencia de datos</h1>
+<p><a href="https://github.com/astral-sh/uv"><img alt="uv" src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json" /></a>
+<a href="https://github.com/charliermarsh/ruff"><img alt="Ruff" src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json" /></a>
+<a href="https://github.com/pre-commit/pre-commit"><img alt="pre-commit" src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&amp;logoColor=white" /></a>
+<a href="https://github.com/PyCQA/bandit"><img alt="security: bandit" src="https://img.shields.io/badge/security-bandit-yellow.svg" /></a>
+<a href="https://mypy-lang.org/"><img alt="Checked with mypy" src="https://www.mypy-lang.org/static/mypy_badge.svg" /></a>
+<a href="https://github.com/JoseRZapata/data-science-project-template/actions/workflows/pages/pages-build-deployment"><img alt="pages-build-deployment" src="https://github.com/JoseRZapata/data-science-project-template/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages" /></a>
+<a href="https://github.com/JoseRZapata/data-science-project-template/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/JoseRZapata/data-science-project-template/actions/workflows/ci.yml/badge.svg" /></a>
+<a href="https://codecov.io/gh/JoseRZapata/data-science-project-template"><img alt="codecov" src="https://codecov.io/gh/JoseRZapata/data-science-project-template/graph/badge.svg?token=7LCPX574UF" /></a></p>
+<hr />
+<p>Una plantilla moderna para proyectos de ciencia de datos con todas las herramientas necesarias para experimentación, desarrollo, pruebas y despliegue. Desde notebooks hasta producción.</p>
+<p>✨📚✨ Documentación: <a href="https://joserzapata.github.io/data-science-project-template/">https://joserzapata.github.io/data-science-project-template/</a></p>
+<p>Código Fuente: <a href="https://github.com/JoseRZapata/data-science-project-template">https://github.com/JoseRZapata/data-science-project-template</a></p>
+<hr />
+<h2 id="caracteristicas">Características</h2>
+<!-- features-begin -->
+
+<ul>
+<li>Gestión de dependencias con <a href="https://docs.astral.sh/uv/">UV</a></li>
+<li>Gestión de entornos virtuales con <a href="https://docs.astral.sh/uv/">UV</a></li>
+<li>Linting con <a href="https://pre-commit.com/">pre-commit</a> y <a href="https://docs.astral.sh/ruff/">Ruff</a></li>
+<li>Integración continua con <a href="https://github.com/features/actions">GitHub Actions</a></li>
+<li>Documentación con <a href="https://www.mkdocs.org/">mkdocs</a> y <a href="https://mkdocstrings.github.io/">mkdocstrings</a> usando el tema <a href="https://github.com/squidfunk/mkdocs-material">mkdocs-material</a></li>
+<li>Actualizaciones automáticas de dependencias con <a href="https://github.com/dependabot/dependabot-core">Dependabot</a></li>
+<li>Formateo de código con <a href="https://docs.astral.sh/ruff/">Ruff</a></li>
+<li>Ordenamiento de imports con <a href="https://docs.astral.sh/ruff/">Ruff</a> usando la regla isort.</li>
+<li>Pruebas con <a href="https://docs.pytest.org/en/latest/">pytest</a></li>
+<li>Cobertura de código con <a href="https://coverage.readthedocs.io/">Coverage.py</a></li>
+<li>Reportes de cobertura con <a href="https://codecov.io/">Codecov</a></li>
+<li>Verificación estática de tipos con <a href="http://mypy-lang.org/">mypy</a></li>
+<li>Auditoría de seguridad con <a href="https://docs.astral.sh/ruff/">Ruff</a> usando la regla bandit.</li>
+<li>Gestión de etiquetas del proyecto con <a href="https://github.com/marketplace/actions/github-labeler">GitHub Labeler</a></li>
+</ul>
+<hr />
+<ul>
+<li><a href="#referencias">Referencias</a></li>
+</ul>
+<!-- markdownlint-enable MD007 -->
+<h2 id="crear-un-nuevo-proyecto">📁 Crear un Nuevo Proyecto</h2>
+<h3 id="recomendaciones">👍 Recomendaciones</h3>
+<p>Se recomienda encarecidamente usar gestores para las versiones de Python, dependencias y entornos virtuales.</p>
+<p>Este proyecto usa <a href="https://docs.astral.sh/uv/">UV</a>, una herramienta extremadamente rápida para reemplazar <a href="https://pip.pypa.io/en/stable/">pip</a>, pip-tools, <a href="https://pipx.pypa.io/stable/">Pipx</a>, <a href="https://python-poetry.org/">Poetry</a>, <a href="https://github.com/pyenv/pyenv">Pyenv</a>, twine, <a href="https://virtualenv.pypa.io/en/latest/">virtualenv</a>, y más.</p>
+<p>🌟 Revisa cómo configurar tu entorno: <a href="https://joserzapata.github.io/data-science-project-template/local_setup/">https://joserzapata.github.io/data-science-project-template/local_setup/</a></p>
+<h3 id="via-cruft-recomendado">🍪🥇 Vía <a href="https://cruft.github.io/cruft/">Cruft</a> - (<strong>recomendado</strong>)</h3>
+<div class="language-bash highlight"><span class="filename">instalar cruft</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Instalar cruft en un entorno aislado usando uv</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>uv<span class="w"> </span>tool<span class="w"> </span>install<span class="w"> </span>cruft
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># O instalar con pip</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>cruft<span class="w"> </span><span class="c1"># Instalar `cruft` en tu PATH para fácil acceso</span>
+</span></code></pre></div>
+<div class="language-shell highlight"><span class="filename">crear proyecto</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cruft<span class="w"> </span>create<span class="w"> </span>https://github.com/JoseRZapata/data-science-project-template
+</span></code></pre></div>
+<p>luego dentro de la carpeta del proyecto, inicializar git y el entorno uv usando <a href="https://www.gnu.org/software/make/manual/make.html">Make</a>:</p>
+<div class="language-shell highlight"><span class="filename">instalar proyecto</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>make<span class="w"> </span>init_git
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>make<span class="w"> </span>install_env
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+</span></code></pre></div>
+<h3 id="via-cookiecutter">🍪 Vía <a href="https://cookiecutter.readthedocs.io/en/stable/">Cookiecutter</a></h3>
+<div class="language-shell highlight"><span class="filename">instalar cookiecutter</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>uv<span class="w"> </span>tool<span class="w"> </span>install<span class="w"> </span>cookiecutter<span class="w"> </span><span class="c1"># Instalar cookiecutter en un entorno aislado</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1"># O instalar con pip</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>cookiecutter<span class="w"> </span><span class="c1"># Instalar `cookiecutter` en tu PATH para fácil acceso</span>
+</span></code></pre></div>
+<div class="language-shell highlight"><span class="filename">crear proyecto</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>cookiecutter<span class="w"> </span>gh:JoseRZapata/data-science-project-template
+</span></code></pre></div>
+<p>Nota: <strong><em>Cookiecutter</em></strong> usa <code>gh:</code> como abreviatura de <code>https://github.com/</code></p>
+<h2 id="vincular-un-proyecto-existente">🔗  Vincular un Proyecto Existente</h2>
+<p>Si el proyecto fue instalado originalmente vía <a href="https://cookiecutter.readthedocs.io/en/stable/">Cookiecutter</a>, primero debes usar <a href="https://cruft.github.io/cruft/">Cruft</a> para vincular el proyecto con la plantilla original:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>cruft<span class="w"> </span>link<span class="w"> </span>https://github.com/JoseRZapata/data-science-project-template
+</span></code></pre></div>
+<p>Luego:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>cruft<span class="w"> </span>update
+</span></code></pre></div>
+<h2 id="estructura-del-proyecto">🗃️ Estructura del proyecto</h2>
+<p>Estructura de carpetas para proyectos de ciencia de datos  <a href="https://towardsdatascience.com/the-importance-of-layered-thinking-in-data-engineering-a09f685edc71">¿por qué?</a></p>
+<ul>
+<li><a href="https://docs.kedro.org/en/stable/faq/faq.html#what-is-data-engineering-convention">Estructura de datos</a></li>
+<li><a href="https://www.hopsworks.ai/post/mlops-to-ml-systems-with-fti-pipelines">Pipelines basados en Feature/Training/Inference Pipelines</a></li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>.
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>├──<span class="w"> </span>.code_quality
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>│<span class="w">   </span>├──<span class="w"> </span>mypy.ini<span class="w">                        </span><span class="c1"># configuración de mypy</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>│<span class="w">   </span>└──<span class="w"> </span>ruff.toml<span class="w">                       </span><span class="c1"># configuración de ruff</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>├──<span class="w"> </span>.github<span class="w">                             </span><span class="c1"># configuración de github</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>│<span class="w">   </span>├──<span class="w"> </span>actions
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>python-poetry-env
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>│<span class="w">   </span>│<span class="w">       </span>└──<span class="w"> </span>action.yml<span class="w">              </span><span class="c1"># github action para configurar entorno python</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>│<span class="w">   </span>├──<span class="w"> </span>dependabot.md<span class="w">                   </span><span class="c1"># github action para actualizar dependencias</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>│<span class="w">   </span>├──<span class="w"> </span>pull_request_template.md<span class="w">        </span><span class="c1"># plantilla para pull requests</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>│<span class="w">   </span>└──<span class="w"> </span>workflows<span class="w">                       </span><span class="c1"># flujos de trabajo de github actions</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>│<span class="w">       </span>├──<span class="w"> </span>ci.yml<span class="w">                      </span><span class="c1"># ejecutar integración continua (pruebas, pre-commit, etc.)</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>│<span class="w">       </span>├──<span class="w"> </span>dependency_review.yml<span class="w">       </span><span class="c1"># revisión de dependencias</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>│<span class="w">       </span>├──<span class="w"> </span>docs.yml<span class="w">                    </span><span class="c1"># construir documentación (mkdocs)</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>│<span class="w">       </span>└──<span class="w"> </span>pre-commit_autoupdate.yml<span class="w">   </span><span class="c1"># actualizar hooks de pre-commit</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>├──<span class="w"> </span>.vscode<span class="w">                             </span><span class="c1"># configuración de vscode</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="p">|</span><span class="w">   </span>├──<span class="w"> </span>extensions.json<span class="w">                 </span><span class="c1"># lista de extensiones recomendadas</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="p">|</span><span class="w">   </span>├──<span class="w"> </span>launch.json<span class="w">                     </span><span class="c1"># configuración de ejecución de vscode</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="p">|</span><span class="w">   </span>└──<span class="w"> </span>settings.json<span class="w">                   </span><span class="c1"># configuración de vscode</span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>├──<span class="w"> </span>conf<span class="w">                                </span><span class="c1"># carpeta de archivos de configuración</span>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>│<span class="w">   </span>└──<span class="w"> </span>config.yaml<span class="w">                     </span><span class="c1"># archivo principal de configuración</span>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>├──<span class="w"> </span>data
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>│<span class="w">   </span>├──<span class="w"> </span>01_raw<span class="w">                          </span><span class="c1"># datos crudos inmutables</span>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>│<span class="w">   </span>├──<span class="w"> </span>02_intermediate<span class="w">                 </span><span class="c1"># datos tipados</span>
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>│<span class="w">   </span>├──<span class="w"> </span>03_primary<span class="w">                      </span><span class="c1"># datos del modelo de dominio</span>
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>│<span class="w">   </span>├──<span class="w"> </span>04_feature<span class="w">                      </span><span class="c1"># características del modelo</span>
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>│<span class="w">   </span>├──<span class="w"> </span>05_model_input<span class="w">                  </span><span class="c1"># frecuentemente llamados &#39;master tables&#39;</span>
+</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>│<span class="w">   </span>├──<span class="w"> </span>06_models<span class="w">                       </span><span class="c1"># modelos serializados</span>
+</span><span id="__span-7-29"><a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>│<span class="w">   </span>├──<span class="w"> </span>07_model_output<span class="w">                 </span><span class="c1"># datos generados por ejecuciones del modelo</span>
+</span><span id="__span-7-30"><a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a>│<span class="w">   </span>├──<span class="w"> </span>08_reporting<span class="w">                    </span><span class="c1"># reportes, resultados, etc</span>
+</span><span id="__span-7-31"><a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a>│<span class="w">   </span>└──<span class="w"> </span>README.md<span class="w">                       </span><span class="c1"># descripción de la estructura de datos</span>
+</span><span id="__span-7-32"><a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a>├──<span class="w"> </span>docs<span class="w">                                </span><span class="c1"># documentación de tu proyecto</span>
+</span><span id="__span-7-33"><a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a>│<span class="w">   </span>├──<span class="w"> </span>index.md<span class="w">                        </span><span class="c1"># página principal de documentación</span>
+</span><span id="__span-7-34"><a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a>├──<span class="w"> </span>models<span class="w">                              </span><span class="c1"># almacenar modelos finales</span>
+</span><span id="__span-7-35"><a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a>├──<span class="w"> </span>notebooks
+</span><span id="__span-7-36"><a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a>│<span class="w">   </span>├──<span class="w"> </span><span class="m">1</span>-data<span class="w">                          </span><span class="c1"># extracción y limpieza de datos</span>
+</span><span id="__span-7-37"><a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a>│<span class="w">   </span>├──<span class="w"> </span><span class="m">2</span>-exploration<span class="w">                   </span><span class="c1"># análisis exploratorio de datos (EDA)</span>
+</span><span id="__span-7-38"><a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a>│<span class="w">   </span>├──<span class="w"> </span><span class="m">3</span>-analysis<span class="w">                      </span><span class="c1"># Análisis estadístico, pruebas de hipótesis.</span>
+</span><span id="__span-7-39"><a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a>│<span class="w">   </span>├──<span class="w"> </span><span class="m">4</span>-feat_eng<span class="w">                      </span><span class="c1"># ingeniería de características (creación, selección y transformación.)</span>
+</span><span id="__span-7-40"><a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a>│<span class="w">   </span>├──<span class="w"> </span><span class="m">5</span>-models<span class="w">                        </span><span class="c1"># entrenamiento de modelos, evaluación y ajuste de hiperparámetros.</span>
+</span><span id="__span-7-41"><a id="__codelineno-7-41" name="__codelineno-7-41" href="#__codelineno-7-41"></a>│<span class="w">   </span>├──<span class="w"> </span><span class="m">6</span>-interpretation<span class="w">                </span><span class="c1"># interpretación de modelos</span>
+</span><span id="__span-7-42"><a id="__codelineno-7-42" name="__codelineno-7-42" href="#__codelineno-7-42"></a>│<span class="w">   </span>├──<span class="w"> </span><span class="m">7</span>-deploy<span class="w">                        </span><span class="c1"># empaquetado de modelos, estrategias de despliegue.</span>
+</span><span id="__span-7-43"><a id="__codelineno-7-43" name="__codelineno-7-43" href="#__codelineno-7-43"></a>│<span class="w">   </span>├──<span class="w"> </span><span class="m">8</span>-reports<span class="w">                       </span><span class="c1"># narrativa, resúmenes y conclusiones de análisis.</span>
+</span><span id="__span-7-44"><a id="__codelineno-7-44" name="__codelineno-7-44" href="#__codelineno-7-44"></a>│<span class="w">   </span>├──<span class="w"> </span>notebook_template.ipynb<span class="w">         </span><span class="c1"># plantilla para notebooks</span>
+</span><span id="__span-7-45"><a id="__codelineno-7-45" name="__codelineno-7-45" href="#__codelineno-7-45"></a>│<span class="w">   </span>└──<span class="w"> </span>README.md<span class="w">                       </span><span class="c1"># información sobre los notebooks</span>
+</span><span id="__span-7-46"><a id="__codelineno-7-46" name="__codelineno-7-46" href="#__codelineno-7-46"></a>├──<span class="w"> </span>src<span class="w">                                 </span><span class="c1"># código fuente para uso en este proyecto</span>
+</span><span id="__span-7-47"><a id="__codelineno-7-47" name="__codelineno-7-47" href="#__codelineno-7-47"></a>│<span class="w">   </span>├──<span class="w"> </span>README.md<span class="w">                       </span><span class="c1"># descripción de la estructura de src</span>
+</span><span id="__span-7-48"><a id="__codelineno-7-48" name="__codelineno-7-48" href="#__codelineno-7-48"></a>│<span class="w">   </span>├──<span class="w"> </span>tmp_mock.py<span class="w">                     </span><span class="c1"># archivo python de ejemplo</span>
+</span><span id="__span-7-49"><a id="__codelineno-7-49" name="__codelineno-7-49" href="#__codelineno-7-49"></a>│<span class="w">   </span>├──<span class="w"> </span>data<span class="w">                            </span><span class="c1"># extracción, validación, procesamiento, transformación de datos</span>
+</span><span id="__span-7-50"><a id="__codelineno-7-50" name="__codelineno-7-50" href="#__codelineno-7-50"></a>│<span class="w">   </span>├──<span class="w"> </span>model<span class="w">                           </span><span class="c1"># entrenamiento, evaluación, validación, exportación de modelos</span>
+</span><span id="__span-7-51"><a id="__codelineno-7-51" name="__codelineno-7-51" href="#__codelineno-7-51"></a>│<span class="w">   </span>├──<span class="w"> </span>inference<span class="w">                       </span><span class="c1"># predicción, servicio, monitoreo de modelos</span>
+</span><span id="__span-7-52"><a id="__codelineno-7-52" name="__codelineno-7-52" href="#__codelineno-7-52"></a>│<span class="w">   </span>└──<span class="w"> </span>pipelines<span class="w">                       </span><span class="c1"># orquestación de pipelines</span>
+</span><span id="__span-7-53"><a id="__codelineno-7-53" name="__codelineno-7-53" href="#__codelineno-7-53"></a>│<span class="w">       </span>├──<span class="w"> </span>feature_pipeline<span class="w">            </span><span class="c1"># transforma datos crudos en características y etiquetas</span>
+</span><span id="__span-7-54"><a id="__codelineno-7-54" name="__codelineno-7-54" href="#__codelineno-7-54"></a>│<span class="w">       </span>├──<span class="w"> </span>training_pipeline<span class="w">           </span><span class="c1"># transforma características y etiquetas en un modelo</span>
+</span><span id="__span-7-55"><a id="__codelineno-7-55" name="__codelineno-7-55" href="#__codelineno-7-55"></a>│<span class="w">       </span>└──<span class="w"> </span>inference_pipeline<span class="w">          </span><span class="c1"># toma características y un modelo entrenado para predicciones</span>
+</span><span id="__span-7-56"><a id="__codelineno-7-56" name="__codelineno-7-56" href="#__codelineno-7-56"></a>├──<span class="w"> </span>tests<span class="w">                               </span><span class="c1"># código de pruebas para tu proyecto</span>
+</span><span id="__span-7-57"><a id="__codelineno-7-57" name="__codelineno-7-57" href="#__codelineno-7-57"></a>│<span class="w">   </span>├──<span class="w"> </span>test_mock.py<span class="w">                    </span><span class="c1"># archivo de prueba de ejemplo</span>
+</span><span id="__span-7-58"><a id="__codelineno-7-58" name="__codelineno-7-58" href="#__codelineno-7-58"></a>│<span class="w">   </span>├──<span class="w"> </span>data<span class="w">                            </span><span class="c1"># pruebas para el módulo data</span>
+</span><span id="__span-7-59"><a id="__codelineno-7-59" name="__codelineno-7-59" href="#__codelineno-7-59"></a>│<span class="w">   </span>├──<span class="w"> </span>model<span class="w">                           </span><span class="c1"># pruebas para el módulo model</span>
+</span><span id="__span-7-60"><a id="__codelineno-7-60" name="__codelineno-7-60" href="#__codelineno-7-60"></a>│<span class="w">   </span>├──<span class="w"> </span>inference<span class="w">                       </span><span class="c1"># pruebas para el módulo inference</span>
+</span><span id="__span-7-61"><a id="__codelineno-7-61" name="__codelineno-7-61" href="#__codelineno-7-61"></a>│<span class="w">   </span>└──<span class="w"> </span>pipelines<span class="w">                       </span><span class="c1"># pruebas para el módulo pipelines</span>
+</span><span id="__span-7-62"><a id="__codelineno-7-62" name="__codelineno-7-62" href="#__codelineno-7-62"></a>├──<span class="w"> </span>.editorconfig<span class="w">                       </span><span class="c1"># configuración del editor</span>
+</span><span id="__span-7-63"><a id="__codelineno-7-63" name="__codelineno-7-63" href="#__codelineno-7-63"></a>├──<span class="w"> </span>.gitignore<span class="w">                          </span><span class="c1"># archivos a ignorar en git</span>
+</span><span id="__span-7-64"><a id="__codelineno-7-64" name="__codelineno-7-64" href="#__codelineno-7-64"></a>├──<span class="w"> </span>.pre-commit-config.yaml<span class="w">             </span><span class="c1"># configuración para hooks de pre-commit</span>
+</span><span id="__span-7-65"><a id="__codelineno-7-65" name="__codelineno-7-65" href="#__codelineno-7-65"></a>├──<span class="w"> </span>codecov.yml<span class="w">                         </span><span class="c1"># configuración para codecov</span>
+</span><span id="__span-7-66"><a id="__codelineno-7-66" name="__codelineno-7-66" href="#__codelineno-7-66"></a>├──<span class="w"> </span>Makefile<span class="w">                            </span><span class="c1"># comandos útiles para configurar entorno, ejecutar pruebas, etc.</span>
+</span><span id="__span-7-67"><a id="__codelineno-7-67" name="__codelineno-7-67" href="#__codelineno-7-67"></a>├──<span class="w"> </span>mkdocs.yml<span class="w">                          </span><span class="c1"># configuración para documentación mkdocs</span>
+</span><span id="__span-7-68"><a id="__codelineno-7-68" name="__codelineno-7-68" href="#__codelineno-7-68"></a>├──<span class="w"> </span>pyproject.toml<span class="w">                      </span><span class="c1"># archivo de dependencias y configuración del proyecto</span>
+</span><span id="__span-7-69"><a id="__codelineno-7-69" name="__codelineno-7-69" href="#__codelineno-7-69"></a>├──<span class="w"> </span>uv.lock<span class="w">                             </span><span class="c1"># dependencias bloqueadas</span>
+</span><span id="__span-7-70"><a id="__codelineno-7-70" name="__codelineno-7-70" href="#__codelineno-7-70"></a>└──<span class="w"> </span>README.md<span class="w">                           </span><span class="c1"># descripción de tu proyecto</span>
+</span></code></pre></div>
+<h2 id="caracteristicas-y-herramientas">✨ Características y Herramientas</h2>
+<h3 id="estandarizacion-y-automatizacion-del-proyecto">🚀 Estandarización y Automatización del Proyecto</h3>
+<h4 id="automatizacion-del-flujo-de-trabajo-del-desarrollador">🔨 Automatización del Flujo de Trabajo del Desarrollador</h4>
+<ul>
+<li>Empaquetado de Python, gestión de dependencias y gestión de entornos
+  con <a href="https://docs.astral.sh/uv/">UV</a> - <a href="https://codecut.ai/poetry-a-better-way-to-manage-python-dependencies/"><code>¿por qué usar un gestor? (uv es un reemplazo de poetry)</code></a></li>
+<li>Orquestación del flujo de trabajo del proyecto
+  con <a href="https://www.gnu.org/software/make/manual/make.html">Make</a> como <a href="https://en.wikipedia.org/wiki/Shim_(computing)">interfaz shim</a><ul>
+<li><a href="https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/Makefile">Makefile</a> autodocumentado; simplemente escribe
+  <code>make</code> en la línea de comandos para mostrar documentación autogenerada sobre los
+  objetivos disponibles:</li>
+</ul>
+</li>
+<li>Sincronización automatizada de plantillas Cookiecutter con <a href="https://cruft.github.io/cruft/">Cruft</a> - <a href="https://careers.wolt.com/en/blog/tech/project-template-for-modern-python-packages"><code>¿por qué?</code></a></li>
+<li>Automatización y gestión de herramientas de calidad de código con <a href="https://pre-commit.com/">pre-commit</a></li>
+<li>Integración y despliegue continuos con <a href="https://github.com/features/actions">GitHub Actions</a></li>
+<li>Archivos de configuración del proyecto con <a href="https://hydra.cc/">Hydra</a> - <a href="https://codecut.ai/stop-hard-coding-in-a-data-science-project-use-configuration-files-instead/"><code>¿por qué?</code></a></li>
+</ul>
+<h4 id="paquete-python-o-plantilla-de-proyecto-renderizado-condicionalmente">🌱 Paquete Python o Plantilla de Proyecto Renderizado Condicionalmente</h4>
+<ul>
+<li><em>Opcional:</em> Soporte para <a href="https://jupyter.org/">Jupyter</a></li>
+</ul>
+<h3 id="mantenibilidad">🔧 Mantenibilidad</h3>
+<h4 id="verificacion-de-tipos-y-validacion-de-datos">🏷️  Verificación de Tipos y Validación de Datos</h4>
+<ul>
+<li>Verificación estática de tipos con <a href="http://mypy-lang.org/">Mypy</a></li>
+</ul>
+<h4 id="pruebascobertura">✅ 🧪 Pruebas/Cobertura</h4>
+<ul>
+<li>Pruebas con <a href="https://docs.pytest.org/en/latest/">Pytest</a></li>
+<li>Cobertura de código con <a href="https://coverage.readthedocs.io/">Coverage.py</a></li>
+<li>Reportes de cobertura con <a href="https://codecov.io/">Codecov</a></li>
+</ul>
+<h4 id="linting">🚨 Linting</h4>
+<h5 id="calidad-de-codigo">🔍 Calidad de código</h5>
+<ul>
+<li><a href="https://docs.astral.sh/ruff/">Ruff</a> Un linter y formateador de Python extremadamente rápido (10x-100x más rápido), escrito en Rust.<ul>
+<li>Reemplazo de ~~<a href="https://github.com/PyCQA/pylint">Pylint</a>~~, ~~<a href="https://github.com/PyCQA/flake8">Flake8</a>~~ (incluyendo plugins principales) y más linters bajo una interfaz única y común</li>
+</ul>
+</li>
+<li><a href="https://github.com/koalaman/shellcheck">ShellCheck</a></li>
+<li>Commits no seguros:<ul>
+<li>Secretos con <a href="https://github.com/Yelp/detect-secrets"><code>detect-secrets</code></a></li>
+<li>Archivos grandes con <a href="https://github.com/pre-commit/pre-commit-hooks#check-added-large-files"><code>check-added-large-files</code></a></li>
+<li>Archivos que contienen cadenas de conflicto de merge. <a href="https://github.com/pre-commit/pre-commit-hooks?tab=readme-ov-file#check-merge-conflict">check-merge-conflict</a></li>
+</ul>
+</li>
+</ul>
+<h5 id="formateo-de-codigo">🎨 Formateo de código</h5>
+<ul>
+<li>
+<p><a href="https://docs.astral.sh/ruff/">Ruff</a> Un linter y formateador de Python extremadamente rápido (10x-100x más rápido), escrito en Rust.</p>
+<ul>
+<li>Reemplazo de ~~<a href="https://github.com/psf/black">Black</a>~~, ~~<a href="https://github.com/PyCQA/isort">isort</a>~~, ~~<a href="https://github.com/asottile/pyupgrade">pyupgrade</a>~~ y más formateadores bajo una interfaz única y común</li>
+</ul>
+</li>
+<li>
+<p>Formateo general de archivos:</p>
+<ul>
+<li><a href="https://github.com/pre-commit/pre-commit-hooks#end-of-file-fixer"><code>end-of-file-fixer</code></a></li>
+<li><a href="https://github.com/pre-commit/pre-commit-hooks#pretty-format-json"><code>pretty-format-json</code></a></li>
+<li>(trim) <a href="https://github.com/pre-commit/pre-commit-hooks#trailing-whitespace"><code>trailing-whitespace</code></a></li>
+<li><a href="https://github.com/pre-commit/pre-commit-hooks#check-yaml"><code>check-yaml</code></a></li>
+</ul>
+</li>
+</ul>
+<h4 id="cicd">👷 CI/CD</h4>
+<h5 id="actualizaciones-automaticas-de-dependencias">Actualizaciones automáticas de dependencias</h5>
+<ul>
+<li>
+<p>Actualizaciones de dependencias con <a href="https://github.com/dependabot/dependabot-core">Dependabot</a>, merge automatizado de PRs de <a href="https://github.com/dependabot/dependabot-core">Dependabot</a> con el <a href="https://github.com/ahmadnassri/action-dependabot-auto-merge">Dependabot Auto Merge GitHub Action</a></p>
+</li>
+<li>
+<p>Esto es un reemplazo de <a href="https://github.com/pypa/pip-audit">pip-audit</a>, <em>En tu entorno local, si quieres verificar vulnerabilidades en tus dependencias puedes usar [pip-audit]</em>.</p>
+</li>
+</ul>
+<h5 id="revision-de-dependencias-en-pr">Revisión de dependencias en PR</h5>
+<ul>
+<li>Revisión de dependencias con <a href="https://github.com/actions/dependency-review-action">dependency-review-action</a>, esta acción escanea tus pull requests por cambios de dependencias, y generará un error si se están introduciendo vulnerabilidades o licencias inválidas.</li>
+</ul>
+<h5 id="actualizaciones-automaticas-de-pre-commit">Actualizaciones automáticas de Pre-commit</h5>
+<ul>
+<li>Actualizaciones automáticas con flujo de trabajo de <a href="https://github.com/features/actions">GitHub Actions</a> <code>.github/workflows/pre-commit_autoupdate.yml</code></li>
+</ul>
+<h2 id="seguridad">🔒 Seguridad</h2>
+<h3 id="pruebas-estaticas-de-seguridad-de-aplicaciones-sast">🔏 Pruebas Estáticas de Seguridad de Aplicaciones (SAST)</h3>
+<ul>
+<li>Vulnerabilidades de código con <a href="https://github.com/PyCQA/bandit">Bandit</a> usando <a href="https://docs.astral.sh/ruff/">Ruff</a></li>
+</ul>
+<h2 id="accesibilidad">⌨️ Accesibilidad</h2>
+<h3 id="herramienta-de-automatizacion-makefile">🔨 Herramienta de automatización (Makefile)</h3>
+<p>Makefile para automatizar la configuración de tu entorno, la instalación de dependencias, la ejecución de pruebas, etc.
+en la terminal escribe <code>make</code> para ver los comandos disponibles</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Target<span class="w">                </span>Descripción
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>-------------------<span class="w">   </span>----------------------------------------------------
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>check<span class="w">                 </span>Ejecutar<span class="w"> </span>herramientas<span class="w"> </span>de<span class="w"> </span>calidad<span class="w"> </span>de<span class="w"> </span>código<span class="w"> </span>con<span class="w"> </span>hooks<span class="w"> </span>de<span class="w"> </span>pre-commit.
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>docs_test<span class="w">             </span>Probar<span class="w"> </span>si<span class="w"> </span>la<span class="w"> </span>documentación<span class="w"> </span>se<span class="w"> </span>puede<span class="w"> </span>construir<span class="w"> </span>sin<span class="w"> </span>advertencias<span class="w"> </span>o<span class="w"> </span>errores
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>docs_view<span class="w">             </span>Construir<span class="w"> </span>y<span class="w"> </span>servir<span class="w"> </span>la<span class="w"> </span>documentación
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>init_env<span class="w">              </span>Instalar<span class="w"> </span>dependencias<span class="w"> </span>con<span class="w"> </span>uv<span class="w"> </span>y<span class="w"> </span>activar<span class="w"> </span>entorno
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>init_git<span class="w">              </span>Inicializar<span class="w"> </span>repositorio<span class="w"> </span>git
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>install_data_libs<span class="w">     </span>Instalar<span class="w"> </span>pandas,<span class="w"> </span>scikit-learn,<span class="w"> </span>Jupyter,<span class="w"> </span>seaborn
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>pre-commit_update<span class="w">     </span>Actualizar<span class="w"> </span>hooks<span class="w"> </span>de<span class="w"> </span>pre-commit
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="nb">test</span><span class="w">                  </span>Probar<span class="w"> </span>el<span class="w"> </span>código<span class="w"> </span>con<span class="w"> </span>pytest<span class="w"> </span>y<span class="w"> </span>cobertura
+</span></code></pre></div>
+<h3 id="documentacion-del-proyecto">📝 Documentación del Proyecto</h3>
+<ul>
+<li>Construcción de documentación
+  con <a href="https://www.mkdocs.org/">MkDocs</a> - <a href="https://realpython.com/python-project-documentation-with-mkdocs/">Tutorial</a><ul>
+<li>Potenciado por <a href="https://github.com/squidfunk/mkdocs-material">mkdocs-material</a></li>
+<li>Documentación automática rica a partir de anotaciones de tipo y docstrings (NumPy, Google, etc.)
+con <a href="https://mkdocstrings.github.io/">mkdocstrings</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="plantillas">🗃️ Plantillas</h3>
+<ul>
+<li><a href="https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/.github/pull_request_template.md">Plantilla de Pull Request</a></li>
+<li><a href="https://github.com/JoseRZapata/data-science-project-template/blob/main/{{cookiecutter.repo_name}}/notebooks/notebook_template.ipynb">Plantilla de Notebook</a></li>
+</ul>
+<h3 id="buenas-practicas">Buenas prácticas</h3>
+<ul>
+<li><a href="https://www.conventionalcommits.org/">https://www.conventionalcommits.org/</a></li>
+<li><a href="https://keepachangelog.com/">https://keepachangelog.com/</a></li>
+</ul>
+<hr />
+<h2 id="referencias">Referencias</h2>
+<ul>
+<li><a href="https://drivendata.github.io/cookiecutter-data-science/">https://drivendata.github.io/cookiecutter-data-science/</a></li>
+<li><a href="https://github.com/crmne/cookiecutter-modern-datascience">https://github.com/crmne/cookiecutter-modern-datascience</a></li>
+<li><a href="https://github.com/fpgmaas/cookiecutter-poetry">https://github.com/fpgmaas/cookiecutter-poetry</a></li>
+<li><a href="https://github.com/khuyentran1401/data-science-template">https://github.com/khuyentran1401/data-science-template</a></li>
+<li><a href="https://github.com/woltapp/wolt-python-package-cookiecutter">https://github.com/woltapp/wolt-python-package-cookiecutter</a></li>
+<li><a href="https://khuyentran1401.github.io/reproducible-data-science/structure_project/introduction.html">https://khuyentran1401.github.io/reproducible-data-science/structure_project/introduction.html</a></li>
+<li><a href="https://github.com/TeoZosa/cookiecutter-cruft-poetry-tox-pre-commit-ci-cd">https://github.com/TeoZosa/cookiecutter-cruft-poetry-tox-pre-commit-ci-cd</a></li>
+<li><a href="https://github.com/cjolowicz/cookiecutter-hypermodern-python">https://github.com/cjolowicz/cookiecutter-hypermodern-python</a></li>
+<li><a href="https://github.com/gotofritz/cookiecutter-gotofritz-poetry">https://github.com/gotofritz/cookiecutter-gotofritz-poetry</a></li>
+<li><a href="https://github.com/kedro-org/kedro-starters">https://github.com/kedro-org/kedro-starters</a></li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.expand", "navigation.path"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
