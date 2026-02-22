@@ -17,6 +17,38 @@ theme:
     - navigation.expand
     - navigation.path
 
+plugins:
+  - search
+  - i18n:
+      reconfigure_material: true
+      docs_structure: suffix
+      fallback_to_default: true
+      languages:
+        - locale: en
+          name: English
+          default: true
+          build: true
+        - locale: es
+          name: Español
+          build: true
+          site_name: "Plantilla de proyecto de ciencia de datos"
+          nav_translations:
+            📖 Introduction: "📖 Introducción"
+            🛠️ Get started (💻 Local setup): "🛠️ Comenzar (💻 Configuración local)"
+            🗃️ Project structure: "🗃️ Estructura del proyecto"
+            🗂️ Directory Hierarchy: "🗂️ Jerarquía de directorios"
+            🗄️ Data Schema: "🗄️ Esquema de datos"
+            🔑 Setup Tokens: "🔑 Configurar Tokens"
+            ⚙️  Pre-commit configuration: "⚙️  Configuración de Pre-commit"
+            🚀 Github Actions: "🚀 Github Actions"
+            Continuos Integration (CI): "Integración Continua (CI)"
+            Pre-commit_autoupdate: "Pre-commit_autoupdate"
+            Automerge: "Automerge"
+            Dependency Review: "Revisión de Dependencias"
+            Docs generator: "Generador de documentación"
+            Labels github: "Etiquetas de github"
+            💻 VSCode configuration: "💻 Configuración de VSCode"
+
 nav:
   - 📖 Introduction: 'index.md'
   - 🛠️ Get started (💻 Local setup): 'local_setup.md'
