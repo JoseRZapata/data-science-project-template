@@ -15,7 +15,7 @@ readme = "README.md"
 license = {text = "MIT"}
 dependencies = [
     "pre-commit>=4.2.0",
-    "pytest>=8.3.5",
+    "pytest>=9.0.3",
     "pytest-cookies>=0.7.0",
     "pytest-cov>=6.1.1",
 ]
@@ -31,7 +31,7 @@ docs = [
     "mkdocs>=1.6.1",
     "mkdocs-material>=9.6.4",
     "mkdocs-static-i18n>=1.2.3",
-    "mkdocstrings[python]>=0.28.1",
+    "mkdocstrings[python]>=1.0.3",
     "pymdown-extensions>=10.14.3",
 ]
 
