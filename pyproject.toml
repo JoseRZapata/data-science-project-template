@@ -14,7 +14,7 @@ keywords = [
 readme = "README.md"
 license = {text = "MIT"}
 dependencies = [
-    "pre-commit>=4.2.0",
+    "pre-commit>=4.6.0",
     "pytest>=9.0.3",
     "pytest-cookies>=0.7.0",
     "pytest-cov>=6.1.1",
