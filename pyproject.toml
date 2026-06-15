@@ -15,7 +15,7 @@ readme = "README.md"
 license = {text = "MIT"}
 dependencies = [
     "pre-commit>=4.6.0",
-    "pytest>=9.0.3",
+    "pytest>=9.1.0",
     "pytest-cookies>=0.7.0",
     "pytest-cov>=6.1.1",
 ]
