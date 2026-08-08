@@ -34,7 +34,7 @@ def get_latest_version(package_name: str) -> str | None:
                 file=sys.stderr,
             )
             return None
-        with urllib.request.urlopen(url, timeout=10) as response:  # noqa: S310
+        with urllib.request.urlopen(url, timeout=10) as response:
             data = json.loads(response.read().decode())
             version = data.get("info", {}).get("version")
             return str(version) if version is not None else None
