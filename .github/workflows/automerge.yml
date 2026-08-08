@@ -14,7 +14,7 @@ jobs:
         name: automerge
         uses: "pascalgn/automerge-action@v0.16.4"
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_TOKEN: "${{ github.token }}"
           MERGE_METHOD: squash
           MERGE_REQUIRED_APPROVALS: "0"
           MERGE_LABELS: automerge   # label to trigger automerge

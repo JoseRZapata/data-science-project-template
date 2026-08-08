@@ -16,14 +16,14 @@ In workflows, use:
 
 ```yaml
 with:
-  github-token: ${{ secrets.GITHUB_TOKEN }}
+  github-token: ${{ github.token }}
 ```
 
 or:
 
 ```yaml
 env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GITHUB_TOKEN: ${{ github.token }}
 ```
 
 Also set explicit permissions in each workflow/job when needed, for example:
