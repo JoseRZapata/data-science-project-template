@@ -1,4 +1,4 @@
-# 🔑 Setup tokens for GitHub Actions
+# 🔑 Set up tokens for GitHub Actions
 
 This template now uses **`GITHUB_TOKEN` by default** for most workflows.
 
