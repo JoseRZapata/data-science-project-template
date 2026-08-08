@@ -6,12 +6,15 @@ on:
 jobs:
   automerge:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - id: automerge
         name: automerge
         uses: "pascalgn/automerge-action@v0.16.4"
         env:
-          GITHUB_TOKEN: "${{ secrets.PAT }}"
+          GITHUB_TOKEN: "${{ github.token }}"
           MERGE_METHOD: squash
           MERGE_REQUIRED_APPROVALS: "0"
           MERGE_LABELS: automerge   # label to trigger automerge

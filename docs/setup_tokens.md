@@ -1,32 +1,73 @@
-# 🔑 Setup Tokens
+# 🔑 Set up tokens for GitHub Actions
 
-Some of the github actions require token keys to be set as secrets in the github repository. The following tokens are required:
+This template now uses **`GITHUB_TOKEN` by default** for most workflows.
 
-## Github Action secrets.PAT
+`GITHUB_TOKEN` is automatically created by GitHub Actions on each run, so you usually **do not** need to create a custom PAT secret.
 
-This is the personal access token for the github repository and It is used to:
+## 1) Recommended default: `GITHUB_TOKEN`
 
-- Push the MKDocs documentation to the `gh-pages` branch.
-- Push the pre-commit autoupdate to the `main` branch.
+### What to configure in the repository
 
-How to configure the secrets.PAT:
+1. Go to **Settings → Actions → General → Workflow permissions**.
+2. Select **Read and write permissions**.
+3. Enable **Allow GitHub Actions to create and approve pull requests** (required for PR automation workflows).
 
-- Create in github a [Personal Access Token (PAT)](https://github.com/settings/tokens?type=beta),for the specific repository. [How](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token)
-- Give it read/write access to "Contents", "Pull Requests" and "Workflows" under the "Repository Permissions" section.
-- Add de PAT to the repository secrets. Go to the repository settings > Secrets and variables > Actions. THen in Repository secrets add a new repository secret and Name it `PAT` and paste the token.
-- You must explicitly allow GitHub Actions to create pull requests. This setting can be found in a repository's settings under Actions > General > Workflow permissions. select `Read repository contents and packages permissions`
+In workflows, use:
 
-## CODECOV_TOKEN
+```yaml
+with:
+  github-token: ${{ github.token }}
+```
 
-This is the token for codecov. It is used to upload the coverage report to codecov. You can get it from codecov.io. It is not required for local development.
-<https://docs.codecov.com/docs/quick-start>
+or:
 
-You have to add this secret to the github repository. How to add codecov to the github repository: <https://docs.codecov.com/docs/adding-the-codecov-token#github-actions>
+```yaml
+env:
+  GITHUB_TOKEN: ${{ github.token }}
+```
+
+Also set explicit permissions in each workflow/job when needed, for example:
+
+```yaml
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+```
+
+## 2) When is a PAT still needed?
+
+Use a PAT (or GitHub App token) only for advanced cases, such as:
+
+- You need automation-created PRs/commits to trigger additional workflows in a way that `GITHUB_TOKEN` restrictions prevent.
+- You need to access **another repository** (cross-repo operations).
+- An action feature explicitly requires scopes not available with your current `GITHUB_TOKEN` permissions.
+
+If needed, create a repository secret named `PAT`.
+
+## 3) Transitional fallback (optional)
+
+If you are migrating existing repositories, you can temporarily use:
+
+```yaml
+${{ secrets.PAT || github.token }}
+```
+
+This keeps old repos working while you remove PAT dependencies.
+
+## 4) CODECOV_TOKEN
+
+`CODECOV_TOKEN` is still required for Codecov upload workflows (depending on your Codecov setup).
+
+- <https://docs.codecov.com/docs/quick-start>
+- <https://docs.codecov.com/docs/adding-the-codecov-token#github-actions>
 
 ---
 
 ## References
 
+- <https://docs.github.com/en/actions/security-guides/automatic-token-authentication>
+- <https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#permissions>
+- <https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/trigger-a-workflow>
 - <https://github.com/peter-evans/create-pull-request?tab=readme-ov-file#workflow-permissions>
-- <https://github.com/peter-evans/create-pull-request/issues/2443>
-- <https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token>
+- <https://github.blog/changelog/2023-02-02-github-actions-updating-the-default-github_token-permissions-to-read-only/>
