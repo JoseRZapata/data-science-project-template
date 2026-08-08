@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://joserzapata.github.io/data-science-project-template/setup_tokens/">
+      
       
         <link rel="prev" href="../data_schema/">
       
@@ -23,7 +25,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -31,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#setup-tokens" class="md-skip">
+        <a href="#set-up-tokens-for-github-actions" class="md-skip">
           Skip to content
         </a>
       
@@ -512,10 +514,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#github-action-secretspat" class="md-nav__link">
+  <a href="#1-recommended-default-github_token" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Github Action secrets.PAT
+        1) Recommended default: GITHUB_TOKEN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1) Recommended default: GITHUB_TOKEN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-to-configure-in-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to configure in the repository
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-when-is-a-pat-still-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) When is a PAT still needed?
       
     </span>
   </a>
@@ -523,10 +553,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#codecov_token" class="md-nav__link">
+  <a href="#3-transitional-fallback-optional" class="md-nav__link">
     <span class="md-ellipsis">
       
-        CODECOV_TOKEN
+        3) Transitional fallback (optional)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-codecov_token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4) CODECOV_TOKEN
       
     </span>
   </a>
@@ -857,10 +898,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#github-action-secretspat" class="md-nav__link">
+  <a href="#1-recommended-default-github_token" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Github Action secrets.PAT
+        1) Recommended default: GITHUB_TOKEN
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1) Recommended default: GITHUB_TOKEN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-to-configure-in-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to configure in the repository
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-when-is-a-pat-still-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) When is a PAT still needed?
       
     </span>
   </a>
@@ -868,10 +937,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#codecov_token" class="md-nav__link">
+  <a href="#3-transitional-fallback-optional" class="md-nav__link">
     <span class="md-ellipsis">
       
-        CODECOV_TOKEN
+        3) Transitional fallback (optional)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-codecov_token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4) CODECOV_TOKEN
       
     </span>
   </a>
@@ -917,31 +997,57 @@
   
 
 
-<h1 id="setup-tokens">🔑 Setup Tokens</h1>
-<p>Some of the github actions require token keys to be set as secrets in the github repository. The following tokens are required:</p>
-<h2 id="github-action-secretspat">Github Action secrets.PAT</h2>
-<p>This is the personal access token for the github repository and It is used to:</p>
+<h1 id="set-up-tokens-for-github-actions">🔑 Set up tokens for GitHub Actions</h1>
+<p>This template now uses <strong><code>GITHUB_TOKEN</code> by default</strong> for most workflows.</p>
+<p><code>GITHUB_TOKEN</code> is automatically created by GitHub Actions on each run, so you usually <strong>do not</strong> need to create a custom PAT secret.</p>
+<h2 id="1-recommended-default-github_token">1) Recommended default: <code>GITHUB_TOKEN</code></h2>
+<h3 id="what-to-configure-in-the-repository">What to configure in the repository</h3>
+<ol>
+<li>Go to <strong>Settings → Actions → General → Workflow permissions</strong>.</li>
+<li>Select <strong>Read and write permissions</strong>.</li>
+<li>Enable <strong>Allow GitHub Actions to create and approve pull requests</strong> (required for PR automation workflows).</li>
+</ol>
+<p>In workflows, use:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">with</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">github-token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ github.token }}</span>
+</span></code></pre></div>
+<p>or:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">env</span><span class="p">:</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">GITHUB_TOKEN</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ github.token }}</span>
+</span></code></pre></div>
+<p>Also set explicit permissions in each workflow/job when needed, for example:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">permissions</span><span class="p">:</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">pull-requests</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">issues</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+</span></code></pre></div>
+<h2 id="2-when-is-a-pat-still-needed">2) When is a PAT still needed?</h2>
+<p>Use a PAT (or GitHub App token) only for advanced cases, such as:</p>
 <ul>
-<li>Push the MKDocs documentation to the <code>gh-pages</code> branch.</li>
-<li>Push the pre-commit autoupdate to the <code>main</code> branch.</li>
+<li>You need automation-created PRs/commits to trigger additional workflows in a way that <code>GITHUB_TOKEN</code> restrictions prevent.</li>
+<li>You need to access <strong>another repository</strong> (cross-repo operations).</li>
+<li>An action feature explicitly requires scopes not available with your current <code>GITHUB_TOKEN</code> permissions.</li>
 </ul>
-<p>How to configure the secrets.PAT:</p>
+<p>If needed, create a repository secret named <code>PAT</code>.</p>
+<h2 id="3-transitional-fallback-optional">3) Transitional fallback (optional)</h2>
+<p>If you are migrating existing repositories, you can temporarily use:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="l l-Scalar l-Scalar-Plain">${{ secrets.PAT || github.token }}</span>
+</span></code></pre></div>
+<p>This keeps old repos working while you remove PAT dependencies.</p>
+<h2 id="4-codecov_token">4) CODECOV_TOKEN</h2>
+<p><code>CODECOV_TOKEN</code> is still required for Codecov upload workflows (depending on your Codecov setup).</p>
 <ul>
-<li>Create in github a <a href="https://github.com/settings/tokens?type=beta">Personal Access Token (PAT)</a>,for the specific repository. <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token">How</a></li>
-<li>Give it read/write access to "Contents", "Pull Requests" and "Workflows" under the "Repository Permissions" section.</li>
-<li>Add de PAT to the repository secrets. Go to the repository settings &gt; Secrets and variables &gt; Actions. THen in Repository secrets add a new repository secret and Name it <code>PAT</code> and paste the token.</li>
-<li>You must explicitly allow GitHub Actions to create pull requests. This setting can be found in a repository's settings under Actions &gt; General &gt; Workflow permissions. select <code>Read repository contents and packages permissions</code></li>
+<li><a href="https://docs.codecov.com/docs/quick-start">https://docs.codecov.com/docs/quick-start</a></li>
+<li><a href="https://docs.codecov.com/docs/adding-the-codecov-token#github-actions">https://docs.codecov.com/docs/adding-the-codecov-token#github-actions</a></li>
 </ul>
-<h2 id="codecov_token">CODECOV_TOKEN</h2>
-<p>This is the token for codecov. It is used to upload the coverage report to codecov. You can get it from codecov.io. It is not required for local development.
-<a href="https://docs.codecov.com/docs/quick-start">https://docs.codecov.com/docs/quick-start</a></p>
-<p>You have to add this secret to the github repository. How to add codecov to the github repository: <a href="https://docs.codecov.com/docs/adding-the-codecov-token#github-actions">https://docs.codecov.com/docs/adding-the-codecov-token#github-actions</a></p>
 <hr />
 <h2 id="references">References</h2>
 <ul>
+<li><a href="https://docs.github.com/en/actions/security-guides/automatic-token-authentication">https://docs.github.com/en/actions/security-guides/automatic-token-authentication</a></li>
+<li><a href="https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#permissions">https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#permissions</a></li>
+<li><a href="https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/trigger-a-workflow">https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/trigger-a-workflow</a></li>
 <li><a href="https://github.com/peter-evans/create-pull-request?tab=readme-ov-file#workflow-permissions">https://github.com/peter-evans/create-pull-request?tab=readme-ov-file#workflow-permissions</a></li>
-<li><a href="https://github.com/peter-evans/create-pull-request/issues/2443">https://github.com/peter-evans/create-pull-request/issues/2443</a></li>
-<li><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token">https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token</a></li>
+<li><a href="https://github.blog/changelog/2023-02-02-github-actions-updating-the-default-github_token-permissions-to-read-only/">https://github.blog/changelog/2023-02-02-github-actions-updating-the-default-github_token-permissions-to-read-only/</a></li>
 </ul>
 
 
@@ -995,7 +1101,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.expand", "navigation.path"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
