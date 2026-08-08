@@ -1,6 +1,6 @@
 # 🔑 Configurar tokens para GitHub Actions
 
-Esta plantilla ahora usa **`GITHUB_TOKEN` por defecto** en la mayoría de workflows.
+Esta plantilla ahora usa **`GITHUB_TOKEN` por defecto** en la mayoría de los workflows.
 
 `GITHUB_TOKEN` se crea automáticamente en cada ejecución de GitHub Actions, así que normalmente **no** necesitas crear un PAT manual.
 
