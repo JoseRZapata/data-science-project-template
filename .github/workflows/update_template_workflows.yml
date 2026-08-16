@@ -2,7 +2,7 @@ name: Update Template Workflows
 
 on:
   schedule:
-    - cron: "0 0 * * 0" # Run weekly on Sunday at midnight
+    - cron: "0 1 * * 0" # Run weekly on Sunday at 01:00 UTC (staggered 1h after update_template_deps.yml / Dependabot to avoid stale-branch collisions)
   workflow_dispatch: # Allow manual trigger
 
 jobs:

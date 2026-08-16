@@ -5,7 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.4.0] - 2026-08-15
+
+### Added 🚀
+
+- Added Dependabot configuration for automatic GitHub Actions version updates in both root and template workflows (with staggered schedules to avoid collisions)
+- Added script `scripts/update_template_workflows.py` to update GitHub Actions references in template workflows
+- Added workflow `.github/workflows/update_template_workflows.yml` to run the update script weekly
+- Added pre-commit hook `check-dependabot` to validate Dependabot configuration before commit
+- Updated `.github/workflows/automerge.yml` to run hourly on Sundays and daily Monday-Saturday, using `github.token` and proper permissions
+- Updated template's `.github/dependabot.yml` and `.github/workflows/automerge.yml` to match root configuration
+
+### Changed 💥
+
+- Staggered cron schedules: Dependabot and update_template_deps at 00:00 UTC Sunday, update_template_workflows at 01:00 UTC Sunday, automerge hourly on Sunday and daily 08:00 UTC Mon-Sat
 
 ## [1.3.0] - 2026-02-22
 
@@ -20,8 +33,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed 💥
 
 - Updated `.github/workflows/docs.yml` to trigger on changes to `mkdocs.yml`.
-
-## [Released]
 
 ## [1.2.0] - 2025-11-29
 

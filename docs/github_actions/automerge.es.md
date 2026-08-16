@@ -11,7 +11,8 @@ Este flujo de trabajo de GitHub Action automatiza la fusión de pull requests et
 ### Disparadores (`on`)
 
 - **`schedule`**:
-    - Se ejecuta automáticamente diariamente a las 08:00 UTC (según el cron schedule: `0 8 * * *`).
+    - Se ejecuta automáticamente **cada hora los domingos** (UTC) para capturar los jobs escalonados de creación de PRs (`0 * * * 0`).
+    - Se ejecuta diariamente a las 08:00 UTC de lunes a sábado (`0 8 * * 1-6`).
 - **`workflow_dispatch`**:
     - Permite la ejecución manual del flujo de trabajo a través de la interfaz de GitHub Actions.
 
@@ -36,3 +37,18 @@ Este flujo de trabajo de GitHub Action automatiza la fusión de pull requests et
 ---
 
 En resumen, este flujo de trabajo simplifica el proceso de fusión de pull requests al fusionar automáticamente aquellos etiquetados con `automerge` usando el método `squash`. Puede ejecutarse diariamente o manualmente, asegurando flexibilidad y eficiencia en el proceso de desarrollo.
+
+---
+
+## Configuración Requerida del Repositorio para Workflows de PR Automatizados
+
+Para que el workflow de automerge (y otros PRs creados por bots como Dependabot, `update_template_deps`, `update_template_workflows`) ejecuten sus checks de CI **automáticamente sin aprobación manual**, debes configurar lo siguiente en el **repositorio de tu proyecto generado**:
+
+1. Ve a **Settings → Actions → General**
+2. En **"Fork pull request workflows from outside collaborators"**, selecciona:
+   - **"Require approval for first-time contributors who are new to GitHub"** (recomendado), o
+   - **"Read‑only"** (si confías en todos los colaboradores)
+
+Sin esta configuración, los PRs creados por bots mostrarán **"X workflows awaiting approval"** y sus checks permanecerán bloqueados hasta que un mantenedor apruebe manualmente cada ejecución.
+
+Esta configuración solo necesita hacerse una vez por repositorio generado.
