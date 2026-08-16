@@ -11,6 +11,11 @@ repos:
       - id: check-added-large-files
         args: [--maxkb=100000] # 100MB
 
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.38.0
+    hooks:
+      - id: check-dependabot
+
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.
     rev: v0.16.2
