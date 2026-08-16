@@ -728,6 +728,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#configuracion-requerida-del-repositorio-para-workflows-de-pr-automatizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración Requerida del Repositorio para Workflows de PR Automatizados
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -937,6 +948,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#configuracion-requerida-del-repositorio-para-workflows-de-pr-automatizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración Requerida del Repositorio para Workflows de PR Automatizados
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1013,7 +1035,8 @@
 <h3 id="disparadores-on">Disparadores (<code>on</code>)</h3>
 <ul>
 <li><strong><code>schedule</code></strong>:<ul>
-<li>Se ejecuta automáticamente diariamente a las 08:00 UTC (según el cron schedule: <code>0 8 * * *</code>).</li>
+<li>Se ejecuta automáticamente <strong>cada hora los domingos</strong> (UTC) para capturar los jobs escalonados de creación de PRs (<code>0 * * * 0</code>).</li>
+<li>Se ejecuta diariamente a las 08:00 UTC de lunes a sábado (<code>0 8 * * 1-6</code>).</li>
 </ul>
 </li>
 <li><strong><code>workflow_dispatch</code></strong>:<ul>
@@ -1039,6 +1062,17 @@
 </ol>
 <hr />
 <p>En resumen, este flujo de trabajo simplifica el proceso de fusión de pull requests al fusionar automáticamente aquellos etiquetados con <code>automerge</code> usando el método <code>squash</code>. Puede ejecutarse diariamente o manualmente, asegurando flexibilidad y eficiencia en el proceso de desarrollo.</p>
+<hr />
+<h2 id="configuracion-requerida-del-repositorio-para-workflows-de-pr-automatizados">Configuración Requerida del Repositorio para Workflows de PR Automatizados</h2>
+<p>Para que el workflow de automerge (y otros PRs creados por bots como Dependabot, <code>update_template_deps</code>, <code>update_template_workflows</code>) ejecuten sus checks de CI <strong>automáticamente sin aprobación manual</strong>, debes configurar lo siguiente en el <strong>repositorio de tu proyecto generado</strong>:</p>
+<ol>
+<li>Ve a <strong>Settings → Actions → General</strong></li>
+<li>En <strong>"Fork pull request workflows from outside collaborators"</strong>, selecciona:</li>
+<li><strong>"Require approval for first-time contributors who are new to GitHub"</strong> (recomendado), o</li>
+<li><strong>"Read‑only"</strong> (si confías en todos los colaboradores)</li>
+</ol>
+<p>Sin esta configuración, los PRs creados por bots mostrarán <strong>"X workflows awaiting approval"</strong> y sus checks permanecerán bloqueados hasta que un mantenedor apruebe manualmente cada ejecución.</p>
+<p>Esta configuración solo necesita hacerse una vez por repositorio generado.</p>
 
 
 

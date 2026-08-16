@@ -2,182 +2,182 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/data_schema/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/data_schema/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/data_schema/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/directory_hierarchy/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/directory_hierarchy/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/directory_hierarchy/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/local_setup/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/local_setup/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/local_setup/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/pre-commit/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/pre-commit/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/pre-commit/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/setup_tokens/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/setup_tokens/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/setup_tokens/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/vscode/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/vscode/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/vscode/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/github_actions/automerge/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/github_actions/automerge/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/github_actions/automerge/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/github_actions/ci/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/github_actions/ci/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/github_actions/ci/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/github_actions/dependency_review/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/github_actions/dependency_review/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/github_actions/dependency_review/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/github_actions/docs/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/github_actions/docs/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/github_actions/docs/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/github_actions/gh_action_pre-commit-autoupdate/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/github_actions/gh_action_pre-commit-autoupdate/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/github_actions/gh_action_pre-commit-autoupdate/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/github_actions/labels/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/github_actions/labels/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/github_actions/labels/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/es/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/es/data_schema/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/data_schema/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/data_schema/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/es/directory_hierarchy/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/directory_hierarchy/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/directory_hierarchy/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/es/local_setup/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/local_setup/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/local_setup/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/es/pre-commit/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/pre-commit/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/pre-commit/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/es/setup_tokens/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/setup_tokens/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/setup_tokens/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/es/vscode/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/vscode/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/vscode/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/es/github_actions/automerge/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/github_actions/automerge/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/github_actions/automerge/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/es/github_actions/ci/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/github_actions/ci/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/github_actions/ci/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/es/github_actions/dependency_review/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/github_actions/dependency_review/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/github_actions/dependency_review/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/es/github_actions/docs/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/github_actions/docs/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/github_actions/docs/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/es/github_actions/gh_action_pre-commit-autoupdate/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/github_actions/gh_action_pre-commit-autoupdate/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/github_actions/gh_action_pre-commit-autoupdate/"/>
     </url>
     <url>
         <loc>https://joserzapata.github.io/data-science-project-template/es/github_actions/labels/</loc>
-        <lastmod>2026-08-08</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://joserzapata.github.io/data-science-project-template/es/github_actions/labels/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://joserzapata.github.io/data-science-project-template/github_actions/labels/"/>

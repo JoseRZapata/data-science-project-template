@@ -728,6 +728,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#required-repository-setting-for-automated-pr-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required Repository Setting for Automated PR Workflows
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -937,6 +948,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#required-repository-setting-for-automated-pr-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required Repository Setting for Automated PR Workflows
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1013,7 +1035,8 @@
 <h3 id="triggers-on">Triggers (<code>on</code>)</h3>
 <ul>
 <li><strong><code>schedule</code></strong>:<ul>
-<li>Automatically runs daily at 08:00 UTC (according to the cron schedule: <code>0 8 * * *</code>).</li>
+<li>Automatically runs <strong>every hour on Sundays</strong> (UTC) to catch staggered PR-creating jobs (<code>0 * * * 0</code>).</li>
+<li>Runs daily at 08:00 UTC Monday–Saturday (<code>0 8 * * 1-6</code>).</li>
 </ul>
 </li>
 <li><strong><code>workflow_dispatch</code></strong>:<ul>
@@ -1039,6 +1062,17 @@
 </ol>
 <hr />
 <p>In summary, this workflow simplifies the process of merging pull requests by automatically merging those labeled with <code>automerge</code> using the <code>squash</code> method. It can be executed daily or manually, ensuring flexibility and efficiency in the development process.</p>
+<hr />
+<h2 id="required-repository-setting-for-automated-pr-workflows">Required Repository Setting for Automated PR Workflows</h2>
+<p>For the automerge workflow (and other bot-created PRs like Dependabot, <code>update_template_deps</code>, <code>update_template_workflows</code>) to run their CI checks <strong>automatically without manual approval</strong>, you must configure the following setting in your <strong>generated project's repository</strong>:</p>
+<ol>
+<li>Go to <strong>Settings → Actions → General</strong></li>
+<li>Under <strong>"Fork pull request workflows from outside collaborators"</strong>, select:</li>
+<li><strong>"Require approval for first-time contributors who are new to GitHub"</strong> (recommended), or</li>
+<li><strong>"Read‑only"</strong> (if you trust all contributors)</li>
+</ol>
+<p>Without this setting, PRs created by bots will show <strong>"X workflows awaiting approval"</strong> and their checks will remain blocked until a maintainer manually approves each run.</p>
+<p>This setting only needs to be configured once per generated repository.</p>
 
 
 
