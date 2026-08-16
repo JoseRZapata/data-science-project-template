@@ -11,7 +11,8 @@ This GitHub Action workflow automates the merging of pull requests labeled with 
 ### Triggers (`on`)
 
 - **`schedule`**:
-    - Automatically runs daily at 08:00 UTC (according to the cron schedule: `0 8 * * *`).
+    - Automatically runs **every hour on Sundays** (UTC) to catch staggered PR-creating jobs (`0 * * * 0`).
+    - Runs daily at 08:00 UTC Monday–Saturday (`0 8 * * 1-6`).
 - **`workflow_dispatch`**:
     - Allows manual execution of the workflow via the GitHub Actions interface.
 
@@ -36,3 +37,18 @@ This GitHub Action workflow automates the merging of pull requests labeled with 
 ---
 
 In summary, this workflow simplifies the process of merging pull requests by automatically merging those labeled with `automerge` using the `squash` method. It can be executed daily or manually, ensuring flexibility and efficiency in the development process.
+
+---
+
+## Required Repository Setting for Automated PR Workflows
+
+For the automerge workflow (and other bot-created PRs like Dependabot, `update_template_deps`, `update_template_workflows`) to run their CI checks **automatically without manual approval**, you must configure the following setting in your **generated project's repository**:
+
+1. Go to **Settings → Actions → General**
+2. Under **"Fork pull request workflows from outside collaborators"**, select:
+   - **"Require approval for first-time contributors who are new to GitHub"** (recommended), or
+   - **"Read‑only"** (if you trust all contributors)
+
+Without this setting, PRs created by bots will show **"X workflows awaiting approval"** and their checks will remain blocked until a maintainer manually approves each run.
+
+This setting only needs to be configured once per generated repository.
