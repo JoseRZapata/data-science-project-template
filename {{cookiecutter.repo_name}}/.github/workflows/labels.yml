@@ -18,10 +18,10 @@ jobs:
     steps:
       -
         name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       -
         name: Run Labeler
-        uses: crazy-max/ghaction-github-labeler@v5
+        uses: crazy-max/ghaction-github-labeler@v6
         with:
           github-token: ${{ secrets.PAT }}
           yaml-file: .github/labels.yml
