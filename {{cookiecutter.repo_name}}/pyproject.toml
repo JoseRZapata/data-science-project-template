@@ -19,7 +19,7 @@ repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecut
 
 [dependency-groups]
 dev = [
-    "pre-commit>=4.6.2", # Code linting and formatting
+    "pre-commit>=4.7.0", # Code linting and formatting
     "pytest>=9.1.1", # Testing framework
     "pytest-cookies>=0.7.0",
     "pytest-cov>=7.1.0",
@@ -29,8 +29,8 @@ dev = [
 #{% if cookiecutter.mkdocs %}
 docs = [
     "mkdocs>=1.6.1",
-    "mkdocs-material>=9.7.7",
-    "mkdocstrings[python]>=1.0.6",
+    "mkdocs-material>=9.8.0",
+    "mkdocstrings[python]>=1.0.8",
     "pymdown-extensions>=10.19",
 ]
 #{% endif %}
